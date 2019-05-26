@@ -1,0 +1,16 @@
+Fitter Status : Successful - Mon Mar 17 10:02:37 2014
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Full Version
+Revision Name : DE0_D5M
+Top-level Entity Name : TOP_CAMERA
+Family : Cyclone III
+Device : EP3C16F484C6
+Timing Models : Final
+Total logic elements : 1,467 / 15,408 ( 10 % )
+    Total combinational functions : 1,198 / 15,408 ( 8 % )
+    Dedicated logic registers : 1,030 / 15,408 ( 7 % )
+Total registers : 1030
+Total pins : 141 / 347 ( 41 % )
+Total virtual pins : 0
+Total memory bits : 53,200 / 516,096 ( 10 % )
+Embedded Multiplier 9-bit elements : 0 / 112 ( 0 % )
+Total PLLs : 1 / 4 ( 25 % )

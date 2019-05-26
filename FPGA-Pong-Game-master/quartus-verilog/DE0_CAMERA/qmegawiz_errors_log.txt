@@ -1,0 +1,28 @@
+
+
+E:/work/teaching/1314_2T_ISE1PRJ/DE0_CAMERA_v2/V/sdram_pll.v
+
+Mar 16 05PM:44:47>: Error in CNX file format.
+
+Error messages are listed in file
+E:/work/teaching/1314_2T_ISE1PRJ/DE0_CAMERA_v2/V/sdram_pll.cnxerr.
+
+Can't create the custom megafunction variation file(s)
+
+E:/work/teaching/1314_2T_ISE1PRJ/DE0_CAMERA_v2/V/sdram_pll.v
+
+Mar 16 05PM:45:47>: Error in CNX file format.
+
+Error messages are listed in file
+E:/work/teaching/1314_2T_ISE1PRJ/DE0_CAMERA_v2/V/sdram_pll.cnxerr.
+
+Can't create the custom megafunction variation file(s)
+
+E:/work/teaching/1314_2T_ISE1PRJ/DE0_CAMERA_v2/V/sdram_pll.v
+
+Mar 16 05PM:45:55>: Error in CNX file format.
+
+Error messages are listed in file
+E:/work/teaching/1314_2T_ISE1PRJ/DE0_CAMERA_v2/V/sdram_pll.cnxerr.
+
+Can't create the custom megafunction variation file(s)

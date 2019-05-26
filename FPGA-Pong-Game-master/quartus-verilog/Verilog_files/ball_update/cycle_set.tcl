@@ -1,0 +1,84 @@
+
+# Loop constraints
+directive set /ball_update/core/core:rlp CSTEPS_FROM {{. == 0}}
+directive set /ball_update/core/core:rlp/main CSTEPS_FROM {{. == 3} {.. == 0}}
+
+# IO operation constraints
+directive set /ball_update/core/core:rlp/main/switch1:io_read(switch1:rsc.d) CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/switch2:io_read(switch2:rsc.d) CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/io_read(video_in:rsc.d) CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/io_read(vga_xy:rsc.d) CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/io_write(video_out:rsc.d) CSTEPS_FROM {{.. == 2}}
+directive set /ball_update/core/core:rlp/main/io_write(ball_x_out:rsc.d) CSTEPS_FROM {{.. == 2}}
+directive set /ball_update/core/core:rlp/main/io_write(ball_y_out:rsc.d) CSTEPS_FROM {{.. == 2}}
+directive set /ball_update/core/core:rlp/main/io_write(left:rsc.d) CSTEPS_FROM {{.. == 2}}
+directive set /ball_update/core/core:rlp/main/io_write(right:rsc.d) CSTEPS_FROM {{.. == 2}}
+
+# Real operation constraints
+directive set /ball_update/core/core:rlp/main/mul CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/acc#10 CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/acc#11 CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/mul#3 CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/acc CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/acc#2 CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/acc#3 CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/mux CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/mux#1 CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/mux#2 CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/if#1:acc CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/else#2:if:acc CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/mux1h CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/if#7:acc#1 CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/if#7:acc#2 CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/if#7:acc#3 CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/if#7:acc#4 CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/aif#5:acc CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/if#7:if:acc CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/if#7:if:unequal CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/if#7:aif:equal CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/mux1h#3 CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/if#11:acc CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/if#11:acc#1 CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/if#11:acc#2 CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/if#11:acc#3 CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/aif#15:acc CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/if#11:equal CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/if#11:aif:equal CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/mux1h#4 CSTEPS_FROM {{.. == 2}}
+directive set /ball_update/core/core:rlp/main/if#15:acc#3 CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/if#15:acc CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/if#15:and#1 CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/if#15:and CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/if#15:acc#1 CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/if#15:else#1:acc CSTEPS_FROM {{.. == 2}}
+directive set /ball_update/core/core:rlp/main/mux1h#5 CSTEPS_FROM {{.. == 2}}
+directive set /ball_update/core/core:rlp/main/mux#13 CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/mux#14 CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/mux#11 CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/if#18:acc#3 CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/if#18:acc CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/if#18:and CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/if#18:and#1 CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/if#18:acc#1 CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/if#18:else#1:acc CSTEPS_FROM {{.. == 2}}
+directive set /ball_update/core/core:rlp/main/mux1h#6 CSTEPS_FROM {{.. == 2}}
+directive set /ball_update/core/core:rlp/main/mux#16 CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/mux#17 CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/mux#18 CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/mux#19 CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/mux1h#7 CSTEPS_FROM {{.. == 1}}
+directive set /ball_update/core/core:rlp/main/if#25:acc CSTEPS_FROM {{.. == 2}}
+directive set /ball_update/core/core:rlp/main/if#25:acc#2 CSTEPS_FROM {{.. == 2}}
+directive set /ball_update/core/core:rlp/main/else#24:if:acc CSTEPS_FROM {{.. == 2}}
+directive set /ball_update/core/core:rlp/main/else#24:if:acc#1 CSTEPS_FROM {{.. == 2}}
+directive set /ball_update/core/core:rlp/main/else#24:else:if:acc#2 CSTEPS_FROM {{.. == 2}}
+directive set /ball_update/core/core:rlp/main/else#24:else:if:acc#1 CSTEPS_FROM {{.. == 2}}
+directive set /ball_update/core/core:rlp/main/else#24:else:else:if:acc#2 CSTEPS_FROM {{.. == 2}}
+directive set /ball_update/core/core:rlp/main/else#24:else:else:if:acc CSTEPS_FROM {{.. == 2}}
+directive set /ball_update/core/core:rlp/main/else#24:else:else:and CSTEPS_FROM {{.. == 2}}
+directive set /ball_update/core/core:rlp/main/else#24:else:and#4 CSTEPS_FROM {{.. == 2}}
+directive set /ball_update/core/core:rlp/main/else#24:and CSTEPS_FROM {{.. == 2}}
+directive set /ball_update/core/core:rlp/main/mux1h#1 CSTEPS_FROM {{.. == 2}}
+directive set /ball_update/core/core:rlp/main/mux1h#2 CSTEPS_FROM {{.. == 2}}
+directive set /ball_update/core/core:rlp/main/and#8 CSTEPS_FROM {{.. == 2}}
+directive set /ball_update/core/core:rlp/main/acc#9 CSTEPS_FROM {{.. == 2}}

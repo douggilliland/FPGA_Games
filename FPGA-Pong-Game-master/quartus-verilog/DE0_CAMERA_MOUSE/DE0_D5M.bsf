@@ -1,0 +1,253 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 304 512)
+	(text "DE0_D5M" (rect 5 0 49 12)(font "Arial" ))
+	(text "inst" (rect 8 480 20 492)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "CLOCK_50" (rect 0 0 49 12)(font "Arial" ))
+		(text "CLOCK_50" (rect 21 27 70 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "KEY[2..0]" (rect 0 0 41 12)(font "Arial" ))
+		(text "KEY[2..0]" (rect 21 43 62 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "SW[9..0]" (rect 0 0 36 12)(font "Arial" ))
+		(text "SW[9..0]" (rect 21 59 57 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "GPIO_1_CLKIN[1..0]" (rect 0 0 86 12)(font "Arial" ))
+		(text "GPIO_1_CLKIN[1..0]" (rect 21 75 107 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 288 32)
+		(output)
+		(text "LEDG[9..0]" (rect 0 0 47 12)(font "Arial" ))
+		(text "LEDG[9..0]" (rect 220 27 267 39)(font "Arial" ))
+		(line (pt 288 32)(pt 272 32)(line_width 3))
+	)
+	(port
+		(pt 288 48)
+		(output)
+		(text "HEX0[6..0]" (rect 0 0 44 12)(font "Arial" ))
+		(text "HEX0[6..0]" (rect 223 43 267 55)(font "Arial" ))
+		(line (pt 288 48)(pt 272 48)(line_width 3))
+	)
+	(port
+		(pt 288 64)
+		(output)
+		(text "HEX1[6..0]" (rect 0 0 43 12)(font "Arial" ))
+		(text "HEX1[6..0]" (rect 224 59 267 71)(font "Arial" ))
+		(line (pt 288 64)(pt 272 64)(line_width 3))
+	)
+	(port
+		(pt 288 80)
+		(output)
+		(text "HEX2[6..0]" (rect 0 0 44 12)(font "Arial" ))
+		(text "HEX2[6..0]" (rect 223 75 267 87)(font "Arial" ))
+		(line (pt 288 80)(pt 272 80)(line_width 3))
+	)
+	(port
+		(pt 288 96)
+		(output)
+		(text "HEX3[6..0]" (rect 0 0 44 12)(font "Arial" ))
+		(text "HEX3[6..0]" (rect 223 91 267 103)(font "Arial" ))
+		(line (pt 288 96)(pt 272 96)(line_width 3))
+	)
+	(port
+		(pt 288 128)
+		(output)
+		(text "DRAM_ADDR[11..0]" (rect 0 0 90 12)(font "Arial" ))
+		(text "DRAM_ADDR[11..0]" (rect 177 123 267 135)(font "Arial" ))
+		(line (pt 288 128)(pt 272 128)(line_width 3))
+	)
+	(port
+		(pt 288 144)
+		(output)
+		(text "DRAM_LDQM" (rect 0 0 66 12)(font "Arial" ))
+		(text "DRAM_LDQM" (rect 201 139 267 151)(font "Arial" ))
+		(line (pt 288 144)(pt 272 144)(line_width 1))
+	)
+	(port
+		(pt 288 160)
+		(output)
+		(text "DRAM_UDQM" (rect 0 0 67 12)(font "Arial" ))
+		(text "DRAM_UDQM" (rect 200 155 267 167)(font "Arial" ))
+		(line (pt 288 160)(pt 272 160)(line_width 1))
+	)
+	(port
+		(pt 288 176)
+		(output)
+		(text "DRAM_WE_N" (rect 0 0 68 12)(font "Arial" ))
+		(text "DRAM_WE_N" (rect 199 171 267 183)(font "Arial" ))
+		(line (pt 288 176)(pt 272 176)(line_width 1))
+	)
+	(port
+		(pt 288 192)
+		(output)
+		(text "DRAM_CAS_N" (rect 0 0 71 12)(font "Arial" ))
+		(text "DRAM_CAS_N" (rect 196 187 267 199)(font "Arial" ))
+		(line (pt 288 192)(pt 272 192)(line_width 1))
+	)
+	(port
+		(pt 288 208)
+		(output)
+		(text "DRAM_RAS_N" (rect 0 0 73 12)(font "Arial" ))
+		(text "DRAM_RAS_N" (rect 194 203 267 215)(font "Arial" ))
+		(line (pt 288 208)(pt 272 208)(line_width 1))
+	)
+	(port
+		(pt 288 224)
+		(output)
+		(text "DRAM_CS_N" (rect 0 0 63 12)(font "Arial" ))
+		(text "DRAM_CS_N" (rect 204 219 267 231)(font "Arial" ))
+		(line (pt 288 224)(pt 272 224)(line_width 1))
+	)
+	(port
+		(pt 288 240)
+		(output)
+		(text "DRAM_BA_0" (rect 0 0 62 12)(font "Arial" ))
+		(text "DRAM_BA_0" (rect 205 235 267 247)(font "Arial" ))
+		(line (pt 288 240)(pt 272 240)(line_width 1))
+	)
+	(port
+		(pt 288 256)
+		(output)
+		(text "DRAM_BA_1" (rect 0 0 61 12)(font "Arial" ))
+		(text "DRAM_BA_1" (rect 206 251 267 263)(font "Arial" ))
+		(line (pt 288 256)(pt 272 256)(line_width 1))
+	)
+	(port
+		(pt 288 272)
+		(output)
+		(text "DRAM_CLK" (rect 0 0 57 12)(font "Arial" ))
+		(text "DRAM_CLK" (rect 210 267 267 279)(font "Arial" ))
+		(line (pt 288 272)(pt 272 272)(line_width 1))
+	)
+	(port
+		(pt 288 288)
+		(output)
+		(text "DRAM_CKE" (rect 0 0 59 12)(font "Arial" ))
+		(text "DRAM_CKE" (rect 208 283 267 295)(font "Arial" ))
+		(line (pt 288 288)(pt 272 288)(line_width 1))
+	)
+	(port
+		(pt 288 304)
+		(output)
+		(text "VGA_HS" (rect 0 0 42 12)(font "Arial" ))
+		(text "VGA_HS" (rect 225 299 267 311)(font "Arial" ))
+		(line (pt 288 304)(pt 272 304)(line_width 1))
+	)
+	(port
+		(pt 288 320)
+		(output)
+		(text "VGA_VS" (rect 0 0 43 12)(font "Arial" ))
+		(text "VGA_VS" (rect 224 315 267 327)(font "Arial" ))
+		(line (pt 288 320)(pt 272 320)(line_width 1))
+	)
+	(port
+		(pt 288 336)
+		(output)
+		(text "VGA_R[9..0]" (rect 0 0 57 12)(font "Arial" ))
+		(text "VGA_R[9..0]" (rect 210 331 267 343)(font "Arial" ))
+		(line (pt 288 336)(pt 272 336)(line_width 3))
+	)
+	(port
+		(pt 288 352)
+		(output)
+		(text "VGA_G[9..0]" (rect 0 0 56 12)(font "Arial" ))
+		(text "VGA_G[9..0]" (rect 211 347 267 359)(font "Arial" ))
+		(line (pt 288 352)(pt 272 352)(line_width 3))
+	)
+	(port
+		(pt 288 368)
+		(output)
+		(text "VGA_B[9..0]" (rect 0 0 55 12)(font "Arial" ))
+		(text "VGA_B[9..0]" (rect 212 363 267 375)(font "Arial" ))
+		(line (pt 288 368)(pt 272 368)(line_width 3))
+	)
+	(port
+		(pt 288 384)
+		(output)
+		(text "VGA_CLK" (rect 0 0 49 12)(font "Arial" ))
+		(text "VGA_CLK" (rect 218 379 267 391)(font "Arial" ))
+		(line (pt 288 384)(pt 272 384)(line_width 1))
+	)
+	(port
+		(pt 288 400)
+		(output)
+		(text "VGA_X[11..0]" (rect 0 0 57 12)(font "Arial" ))
+		(text "VGA_X[11..0]" (rect 210 395 267 407)(font "Arial" ))
+		(line (pt 288 400)(pt 272 400)(line_width 3))
+	)
+	(port
+		(pt 288 416)
+		(output)
+		(text "VGA_Y[11..0]" (rect 0 0 59 12)(font "Arial" ))
+		(text "VGA_Y[11..0]" (rect 208 411 267 423)(font "Arial" ))
+		(line (pt 288 416)(pt 272 416)(line_width 3))
+	)
+	(port
+		(pt 288 432)
+		(output)
+		(text "VGA_ACTIVE" (rect 0 0 68 12)(font "Arial" ))
+		(text "VGA_ACTIVE" (rect 199 427 267 439)(font "Arial" ))
+		(line (pt 288 432)(pt 272 432)(line_width 1))
+	)
+	(port
+		(pt 288 448)
+		(output)
+		(text "GPIO_1_CLKOUT[1..0]" (rect 0 0 96 12)(font "Arial" ))
+		(text "GPIO_1_CLKOUT[1..0]" (rect 171 443 267 455)(font "Arial" ))
+		(line (pt 288 448)(pt 272 448)(line_width 3))
+	)
+	(port
+		(pt 288 112)
+		(bidir)
+		(text "DRAM_DQ[15..0]" (rect 0 0 75 12)(font "Arial" ))
+		(text "DRAM_DQ[15..0]" (rect 192 107 267 119)(font "Arial" ))
+		(line (pt 288 112)(pt 272 112)(line_width 3))
+	)
+	(port
+		(pt 288 464)
+		(bidir)
+		(text "GPIO_1[31..0]" (rect 0 0 55 12)(font "Arial" ))
+		(text "GPIO_1[31..0]" (rect 212 459 267 471)(font "Arial" ))
+		(line (pt 288 464)(pt 272 464)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 272 480)(line_width 1))
+	)
+)
