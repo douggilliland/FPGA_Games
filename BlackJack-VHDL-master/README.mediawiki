@@ -4,3 +4,4 @@ Implementation of BlackJack game using VHDL to be used on FPGA
 asmpractica3.pptx --> Contains the asm diagram and data-routes
 
 
+From https://github.com/AlexHikari/BlackJack-VHDL
