@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon Apr 16 06:43:58 2018
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : tetris
+Top-level Entity Name : DE2_115_TOP
+Family : Cyclone IV E
+Total logic elements : 121
+    Total combinational functions : 72
+    Dedicated logic registers : 75
+Total registers : 75
+Total pins : 207
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1
