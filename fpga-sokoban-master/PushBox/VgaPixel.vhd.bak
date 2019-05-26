@@ -1,0 +1,24 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity VgaPixel is
+	port (
+		-- Sinais de VGA
+		reset       : in  std_logic;
+		clock       : in  std_logic;
+		disp_enable : in  std_logic;
+		row         : in  std_logic_vector(9 downto 0);
+		column      : in  std_logic_vector(10 downto 0);
+		r_out       : out std_logic_vector(3 downto 0);
+		g_out       : out std_logic_vector(3 downto 0);
+		b_out       : out std_logic_vector(3 downto 0);
+		
+		-- Sinais para ler o tabuleiro
+		map_pos_value : in  std_logic_vector(2 downto 0);
+		map_x_pos     : out std_logic_vector(3 downto 0);
+		map_y_pos     : out std_logic_vector(3 downto 0)
+	);
+end entity;
+

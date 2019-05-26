@@ -1,0 +1,139 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 272 192)
+	(text "VgaPixel" (rect 5 0 40 12)(font "Arial" ))
+	(text "inst" (rect 8 160 20 172)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "reset" (rect 0 0 20 12)(font "Arial" ))
+		(text "reset" (rect 21 27 41 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "clock" (rect 0 0 20 12)(font "Arial" ))
+		(text "clock" (rect 21 43 41 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "disp_enable" (rect 0 0 46 12)(font "Arial" ))
+		(text "disp_enable" (rect 21 59 67 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 1))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "row[9..0]" (rect 0 0 34 12)(font "Arial" ))
+		(text "row[9..0]" (rect 21 75 55 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "column[10..0]" (rect 0 0 51 12)(font "Arial" ))
+		(text "column[10..0]" (rect 21 91 72 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "map_victory" (rect 0 0 51 12)(font "Arial" ))
+		(text "map_victory" (rect 21 107 72 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 1))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "map_pos_value[2..0]" (rect 0 0 84 12)(font "Arial" ))
+		(text "map_pos_value[2..0]" (rect 21 123 105 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 3))
+	)
+	(port
+		(pt 256 32)
+		(output)
+		(text "r_out[3..0]" (rect 0 0 41 12)(font "Arial" ))
+		(text "r_out[3..0]" (rect 194 27 235 39)(font "Arial" ))
+		(line (pt 256 32)(pt 240 32)(line_width 3))
+	)
+	(port
+		(pt 256 48)
+		(output)
+		(text "g_out[3..0]" (rect 0 0 42 12)(font "Arial" ))
+		(text "g_out[3..0]" (rect 193 43 235 55)(font "Arial" ))
+		(line (pt 256 48)(pt 240 48)(line_width 3))
+	)
+	(port
+		(pt 256 64)
+		(output)
+		(text "b_out[3..0]" (rect 0 0 42 12)(font "Arial" ))
+		(text "b_out[3..0]" (rect 193 59 235 71)(font "Arial" ))
+		(line (pt 256 64)(pt 240 64)(line_width 3))
+	)
+	(port
+		(pt 256 80)
+		(output)
+		(text "map_x_pos[3..0]" (rect 0 0 68 12)(font "Arial" ))
+		(text "map_x_pos[3..0]" (rect 167 75 235 87)(font "Arial" ))
+		(line (pt 256 80)(pt 240 80)(line_width 3))
+	)
+	(port
+		(pt 256 96)
+		(output)
+		(text "map_y_pos[3..0]" (rect 0 0 69 12)(font "Arial" ))
+		(text "map_y_pos[3..0]" (rect 166 91 235 103)(font "Arial" ))
+		(line (pt 256 96)(pt 240 96)(line_width 3))
+	)
+	(parameter
+		"MAP_START_COL"
+		"144"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"MAP_END_COL"
+		"656"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"MAP_START_ROW"
+		"44"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"MAP_END_ROW"
+		"556"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"MAP_SQUARESIZE_BITS"
+		"5"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 240 160)(line_width 1))
+	)
+	(annotation_block (parameter)(rect 272 -64 372 16))
+)

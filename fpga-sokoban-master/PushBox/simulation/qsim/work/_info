@@ -1,0 +1,45 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\altera\projects\PushBox\simulation\qsim
+vPushBox
+Z1 IcUf:IYBY54eJ4An;cjMjm1
+Z2 VVQ;gG2>4:Hafi8mHCdngU0
+Z3 dD:\altera\projects\PushBox\simulation\qsim
+Z4 w1530219235
+Z5 8PushBox.vo
+Z6 FPushBox.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+Z9 n@push@box
+!i10b 1
+Z10 !s100 z9GR_k]B2o27:G>>=CQAR3
+!s85 0
+Z11 !s108 1530219238.339000
+Z12 !s107 PushBox.vo|
+Z13 !s90 -work|work|PushBox.vo|
+!s101 -O0
+vPushBox_vlg_vec_tst
+!i10b 1
+!s100 `U=c69Un?nGBHRPn`ER^c0
+IBl<[7BI?U_8_ohb;Qz2e[0
+V=he=@nDXneGNY;nMUL7DZ2
+R3
+w1530219232
+8PushBox.vt
+FPushBox.vt
+L0 29
+R7
+r1
+!s85 0
+31
+!s108 1530219241.235000
+!s107 PushBox.vt|
+!s90 -work|work|PushBox.vt|
+!s101 -O0
+R8
+n@push@box_vlg_vec_tst

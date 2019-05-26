@@ -1,0 +1,25 @@
+﻿Jogo PushBox/Sokoban
+https://www.youtube.com/watch?v=dzlGmq_ef9U
+
+O tabuleiro pode ser relativamente grande, 16x16 por exemplo.
+Podemos fazer níveis menores "enclausurados" por paredes "void".
+
+Cada posição pode conter:
+	a) Nada (vazia)
+	b) Parede
+	c) Jogador
+	d) Caixa
+
+Deve haver um bit que sinaliza se a posição é um objetivo.
+Portanto, podemos descrever uma posição com três bits.
+
+O jogador pode andar nas quatro direções cardinais, utilizando os botões.
+
+O jogador somente pode fazer uma ação de movimento se ela o levar a uma
+posição vazia, ou se a posição tiver uma caixa e esta puder ser empurrada
+na direção do movimento.
+
+O jogador pode utilizar uma das chaves para reiniciar o nível.
+
+O jogador pode ir para o próximo nível por meio de uma das chaves, se a
+condição de vitória do nível atual tiver sido estabelecida.

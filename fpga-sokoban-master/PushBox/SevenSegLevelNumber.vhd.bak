@@ -1,0 +1,48 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use work.PushBoxLevels.all;
+
+-- Assumimos que o número de níveis nunca chegará a 100 ou mais.
+-- Se precisar de mais um display de sete segmentos, essa entidade
+-- precisará ser atualizada.
+
+entity SevenSegLevelNumber is
+	cur_level   : in integer range 0 to level_count-1;
+	seven_seg_1 : out unsigned(6 downto 0);
+	seven_seg_1 : out unsigned(6 downto 0);
+end entity;
+
+architecture archSevenSegLevelNumber of SevenSegLevelNumber is
+	signal u_cur_level : unsigned(7 downto 0);
+	signal digit_1 : unsigned(3 downto 0);
+	signal digit_1 : unsigned(3 downto 0);
+begin
+	digit_1 <= unsigned(to_unsigned(cur_level, 8) mod 10)(3 downto 0);
+	digit_1 <= unsigned(to_unsigned(cur_level, 8) / 10)  (3 downto 0);
+	
+	seven_seg_1 <= "0000001" when digit_1 = "1111" else
+	               "1001111" when digit_1 = "1110" else
+	               "0010010" when digit_1 = "1101" else
+	               "0000110" when digit_1 = "1100" else
+	               "1001100" when digit_1 = "1011" else
+	               "0100100" when digit_1 = "1010" else
+	               "0100000" when digit_1 = "1001" else
+	               "0001111" when digit_1 = "1000" else
+	               "0000000" when digit_1 = "0111" else
+	               "0001100" when digit_1 = "0110" else
+	               "1111111";
+	
+	seven_seg_1 <= "0000001" when digit_1 = "1111" else
+	               "1001111" when digit_1 = "1110" else
+	               "0010010" when digit_1 = "1101" else
+	               "0000110" when digit_1 = "1100" else
+	               "1001100" when digit_1 = "1011" else
+	               "0100100" when digit_1 = "1010" else
+	               "0100000" when digit_1 = "1001" else
+	               "0001111" when digit_1 = "1000" else
+	               "0000000" when digit_1 = "0111" else
+	               "0001100" when digit_1 = "0110" else
+	               "1111111";
+	
+end architecture;

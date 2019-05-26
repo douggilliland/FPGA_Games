@@ -1,0 +1,1299 @@
+TimeQuest Timing Analyzer report for PushBox
+Thu Jun 28 18:50:00 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'CLOCK_50'
+ 12. Slow Model Hold: 'CLOCK_50'
+ 13. Slow Model Minimum Pulse Width: 'CLOCK_50'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'CLOCK_50'
+ 24. Fast Model Hold: 'CLOCK_50'
+ 25. Fast Model Minimum Pulse Width: 'CLOCK_50'
+ 26. Setup Times
+ 27. Hold Times
+ 28. Clock to Output Times
+ 29. Minimum Clock to Output Times
+ 30. Multicorner Timing Analysis Summary
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; PushBox                                                           ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C20F484C7                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                               ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets      ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+; CLOCK_50   ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLOCK_50 } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+
+
++-------------------------------------------------+
+; Slow Model Fmax Summary                         ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 59.72 MHz ; 59.72 MHz       ; CLOCK_50   ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow Model Setup Summary           ;
++----------+---------+---------------+
+; Clock    ; Slack   ; End Point TNS ;
++----------+---------+---------------+
+; CLOCK_50 ; -15.744 ; -8714.713     ;
++----------+---------+---------------+
+
+
++----------------------------------+
+; Slow Model Hold Summary          ;
++----------+-------+---------------+
+; Clock    ; Slack ; End Point TNS ;
++----------+-------+---------------+
+; CLOCK_50 ; 0.445 ; 0.000         ;
++----------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++----------+--------+--------------------+
+; Clock    ; Slack  ; End Point TNS      ;
++----------+--------+--------------------+
+; CLOCK_50 ; -1.631 ; -984.119           ;
++----------+--------+--------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'CLOCK_50'                                                                                                                                      ;
++---------+-----------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node                               ; To Node                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+-----------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+; -15.744 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[13][10][1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.006     ; 16.776     ;
+; -15.743 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[13][10][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.006     ; 16.775     ;
+; -15.673 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[1][9][1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.025     ; 16.686     ;
+; -15.673 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[1][9][0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.025     ; 16.686     ;
+; -15.531 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[12][14][1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 16.569     ;
+; -15.531 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[12][14][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 16.569     ;
+; -15.516 ; PushBoxMap:inst12|map_matrix[0][12][0]  ; PushBoxMap:inst12|map_matrix[13][10][1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.003     ; 16.551     ;
+; -15.515 ; PushBoxMap:inst12|map_matrix[0][12][0]  ; PushBoxMap:inst12|map_matrix[13][10][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.003     ; 16.550     ;
+; -15.492 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[14][11][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.025     ; 16.505     ;
+; -15.491 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[9][3][0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.004     ; 16.525     ;
+; -15.490 ; PushBoxMap:inst12|map_matrix[8][14][1]  ; PushBoxMap:inst12|map_matrix[13][7][1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.009      ; 16.537     ;
+; -15.490 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[4][11][1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.004      ; 16.532     ;
+; -15.489 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[14][11][1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.025     ; 16.502     ;
+; -15.488 ; PushBoxMap:inst12|map_matrix[8][14][1]  ; PushBoxMap:inst12|map_matrix[13][7][0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.009      ; 16.535     ;
+; -15.486 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[0][5][1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.014     ; 16.510     ;
+; -15.486 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[0][5][0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.014     ; 16.510     ;
+; -15.468 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[2][15][1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.011     ; 16.495     ;
+; -15.468 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[2][15][0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.011     ; 16.495     ;
+; -15.466 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[7][1][1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.004      ; 16.508     ;
+; -15.466 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[7][1][0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.004      ; 16.508     ;
+; -15.445 ; PushBoxMap:inst12|map_matrix[0][12][0]  ; PushBoxMap:inst12|map_matrix[1][9][1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.022     ; 16.461     ;
+; -15.445 ; PushBoxMap:inst12|map_matrix[0][12][0]  ; PushBoxMap:inst12|map_matrix[1][9][0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.022     ; 16.461     ;
+; -15.443 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[15][13][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.020     ; 16.461     ;
+; -15.441 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[2][4][1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.014     ; 16.465     ;
+; -15.441 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[2][4][0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.014     ; 16.465     ;
+; -15.439 ; PushBoxMap:inst12|map_matrix[0][5][1]   ; PushBoxMap:inst12|map_matrix[2][15][1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.003      ; 16.480     ;
+; -15.439 ; PushBoxMap:inst12|map_matrix[0][5][1]   ; PushBoxMap:inst12|map_matrix[2][15][0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.003      ; 16.480     ;
+; -15.436 ; PushBoxMap:inst12|map_matrix[0][0][0]   ; PushBoxMap:inst12|map_matrix[13][10][1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.017     ; 16.457     ;
+; -15.435 ; PushBoxMap:inst12|map_matrix[0][0][0]   ; PushBoxMap:inst12|map_matrix[13][10][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.017     ; 16.456     ;
+; -15.434 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[15][11][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.010     ; 16.462     ;
+; -15.428 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[0][11][1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.012     ; 16.454     ;
+; -15.428 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[0][11][0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.012     ; 16.454     ;
+; -15.424 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[15][11][1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.010     ; 16.452     ;
+; -15.424 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[1][2][1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 16.464     ;
+; -15.424 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[1][2][0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 16.464     ;
+; -15.421 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[11][1][0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.005     ; 16.454     ;
+; -15.420 ; PushBoxMap:inst12|map_matrix[0][5][1]   ; PushBoxMap:inst12|map_matrix[15][13][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.006     ; 16.452     ;
+; -15.419 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[11][1][1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.005     ; 16.452     ;
+; -15.406 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[2][13][0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 16.445     ;
+; -15.403 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[13][7][1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.006     ; 16.435     ;
+; -15.402 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[14][13][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.009      ; 16.449     ;
+; -15.402 ; PushBoxMap:inst12|map_matrix[11][11][0] ; PushBoxMap:inst12|map_matrix[13][7][1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 16.439     ;
+; -15.401 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[13][7][0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.006     ; 16.433     ;
+; -15.400 ; PushBoxMap:inst12|map_matrix[11][11][0] ; PushBoxMap:inst12|map_matrix[13][7][0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 16.437     ;
+; -15.396 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[6][13][1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.006      ; 16.440     ;
+; -15.396 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[6][13][0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.006      ; 16.440     ;
+; -15.394 ; PushBoxMap:inst12|map_matrix[8][14][1]  ; PushBoxMap:inst12|map_matrix[14][11][1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.010     ; 16.422     ;
+; -15.392 ; PushBoxMap:inst12|map_matrix[8][14][1]  ; PushBoxMap:inst12|map_matrix[14][11][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.010     ; 16.420     ;
+; -15.392 ; PushBoxMap:inst12|map_matrix[12][14][0] ; PushBoxMap:inst12|map_matrix[13][7][1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.006     ; 16.424     ;
+; -15.390 ; PushBoxMap:inst12|map_matrix[12][14][0] ; PushBoxMap:inst12|map_matrix[13][7][0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.006     ; 16.422     ;
+; -15.387 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[13][11][1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.016     ; 16.409     ;
+; -15.387 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[13][11][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.016     ; 16.409     ;
+; -15.383 ; PushBoxMap:inst12|map_matrix[0][5][1]   ; PushBoxMap:inst12|map_matrix[2][13][0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.015      ; 16.436     ;
+; -15.379 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[1][5][0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.008     ; 16.409     ;
+; -15.379 ; PushBoxMap:inst12|map_matrix[5][11][0]  ; PushBoxMap:inst12|map_matrix[1][9][1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.019     ; 16.398     ;
+; -15.379 ; PushBoxMap:inst12|map_matrix[5][11][0]  ; PushBoxMap:inst12|map_matrix[1][9][0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.019     ; 16.398     ;
+; -15.379 ; PushBoxMap:inst12|map_matrix[0][5][1]   ; PushBoxMap:inst12|map_matrix[14][13][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.023      ; 16.440     ;
+; -15.375 ; PushBoxMap:inst12|map_matrix[2][6][1]   ; PushBoxMap:inst12|map_matrix[2][15][1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.010     ; 16.403     ;
+; -15.375 ; PushBoxMap:inst12|map_matrix[2][6][1]   ; PushBoxMap:inst12|map_matrix[2][15][0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.010     ; 16.403     ;
+; -15.373 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[13][14][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.019     ; 16.392     ;
+; -15.371 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[5][1][1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.003      ; 16.412     ;
+; -15.371 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[5][1][0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.003      ; 16.412     ;
+; -15.371 ; PushBoxMap:inst12|map_matrix[3][2][1]   ; PushBoxMap:inst12|map_matrix[13][10][1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.012      ; 16.421     ;
+; -15.370 ; PushBoxMap:inst12|map_matrix[3][2][1]   ; PushBoxMap:inst12|map_matrix[13][10][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.012      ; 16.420     ;
+; -15.365 ; PushBoxMap:inst12|map_matrix[0][0][0]   ; PushBoxMap:inst12|map_matrix[1][9][1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.036     ; 16.367     ;
+; -15.365 ; PushBoxMap:inst12|map_matrix[0][0][0]   ; PushBoxMap:inst12|map_matrix[1][9][0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.036     ; 16.367     ;
+; -15.357 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[12][12][1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.002     ; 16.393     ;
+; -15.357 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[1][4][0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.013     ; 16.382     ;
+; -15.357 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[12][12][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.002     ; 16.393     ;
+; -15.356 ; PushBoxMap:inst12|map_matrix[2][6][1]   ; PushBoxMap:inst12|map_matrix[15][13][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.019     ; 16.375     ;
+; -15.356 ; PushBoxMap:inst12|map_matrix[0][5][1]   ; PushBoxMap:inst12|map_matrix[1][5][0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.006      ; 16.400     ;
+; -15.354 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[1][4][1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.013     ; 16.379     ;
+; -15.351 ; PushBoxMap:inst12|map_matrix[3][2][1]   ; PushBoxMap:inst12|map_matrix[1][4][0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.005      ; 16.394     ;
+; -15.350 ; PushBoxMap:inst12|map_matrix[0][5][1]   ; PushBoxMap:inst12|map_matrix[0][5][0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 16.388     ;
+; -15.348 ; PushBoxMap:inst12|map_matrix[3][2][1]   ; PushBoxMap:inst12|map_matrix[1][4][1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.005      ; 16.391     ;
+; -15.345 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[15][12][1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.005      ; 16.388     ;
+; -15.345 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[15][12][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.005      ; 16.388     ;
+; -15.342 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[8][6][1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.003      ; 16.383     ;
+; -15.338 ; PushBoxMap:inst12|map_matrix[5][8][0]   ; PushBoxMap:inst12|map_matrix[1][9][1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.023     ; 16.353     ;
+; -15.338 ; PushBoxMap:inst12|map_matrix[5][8][0]   ; PushBoxMap:inst12|map_matrix[1][9][0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.023     ; 16.353     ;
+; -15.326 ; PushBoxMap:inst12|map_matrix[7][4][0]   ; PushBoxMap:inst12|map_matrix[1][9][1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.017     ; 16.347     ;
+; -15.326 ; PushBoxMap:inst12|map_matrix[7][4][0]   ; PushBoxMap:inst12|map_matrix[1][9][0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.017     ; 16.347     ;
+; -15.323 ; PushBoxMap:inst12|map_matrix[12][2][0]  ; PushBoxMap:inst12|map_matrix[1][9][1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.032     ; 16.329     ;
+; -15.323 ; PushBoxMap:inst12|map_matrix[12][2][0]  ; PushBoxMap:inst12|map_matrix[1][9][0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.032     ; 16.329     ;
+; -15.322 ; PushBoxMap:inst12|map_matrix[8][14][1]  ; PushBoxMap:inst12|map_matrix[4][0][1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.010      ; 16.370     ;
+; -15.322 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[5][6][0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.006      ; 16.366     ;
+; -15.322 ; PushBoxMap:inst12|map_matrix[0][5][1]   ; PushBoxMap:inst12|map_matrix[15][12][1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.019      ; 16.379     ;
+; -15.322 ; PushBoxMap:inst12|map_matrix[0][5][1]   ; PushBoxMap:inst12|map_matrix[15][12][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.019      ; 16.379     ;
+; -15.319 ; PushBoxMap:inst12|map_matrix[8][14][1]  ; PushBoxMap:inst12|map_matrix[4][0][0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.010      ; 16.367     ;
+; -15.319 ; PushBoxMap:inst12|map_matrix[2][6][1]   ; PushBoxMap:inst12|map_matrix[2][13][0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 16.359     ;
+; -15.316 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[6][11][0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.008      ; 16.362     ;
+; -15.315 ; PushBoxMap:inst12|map_matrix[2][6][1]   ; PushBoxMap:inst12|map_matrix[14][13][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.010      ; 16.363     ;
+; -15.312 ; PushBoxMap:inst12|map_matrix[0][1][1]   ; PushBoxMap:inst12|map_matrix[2][15][1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.013     ; 16.337     ;
+; -15.312 ; PushBoxMap:inst12|map_matrix[0][1][1]   ; PushBoxMap:inst12|map_matrix[2][15][0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.013     ; 16.337     ;
+; -15.311 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[3][5][1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.012     ; 16.337     ;
+; -15.311 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[3][5][0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.012     ; 16.337     ;
+; -15.306 ; PushBoxMap:inst12|map_matrix[11][11][0] ; PushBoxMap:inst12|map_matrix[14][11][1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.020     ; 16.324     ;
+; -15.304 ; PushBoxMap:inst12|map_matrix[11][11][0] ; PushBoxMap:inst12|map_matrix[14][11][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.020     ; 16.322     ;
+; -15.303 ; PushBoxMap:inst12|map_matrix[0][12][0]  ; PushBoxMap:inst12|map_matrix[12][14][1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.003      ; 16.344     ;
+; -15.303 ; PushBoxMap:inst12|map_matrix[0][12][0]  ; PushBoxMap:inst12|map_matrix[12][14][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.003      ; 16.344     ;
++---------+-----------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'CLOCK_50'                                                                                                                   ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.445 ; Rebounce:inst7|counter_out[0]  ; Rebounce:inst7|counter_out[0]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst7|counter_out[1]  ; Rebounce:inst7|counter_out[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst7|counter_out[2]  ; Rebounce:inst7|counter_out[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst7|counter_out[3]  ; Rebounce:inst7|counter_out[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst7|counter_out[4]  ; Rebounce:inst7|counter_out[4]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst7|counter_out[5]  ; Rebounce:inst7|counter_out[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst7|counter_out[6]  ; Rebounce:inst7|counter_out[6]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst7|counter_out[7]  ; Rebounce:inst7|counter_out[7]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst7|counter_out[8]  ; Rebounce:inst7|counter_out[8]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst7|counter_out[9]  ; Rebounce:inst7|counter_out[9]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst7|counter_out[10] ; Rebounce:inst7|counter_out[10] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst7|counter_out[11] ; Rebounce:inst7|counter_out[11] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst7|counter_out[12] ; Rebounce:inst7|counter_out[12] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst7|counter_out[13] ; Rebounce:inst7|counter_out[13] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst7|counter_out[14] ; Rebounce:inst7|counter_out[14] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst7|counter_out[15] ; Rebounce:inst7|counter_out[15] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst7|counter_out[16] ; Rebounce:inst7|counter_out[16] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst7|counter_out[17] ; Rebounce:inst7|counter_out[17] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst7|counter_out[18] ; Rebounce:inst7|counter_out[18] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst7|counter_out[19] ; Rebounce:inst7|counter_out[19] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst7|counter_out[20] ; Rebounce:inst7|counter_out[20] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst7|result          ; Rebounce:inst7|result          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst3|counter_out[0]  ; Rebounce:inst3|counter_out[0]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst3|counter_out[1]  ; Rebounce:inst3|counter_out[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst3|counter_out[2]  ; Rebounce:inst3|counter_out[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst3|counter_out[3]  ; Rebounce:inst3|counter_out[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst3|counter_out[4]  ; Rebounce:inst3|counter_out[4]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst3|counter_out[5]  ; Rebounce:inst3|counter_out[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst3|counter_out[6]  ; Rebounce:inst3|counter_out[6]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst3|counter_out[7]  ; Rebounce:inst3|counter_out[7]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst3|counter_out[8]  ; Rebounce:inst3|counter_out[8]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst3|counter_out[9]  ; Rebounce:inst3|counter_out[9]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst3|counter_out[10] ; Rebounce:inst3|counter_out[10] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst3|counter_out[11] ; Rebounce:inst3|counter_out[11] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst3|counter_out[12] ; Rebounce:inst3|counter_out[12] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst3|counter_out[13] ; Rebounce:inst3|counter_out[13] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst3|counter_out[14] ; Rebounce:inst3|counter_out[14] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst3|counter_out[15] ; Rebounce:inst3|counter_out[15] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst3|counter_out[16] ; Rebounce:inst3|counter_out[16] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst3|counter_out[17] ; Rebounce:inst3|counter_out[17] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst3|counter_out[18] ; Rebounce:inst3|counter_out[18] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst3|counter_out[19] ; Rebounce:inst3|counter_out[19] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst3|counter_out[20] ; Rebounce:inst3|counter_out[20] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst3|counter_out[21] ; Rebounce:inst3|counter_out[21] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst3|result          ; Rebounce:inst3|result          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst6|counter_out[0]  ; Rebounce:inst6|counter_out[0]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst6|counter_out[1]  ; Rebounce:inst6|counter_out[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst6|counter_out[2]  ; Rebounce:inst6|counter_out[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst6|counter_out[3]  ; Rebounce:inst6|counter_out[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst6|counter_out[4]  ; Rebounce:inst6|counter_out[4]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst6|counter_out[5]  ; Rebounce:inst6|counter_out[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst6|counter_out[6]  ; Rebounce:inst6|counter_out[6]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst6|counter_out[7]  ; Rebounce:inst6|counter_out[7]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst6|counter_out[8]  ; Rebounce:inst6|counter_out[8]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst6|counter_out[9]  ; Rebounce:inst6|counter_out[9]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst6|counter_out[10] ; Rebounce:inst6|counter_out[10] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst6|counter_out[11] ; Rebounce:inst6|counter_out[11] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst6|counter_out[12] ; Rebounce:inst6|counter_out[12] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst6|counter_out[13] ; Rebounce:inst6|counter_out[13] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst6|counter_out[14] ; Rebounce:inst6|counter_out[14] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst6|counter_out[15] ; Rebounce:inst6|counter_out[15] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst6|counter_out[16] ; Rebounce:inst6|counter_out[16] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst6|counter_out[17] ; Rebounce:inst6|counter_out[17] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst6|counter_out[18] ; Rebounce:inst6|counter_out[18] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst6|counter_out[19] ; Rebounce:inst6|counter_out[19] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst6|counter_out[20] ; Rebounce:inst6|counter_out[20] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst6|counter_out[21] ; Rebounce:inst6|counter_out[21] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst6|result          ; Rebounce:inst6|result          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst5|counter_out[0]  ; Rebounce:inst5|counter_out[0]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst5|counter_out[1]  ; Rebounce:inst5|counter_out[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst5|counter_out[2]  ; Rebounce:inst5|counter_out[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst5|counter_out[3]  ; Rebounce:inst5|counter_out[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst5|counter_out[4]  ; Rebounce:inst5|counter_out[4]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst5|counter_out[5]  ; Rebounce:inst5|counter_out[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst5|counter_out[6]  ; Rebounce:inst5|counter_out[6]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst5|counter_out[7]  ; Rebounce:inst5|counter_out[7]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst5|counter_out[8]  ; Rebounce:inst5|counter_out[8]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst5|counter_out[9]  ; Rebounce:inst5|counter_out[9]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst5|counter_out[10] ; Rebounce:inst5|counter_out[10] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst5|counter_out[11] ; Rebounce:inst5|counter_out[11] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst5|counter_out[12] ; Rebounce:inst5|counter_out[12] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst5|counter_out[13] ; Rebounce:inst5|counter_out[13] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst5|counter_out[14] ; Rebounce:inst5|counter_out[14] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst5|counter_out[15] ; Rebounce:inst5|counter_out[15] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst5|counter_out[16] ; Rebounce:inst5|counter_out[16] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst5|counter_out[17] ; Rebounce:inst5|counter_out[17] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst5|counter_out[18] ; Rebounce:inst5|counter_out[18] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst5|counter_out[19] ; Rebounce:inst5|counter_out[19] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst5|counter_out[20] ; Rebounce:inst5|counter_out[20] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst5|counter_out[21] ; Rebounce:inst5|counter_out[21] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst5|result          ; Rebounce:inst5|result          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst4|counter_out[0]  ; Rebounce:inst4|counter_out[0]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst4|counter_out[1]  ; Rebounce:inst4|counter_out[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst4|counter_out[2]  ; Rebounce:inst4|counter_out[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst4|counter_out[3]  ; Rebounce:inst4|counter_out[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst4|counter_out[4]  ; Rebounce:inst4|counter_out[4]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst4|counter_out[5]  ; Rebounce:inst4|counter_out[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst4|counter_out[6]  ; Rebounce:inst4|counter_out[6]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst4|counter_out[7]  ; Rebounce:inst4|counter_out[7]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Rebounce:inst4|counter_out[8]  ; Rebounce:inst4|counter_out[8]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'CLOCK_50'                                                                                  ;
++--------+--------------+----------------+------------------+----------+------------+-----------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                                  ;
++--------+--------------+----------------+------------------+----------+------------+-----------------------------------------+
+; -1.631 ; 1.000        ; 2.631          ; Port Rate        ; CLOCK_50 ; Rise       ; CLOCK_50                                ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][0][0]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][0][0]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][0][1]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][0][1]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][10][0]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][10][0]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][10][1]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][10][1]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][11][0]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][11][0]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][11][1]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][11][1]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][12][0]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][12][0]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][12][1]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][12][1]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][13][0]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][13][0]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][13][1]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][13][1]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][14][0]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][14][0]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][14][1]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][14][1]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][15][0]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][15][0]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][15][1]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][15][1]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][1][0]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][1][0]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][1][1]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][1][1]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][2][0]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][2][0]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][2][1]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][2][1]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][3][0]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][3][0]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][3][1]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][3][1]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][4][0]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][4][0]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][4][1]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][4][1]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][5][0]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][5][0]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][5][1]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][5][1]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][6][0]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][6][0]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][6][1]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][6][1]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][7][0]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][7][0]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][7][1]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][7][1]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][8][0]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][8][0]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][8][1]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][8][1]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][9][0]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][9][0]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][9][1]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][9][1]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][0][0]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][0][0]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][0][1]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][0][1]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][10][0] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][10][0] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][10][1] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][10][1] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][10][2] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][10][2] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][11][0] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][11][0] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][11][1] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][11][1] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][11][2] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][11][2] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][12][0] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][12][0] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][12][1] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][12][1] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][12][2] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][12][2] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][13][0] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][13][0] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][13][1] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][13][1] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][14][0] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][14][0] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][14][1] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][14][1] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][15][0] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][15][0] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][15][1] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][15][1] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][1][0]  ;
++--------+--------------+----------------+------------------+----------+------------+-----------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; KEY[*]    ; CLOCK_50   ; 6.998 ; 6.998 ; Rise       ; CLOCK_50        ;
+;  KEY[0]   ; CLOCK_50   ; 3.452 ; 3.452 ; Rise       ; CLOCK_50        ;
+;  KEY[1]   ; CLOCK_50   ; 6.998 ; 6.998 ; Rise       ; CLOCK_50        ;
+;  KEY[2]   ; CLOCK_50   ; 5.486 ; 5.486 ; Rise       ; CLOCK_50        ;
+;  KEY[3]   ; CLOCK_50   ; 4.921 ; 4.921 ; Rise       ; CLOCK_50        ;
+; SW[*]     ; CLOCK_50   ; 2.499 ; 2.499 ; Rise       ; CLOCK_50        ;
+;  SW[1]    ; CLOCK_50   ; 1.749 ; 1.749 ; Rise       ; CLOCK_50        ;
+;  SW[2]    ; CLOCK_50   ; 2.499 ; 2.499 ; Rise       ; CLOCK_50        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; KEY[*]    ; CLOCK_50   ; -3.204 ; -3.204 ; Rise       ; CLOCK_50        ;
+;  KEY[0]   ; CLOCK_50   ; -3.204 ; -3.204 ; Rise       ; CLOCK_50        ;
+;  KEY[1]   ; CLOCK_50   ; -6.750 ; -6.750 ; Rise       ; CLOCK_50        ;
+;  KEY[2]   ; CLOCK_50   ; -5.238 ; -5.238 ; Rise       ; CLOCK_50        ;
+;  KEY[3]   ; CLOCK_50   ; -4.673 ; -4.673 ; Rise       ; CLOCK_50        ;
+; SW[*]     ; CLOCK_50   ; -1.501 ; -1.501 ; Rise       ; CLOCK_50        ;
+;  SW[1]    ; CLOCK_50   ; -1.501 ; -1.501 ; Rise       ; CLOCK_50        ;
+;  SW[2]    ; CLOCK_50   ; -2.251 ; -2.251 ; Rise       ; CLOCK_50        ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; HEX0[*]   ; CLOCK_50   ; 21.197 ; 21.197 ; Rise       ; CLOCK_50        ;
+;  HEX0[0]  ; CLOCK_50   ; 21.197 ; 21.197 ; Rise       ; CLOCK_50        ;
+;  HEX0[1]  ; CLOCK_50   ; 20.744 ; 20.744 ; Rise       ; CLOCK_50        ;
+;  HEX0[2]  ; CLOCK_50   ; 21.104 ; 21.104 ; Rise       ; CLOCK_50        ;
+;  HEX0[3]  ; CLOCK_50   ; 20.975 ; 20.975 ; Rise       ; CLOCK_50        ;
+;  HEX0[4]  ; CLOCK_50   ; 20.809 ; 20.809 ; Rise       ; CLOCK_50        ;
+;  HEX0[5]  ; CLOCK_50   ; 20.817 ; 20.817 ; Rise       ; CLOCK_50        ;
+;  HEX0[6]  ; CLOCK_50   ; 20.816 ; 20.816 ; Rise       ; CLOCK_50        ;
+; HEX1[*]   ; CLOCK_50   ; 18.081 ; 18.081 ; Rise       ; CLOCK_50        ;
+;  HEX1[0]  ; CLOCK_50   ; 11.529 ; 11.529 ; Rise       ; CLOCK_50        ;
+;  HEX1[3]  ; CLOCK_50   ; 11.514 ; 11.514 ; Rise       ; CLOCK_50        ;
+;  HEX1[4]  ; CLOCK_50   ; 11.524 ; 11.524 ; Rise       ; CLOCK_50        ;
+;  HEX1[5]  ; CLOCK_50   ; 18.081 ; 18.081 ; Rise       ; CLOCK_50        ;
+;  HEX1[6]  ; CLOCK_50   ; 14.834 ; 14.834 ; Rise       ; CLOCK_50        ;
+; LEDG[*]   ; CLOCK_50   ; 9.985  ; 9.985  ; Rise       ; CLOCK_50        ;
+;  LEDG[0]  ; CLOCK_50   ; 9.985  ; 9.985  ; Rise       ; CLOCK_50        ;
+; VGA_B[*]  ; CLOCK_50   ; 9.246  ; 9.246  ; Rise       ; CLOCK_50        ;
+;  VGA_B[0] ; CLOCK_50   ; 8.720  ; 8.720  ; Rise       ; CLOCK_50        ;
+;  VGA_B[1] ; CLOCK_50   ; 9.246  ; 9.246  ; Rise       ; CLOCK_50        ;
+;  VGA_B[2] ; CLOCK_50   ; 9.010  ; 9.010  ; Rise       ; CLOCK_50        ;
+;  VGA_B[3] ; CLOCK_50   ; 8.985  ; 8.985  ; Rise       ; CLOCK_50        ;
+; VGA_G[*]  ; CLOCK_50   ; 9.008  ; 9.008  ; Rise       ; CLOCK_50        ;
+;  VGA_G[0] ; CLOCK_50   ; 8.985  ; 8.985  ; Rise       ; CLOCK_50        ;
+;  VGA_G[1] ; CLOCK_50   ; 9.008  ; 9.008  ; Rise       ; CLOCK_50        ;
+;  VGA_G[2] ; CLOCK_50   ; 8.714  ; 8.714  ; Rise       ; CLOCK_50        ;
+;  VGA_G[3] ; CLOCK_50   ; 8.534  ; 8.534  ; Rise       ; CLOCK_50        ;
+; VGA_HS    ; CLOCK_50   ; 7.504  ; 7.504  ; Rise       ; CLOCK_50        ;
+; VGA_R[*]  ; CLOCK_50   ; 9.015  ; 9.015  ; Rise       ; CLOCK_50        ;
+;  VGA_R[0] ; CLOCK_50   ; 9.015  ; 9.015  ; Rise       ; CLOCK_50        ;
+;  VGA_R[1] ; CLOCK_50   ; 8.781  ; 8.781  ; Rise       ; CLOCK_50        ;
+;  VGA_R[2] ; CLOCK_50   ; 8.526  ; 8.526  ; Rise       ; CLOCK_50        ;
+;  VGA_R[3] ; CLOCK_50   ; 8.504  ; 8.504  ; Rise       ; CLOCK_50        ;
+; VGA_VS    ; CLOCK_50   ; 7.463  ; 7.463  ; Rise       ; CLOCK_50        ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; HEX0[*]   ; CLOCK_50   ; 10.843 ; 10.843 ; Rise       ; CLOCK_50        ;
+;  HEX0[0]  ; CLOCK_50   ; 11.283 ; 11.283 ; Rise       ; CLOCK_50        ;
+;  HEX0[1]  ; CLOCK_50   ; 11.348 ; 11.348 ; Rise       ; CLOCK_50        ;
+;  HEX0[2]  ; CLOCK_50   ; 11.258 ; 11.258 ; Rise       ; CLOCK_50        ;
+;  HEX0[3]  ; CLOCK_50   ; 11.023 ; 11.023 ; Rise       ; CLOCK_50        ;
+;  HEX0[4]  ; CLOCK_50   ; 11.038 ; 11.038 ; Rise       ; CLOCK_50        ;
+;  HEX0[5]  ; CLOCK_50   ; 10.843 ; 10.843 ; Rise       ; CLOCK_50        ;
+;  HEX0[6]  ; CLOCK_50   ; 10.845 ; 10.845 ; Rise       ; CLOCK_50        ;
+; HEX1[*]   ; CLOCK_50   ; 8.247  ; 8.247  ; Rise       ; CLOCK_50        ;
+;  HEX1[0]  ; CLOCK_50   ; 8.262  ; 8.262  ; Rise       ; CLOCK_50        ;
+;  HEX1[3]  ; CLOCK_50   ; 8.247  ; 8.247  ; Rise       ; CLOCK_50        ;
+;  HEX1[4]  ; CLOCK_50   ; 8.257  ; 8.257  ; Rise       ; CLOCK_50        ;
+;  HEX1[5]  ; CLOCK_50   ; 12.113 ; 12.113 ; Rise       ; CLOCK_50        ;
+;  HEX1[6]  ; CLOCK_50   ; 10.905 ; 10.905 ; Rise       ; CLOCK_50        ;
+; LEDG[*]   ; CLOCK_50   ; 9.985  ; 9.985  ; Rise       ; CLOCK_50        ;
+;  LEDG[0]  ; CLOCK_50   ; 9.985  ; 9.985  ; Rise       ; CLOCK_50        ;
+; VGA_B[*]  ; CLOCK_50   ; 7.902  ; 7.902  ; Rise       ; CLOCK_50        ;
+;  VGA_B[0] ; CLOCK_50   ; 7.902  ; 7.902  ; Rise       ; CLOCK_50        ;
+;  VGA_B[1] ; CLOCK_50   ; 8.596  ; 8.596  ; Rise       ; CLOCK_50        ;
+;  VGA_B[2] ; CLOCK_50   ; 8.350  ; 8.350  ; Rise       ; CLOCK_50        ;
+;  VGA_B[3] ; CLOCK_50   ; 8.306  ; 8.306  ; Rise       ; CLOCK_50        ;
+; VGA_G[*]  ; CLOCK_50   ; 7.740  ; 7.740  ; Rise       ; CLOCK_50        ;
+;  VGA_G[0] ; CLOCK_50   ; 8.186  ; 8.186  ; Rise       ; CLOCK_50        ;
+;  VGA_G[1] ; CLOCK_50   ; 8.512  ; 8.512  ; Rise       ; CLOCK_50        ;
+;  VGA_G[2] ; CLOCK_50   ; 8.022  ; 8.022  ; Rise       ; CLOCK_50        ;
+;  VGA_G[3] ; CLOCK_50   ; 7.740  ; 7.740  ; Rise       ; CLOCK_50        ;
+; VGA_HS    ; CLOCK_50   ; 7.504  ; 7.504  ; Rise       ; CLOCK_50        ;
+; VGA_R[*]  ; CLOCK_50   ; 7.705  ; 7.705  ; Rise       ; CLOCK_50        ;
+;  VGA_R[0] ; CLOCK_50   ; 8.208  ; 8.208  ; Rise       ; CLOCK_50        ;
+;  VGA_R[1] ; CLOCK_50   ; 7.980  ; 7.980  ; Rise       ; CLOCK_50        ;
+;  VGA_R[2] ; CLOCK_50   ; 7.852  ; 7.852  ; Rise       ; CLOCK_50        ;
+;  VGA_R[3] ; CLOCK_50   ; 7.705  ; 7.705  ; Rise       ; CLOCK_50        ;
+; VGA_VS    ; CLOCK_50   ; 7.463  ; 7.463  ; Rise       ; CLOCK_50        ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------+
+; Fast Model Setup Summary          ;
++----------+--------+---------------+
+; Clock    ; Slack  ; End Point TNS ;
++----------+--------+---------------+
+; CLOCK_50 ; -5.500 ; -2869.518     ;
++----------+--------+---------------+
+
+
++----------------------------------+
+; Fast Model Hold Summary          ;
++----------+-------+---------------+
+; Clock    ; Slack ; End Point TNS ;
++----------+-------+---------------+
+; CLOCK_50 ; 0.215 ; 0.000         ;
++----------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++----------+--------+--------------------+
+; Clock    ; Slack  ; End Point TNS      ;
++----------+--------+--------------------+
+; CLOCK_50 ; -1.380 ; -805.380           ;
++----------+--------+--------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'CLOCK_50'                                                                                                                                     ;
++--------+-----------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                               ; To Node                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+; -5.500 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[13][10][1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.006     ; 6.526      ;
+; -5.497 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[13][10][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.006     ; 6.523      ;
+; -5.448 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[7][1][1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.003      ; 6.483      ;
+; -5.448 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[7][1][0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.003      ; 6.483      ;
+; -5.406 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[1][9][1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.022     ; 6.416      ;
+; -5.406 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[1][9][0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.022     ; 6.416      ;
+; -5.402 ; PushBoxMap:inst12|map_matrix[0][12][0]  ; PushBoxMap:inst12|map_matrix[13][10][1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 6.434      ;
+; -5.399 ; PushBoxMap:inst12|map_matrix[0][12][0]  ; PushBoxMap:inst12|map_matrix[13][10][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 6.431      ;
+; -5.375 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[15][13][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.016     ; 6.391      ;
+; -5.374 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[0][5][0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.014     ; 6.392      ;
+; -5.373 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[0][5][1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.014     ; 6.391      ;
+; -5.371 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[6][13][1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.005      ; 6.408      ;
+; -5.371 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[6][13][0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.005      ; 6.408      ;
+; -5.365 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[5][1][1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 6.399      ;
+; -5.365 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[5][1][0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 6.399      ;
+; -5.363 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[15][12][1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.003      ; 6.398      ;
+; -5.363 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[15][12][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.003      ; 6.398      ;
+; -5.352 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[2][4][1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.012     ; 6.372      ;
+; -5.352 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[2][4][0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.012     ; 6.372      ;
+; -5.350 ; PushBoxMap:inst12|map_matrix[0][12][0]  ; PushBoxMap:inst12|map_matrix[7][1][1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.009      ; 6.391      ;
+; -5.350 ; PushBoxMap:inst12|map_matrix[0][12][0]  ; PushBoxMap:inst12|map_matrix[7][1][0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.009      ; 6.391      ;
+; -5.344 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[13][7][1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.005     ; 6.371      ;
+; -5.343 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[13][7][0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.005     ; 6.370      ;
+; -5.340 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[14][11][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.022     ; 6.350      ;
+; -5.339 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[2][15][1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.010     ; 6.361      ;
+; -5.339 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[2][15][0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.010     ; 6.361      ;
+; -5.338 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[14][11][1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.022     ; 6.348      ;
+; -5.337 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[11][1][0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.004     ; 6.365      ;
+; -5.335 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[11][1][1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.004     ; 6.363      ;
+; -5.333 ; PushBoxMap:inst12|map_matrix[3][2][1]   ; PushBoxMap:inst12|map_matrix[13][10][1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.009      ; 6.374      ;
+; -5.333 ; PushBoxMap:inst12|map_matrix[13][5][0]  ; PushBoxMap:inst12|map_matrix[15][13][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.017     ; 6.348      ;
+; -5.330 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[15][8][1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.008      ; 6.370      ;
+; -5.330 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[15][8][0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.008      ; 6.370      ;
+; -5.330 ; PushBoxMap:inst12|map_matrix[3][2][1]   ; PushBoxMap:inst12|map_matrix[13][10][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.009      ; 6.371      ;
+; -5.328 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[14][13][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.006      ; 6.366      ;
+; -5.327 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[2][13][0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 6.359      ;
+; -5.323 ; PushBoxMap:inst12|map_matrix[2][6][1]   ; PushBoxMap:inst12|map_matrix[15][13][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.013     ; 6.342      ;
+; -5.322 ; PushBoxMap:inst12|player_pos_x[1]       ; PushBoxMap:inst12|map_matrix[15][12][1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.003      ; 6.357      ;
+; -5.322 ; PushBoxMap:inst12|player_pos_x[1]       ; PushBoxMap:inst12|map_matrix[15][12][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.003      ; 6.357      ;
+; -5.321 ; PushBoxMap:inst12|map_matrix[13][5][0]  ; PushBoxMap:inst12|map_matrix[15][12][1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 6.355      ;
+; -5.321 ; PushBoxMap:inst12|map_matrix[13][5][0]  ; PushBoxMap:inst12|map_matrix[15][12][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 6.355      ;
+; -5.319 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[0][11][1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.011     ; 6.340      ;
+; -5.319 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[0][11][0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.011     ; 6.340      ;
+; -5.318 ; PushBoxMap:inst12|map_matrix[7][12][0]  ; PushBoxMap:inst12|map_matrix[15][13][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.009     ; 6.341      ;
+; -5.314 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[12][14][1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 6.345      ;
+; -5.314 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[1][4][0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.012     ; 6.334      ;
+; -5.314 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[12][14][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 6.345      ;
+; -5.312 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[1][4][1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.012     ; 6.332      ;
+; -5.311 ; PushBoxMap:inst12|map_matrix[2][6][1]   ; PushBoxMap:inst12|map_matrix[15][12][1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.006      ; 6.349      ;
+; -5.311 ; PushBoxMap:inst12|map_matrix[2][6][1]   ; PushBoxMap:inst12|map_matrix[15][12][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.006      ; 6.349      ;
+; -5.310 ; PushBoxMap:inst12|map_matrix[8][10][0]  ; PushBoxMap:inst12|map_matrix[13][10][1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 6.343      ;
+; -5.308 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[1][2][1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.003      ; 6.343      ;
+; -5.308 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[1][2][0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.003      ; 6.343      ;
+; -5.308 ; PushBoxMap:inst12|map_matrix[0][12][0]  ; PushBoxMap:inst12|map_matrix[1][9][1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.016     ; 6.324      ;
+; -5.308 ; PushBoxMap:inst12|map_matrix[0][12][0]  ; PushBoxMap:inst12|map_matrix[1][9][0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.016     ; 6.324      ;
+; -5.307 ; PushBoxMap:inst12|map_matrix[8][10][0]  ; PushBoxMap:inst12|map_matrix[13][10][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 6.340      ;
+; -5.306 ; PushBoxMap:inst12|map_matrix[7][12][0]  ; PushBoxMap:inst12|map_matrix[15][12][1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.010      ; 6.348      ;
+; -5.306 ; PushBoxMap:inst12|map_matrix[7][12][0]  ; PushBoxMap:inst12|map_matrix[15][12][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.010      ; 6.348      ;
+; -5.306 ; PushBoxMap:inst12|map_matrix[8][14][1]  ; PushBoxMap:inst12|map_matrix[13][7][1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.008      ; 6.346      ;
+; -5.305 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[13][11][1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.015     ; 6.322      ;
+; -5.305 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[13][11][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.015     ; 6.322      ;
+; -5.305 ; PushBoxMap:inst12|map_matrix[0][0][0]   ; PushBoxMap:inst12|map_matrix[13][10][1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.015     ; 6.322      ;
+; -5.305 ; PushBoxMap:inst12|map_matrix[8][14][1]  ; PushBoxMap:inst12|map_matrix[13][7][0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.008      ; 6.345      ;
+; -5.303 ; PushBoxMap:inst12|map_matrix[11][0][1]  ; PushBoxMap:inst12|map_matrix[13][10][1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.013      ; 6.348      ;
+; -5.302 ; PushBoxMap:inst12|map_matrix[0][0][0]   ; PushBoxMap:inst12|map_matrix[13][10][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.015     ; 6.319      ;
+; -5.300 ; PushBoxMap:inst12|map_matrix[11][0][1]  ; PushBoxMap:inst12|map_matrix[13][10][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.013      ; 6.345      ;
+; -5.300 ; PushBoxMap:inst12|map_matrix[12][14][0] ; PushBoxMap:inst12|map_matrix[13][7][1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.004     ; 6.328      ;
+; -5.299 ; PushBoxMap:inst12|map_matrix[12][14][0] ; PushBoxMap:inst12|map_matrix[13][7][0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.004     ; 6.327      ;
+; -5.298 ; PushBoxMap:inst12|map_matrix[8][10][0]  ; PushBoxMap:inst12|map_matrix[15][13][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.009     ; 6.321      ;
+; -5.297 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[8][6][1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 6.330      ;
+; -5.297 ; PushBoxMap:inst12|map_matrix[5][11][0]  ; PushBoxMap:inst12|map_matrix[1][9][1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.016     ; 6.313      ;
+; -5.297 ; PushBoxMap:inst12|map_matrix[5][11][0]  ; PushBoxMap:inst12|map_matrix[1][9][0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.016     ; 6.313      ;
+; -5.289 ; PushBoxMap:inst12|player_pos_x[1]       ; PushBoxMap:inst12|map_matrix[12][12][1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.002     ; 6.319      ;
+; -5.289 ; PushBoxMap:inst12|player_pos_x[1]       ; PushBoxMap:inst12|map_matrix[12][12][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.002     ; 6.319      ;
+; -5.289 ; PushBoxMap:inst12|map_matrix[9][14][0]  ; PushBoxMap:inst12|map_matrix[13][7][1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.010     ; 6.311      ;
+; -5.288 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[11][15][1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.016     ; 6.304      ;
+; -5.288 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[11][15][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.016     ; 6.304      ;
+; -5.288 ; PushBoxMap:inst12|map_matrix[9][14][0]  ; PushBoxMap:inst12|map_matrix[13][10][1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.011     ; 6.309      ;
+; -5.288 ; PushBoxMap:inst12|map_matrix[5][11][0]  ; PushBoxMap:inst12|map_matrix[7][1][1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.009      ; 6.329      ;
+; -5.288 ; PushBoxMap:inst12|map_matrix[5][11][0]  ; PushBoxMap:inst12|map_matrix[7][1][0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.009      ; 6.329      ;
+; -5.288 ; PushBoxMap:inst12|map_matrix[9][14][0]  ; PushBoxMap:inst12|map_matrix[13][7][0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.010     ; 6.310      ;
+; -5.288 ; PushBoxMap:inst12|map_matrix[13][5][0]  ; PushBoxMap:inst12|map_matrix[15][8][1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.007      ; 6.327      ;
+; -5.288 ; PushBoxMap:inst12|map_matrix[13][5][0]  ; PushBoxMap:inst12|map_matrix[15][8][0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.007      ; 6.327      ;
+; -5.287 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[14][14][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.005      ; 6.324      ;
+; -5.287 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[12][12][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.002     ; 6.317      ;
+; -5.287 ; PushBoxMap:inst12|player_pos_x[3]       ; PushBoxMap:inst12|map_matrix[15][12][1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.003      ; 6.322      ;
+; -5.287 ; PushBoxMap:inst12|player_pos_x[3]       ; PushBoxMap:inst12|map_matrix[15][12][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.003      ; 6.322      ;
+; -5.286 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[14][14][1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.005      ; 6.323      ;
+; -5.286 ; PushBoxMap:inst12|map_matrix[3][8][1]   ; PushBoxMap:inst12|map_matrix[13][10][1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 6.318      ;
+; -5.286 ; PushBoxMap:inst12|map_matrix[13][5][0]  ; PushBoxMap:inst12|map_matrix[14][13][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.005      ; 6.323      ;
+; -5.286 ; PushBoxMap:inst12|map_matrix[8][10][0]  ; PushBoxMap:inst12|map_matrix[15][12][1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.010      ; 6.328      ;
+; -5.286 ; PushBoxMap:inst12|map_matrix[8][10][0]  ; PushBoxMap:inst12|map_matrix[15][12][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.010      ; 6.328      ;
+; -5.285 ; PushBoxMap:inst12|map_matrix[9][14][0]  ; PushBoxMap:inst12|map_matrix[13][10][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.011     ; 6.306      ;
+; -5.285 ; PushBoxMap:inst12|map_matrix[13][5][0]  ; PushBoxMap:inst12|map_matrix[2][13][0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 6.316      ;
+; -5.283 ; PushBoxMap:inst12|map_matrix[3][8][1]   ; PushBoxMap:inst12|map_matrix[13][10][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 6.315      ;
+; -5.282 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[15][11][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.009     ; 6.305      ;
+; -5.282 ; PushBoxMap:inst12|map_matrix[7][4][0]   ; PushBoxMap:inst12|map_matrix[13][10][1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.003      ; 6.317      ;
+; -5.280 ; PushBoxMap:inst12|player_pos_x[0]       ; PushBoxMap:inst12|map_matrix[11][14][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.003     ; 6.309      ;
+; -5.280 ; PushBoxMap:inst12|map_matrix[2][4][1]   ; PushBoxMap:inst12|map_matrix[15][13][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.004     ; 6.308      ;
+; -5.279 ; PushBoxMap:inst12|map_matrix[5][9][1]   ; PushBoxMap:inst12|map_matrix[13][10][1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.010     ; 6.301      ;
++--------+-----------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'CLOCK_50'                                                                                                                   ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; Rebounce:inst7|counter_out[0]  ; Rebounce:inst7|counter_out[0]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst7|counter_out[1]  ; Rebounce:inst7|counter_out[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst7|counter_out[2]  ; Rebounce:inst7|counter_out[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst7|counter_out[3]  ; Rebounce:inst7|counter_out[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst7|counter_out[4]  ; Rebounce:inst7|counter_out[4]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst7|counter_out[5]  ; Rebounce:inst7|counter_out[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst7|counter_out[6]  ; Rebounce:inst7|counter_out[6]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst7|counter_out[7]  ; Rebounce:inst7|counter_out[7]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst7|counter_out[8]  ; Rebounce:inst7|counter_out[8]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst7|counter_out[9]  ; Rebounce:inst7|counter_out[9]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst7|counter_out[10] ; Rebounce:inst7|counter_out[10] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst7|counter_out[11] ; Rebounce:inst7|counter_out[11] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst7|counter_out[12] ; Rebounce:inst7|counter_out[12] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst7|counter_out[13] ; Rebounce:inst7|counter_out[13] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst7|counter_out[14] ; Rebounce:inst7|counter_out[14] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst7|counter_out[15] ; Rebounce:inst7|counter_out[15] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst7|counter_out[16] ; Rebounce:inst7|counter_out[16] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst7|counter_out[17] ; Rebounce:inst7|counter_out[17] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst7|counter_out[18] ; Rebounce:inst7|counter_out[18] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst7|counter_out[19] ; Rebounce:inst7|counter_out[19] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst7|counter_out[20] ; Rebounce:inst7|counter_out[20] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst7|result          ; Rebounce:inst7|result          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst3|counter_out[0]  ; Rebounce:inst3|counter_out[0]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst3|counter_out[1]  ; Rebounce:inst3|counter_out[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst3|counter_out[2]  ; Rebounce:inst3|counter_out[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst3|counter_out[3]  ; Rebounce:inst3|counter_out[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst3|counter_out[4]  ; Rebounce:inst3|counter_out[4]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst3|counter_out[5]  ; Rebounce:inst3|counter_out[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst3|counter_out[6]  ; Rebounce:inst3|counter_out[6]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst3|counter_out[7]  ; Rebounce:inst3|counter_out[7]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst3|counter_out[8]  ; Rebounce:inst3|counter_out[8]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst3|counter_out[9]  ; Rebounce:inst3|counter_out[9]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst3|counter_out[10] ; Rebounce:inst3|counter_out[10] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst3|counter_out[11] ; Rebounce:inst3|counter_out[11] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst3|counter_out[12] ; Rebounce:inst3|counter_out[12] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst3|counter_out[13] ; Rebounce:inst3|counter_out[13] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst3|counter_out[14] ; Rebounce:inst3|counter_out[14] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst3|counter_out[15] ; Rebounce:inst3|counter_out[15] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst3|counter_out[16] ; Rebounce:inst3|counter_out[16] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst3|counter_out[17] ; Rebounce:inst3|counter_out[17] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst3|counter_out[18] ; Rebounce:inst3|counter_out[18] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst3|counter_out[19] ; Rebounce:inst3|counter_out[19] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst3|counter_out[20] ; Rebounce:inst3|counter_out[20] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst3|counter_out[21] ; Rebounce:inst3|counter_out[21] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst3|result          ; Rebounce:inst3|result          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst6|counter_out[0]  ; Rebounce:inst6|counter_out[0]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst6|counter_out[1]  ; Rebounce:inst6|counter_out[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst6|counter_out[2]  ; Rebounce:inst6|counter_out[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst6|counter_out[3]  ; Rebounce:inst6|counter_out[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst6|counter_out[4]  ; Rebounce:inst6|counter_out[4]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst6|counter_out[5]  ; Rebounce:inst6|counter_out[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst6|counter_out[6]  ; Rebounce:inst6|counter_out[6]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst6|counter_out[7]  ; Rebounce:inst6|counter_out[7]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst6|counter_out[8]  ; Rebounce:inst6|counter_out[8]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst6|counter_out[9]  ; Rebounce:inst6|counter_out[9]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst6|counter_out[10] ; Rebounce:inst6|counter_out[10] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst6|counter_out[11] ; Rebounce:inst6|counter_out[11] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst6|counter_out[12] ; Rebounce:inst6|counter_out[12] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst6|counter_out[13] ; Rebounce:inst6|counter_out[13] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst6|counter_out[14] ; Rebounce:inst6|counter_out[14] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst6|counter_out[15] ; Rebounce:inst6|counter_out[15] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst6|counter_out[16] ; Rebounce:inst6|counter_out[16] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst6|counter_out[17] ; Rebounce:inst6|counter_out[17] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst6|counter_out[18] ; Rebounce:inst6|counter_out[18] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst6|counter_out[19] ; Rebounce:inst6|counter_out[19] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst6|counter_out[20] ; Rebounce:inst6|counter_out[20] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst6|counter_out[21] ; Rebounce:inst6|counter_out[21] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst6|result          ; Rebounce:inst6|result          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst5|counter_out[0]  ; Rebounce:inst5|counter_out[0]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst5|counter_out[1]  ; Rebounce:inst5|counter_out[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst5|counter_out[2]  ; Rebounce:inst5|counter_out[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst5|counter_out[3]  ; Rebounce:inst5|counter_out[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst5|counter_out[4]  ; Rebounce:inst5|counter_out[4]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst5|counter_out[5]  ; Rebounce:inst5|counter_out[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst5|counter_out[6]  ; Rebounce:inst5|counter_out[6]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst5|counter_out[7]  ; Rebounce:inst5|counter_out[7]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst5|counter_out[8]  ; Rebounce:inst5|counter_out[8]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst5|counter_out[9]  ; Rebounce:inst5|counter_out[9]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst5|counter_out[10] ; Rebounce:inst5|counter_out[10] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst5|counter_out[11] ; Rebounce:inst5|counter_out[11] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst5|counter_out[12] ; Rebounce:inst5|counter_out[12] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst5|counter_out[13] ; Rebounce:inst5|counter_out[13] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst5|counter_out[14] ; Rebounce:inst5|counter_out[14] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst5|counter_out[15] ; Rebounce:inst5|counter_out[15] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst5|counter_out[16] ; Rebounce:inst5|counter_out[16] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst5|counter_out[17] ; Rebounce:inst5|counter_out[17] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst5|counter_out[18] ; Rebounce:inst5|counter_out[18] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst5|counter_out[19] ; Rebounce:inst5|counter_out[19] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst5|counter_out[20] ; Rebounce:inst5|counter_out[20] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst5|counter_out[21] ; Rebounce:inst5|counter_out[21] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst5|result          ; Rebounce:inst5|result          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst4|counter_out[0]  ; Rebounce:inst4|counter_out[0]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst4|counter_out[1]  ; Rebounce:inst4|counter_out[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst4|counter_out[2]  ; Rebounce:inst4|counter_out[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst4|counter_out[3]  ; Rebounce:inst4|counter_out[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst4|counter_out[4]  ; Rebounce:inst4|counter_out[4]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst4|counter_out[5]  ; Rebounce:inst4|counter_out[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst4|counter_out[6]  ; Rebounce:inst4|counter_out[6]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst4|counter_out[7]  ; Rebounce:inst4|counter_out[7]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Rebounce:inst4|counter_out[8]  ; Rebounce:inst4|counter_out[8]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'CLOCK_50'                                                                                  ;
++--------+--------------+----------------+------------------+----------+------------+-----------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                                  ;
++--------+--------------+----------------+------------------+----------+------------+-----------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLOCK_50 ; Rise       ; CLOCK_50                                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][0][0]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][0][0]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][0][1]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][0][1]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][10][0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][10][0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][10][1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][10][1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][11][0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][11][0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][11][1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][11][1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][12][0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][12][0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][12][1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][12][1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][13][0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][13][0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][13][1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][13][1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][14][0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][14][0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][14][1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][14][1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][15][0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][15][0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][15][1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][15][1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][1][0]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][1][0]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][1][1]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][1][1]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][2][0]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][2][0]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][2][1]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][2][1]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][3][0]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][3][0]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][3][1]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][3][1]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][4][0]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][4][0]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][4][1]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][4][1]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][5][0]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][5][0]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][5][1]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][5][1]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][6][0]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][6][0]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][6][1]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][6][1]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][7][0]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][7][0]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][7][1]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][7][1]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][8][0]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][8][0]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][8][1]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][8][1]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][9][0]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][9][0]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][9][1]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[0][9][1]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][0][0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][0][0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][0][1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][0][1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][10][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][10][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][10][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][10][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][10][2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][10][2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][11][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][11][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][11][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][11][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][11][2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][11][2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][12][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][12][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][12][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][12][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][12][2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][12][2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][13][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][13][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][13][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][13][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][14][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][14][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][14][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][14][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][15][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][15][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][15][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][15][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; PushBoxMap:inst12|map_matrix[10][1][0]  ;
++--------+--------------+----------------+------------------+----------+------------+-----------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; KEY[*]    ; CLOCK_50   ; 3.012 ; 3.012 ; Rise       ; CLOCK_50        ;
+;  KEY[0]   ; CLOCK_50   ; 1.602 ; 1.602 ; Rise       ; CLOCK_50        ;
+;  KEY[1]   ; CLOCK_50   ; 3.012 ; 3.012 ; Rise       ; CLOCK_50        ;
+;  KEY[2]   ; CLOCK_50   ; 2.536 ; 2.536 ; Rise       ; CLOCK_50        ;
+;  KEY[3]   ; CLOCK_50   ; 2.212 ; 2.212 ; Rise       ; CLOCK_50        ;
+; SW[*]     ; CLOCK_50   ; 0.536 ; 0.536 ; Rise       ; CLOCK_50        ;
+;  SW[1]    ; CLOCK_50   ; 0.218 ; 0.218 ; Rise       ; CLOCK_50        ;
+;  SW[2]    ; CLOCK_50   ; 0.536 ; 0.536 ; Rise       ; CLOCK_50        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; KEY[*]    ; CLOCK_50   ; -1.482 ; -1.482 ; Rise       ; CLOCK_50        ;
+;  KEY[0]   ; CLOCK_50   ; -1.482 ; -1.482 ; Rise       ; CLOCK_50        ;
+;  KEY[1]   ; CLOCK_50   ; -2.892 ; -2.892 ; Rise       ; CLOCK_50        ;
+;  KEY[2]   ; CLOCK_50   ; -2.416 ; -2.416 ; Rise       ; CLOCK_50        ;
+;  KEY[3]   ; CLOCK_50   ; -2.092 ; -2.092 ; Rise       ; CLOCK_50        ;
+; SW[*]     ; CLOCK_50   ; -0.098 ; -0.098 ; Rise       ; CLOCK_50        ;
+;  SW[1]    ; CLOCK_50   ; -0.098 ; -0.098 ; Rise       ; CLOCK_50        ;
+;  SW[2]    ; CLOCK_50   ; -0.416 ; -0.416 ; Rise       ; CLOCK_50        ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; HEX0[*]   ; CLOCK_50   ; 9.065 ; 9.065 ; Rise       ; CLOCK_50        ;
+;  HEX0[0]  ; CLOCK_50   ; 9.065 ; 9.065 ; Rise       ; CLOCK_50        ;
+;  HEX0[1]  ; CLOCK_50   ; 8.921 ; 8.921 ; Rise       ; CLOCK_50        ;
+;  HEX0[2]  ; CLOCK_50   ; 9.033 ; 9.033 ; Rise       ; CLOCK_50        ;
+;  HEX0[3]  ; CLOCK_50   ; 9.021 ; 9.021 ; Rise       ; CLOCK_50        ;
+;  HEX0[4]  ; CLOCK_50   ; 8.958 ; 8.958 ; Rise       ; CLOCK_50        ;
+;  HEX0[5]  ; CLOCK_50   ; 8.943 ; 8.943 ; Rise       ; CLOCK_50        ;
+;  HEX0[6]  ; CLOCK_50   ; 8.940 ; 8.940 ; Rise       ; CLOCK_50        ;
+; HEX1[*]   ; CLOCK_50   ; 8.054 ; 8.054 ; Rise       ; CLOCK_50        ;
+;  HEX1[0]  ; CLOCK_50   ; 5.595 ; 5.595 ; Rise       ; CLOCK_50        ;
+;  HEX1[3]  ; CLOCK_50   ; 5.579 ; 5.579 ; Rise       ; CLOCK_50        ;
+;  HEX1[4]  ; CLOCK_50   ; 5.589 ; 5.589 ; Rise       ; CLOCK_50        ;
+;  HEX1[5]  ; CLOCK_50   ; 8.054 ; 8.054 ; Rise       ; CLOCK_50        ;
+;  HEX1[6]  ; CLOCK_50   ; 6.913 ; 6.913 ; Rise       ; CLOCK_50        ;
+; LEDG[*]   ; CLOCK_50   ; 4.892 ; 4.892 ; Rise       ; CLOCK_50        ;
+;  LEDG[0]  ; CLOCK_50   ; 4.892 ; 4.892 ; Rise       ; CLOCK_50        ;
+; VGA_B[*]  ; CLOCK_50   ; 4.659 ; 4.659 ; Rise       ; CLOCK_50        ;
+;  VGA_B[0] ; CLOCK_50   ; 4.481 ; 4.481 ; Rise       ; CLOCK_50        ;
+;  VGA_B[1] ; CLOCK_50   ; 4.659 ; 4.659 ; Rise       ; CLOCK_50        ;
+;  VGA_B[2] ; CLOCK_50   ; 4.592 ; 4.592 ; Rise       ; CLOCK_50        ;
+;  VGA_B[3] ; CLOCK_50   ; 4.561 ; 4.561 ; Rise       ; CLOCK_50        ;
+; VGA_G[*]  ; CLOCK_50   ; 4.588 ; 4.588 ; Rise       ; CLOCK_50        ;
+;  VGA_G[0] ; CLOCK_50   ; 4.575 ; 4.575 ; Rise       ; CLOCK_50        ;
+;  VGA_G[1] ; CLOCK_50   ; 4.588 ; 4.588 ; Rise       ; CLOCK_50        ;
+;  VGA_G[2] ; CLOCK_50   ; 4.474 ; 4.474 ; Rise       ; CLOCK_50        ;
+;  VGA_G[3] ; CLOCK_50   ; 4.385 ; 4.385 ; Rise       ; CLOCK_50        ;
+; VGA_HS    ; CLOCK_50   ; 4.012 ; 4.012 ; Rise       ; CLOCK_50        ;
+; VGA_R[*]  ; CLOCK_50   ; 4.579 ; 4.579 ; Rise       ; CLOCK_50        ;
+;  VGA_R[0] ; CLOCK_50   ; 4.579 ; 4.579 ; Rise       ; CLOCK_50        ;
+;  VGA_R[1] ; CLOCK_50   ; 4.462 ; 4.462 ; Rise       ; CLOCK_50        ;
+;  VGA_R[2] ; CLOCK_50   ; 4.386 ; 4.386 ; Rise       ; CLOCK_50        ;
+;  VGA_R[3] ; CLOCK_50   ; 4.358 ; 4.358 ; Rise       ; CLOCK_50        ;
+; VGA_VS    ; CLOCK_50   ; 3.977 ; 3.977 ; Rise       ; CLOCK_50        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; HEX0[*]   ; CLOCK_50   ; 5.137 ; 5.137 ; Rise       ; CLOCK_50        ;
+;  HEX0[0]  ; CLOCK_50   ; 5.294 ; 5.294 ; Rise       ; CLOCK_50        ;
+;  HEX0[1]  ; CLOCK_50   ; 5.313 ; 5.313 ; Rise       ; CLOCK_50        ;
+;  HEX0[2]  ; CLOCK_50   ; 5.274 ; 5.274 ; Rise       ; CLOCK_50        ;
+;  HEX0[3]  ; CLOCK_50   ; 5.197 ; 5.197 ; Rise       ; CLOCK_50        ;
+;  HEX0[4]  ; CLOCK_50   ; 5.208 ; 5.208 ; Rise       ; CLOCK_50        ;
+;  HEX0[5]  ; CLOCK_50   ; 5.139 ; 5.139 ; Rise       ; CLOCK_50        ;
+;  HEX0[6]  ; CLOCK_50   ; 5.137 ; 5.137 ; Rise       ; CLOCK_50        ;
+; HEX1[*]   ; CLOCK_50   ; 4.202 ; 4.202 ; Rise       ; CLOCK_50        ;
+;  HEX1[0]  ; CLOCK_50   ; 4.218 ; 4.218 ; Rise       ; CLOCK_50        ;
+;  HEX1[3]  ; CLOCK_50   ; 4.202 ; 4.202 ; Rise       ; CLOCK_50        ;
+;  HEX1[4]  ; CLOCK_50   ; 4.212 ; 4.212 ; Rise       ; CLOCK_50        ;
+;  HEX1[5]  ; CLOCK_50   ; 5.776 ; 5.776 ; Rise       ; CLOCK_50        ;
+;  HEX1[6]  ; CLOCK_50   ; 5.335 ; 5.335 ; Rise       ; CLOCK_50        ;
+; LEDG[*]   ; CLOCK_50   ; 4.892 ; 4.892 ; Rise       ; CLOCK_50        ;
+;  LEDG[0]  ; CLOCK_50   ; 4.892 ; 4.892 ; Rise       ; CLOCK_50        ;
+; VGA_B[*]  ; CLOCK_50   ; 4.138 ; 4.138 ; Rise       ; CLOCK_50        ;
+;  VGA_B[0] ; CLOCK_50   ; 4.138 ; 4.138 ; Rise       ; CLOCK_50        ;
+;  VGA_B[1] ; CLOCK_50   ; 4.406 ; 4.406 ; Rise       ; CLOCK_50        ;
+;  VGA_B[2] ; CLOCK_50   ; 4.339 ; 4.339 ; Rise       ; CLOCK_50        ;
+;  VGA_B[3] ; CLOCK_50   ; 4.316 ; 4.316 ; Rise       ; CLOCK_50        ;
+; VGA_G[*]  ; CLOCK_50   ; 4.098 ; 4.098 ; Rise       ; CLOCK_50        ;
+;  VGA_G[0] ; CLOCK_50   ; 4.246 ; 4.246 ; Rise       ; CLOCK_50        ;
+;  VGA_G[1] ; CLOCK_50   ; 4.376 ; 4.376 ; Rise       ; CLOCK_50        ;
+;  VGA_G[2] ; CLOCK_50   ; 4.201 ; 4.201 ; Rise       ; CLOCK_50        ;
+;  VGA_G[3] ; CLOCK_50   ; 4.098 ; 4.098 ; Rise       ; CLOCK_50        ;
+; VGA_HS    ; CLOCK_50   ; 4.012 ; 4.012 ; Rise       ; CLOCK_50        ;
+; VGA_R[*]  ; CLOCK_50   ; 4.065 ; 4.065 ; Rise       ; CLOCK_50        ;
+;  VGA_R[0] ; CLOCK_50   ; 4.249 ; 4.249 ; Rise       ; CLOCK_50        ;
+;  VGA_R[1] ; CLOCK_50   ; 4.171 ; 4.171 ; Rise       ; CLOCK_50        ;
+;  VGA_R[2] ; CLOCK_50   ; 4.135 ; 4.135 ; Rise       ; CLOCK_50        ;
+;  VGA_R[3] ; CLOCK_50   ; 4.065 ; 4.065 ; Rise       ; CLOCK_50        ;
+; VGA_VS    ; CLOCK_50   ; 3.977 ; 3.977 ; Rise       ; CLOCK_50        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                             ;
++------------------+-----------+-------+----------+---------+---------------------+
+; Clock            ; Setup     ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -15.744   ; 0.215 ; N/A      ; N/A     ; -1.631              ;
+;  CLOCK_50        ; -15.744   ; 0.215 ; N/A      ; N/A     ; -1.631              ;
+; Design-wide TNS  ; -8714.713 ; 0.0   ; 0.0      ; 0.0     ; -984.119            ;
+;  CLOCK_50        ; -8714.713 ; 0.000 ; N/A      ; N/A     ; -984.119            ;
++------------------+-----------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; KEY[*]    ; CLOCK_50   ; 6.998 ; 6.998 ; Rise       ; CLOCK_50        ;
+;  KEY[0]   ; CLOCK_50   ; 3.452 ; 3.452 ; Rise       ; CLOCK_50        ;
+;  KEY[1]   ; CLOCK_50   ; 6.998 ; 6.998 ; Rise       ; CLOCK_50        ;
+;  KEY[2]   ; CLOCK_50   ; 5.486 ; 5.486 ; Rise       ; CLOCK_50        ;
+;  KEY[3]   ; CLOCK_50   ; 4.921 ; 4.921 ; Rise       ; CLOCK_50        ;
+; SW[*]     ; CLOCK_50   ; 2.499 ; 2.499 ; Rise       ; CLOCK_50        ;
+;  SW[1]    ; CLOCK_50   ; 1.749 ; 1.749 ; Rise       ; CLOCK_50        ;
+;  SW[2]    ; CLOCK_50   ; 2.499 ; 2.499 ; Rise       ; CLOCK_50        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; KEY[*]    ; CLOCK_50   ; -1.482 ; -1.482 ; Rise       ; CLOCK_50        ;
+;  KEY[0]   ; CLOCK_50   ; -1.482 ; -1.482 ; Rise       ; CLOCK_50        ;
+;  KEY[1]   ; CLOCK_50   ; -2.892 ; -2.892 ; Rise       ; CLOCK_50        ;
+;  KEY[2]   ; CLOCK_50   ; -2.416 ; -2.416 ; Rise       ; CLOCK_50        ;
+;  KEY[3]   ; CLOCK_50   ; -2.092 ; -2.092 ; Rise       ; CLOCK_50        ;
+; SW[*]     ; CLOCK_50   ; -0.098 ; -0.098 ; Rise       ; CLOCK_50        ;
+;  SW[1]    ; CLOCK_50   ; -0.098 ; -0.098 ; Rise       ; CLOCK_50        ;
+;  SW[2]    ; CLOCK_50   ; -0.416 ; -0.416 ; Rise       ; CLOCK_50        ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; HEX0[*]   ; CLOCK_50   ; 21.197 ; 21.197 ; Rise       ; CLOCK_50        ;
+;  HEX0[0]  ; CLOCK_50   ; 21.197 ; 21.197 ; Rise       ; CLOCK_50        ;
+;  HEX0[1]  ; CLOCK_50   ; 20.744 ; 20.744 ; Rise       ; CLOCK_50        ;
+;  HEX0[2]  ; CLOCK_50   ; 21.104 ; 21.104 ; Rise       ; CLOCK_50        ;
+;  HEX0[3]  ; CLOCK_50   ; 20.975 ; 20.975 ; Rise       ; CLOCK_50        ;
+;  HEX0[4]  ; CLOCK_50   ; 20.809 ; 20.809 ; Rise       ; CLOCK_50        ;
+;  HEX0[5]  ; CLOCK_50   ; 20.817 ; 20.817 ; Rise       ; CLOCK_50        ;
+;  HEX0[6]  ; CLOCK_50   ; 20.816 ; 20.816 ; Rise       ; CLOCK_50        ;
+; HEX1[*]   ; CLOCK_50   ; 18.081 ; 18.081 ; Rise       ; CLOCK_50        ;
+;  HEX1[0]  ; CLOCK_50   ; 11.529 ; 11.529 ; Rise       ; CLOCK_50        ;
+;  HEX1[3]  ; CLOCK_50   ; 11.514 ; 11.514 ; Rise       ; CLOCK_50        ;
+;  HEX1[4]  ; CLOCK_50   ; 11.524 ; 11.524 ; Rise       ; CLOCK_50        ;
+;  HEX1[5]  ; CLOCK_50   ; 18.081 ; 18.081 ; Rise       ; CLOCK_50        ;
+;  HEX1[6]  ; CLOCK_50   ; 14.834 ; 14.834 ; Rise       ; CLOCK_50        ;
+; LEDG[*]   ; CLOCK_50   ; 9.985  ; 9.985  ; Rise       ; CLOCK_50        ;
+;  LEDG[0]  ; CLOCK_50   ; 9.985  ; 9.985  ; Rise       ; CLOCK_50        ;
+; VGA_B[*]  ; CLOCK_50   ; 9.246  ; 9.246  ; Rise       ; CLOCK_50        ;
+;  VGA_B[0] ; CLOCK_50   ; 8.720  ; 8.720  ; Rise       ; CLOCK_50        ;
+;  VGA_B[1] ; CLOCK_50   ; 9.246  ; 9.246  ; Rise       ; CLOCK_50        ;
+;  VGA_B[2] ; CLOCK_50   ; 9.010  ; 9.010  ; Rise       ; CLOCK_50        ;
+;  VGA_B[3] ; CLOCK_50   ; 8.985  ; 8.985  ; Rise       ; CLOCK_50        ;
+; VGA_G[*]  ; CLOCK_50   ; 9.008  ; 9.008  ; Rise       ; CLOCK_50        ;
+;  VGA_G[0] ; CLOCK_50   ; 8.985  ; 8.985  ; Rise       ; CLOCK_50        ;
+;  VGA_G[1] ; CLOCK_50   ; 9.008  ; 9.008  ; Rise       ; CLOCK_50        ;
+;  VGA_G[2] ; CLOCK_50   ; 8.714  ; 8.714  ; Rise       ; CLOCK_50        ;
+;  VGA_G[3] ; CLOCK_50   ; 8.534  ; 8.534  ; Rise       ; CLOCK_50        ;
+; VGA_HS    ; CLOCK_50   ; 7.504  ; 7.504  ; Rise       ; CLOCK_50        ;
+; VGA_R[*]  ; CLOCK_50   ; 9.015  ; 9.015  ; Rise       ; CLOCK_50        ;
+;  VGA_R[0] ; CLOCK_50   ; 9.015  ; 9.015  ; Rise       ; CLOCK_50        ;
+;  VGA_R[1] ; CLOCK_50   ; 8.781  ; 8.781  ; Rise       ; CLOCK_50        ;
+;  VGA_R[2] ; CLOCK_50   ; 8.526  ; 8.526  ; Rise       ; CLOCK_50        ;
+;  VGA_R[3] ; CLOCK_50   ; 8.504  ; 8.504  ; Rise       ; CLOCK_50        ;
+; VGA_VS    ; CLOCK_50   ; 7.463  ; 7.463  ; Rise       ; CLOCK_50        ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; HEX0[*]   ; CLOCK_50   ; 5.137 ; 5.137 ; Rise       ; CLOCK_50        ;
+;  HEX0[0]  ; CLOCK_50   ; 5.294 ; 5.294 ; Rise       ; CLOCK_50        ;
+;  HEX0[1]  ; CLOCK_50   ; 5.313 ; 5.313 ; Rise       ; CLOCK_50        ;
+;  HEX0[2]  ; CLOCK_50   ; 5.274 ; 5.274 ; Rise       ; CLOCK_50        ;
+;  HEX0[3]  ; CLOCK_50   ; 5.197 ; 5.197 ; Rise       ; CLOCK_50        ;
+;  HEX0[4]  ; CLOCK_50   ; 5.208 ; 5.208 ; Rise       ; CLOCK_50        ;
+;  HEX0[5]  ; CLOCK_50   ; 5.139 ; 5.139 ; Rise       ; CLOCK_50        ;
+;  HEX0[6]  ; CLOCK_50   ; 5.137 ; 5.137 ; Rise       ; CLOCK_50        ;
+; HEX1[*]   ; CLOCK_50   ; 4.202 ; 4.202 ; Rise       ; CLOCK_50        ;
+;  HEX1[0]  ; CLOCK_50   ; 4.218 ; 4.218 ; Rise       ; CLOCK_50        ;
+;  HEX1[3]  ; CLOCK_50   ; 4.202 ; 4.202 ; Rise       ; CLOCK_50        ;
+;  HEX1[4]  ; CLOCK_50   ; 4.212 ; 4.212 ; Rise       ; CLOCK_50        ;
+;  HEX1[5]  ; CLOCK_50   ; 5.776 ; 5.776 ; Rise       ; CLOCK_50        ;
+;  HEX1[6]  ; CLOCK_50   ; 5.335 ; 5.335 ; Rise       ; CLOCK_50        ;
+; LEDG[*]   ; CLOCK_50   ; 4.892 ; 4.892 ; Rise       ; CLOCK_50        ;
+;  LEDG[0]  ; CLOCK_50   ; 4.892 ; 4.892 ; Rise       ; CLOCK_50        ;
+; VGA_B[*]  ; CLOCK_50   ; 4.138 ; 4.138 ; Rise       ; CLOCK_50        ;
+;  VGA_B[0] ; CLOCK_50   ; 4.138 ; 4.138 ; Rise       ; CLOCK_50        ;
+;  VGA_B[1] ; CLOCK_50   ; 4.406 ; 4.406 ; Rise       ; CLOCK_50        ;
+;  VGA_B[2] ; CLOCK_50   ; 4.339 ; 4.339 ; Rise       ; CLOCK_50        ;
+;  VGA_B[3] ; CLOCK_50   ; 4.316 ; 4.316 ; Rise       ; CLOCK_50        ;
+; VGA_G[*]  ; CLOCK_50   ; 4.098 ; 4.098 ; Rise       ; CLOCK_50        ;
+;  VGA_G[0] ; CLOCK_50   ; 4.246 ; 4.246 ; Rise       ; CLOCK_50        ;
+;  VGA_G[1] ; CLOCK_50   ; 4.376 ; 4.376 ; Rise       ; CLOCK_50        ;
+;  VGA_G[2] ; CLOCK_50   ; 4.201 ; 4.201 ; Rise       ; CLOCK_50        ;
+;  VGA_G[3] ; CLOCK_50   ; 4.098 ; 4.098 ; Rise       ; CLOCK_50        ;
+; VGA_HS    ; CLOCK_50   ; 4.012 ; 4.012 ; Rise       ; CLOCK_50        ;
+; VGA_R[*]  ; CLOCK_50   ; 4.065 ; 4.065 ; Rise       ; CLOCK_50        ;
+;  VGA_R[0] ; CLOCK_50   ; 4.249 ; 4.249 ; Rise       ; CLOCK_50        ;
+;  VGA_R[1] ; CLOCK_50   ; 4.171 ; 4.171 ; Rise       ; CLOCK_50        ;
+;  VGA_R[2] ; CLOCK_50   ; 4.135 ; 4.135 ; Rise       ; CLOCK_50        ;
+;  VGA_R[3] ; CLOCK_50   ; 4.065 ; 4.065 ; Rise       ; CLOCK_50        ;
+; VGA_VS    ; CLOCK_50   ; 3.977 ; 3.977 ; Rise       ; CLOCK_50        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLOCK_50   ; CLOCK_50 ; 58942145 ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLOCK_50   ; CLOCK_50 ; 58942145 ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 7     ; 7    ;
+; Unconstrained Input Port Paths  ; 43    ; 43   ;
+; Unconstrained Output Ports      ; 27    ; 27   ;
+; Unconstrained Output Port Paths ; 87    ; 87   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu Jun 28 18:49:58 2018
+Info: Command: quartus_sta PushBox -c PushBox
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'PushBox.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name CLOCK_50 CLOCK_50
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -15.744
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):   -15.744     -8714.713 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.445
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.445         0.000 CLOCK_50 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.631
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.631      -984.119 CLOCK_50 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -5.500
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -5.500     -2869.518 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 CLOCK_50 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380      -805.380 CLOCK_50 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4663 megabytes
+    Info: Processing ended: Thu Jun 28 18:50:00 2018
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:03
+
+

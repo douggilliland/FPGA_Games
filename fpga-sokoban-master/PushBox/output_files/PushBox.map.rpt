@@ -1,0 +1,1022 @@
+Analysis & Synthesis report for PushBox
+Thu Jun 28 18:47:56 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: PushBoxMap:inst12
+ 13. Parameter Settings for User Entity Instance: Rebounce:inst4
+ 14. Parameter Settings for User Entity Instance: Rebounce:inst5
+ 15. Parameter Settings for User Entity Instance: Rebounce:inst3
+ 16. Parameter Settings for User Entity Instance: Rebounce:inst6
+ 17. Parameter Settings for User Entity Instance: Rebounce:inst8
+ 18. Parameter Settings for User Entity Instance: Rebounce:inst7
+ 19. Parameter Settings for User Entity Instance: VgaPixel:inst11
+ 20. Parameter Settings for Inferred Entity Instance: SevenSegLevelNumber:inst14|lpm_divide:Mod0
+ 21. Parameter Settings for Inferred Entity Instance: SevenSegLevelNumber:inst14|lpm_divide:Div0
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Jun 28 18:47:56 2018           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; PushBox                                         ;
+; Top-level Entity Name              ; PushBox                                         ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 11,934                                          ;
+;     Total combinational functions  ; 11,903                                          ;
+;     Dedicated logic registers      ; 804                                             ;
+; Total registers                    ; 804                                             ;
+; Total pins                         ; 51                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C20F484C7       ;                    ;
+; Top-level entity name                                                      ; PushBox            ; PushBox            ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                    ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                          ; Library ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------+---------+
+; PushBox.bdf                      ; yes             ; User Block Diagram/Schematic File  ; D:/altera/projects/PushBox/PushBox.bdf                                ;         ;
+; VgaSync.vhd                      ; yes             ; User VHDL File                     ; D:/altera/projects/PushBox/VgaSync.vhd                                ;         ;
+; VgaPixel.vhd                     ; yes             ; User VHDL File                     ; D:/altera/projects/PushBox/VgaPixel.vhd                               ;         ;
+; PushBoxMap.vhd                   ; yes             ; User VHDL File                     ; D:/altera/projects/PushBox/PushBoxMap.vhd                             ;         ;
+; Rebounce.vhd                     ; yes             ; User VHDL File                     ; D:/altera/projects/PushBox/Rebounce.vhd                               ;         ;
+; Images.vhd                       ; yes             ; User VHDL File                     ; D:/altera/projects/PushBox/Images.vhd                                 ;         ;
+; PushBoxLevels.vhd                ; yes             ; User VHDL File                     ; D:/altera/projects/PushBox/PushBoxLevels.vhd                          ;         ;
+; SevenSegLevelNumber.vhd          ; yes             ; User VHDL File                     ; D:/altera/projects/PushBox/SevenSegLevelNumber.vhd                    ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                       ; d:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                       ; d:/altera/13.0sp1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                       ; d:/altera/13.0sp1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                       ; d:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc      ;         ;
+; db/lpm_divide_85m.tdf            ; yes             ; Auto-Generated Megafunction        ; D:/altera/projects/PushBox/db/lpm_divide_85m.tdf                      ;         ;
+; db/sign_div_unsign_fkh.tdf       ; yes             ; Auto-Generated Megafunction        ; D:/altera/projects/PushBox/db/sign_div_unsign_fkh.tdf                 ;         ;
+; db/alt_u_div_00f.tdf             ; yes             ; Auto-Generated Megafunction        ; D:/altera/projects/PushBox/db/alt_u_div_00f.tdf                       ;         ;
+; db/add_sub_lkc.tdf               ; yes             ; Auto-Generated Megafunction        ; D:/altera/projects/PushBox/db/add_sub_lkc.tdf                         ;         ;
+; db/add_sub_mkc.tdf               ; yes             ; Auto-Generated Megafunction        ; D:/altera/projects/PushBox/db/add_sub_mkc.tdf                         ;         ;
+; db/lpm_divide_1dm.tdf            ; yes             ; Auto-Generated Megafunction        ; D:/altera/projects/PushBox/db/lpm_divide_1dm.tdf                      ;         ;
+; db/sign_div_unsign_bkh.tdf       ; yes             ; Auto-Generated Megafunction        ; D:/altera/projects/PushBox/db/sign_div_unsign_bkh.tdf                 ;         ;
+; db/alt_u_div_ove.tdf             ; yes             ; Auto-Generated Megafunction        ; D:/altera/projects/PushBox/db/alt_u_div_ove.tdf                       ;         ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                              ;
++---------------------------------------------+----------------------------+
+; Resource                                    ; Usage                      ;
++---------------------------------------------+----------------------------+
+; Estimated Total logic elements              ; 11,934                     ;
+;                                             ;                            ;
+; Total combinational functions               ; 11903                      ;
+; Logic element usage by number of LUT inputs ;                            ;
+;     -- 4 input functions                    ; 8774                       ;
+;     -- 3 input functions                    ; 1755                       ;
+;     -- <=2 input functions                  ; 1374                       ;
+;                                             ;                            ;
+; Logic elements by mode                      ;                            ;
+;     -- normal mode                          ; 11733                      ;
+;     -- arithmetic mode                      ; 170                        ;
+;                                             ;                            ;
+; Total registers                             ; 804                        ;
+;     -- Dedicated logic registers            ; 804                        ;
+;     -- I/O registers                        ; 0                          ;
+;                                             ;                            ;
+; I/O pins                                    ; 51                         ;
+; Embedded Multiplier 9-bit elements          ; 0                          ;
+; Maximum fan-out node                        ; PushBoxMap:inst12|Equal2~0 ;
+; Maximum fan-out                             ; 1361                       ;
+; Total fan-out                               ; 45446                      ;
+; Average fan-out                             ; 3.56                       ;
++---------------------------------------------+----------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                        ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                 ; Library Name ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |PushBox                                  ; 11903 (0)         ; 804 (0)      ; 0           ; 0            ; 0       ; 0         ; 51   ; 0            ; |PushBox                                                                                                                            ; work         ;
+;    |PushBoxMap:inst12|                    ; 11313 (11313)     ; 619 (619)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PushBox|PushBoxMap:inst12                                                                                                          ; work         ;
+;    |Rebounce:inst3|                       ; 47 (47)           ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PushBox|Rebounce:inst3                                                                                                             ; work         ;
+;    |Rebounce:inst4|                       ; 47 (47)           ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PushBox|Rebounce:inst4                                                                                                             ; work         ;
+;    |Rebounce:inst5|                       ; 47 (47)           ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PushBox|Rebounce:inst5                                                                                                             ; work         ;
+;    |Rebounce:inst6|                       ; 47 (47)           ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PushBox|Rebounce:inst6                                                                                                             ; work         ;
+;    |Rebounce:inst7|                       ; 45 (45)           ; 24 (24)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PushBox|Rebounce:inst7                                                                                                             ; work         ;
+;    |Rebounce:inst8|                       ; 45 (45)           ; 24 (24)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PushBox|Rebounce:inst8                                                                                                             ; work         ;
+;    |SevenSegLevelNumber:inst14|           ; 80 (29)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PushBox|SevenSegLevelNumber:inst14                                                                                                 ; work         ;
+;       |lpm_divide:Div0|                   ; 19 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PushBox|SevenSegLevelNumber:inst14|lpm_divide:Div0                                                                                 ; work         ;
+;          |lpm_divide_1dm:auto_generated|  ; 19 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PushBox|SevenSegLevelNumber:inst14|lpm_divide:Div0|lpm_divide_1dm:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_bkh:divider| ; 19 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PushBox|SevenSegLevelNumber:inst14|lpm_divide:Div0|lpm_divide_1dm:auto_generated|sign_div_unsign_bkh:divider                       ; work         ;
+;                |alt_u_div_ove:divider|    ; 19 (19)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PushBox|SevenSegLevelNumber:inst14|lpm_divide:Div0|lpm_divide_1dm:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_ove:divider ; work         ;
+;       |lpm_divide:Mod0|                   ; 32 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PushBox|SevenSegLevelNumber:inst14|lpm_divide:Mod0                                                                                 ; work         ;
+;          |lpm_divide_85m:auto_generated|  ; 32 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PushBox|SevenSegLevelNumber:inst14|lpm_divide:Mod0|lpm_divide_85m:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_fkh:divider| ; 32 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PushBox|SevenSegLevelNumber:inst14|lpm_divide:Mod0|lpm_divide_85m:auto_generated|sign_div_unsign_fkh:divider                       ; work         ;
+;                |alt_u_div_00f:divider|    ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PushBox|SevenSegLevelNumber:inst14|lpm_divide:Mod0|lpm_divide_85m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_00f:divider ; work         ;
+;    |VgaPixel:inst11|                      ; 178 (178)         ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PushBox|VgaPixel:inst11                                                                                                            ; work         ;
+;    |VgaSync:inst|                         ; 54 (54)           ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PushBox|VgaSync:inst                                                                                                               ; work         ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                            ;
++-----------------------------------------+-----------------------------------------------------+
+; Register name                           ; Reason for Removal                                  ;
++-----------------------------------------+-----------------------------------------------------+
+; PushBoxMap:inst12|map_matrix[6][14][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][4][2]   ;
+; PushBoxMap:inst12|map_matrix[2][0][2]   ; Merged with PushBoxMap:inst12|map_matrix[0][4][2]   ;
+; PushBoxMap:inst12|map_matrix[15][8][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][4][2]   ;
+; PushBoxMap:inst12|map_matrix[1][0][2]   ; Merged with PushBoxMap:inst12|map_matrix[0][4][2]   ;
+; PushBoxMap:inst12|map_matrix[13][13][2] ; Merged with PushBoxMap:inst12|map_matrix[0][4][2]   ;
+; PushBoxMap:inst12|map_matrix[1][6][2]   ; Merged with PushBoxMap:inst12|map_matrix[0][4][2]   ;
+; PushBoxMap:inst12|map_matrix[14][11][2] ; Merged with PushBoxMap:inst12|map_matrix[0][4][2]   ;
+; PushBoxMap:inst12|map_matrix[0][9][2]   ; Merged with PushBoxMap:inst12|map_matrix[0][4][2]   ;
+; PushBoxMap:inst12|map_matrix[14][15][2] ; Merged with PushBoxMap:inst12|map_matrix[0][4][2]   ;
+; PushBoxMap:inst12|map_matrix[14][8][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][4][2]   ;
+; PushBoxMap:inst12|map_matrix[15][7][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][4][2]   ;
+; PushBoxMap:inst12|map_matrix[15][12][2] ; Merged with PushBoxMap:inst12|map_matrix[0][4][2]   ;
+; PushBoxMap:inst12|map_matrix[1][12][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][4][2]   ;
+; PushBoxMap:inst12|map_matrix[2][9][2]   ; Merged with PushBoxMap:inst12|map_matrix[0][4][2]   ;
+; PushBoxMap:inst12|map_matrix[2][13][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][4][2]   ;
+; PushBoxMap:inst12|map_matrix[9][0][2]   ; Merged with PushBoxMap:inst12|map_matrix[0][4][2]   ;
+; PushBoxMap:inst12|map_matrix[0][0][2]   ; Merged with PushBoxMap:inst12|map_matrix[0][4][2]   ;
+; PushBoxMap:inst12|map_matrix[0][1][2]   ; Merged with PushBoxMap:inst12|map_matrix[0][4][2]   ;
+; PushBoxMap:inst12|map_matrix[9][14][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][4][2]   ;
+; PushBoxMap:inst12|map_matrix[0][5][2]   ; Merged with PushBoxMap:inst12|map_matrix[0][4][2]   ;
+; PushBoxMap:inst12|map_matrix[3][13][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][4][2]   ;
+; PushBoxMap:inst12|map_matrix[10][15][2] ; Merged with PushBoxMap:inst12|map_matrix[0][4][2]   ;
+; PushBoxMap:inst12|map_matrix[11][1][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][4][2]   ;
+; PushBoxMap:inst12|map_matrix[11][2][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][4][2]   ;
+; PushBoxMap:inst12|map_matrix[0][10][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][4][2]   ;
+; PushBoxMap:inst12|map_matrix[11][15][2] ; Merged with PushBoxMap:inst12|map_matrix[0][4][2]   ;
+; PushBoxMap:inst12|map_matrix[0][11][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][4][2]   ;
+; PushBoxMap:inst12|map_matrix[12][2][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][4][2]   ;
+; PushBoxMap:inst12|map_matrix[12][3][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][4][2]   ;
+; PushBoxMap:inst12|map_matrix[0][14][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][4][2]   ;
+; PushBoxMap:inst12|map_matrix[0][15][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][4][2]   ;
+; PushBoxMap:inst12|map_matrix[13][3][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][4][2]   ;
+; PushBoxMap:inst12|map_matrix[1][3][2]   ; Merged with PushBoxMap:inst12|map_matrix[0][4][2]   ;
+; PushBoxMap:inst12|map_matrix[13][15][2] ; Merged with PushBoxMap:inst12|map_matrix[0][4][2]   ;
+; PushBoxMap:inst12|map_matrix[14][3][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][4][2]   ;
+; PushBoxMap:inst12|map_matrix[14][10][2] ; Merged with PushBoxMap:inst12|map_matrix[0][4][2]   ;
+; PushBoxMap:inst12|map_matrix[15][2][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][3][2]   ;
+; PushBoxMap:inst12|map_matrix[11][0][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][3][2]   ;
+; PushBoxMap:inst12|map_matrix[2][14][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][3][2]   ;
+; PushBoxMap:inst12|map_matrix[1][11][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][3][2]   ;
+; PushBoxMap:inst12|map_matrix[3][14][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][3][2]   ;
+; PushBoxMap:inst12|map_matrix[2][15][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][3][2]   ;
+; PushBoxMap:inst12|map_matrix[10][0][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][3][2]   ;
+; PushBoxMap:inst12|map_matrix[4][14][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][3][2]   ;
+; PushBoxMap:inst12|map_matrix[14][6][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][3][2]   ;
+; PushBoxMap:inst12|map_matrix[5][14][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][3][2]   ;
+; PushBoxMap:inst12|map_matrix[15][6][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][3][2]   ;
+; PushBoxMap:inst12|map_matrix[14][1][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][3][2]   ;
+; PushBoxMap:inst12|map_matrix[14][5][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][3][2]   ;
+; PushBoxMap:inst12|map_matrix[12][15][2] ; Merged with PushBoxMap:inst12|map_matrix[0][3][2]   ;
+; PushBoxMap:inst12|map_matrix[2][10][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][3][2]   ;
+; PushBoxMap:inst12|map_matrix[14][9][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][3][2]   ;
+; PushBoxMap:inst12|map_matrix[8][14][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][3][2]   ;
+; PushBoxMap:inst12|map_matrix[14][12][2] ; Merged with PushBoxMap:inst12|map_matrix[0][3][2]   ;
+; PushBoxMap:inst12|map_matrix[1][10][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][3][2]   ;
+; PushBoxMap:inst12|map_matrix[7][1][2]   ; Merged with PushBoxMap:inst12|map_matrix[0][3][2]   ;
+; PushBoxMap:inst12|map_matrix[10][14][2] ; Merged with PushBoxMap:inst12|map_matrix[0][3][2]   ;
+; PushBoxMap:inst12|map_matrix[7][15][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][3][2]   ;
+; PushBoxMap:inst12|map_matrix[11][14][2] ; Merged with PushBoxMap:inst12|map_matrix[0][3][2]   ;
+; PushBoxMap:inst12|map_matrix[9][15][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][3][2]   ;
+; PushBoxMap:inst12|map_matrix[12][14][2] ; Merged with PushBoxMap:inst12|map_matrix[0][3][2]   ;
+; PushBoxMap:inst12|map_matrix[13][14][2] ; Merged with PushBoxMap:inst12|map_matrix[0][3][2]   ;
+; PushBoxMap:inst12|map_matrix[13][1][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][3][2]   ;
+; PushBoxMap:inst12|map_matrix[14][14][2] ; Merged with PushBoxMap:inst12|map_matrix[0][3][2]   ;
+; PushBoxMap:inst12|map_matrix[1][4][2]   ; Merged with PushBoxMap:inst12|map_matrix[0][3][2]   ;
+; PushBoxMap:inst12|map_matrix[4][15][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][3][2]   ;
+; PushBoxMap:inst12|map_matrix[15][14][2] ; Merged with PushBoxMap:inst12|map_matrix[0][3][2]   ;
+; PushBoxMap:inst12|map_matrix[5][15][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][3][2]   ;
+; PushBoxMap:inst12|map_matrix[15][0][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][3][2]   ;
+; PushBoxMap:inst12|map_matrix[1][14][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][3][2]   ;
+; PushBoxMap:inst12|map_matrix[2][12][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][2][2]   ;
+; PushBoxMap:inst12|map_matrix[2][8][2]   ; Merged with PushBoxMap:inst12|map_matrix[0][2][2]   ;
+; PushBoxMap:inst12|map_matrix[3][0][2]   ; Merged with PushBoxMap:inst12|map_matrix[0][2][2]   ;
+; PushBoxMap:inst12|map_matrix[8][15][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][2][2]   ;
+; PushBoxMap:inst12|map_matrix[9][1][2]   ; Merged with PushBoxMap:inst12|map_matrix[0][2][2]   ;
+; PushBoxMap:inst12|map_matrix[10][1][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][2][2]   ;
+; PushBoxMap:inst12|map_matrix[7][14][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][2][2]   ;
+; PushBoxMap:inst12|map_matrix[0][6][2]   ; Merged with PushBoxMap:inst12|map_matrix[0][2][2]   ;
+; PushBoxMap:inst12|map_matrix[0][7][2]   ; Merged with PushBoxMap:inst12|map_matrix[0][2][2]   ;
+; PushBoxMap:inst12|map_matrix[0][8][2]   ; Merged with PushBoxMap:inst12|map_matrix[0][2][2]   ;
+; PushBoxMap:inst12|map_matrix[3][15][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][2][2]   ;
+; PushBoxMap:inst12|map_matrix[4][0][2]   ; Merged with PushBoxMap:inst12|map_matrix[0][2][2]   ;
+; PushBoxMap:inst12|map_matrix[13][0][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][2][2]   ;
+; PushBoxMap:inst12|map_matrix[0][13][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][2][2]   ;
+; PushBoxMap:inst12|map_matrix[14][7][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][2][2]   ;
+; PushBoxMap:inst12|map_matrix[15][9][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][2][2]   ;
+; PushBoxMap:inst12|map_matrix[2][6][2]   ; Merged with PushBoxMap:inst12|map_matrix[0][2][2]   ;
+; PushBoxMap:inst12|map_matrix[15][15][2] ; Merged with PushBoxMap:inst12|map_matrix[0][12][2]  ;
+; PushBoxMap:inst12|map_matrix[1][13][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][12][2]  ;
+; PushBoxMap:inst12|map_matrix[6][0][2]   ; Merged with PushBoxMap:inst12|map_matrix[0][12][2]  ;
+; PushBoxMap:inst12|map_matrix[1][8][2]   ; Merged with PushBoxMap:inst12|map_matrix[0][12][2]  ;
+; PushBoxMap:inst12|map_matrix[15][3][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][12][2]  ;
+; PushBoxMap:inst12|map_matrix[1][15][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][12][2]  ;
+; PushBoxMap:inst12|map_matrix[15][4][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][12][2]  ;
+; PushBoxMap:inst12|map_matrix[7][0][2]   ; Merged with PushBoxMap:inst12|map_matrix[0][12][2]  ;
+; PushBoxMap:inst12|map_matrix[2][1][2]   ; Merged with PushBoxMap:inst12|map_matrix[0][12][2]  ;
+; PushBoxMap:inst12|map_matrix[15][11][2] ; Merged with PushBoxMap:inst12|map_matrix[0][12][2]  ;
+; PushBoxMap:inst12|map_matrix[2][2][2]   ; Merged with PushBoxMap:inst12|map_matrix[0][12][2]  ;
+; PushBoxMap:inst12|map_matrix[2][3][2]   ; Merged with PushBoxMap:inst12|map_matrix[0][12][2]  ;
+; PushBoxMap:inst12|map_matrix[15][13][2] ; Merged with PushBoxMap:inst12|map_matrix[0][12][2]  ;
+; PushBoxMap:inst12|map_matrix[5][0][2]   ; Merged with PushBoxMap:inst12|map_matrix[0][12][2]  ;
+; PushBoxMap:inst12|map_matrix[13][2][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][12][2]  ;
+; PushBoxMap:inst12|map_matrix[1][1][2]   ; Merged with PushBoxMap:inst12|map_matrix[0][12][2]  ;
+; PushBoxMap:inst12|map_matrix[1][2][2]   ; Merged with PushBoxMap:inst12|map_matrix[0][12][2]  ;
+; PushBoxMap:inst12|map_matrix[13][12][2] ; Merged with PushBoxMap:inst12|map_matrix[0][12][2]  ;
+; PushBoxMap:inst12|map_matrix[14][0][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][12][2]  ;
+; PushBoxMap:inst12|map_matrix[13][11][2] ; Merged with PushBoxMap:inst12|map_matrix[0][12][2]  ;
+; PushBoxMap:inst12|map_matrix[2][11][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][12][2]  ;
+; PushBoxMap:inst12|map_matrix[12][1][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][12][2]  ;
+; PushBoxMap:inst12|map_matrix[14][4][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][12][2]  ;
+; PushBoxMap:inst12|map_matrix[1][5][2]   ; Merged with PushBoxMap:inst12|map_matrix[0][12][2]  ;
+; PushBoxMap:inst12|map_matrix[14][2][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][12][2]  ;
+; PushBoxMap:inst12|map_matrix[1][7][2]   ; Merged with PushBoxMap:inst12|map_matrix[0][12][2]  ;
+; PushBoxMap:inst12|map_matrix[14][13][2] ; Merged with PushBoxMap:inst12|map_matrix[0][12][2]  ;
+; PushBoxMap:inst12|map_matrix[1][9][2]   ; Merged with PushBoxMap:inst12|map_matrix[0][12][2]  ;
+; PushBoxMap:inst12|map_matrix[12][0][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][12][2]  ;
+; PushBoxMap:inst12|map_matrix[15][1][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][12][2]  ;
+; PushBoxMap:inst12|map_matrix[6][15][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][12][2]  ;
+; PushBoxMap:inst12|map_matrix[15][5][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][12][2]  ;
+; PushBoxMap:inst12|map_matrix[15][10][2] ; Merged with PushBoxMap:inst12|map_matrix[0][12][2]  ;
+; PushBoxMap:inst12|map_matrix[2][4][2]   ; Merged with PushBoxMap:inst12|map_matrix[0][12][2]  ;
+; PushBoxMap:inst12|map_matrix[2][5][2]   ; Merged with PushBoxMap:inst12|map_matrix[0][12][2]  ;
+; PushBoxMap:inst12|map_matrix[2][7][2]   ; Merged with PushBoxMap:inst12|map_matrix[0][12][2]  ;
+; PushBoxMap:inst12|map_matrix[8][1][2]   ; Merged with PushBoxMap:inst12|map_matrix[0][12][2]  ;
+; PushBoxMap:inst12|map_matrix[8][0][2]   ; Merged with PushBoxMap:inst12|map_matrix[0][12][2]  ;
+; PushBoxMap:inst12|map_matrix[3][3][2]   ; Merged with PushBoxMap:inst12|map_matrix[3][1][2]   ;
+; PushBoxMap:inst12|map_matrix[6][1][2]   ; Merged with PushBoxMap:inst12|map_matrix[3][1][2]   ;
+; PushBoxMap:inst12|map_matrix[3][11][2]  ; Merged with PushBoxMap:inst12|map_matrix[3][1][2]   ;
+; PushBoxMap:inst12|map_matrix[3][4][2]   ; Merged with PushBoxMap:inst12|map_matrix[3][1][2]   ;
+; PushBoxMap:inst12|map_matrix[3][7][2]   ; Merged with PushBoxMap:inst12|map_matrix[3][1][2]   ;
+; PushBoxMap:inst12|map_matrix[3][8][2]   ; Merged with PushBoxMap:inst12|map_matrix[3][1][2]   ;
+; PushBoxMap:inst12|map_matrix[3][5][2]   ; Merged with PushBoxMap:inst12|map_matrix[3][1][2]   ;
+; PushBoxMap:inst12|map_matrix[3][9][2]   ; Merged with PushBoxMap:inst12|map_matrix[3][1][2]   ;
+; PushBoxMap:inst12|map_matrix[10][13][2] ; Merged with PushBoxMap:inst12|map_matrix[3][1][2]   ;
+; PushBoxMap:inst12|map_matrix[13][8][2]  ; Merged with PushBoxMap:inst12|map_matrix[3][2][2]   ;
+; PushBoxMap:inst12|map_matrix[13][6][2]  ; Merged with PushBoxMap:inst12|map_matrix[3][2][2]   ;
+; PushBoxMap:inst12|map_matrix[13][10][2] ; Merged with PushBoxMap:inst12|map_matrix[3][2][2]   ;
+; PushBoxMap:inst12|map_matrix[3][10][2]  ; Merged with PushBoxMap:inst12|map_matrix[3][2][2]   ;
+; PushBoxMap:inst12|map_matrix[4][2][2]   ; Merged with PushBoxMap:inst12|map_matrix[3][2][2]   ;
+; PushBoxMap:inst12|map_matrix[5][2][2]   ; Merged with PushBoxMap:inst12|map_matrix[3][2][2]   ;
+; PushBoxMap:inst12|map_matrix[11][13][2] ; Merged with PushBoxMap:inst12|map_matrix[3][2][2]   ;
+; PushBoxMap:inst12|map_matrix[4][1][2]   ; Merged with PushBoxMap:inst12|map_matrix[3][2][2]   ;
+; PushBoxMap:inst12|map_matrix[13][4][2]  ; Merged with PushBoxMap:inst12|map_matrix[3][2][2]   ;
+; PushBoxMap:inst12|map_matrix[3][12][2]  ; Merged with PushBoxMap:inst12|map_matrix[3][6][2]   ;
+; PushBoxMap:inst12|map_matrix[12][13][2] ; Merged with PushBoxMap:inst12|map_matrix[3][6][2]   ;
+; PushBoxMap:inst12|map_matrix[5][1][2]   ; Merged with PushBoxMap:inst12|map_matrix[3][6][2]   ;
+; PushBoxMap:inst12|map_matrix[13][7][2]  ; Merged with PushBoxMap:inst12|map_matrix[3][6][2]   ;
+; PushBoxMap:inst12|map_matrix[13][5][2]  ; Merged with PushBoxMap:inst12|map_matrix[3][6][2]   ;
+; PushBoxMap:inst12|map_matrix[13][9][2]  ; Merged with PushBoxMap:inst12|map_matrix[3][6][2]   ;
+; PushBoxMap:inst12|map_matrix[12][7][2]  ; Merged with PushBoxMap:inst12|map_matrix[4][3][2]   ;
+; PushBoxMap:inst12|map_matrix[12][5][2]  ; Merged with PushBoxMap:inst12|map_matrix[4][3][2]   ;
+; PushBoxMap:inst12|map_matrix[4][8][2]   ; Merged with PushBoxMap:inst12|map_matrix[4][7][2]   ;
+; PushBoxMap:inst12|map_matrix[5][13][2]  ; Merged with PushBoxMap:inst12|map_matrix[4][13][2]  ;
+; PushBoxMap:inst12|map_matrix[8][13][2]  ; Merged with PushBoxMap:inst12|map_matrix[6][2][2]   ;
+; PushBoxMap:inst12|map_matrix[6][7][2]   ; Merged with PushBoxMap:inst12|map_matrix[6][6][2]   ;
+; PushBoxMap:inst12|map_matrix[10][9][2]  ; Merged with PushBoxMap:inst12|map_matrix[6][6][2]   ;
+; PushBoxMap:inst12|map_matrix[9][6][2]   ; Merged with PushBoxMap:inst12|map_matrix[6][8][2]   ;
+; PushBoxMap:inst12|map_matrix[9][9][2]   ; Merged with PushBoxMap:inst12|map_matrix[6][8][2]   ;
+; PushBoxMap:inst12|map_matrix[10][2][2]  ; Merged with PushBoxMap:inst12|map_matrix[7][2][2]   ;
+; PushBoxMap:inst12|map_matrix[9][2][2]   ; Merged with PushBoxMap:inst12|map_matrix[8][2][2]   ;
+; PushBoxMap:inst12|map_matrix[9][3][2]   ; Merged with PushBoxMap:inst12|map_matrix[8][3][2]   ;
+; PushBoxMap:inst12|map_matrix[12][10][2] ; Merged with PushBoxMap:inst12|map_matrix[12][8][2]  ;
+; PushBoxMap:inst12|map_matrix[0][12][2]  ; Merged with PushBoxMap:inst12|map_matrix[0][4][2]   ;
+; PushBoxMap:inst12|map_matrix[0][2][2]   ; Merged with PushBoxMap:inst12|map_matrix[0][3][2]   ;
+; PushBoxMap:inst12|map_matrix[3][2][2]   ; Merged with PushBoxMap:inst12|map_matrix[3][1][2]   ;
+; PushBoxMap:inst12|map_matrix[12][6][2]  ; Merged with PushBoxMap:inst12|map_matrix[4][3][2]   ;
+; PushBoxMap:inst12|map_matrix[7][4][2]   ; Merged with PushBoxMap:inst12|map_matrix[5][6][2]   ;
+; PushBoxMap:inst12|map_matrix[9][13][2]  ; Merged with PushBoxMap:inst12|map_matrix[6][2][2]   ;
+; PushBoxMap:inst12|map_matrix[6][8][2]   ; Merged with PushBoxMap:inst12|map_matrix[6][6][2]   ;
+; PushBoxMap:inst12|map_matrix[7][3][2]   ; Merged with PushBoxMap:inst12|map_matrix[6][12][2]  ;
+; PushBoxMap:inst12|map_matrix[8][2][2]   ; Merged with PushBoxMap:inst12|map_matrix[7][2][2]   ;
+; PushBoxMap:inst12|map_matrix[12][9][2]  ; Merged with PushBoxMap:inst12|map_matrix[12][8][2]  ;
+; PushBoxMap:inst12|map_matrix[0][3][2]   ; Merged with PushBoxMap:inst12|map_matrix[0][4][2]   ;
+; PushBoxMap:inst12|map_matrix[3][6][2]   ; Merged with PushBoxMap:inst12|map_matrix[3][1][2]   ;
+; PushBoxMap:inst12|map_matrix[6][5][2]   ; Merged with PushBoxMap:inst12|map_matrix[5][5][2]   ;
+; PushBoxMap:inst12|map_matrix[7][13][2]  ; Merged with PushBoxMap:inst12|map_matrix[6][13][2]  ;
+; PushBoxMap:inst12|map_matrix[9][12][2]  ; Merged with PushBoxMap:inst12|map_matrix[8][12][2]  ;
+; PushBoxMap:inst12|map_matrix[12][12][2] ; Merged with PushBoxMap:inst12|map_matrix[12][11][2] ;
+; PushBoxMap:inst12|map_matrix[6][6][2]   ; Stuck at GND due to stuck port data_in              ;
+; PushBoxMap:inst12|map_matrix[0][4][2]   ; Stuck at VCC due to stuck port data_in              ;
+; PushBoxMap:inst12|map_matrix[6][2][2]   ; Merged with PushBoxMap:inst12|map_matrix[11][9][2]  ;
+; Total Number of Removed Registers = 181 ;                                                     ;
++-----------------------------------------+-----------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 804   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 98    ;
+; Number of registers using Asynchronous Clear ; 37    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 492   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; PushBoxMap:inst12|map_matrix[3][1][2]   ; 8       ;
+; PushBoxMap:inst12|map_matrix[8][12][2]  ; 2       ;
+; PushBoxMap:inst12|map_matrix[11][12][2] ; 2       ;
+; PushBoxMap:inst12|map_matrix[10][12][2] ; 2       ;
+; PushBoxMap:inst12|map_matrix[8][3][2]   ; 2       ;
+; PushBoxMap:inst12|map_matrix[11][3][2]  ; 2       ;
+; PushBoxMap:inst12|map_matrix[10][3][2]  ; 2       ;
+; PushBoxMap:inst12|map_matrix[7][2][2]   ; 3       ;
+; PushBoxMap:inst12|map_matrix[10][6][2]  ; 2       ;
+; PushBoxMap:inst12|map_matrix[10][5][2]  ; 2       ;
+; PushBoxMap:inst12|map_matrix[10][4][2]  ; 2       ;
+; PushBoxMap:inst12|map_matrix[11][5][2]  ; 2       ;
+; PushBoxMap:inst12|map_matrix[11][6][2]  ; 2       ;
+; PushBoxMap:inst12|map_matrix[11][4][2]  ; 2       ;
+; PushBoxMap:inst12|map_matrix[8][5][2]   ; 2       ;
+; PushBoxMap:inst12|map_matrix[9][10][2]  ; 2       ;
+; PushBoxMap:inst12|map_matrix[9][11][2]  ; 2       ;
+; PushBoxMap:inst12|map_matrix[10][11][2] ; 2       ;
+; PushBoxMap:inst12|map_matrix[10][10][2] ; 2       ;
+; PushBoxMap:inst12|map_matrix[10][8][2]  ; 2       ;
+; PushBoxMap:inst12|map_matrix[11][10][2] ; 2       ;
+; PushBoxMap:inst12|map_matrix[11][11][2] ; 2       ;
+; PushBoxMap:inst12|map_matrix[5][3][2]   ; 2       ;
+; PushBoxMap:inst12|map_matrix[5][12][2]  ; 2       ;
+; PushBoxMap:inst12|map_matrix[4][13][2]  ; 3       ;
+; PushBoxMap:inst12|map_matrix[5][5][2]   ; 3       ;
+; PushBoxMap:inst12|map_matrix[5][4][2]   ; 2       ;
+; PushBoxMap:inst12|map_matrix[5][7][2]   ; 2       ;
+; PushBoxMap:inst12|map_matrix[5][9][2]   ; 2       ;
+; PushBoxMap:inst12|map_matrix[5][10][2]  ; 2       ;
+; PushBoxMap:inst12|map_matrix[5][11][2]  ; 2       ;
+; PushBoxMap:inst12|map_matrix[6][12][2]  ; 3       ;
+; PushBoxMap:inst12|map_matrix[6][13][2]  ; 3       ;
+; PushBoxMap:inst12|map_matrix[6][3][2]   ; 2       ;
+; PushBoxMap:inst12|map_matrix[6][4][2]   ; 2       ;
+; PushBoxMap:inst12|map_matrix[7][12][2]  ; 2       ;
+; PushBoxMap:inst12|map_matrix[7][10][2]  ; 2       ;
+; PushBoxMap:inst12|map_matrix[4][12][2]  ; 2       ;
+; PushBoxMap:inst12|map_matrix[4][3][2]   ; 3       ;
+; PushBoxMap:inst12|map_matrix[4][5][2]   ; 2       ;
+; PushBoxMap:inst12|map_matrix[4][4][2]   ; 2       ;
+; PushBoxMap:inst12|map_matrix[4][9][2]   ; 2       ;
+; PushBoxMap:inst12|map_matrix[4][10][2]  ; 2       ;
+; PushBoxMap:inst12|map_matrix[4][11][2]  ; 2       ;
+; PushBoxMap:inst12|map_matrix[12][4][2]  ; 2       ;
+; PushBoxMap:inst12|map_matrix[12][11][2] ; 3       ;
+; PushBoxMap:inst12|map_matrix[12][8][2]  ; 2       ;
+; PushBoxMap:inst12|map_matrix[7][9][0]   ; 5       ;
+; PushBoxMap:inst12|map_matrix[8][5][0]   ; 5       ;
+; PushBoxMap:inst12|map_matrix[8][6][0]   ; 4       ;
+; PushBoxMap:inst12|map_matrix[7][10][0]  ; 5       ;
+; PushBoxMap:inst12|map_matrix[7][8][0]   ; 4       ;
+; PushBoxMap:inst12|map_matrix[9][8][0]   ; 5       ;
+; PushBoxMap:inst12|map_matrix[8][8][0]   ; 4       ;
+; PushBoxMap:inst12|map_matrix[10][8][0]  ; 5       ;
+; PushBoxMap:inst12|map_matrix[5][7][0]   ; 5       ;
+; PushBoxMap:inst12|map_matrix[6][7][0]   ; 3       ;
+; PushBoxMap:inst12|map_matrix[8][7][0]   ; 5       ;
+; PushBoxMap:inst12|map_matrix[8][6][1]   ; 4       ;
+; PushBoxMap:inst12|map_matrix[7][8][1]   ; 4       ;
+; PushBoxMap:inst12|map_matrix[8][8][1]   ; 4       ;
+; PushBoxMap:inst12|map_matrix[7][7][1]   ; 5       ;
+; PushBoxMap:inst12|map_matrix[6][7][1]   ; 3       ;
+; PushBoxMap:inst12|player_pos_y[0]       ; 108     ;
+; PushBoxMap:inst12|player_pos_y[1]       ; 102     ;
+; PushBoxMap:inst12|player_pos_y[2]       ; 98      ;
+; PushBoxMap:inst12|player_pos_x[0]       ; 568     ;
+; PushBoxMap:inst12|player_pos_x[1]       ; 249     ;
+; PushBoxMap:inst12|player_pos_x[2]       ; 183     ;
+; Total number of inverted registers = 69 ;         ;
++-----------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |PushBox|VgaSync:inst|s_countv_prev[3]             ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |PushBox|Rebounce:inst8|counter_out[9]             ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |PushBox|Rebounce:inst7|counter_out[4]             ;
+; 3:1                ; 21 bits   ; 42 LEs        ; 21 LEs               ; 21 LEs                 ; Yes        ; |PushBox|Rebounce:inst5|counter_out[17]            ;
+; 3:1                ; 21 bits   ; 42 LEs        ; 21 LEs               ; 21 LEs                 ; Yes        ; |PushBox|Rebounce:inst4|counter_out[5]             ;
+; 3:1                ; 21 bits   ; 42 LEs        ; 21 LEs               ; 21 LEs                 ; Yes        ; |PushBox|Rebounce:inst6|counter_out[12]            ;
+; 3:1                ; 21 bits   ; 42 LEs        ; 21 LEs               ; 21 LEs                 ; Yes        ; |PushBox|Rebounce:inst3|counter_out[5]             ;
+; 3:1                ; 27 bits   ; 54 LEs        ; 27 LEs               ; 27 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[11][9][2]    ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |PushBox|VgaPixel:inst11|s_rgb_prev[8]             ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[15][0][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[14][0][0]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[13][0][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[14][1][0]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[14][15][1]   ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[15][1][0]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[13][1][0]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[14][2][0]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[15][2][0]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[13][2][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[14][3][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[15][3][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[13][3][0]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[14][4][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[15][4][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[13][4][0]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[14][5][0]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[15][5][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[13][5][0]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[14][6][0]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[15][6][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[13][6][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[14][7][0]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[15][7][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[13][7][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[14][8][0]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[15][8][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[13][8][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[14][9][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[15][9][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[13][9][0]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[14][10][1]   ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[15][10][0]   ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[13][10][0]   ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[14][11][1]   ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[15][11][0]   ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[13][11][1]   ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[14][12][1]   ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[15][12][0]   ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[13][12][1]   ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[14][13][1]   ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[15][13][1]   ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[13][13][1]   ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[14][14][1]   ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[15][14][1]   ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[13][14][1]   ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[15][15][1]   ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[13][15][1]   ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[12][0][0]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[12][1][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[12][2][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[12][3][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[12][4][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[12][10][1]   ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[12][11][0]   ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[12][12][0]   ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[12][13][0]   ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[12][14][0]   ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[12][15][0]   ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[11][0][0]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[11][1][0]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[11][2][0]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[11][3][0]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[11][4][0]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[11][11][1]   ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[11][13][0]   ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[11][14][0]   ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[11][15][0]   ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[10][0][0]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[10][1][0]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[10][2][0]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[10][3][0]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[10][4][0]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[10][6][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[10][9][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[10][10][1]   ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[10][13][1]   ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[10][14][1]   ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[10][15][1]   ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[9][0][1]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[9][1][1]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[9][2][1]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[9][5][0]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[9][6][0]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[9][7][1]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[9][9][1]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[9][10][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[9][11][0]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[9][13][0]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[9][14][0]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[9][15][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[8][0][1]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[8][1][1]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[8][2][1]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[8][4][0]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[8][9][1]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[8][10][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[8][11][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[8][13][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[8][14][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[8][15][0]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[7][0][0]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[7][1][0]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[7][2][0]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[7][4][1]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[7][6][0]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[7][13][0]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[7][14][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[7][15][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[6][0][1]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[6][1][1]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[6][2][0]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[6][3][0]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[6][5][1]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[6][6][0]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[6][8][1]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[6][9][1]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[6][11][0]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[6][13][0]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[6][14][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[6][15][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[5][0][1]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[5][1][1]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[5][5][0]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[5][6][0]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[5][8][0]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[5][13][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[5][14][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[5][15][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[4][0][1]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[4][1][1]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[4][5][0]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[4][6][0]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[4][12][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[4][13][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[4][14][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[4][15][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[3][0][0]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[3][1][0]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[3][2][0]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[3][3][1]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[3][4][1]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[3][5][0]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[3][6][1]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[3][7][1]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[3][8][1]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[3][9][1]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[3][10][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[3][11][0]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[3][12][0]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[3][13][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[3][14][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[3][15][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[2][0][1]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[2][1][1]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[2][2][1]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[2][3][1]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[2][4][0]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[2][5][0]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[2][6][1]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[2][7][1]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[2][8][1]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[2][9][1]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[2][10][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[2][11][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[2][12][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[2][13][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[2][14][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[2][15][0]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[1][0][0]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[1][1][0]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[1][2][0]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[1][3][1]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[1][4][0]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[1][5][0]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[1][6][0]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[1][7][0]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[1][8][0]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[1][9][0]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[1][10][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[1][11][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[1][12][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[1][13][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[1][14][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[1][15][0]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[0][0][0]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[0][1][0]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[0][2][1]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[0][3][1]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[0][4][1]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[0][5][1]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[0][6][1]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[0][7][1]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[0][8][1]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[0][9][1]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[0][10][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[0][11][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[0][12][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[0][13][1]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[0][14][0]    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[0][15][0]    ;
+; 3:1                ; 48 bits   ; 96 LEs        ; 48 LEs               ; 48 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[10][6][2]    ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |PushBox|PushBoxMap:inst12|player_pos_y[1]         ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |PushBox|PushBoxMap:inst12|player_pos_x[1]         ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[8][6][0]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[8][8][1]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[7][8][0]     ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |PushBox|PushBoxMap:inst12|map_matrix[6][7][0]     ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |PushBox|PushBoxMap:inst12|Mux376                  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |PushBox|PushBoxMap:inst12|Mux372                  ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; No         ; |PushBox|VgaPixel:inst11|s_rgb_next                ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |PushBox|VgaPixel:inst11|Mux26                     ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |PushBox|PushBoxMap:inst12|Mux372                  ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |PushBox|PushBoxMap:inst12|Mux410                  ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |PushBox|PushBoxMap:inst12|Mux374                  ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |PushBox|SevenSegLevelNumber:inst14|seven_seg_0[6] ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |PushBox|SevenSegLevelNumber:inst14|seven_seg_0[0] ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |PushBox|SevenSegLevelNumber:inst14|seven_seg_1[5] ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |PushBox|SevenSegLevelNumber:inst14|seven_seg_0[4] ;
+; 8:1                ; 32 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; No         ; |PushBox|PushBoxMap:inst12|Mux404                  ;
+; 64:1               ; 2 bits    ; 84 LEs        ; 84 LEs               ; 0 LEs                  ; No         ; |PushBox|PushBoxMap:inst12|Mux511                  ;
+; 64:1               ; 2 bits    ; 84 LEs        ; 84 LEs               ; 0 LEs                  ; No         ; |PushBox|PushBoxMap:inst12|Mux444                  ;
+; 128:1              ; 2 bits    ; 170 LEs       ; 170 LEs              ; 0 LEs                  ; No         ; |PushBox|PushBoxMap:inst12|Mux545                  ;
+; 128:1              ; 2 bits    ; 170 LEs       ; 170 LEs              ; 0 LEs                  ; No         ; |PushBox|PushBoxMap:inst12|Mux477                  ;
+; 256:1              ; 2 bits    ; 340 LEs       ; 340 LEs              ; 0 LEs                  ; No         ; |PushBox|PushBoxMap:inst12|Mux49                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PushBoxMap:inst12 ;
++-----------------+-------+--------------------------------------+
+; Parameter Name  ; Value ; Type                                 ;
++-----------------+-------+--------------------------------------+
+; map_width_bits  ; 4     ; Signed Integer                       ;
+; map_height_bits ; 4     ; Signed Integer                       ;
++-----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Rebounce:inst4 ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; counter_size   ; 21    ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Rebounce:inst5 ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; counter_size   ; 21    ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Rebounce:inst3 ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; counter_size   ; 21    ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Rebounce:inst6 ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; counter_size   ; 21    ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Rebounce:inst8 ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; counter_size   ; 20    ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Rebounce:inst7 ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; counter_size   ; 20    ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: VgaPixel:inst11 ;
++---------------------+-------+--------------------------------+
+; Parameter Name      ; Value ; Type                           ;
++---------------------+-------+--------------------------------+
+; map_start_col       ; 144   ; Signed Integer                 ;
+; map_end_col         ; 656   ; Signed Integer                 ;
+; map_start_row       ; 44    ; Signed Integer                 ;
+; map_end_row         ; 556   ; Signed Integer                 ;
+; map_squaresize_bits ; 5     ; Signed Integer                 ;
++---------------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: SevenSegLevelNumber:inst14|lpm_divide:Mod0 ;
++------------------------+----------------+---------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                              ;
++------------------------+----------------+---------------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                           ;
+; LPM_WIDTHD             ; 8              ; Untyped                                           ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                           ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                           ;
+; LPM_PIPELINE           ; 0              ; Untyped                                           ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                           ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                           ;
+; CBXI_PARAMETER         ; lpm_divide_85m ; Untyped                                           ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                           ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                           ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                      ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                    ;
++------------------------+----------------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: SevenSegLevelNumber:inst14|lpm_divide:Div0 ;
++------------------------+----------------+---------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                              ;
++------------------------+----------------+---------------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                           ;
+; LPM_WIDTHD             ; 4              ; Untyped                                           ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                           ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                           ;
+; LPM_PIPELINE           ; 0              ; Untyped                                           ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                           ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                           ;
+; CBXI_PARAMETER         ; lpm_divide_1dm ; Untyped                                           ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                           ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                           ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                      ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                    ;
++------------------------+----------------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:01:37     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu Jun 28 18:46:15 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off PushBox -c PushBox
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file pushbox.bdf
+    Info (12023): Found entity 1: PushBox
+Info (12021): Found 2 design units, including 1 entities, in source file vgasync.vhd
+    Info (12022): Found design unit 1: VgaSync-archVgaSync
+    Info (12023): Found entity 1: VgaSync
+Info (12021): Found 2 design units, including 1 entities, in source file vgapixel.vhd
+    Info (12022): Found design unit 1: VgaPixel-archVgaPixel
+    Info (12023): Found entity 1: VgaPixel
+Info (12021): Found 2 design units, including 1 entities, in source file pushboxmap.vhd
+    Info (12022): Found design unit 1: PushBoxMap-archPushBoxMap
+    Info (12023): Found entity 1: PushBoxMap
+Info (12021): Found 2 design units, including 1 entities, in source file rebounce.vhd
+    Info (12022): Found design unit 1: Rebounce-archRebounce
+    Info (12023): Found entity 1: Rebounce
+Info (12021): Found 1 design units, including 0 entities, in source file images.vhd
+    Info (12022): Found design unit 1: Images
+Info (12021): Found 1 design units, including 0 entities, in source file pushboxlevels.vhd
+    Info (12022): Found design unit 1: PushBoxLevels
+Info (12021): Found 2 design units, including 1 entities, in source file sevenseglevelnumber.vhd
+    Info (12022): Found design unit 1: SevenSegLevelNumber-archSevenSegLevelNumber
+    Info (12023): Found entity 1: SevenSegLevelNumber
+Info (12127): Elaborating entity "PushBox" for the top level hierarchy
+Warning (275011): Block or symbol "VgaPixel" of instance "inst11" overlaps another block or symbol
+Info (12128): Elaborating entity "VgaSync" for hierarchy "VgaSync:inst"
+Info (12128): Elaborating entity "SevenSegLevelNumber" for hierarchy "SevenSegLevelNumber:inst14"
+Info (12128): Elaborating entity "PushBoxMap" for hierarchy "PushBoxMap:inst12"
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "map_matrix" into its bus
+Info (12128): Elaborating entity "Rebounce" for hierarchy "Rebounce:inst4"
+Info (12128): Elaborating entity "Rebounce" for hierarchy "Rebounce:inst8"
+Info (12128): Elaborating entity "VgaPixel" for hierarchy "VgaPixel:inst11"
+Info (278001): Inferred 2 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "SevenSegLevelNumber:inst14|Mod0"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "SevenSegLevelNumber:inst14|Div0"
+Info (12130): Elaborated megafunction instantiation "SevenSegLevelNumber:inst14|lpm_divide:Mod0"
+Info (12133): Instantiated megafunction "SevenSegLevelNumber:inst14|lpm_divide:Mod0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "8"
+    Info (12134): Parameter "LPM_WIDTHD" = "8"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_85m.tdf
+    Info (12023): Found entity 1: lpm_divide_85m
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_fkh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_fkh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_00f.tdf
+    Info (12023): Found entity 1: alt_u_div_00f
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_lkc.tdf
+    Info (12023): Found entity 1: add_sub_lkc
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_mkc.tdf
+    Info (12023): Found entity 1: add_sub_mkc
+Info (12130): Elaborated megafunction instantiation "SevenSegLevelNumber:inst14|lpm_divide:Div0"
+Info (12133): Instantiated megafunction "SevenSegLevelNumber:inst14|lpm_divide:Div0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "8"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_1dm.tdf
+    Info (12023): Found entity 1: lpm_divide_1dm
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_bkh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_bkh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ove.tdf
+    Info (12023): Found entity 1: alt_u_div_ove
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX1[2]" is stuck at GND
+    Warning (13410): Pin "HEX1[1]" is stuck at GND
+    Warning (13410): Pin "HEX2[6]" is stuck at VCC
+    Warning (13410): Pin "HEX2[5]" is stuck at VCC
+    Warning (13410): Pin "HEX2[4]" is stuck at VCC
+    Warning (13410): Pin "HEX2[3]" is stuck at VCC
+    Warning (13410): Pin "HEX2[2]" is stuck at VCC
+    Warning (13410): Pin "HEX2[1]" is stuck at VCC
+    Warning (13410): Pin "HEX2[0]" is stuck at VCC
+    Warning (13410): Pin "HEX3[6]" is stuck at VCC
+    Warning (13410): Pin "HEX3[5]" is stuck at VCC
+    Warning (13410): Pin "HEX3[4]" is stuck at VCC
+    Warning (13410): Pin "HEX3[3]" is stuck at VCC
+    Warning (13410): Pin "HEX3[2]" is stuck at VCC
+    Warning (13410): Pin "HEX3[1]" is stuck at VCC
+    Warning (13410): Pin "HEX3[0]" is stuck at VCC
+Info (17016): Found the following redundant logic cells in design
+    Info (17048): Logic cell "SevenSegLevelNumber:inst14|lpm_divide:Mod0|lpm_divide_85m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_00f:divider|add_sub_7_result_int[0]~16"
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 11988 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 8 input pins
+    Info (21059): Implemented 43 output pins
+    Info (21061): Implemented 11937 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 19 warnings
+    Info: Peak virtual memory: 4730 megabytes
+    Info: Processing ended: Thu Jun 28 18:47:56 2018
+    Info: Elapsed time: 00:01:41
+    Info: Total CPU time (on all processors): 00:01:41
+
+
