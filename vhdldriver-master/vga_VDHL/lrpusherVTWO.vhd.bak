@@ -1,0 +1,58 @@
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY lrpusherVTWO IS
+
+			
+	PORT(
+		enable : IN STD_LOGIC;
+		a		: 	OUT	INTEGER;
+		b		: 	OUT	INTEGER;
+		c		: 	OUT	INTEGER;
+		
+		d		: 	OUT	INTEGER;
+		e		: 	OUT	INTEGER;
+		f		: 	OUT	INTEGER;
+		
+		g		: 	OUT	INTEGER;
+		h		: 	OUT	INTEGER;
+		i		: 	OUT	INTEGER
+		
+		); --draws greaterthan
+		
+END lrpusherVTWO;
+
+ARCHITECTURE behavior OF lrpusherVTWO IS
+BEGIN
+	PROCESS(enable)
+			BEGIN
+			
+			IF(enable='1') THEN
+			
+			--need 18 bottim starts at 0 rest increment up by 100
+				a <= 1700;
+				b <= 1600;
+				c <= 1500;
+				d <= 1400;
+				e <= 1300;
+				f <= 1200;
+				g <= 1100;
+				h <= 1000;
+				i <= 900;
+				
+				j <= 800;
+				k <= 700;
+				l <= 600;
+				m <= 500;
+				n <= 400;
+				o <= 300;
+				p <= 200;
+				q <= 100;
+				r <= 0;
+				
+			END IF;
+	
+			
+	END PROCESS;
+END behavior;

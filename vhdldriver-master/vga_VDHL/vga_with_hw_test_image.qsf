@@ -1,0 +1,114 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2011 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 32-bit
+# Version 11.1 Build 173 11/01/2011 SJ Full Version
+# Date created = 11:38:09  February 08, 2013
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		vga_with_hw_test_image_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE115F29C7
+set_global_assignment -name TOP_LEVEL_ENTITY vga_with_hw_test_image
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 11.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:38:09  FEBRUARY 08, 2013"
+set_global_assignment -name LAST_QUARTUS_VERSION "17.1.0 Lite Edition"
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 780
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 7
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
+set_location_assignment PIN_H10 -to red[7]
+set_location_assignment PIN_H8 -to red[6]
+set_location_assignment PIN_J12 -to red[5]
+set_location_assignment PIN_G10 -to red[4]
+set_location_assignment PIN_F12 -to red[3]
+set_location_assignment PIN_D10 -to red[2]
+set_location_assignment PIN_E11 -to red[1]
+set_location_assignment PIN_E12 -to red[0]
+set_location_assignment PIN_C9 -to green[7]
+set_location_assignment PIN_F10 -to green[6]
+set_location_assignment PIN_B8 -to green[5]
+set_location_assignment PIN_C8 -to green[4]
+set_location_assignment PIN_H12 -to green[3]
+set_location_assignment PIN_F8 -to green[2]
+set_location_assignment PIN_G11 -to green[1]
+set_location_assignment PIN_G8 -to green[0]
+set_location_assignment PIN_D12 -to blue[7]
+set_location_assignment PIN_D11 -to blue[6]
+set_location_assignment PIN_C12 -to blue[5]
+set_location_assignment PIN_A11 -to blue[4]
+set_location_assignment PIN_B11 -to blue[3]
+set_location_assignment PIN_C11 -to blue[2]
+set_location_assignment PIN_A10 -to blue[1]
+set_location_assignment PIN_B10 -to blue[0]
+set_location_assignment PIN_G13 -to h_sync
+set_location_assignment PIN_F11 -to n_blank
+set_location_assignment PIN_C10 -to n_sync
+set_location_assignment PIN_A12 -to pixel_clk
+set_location_assignment PIN_C13 -to v_sync
+set_location_assignment PIN_Y2 -to clk
+set_global_assignment -name SDC_FILE vga_with_hw_test_image.out.sdc
+set_global_assignment -name BDF_FILE vga_with_hw_test_image.bdf
+set_global_assignment -name VHDL_FILE vga_controller.vhd
+set_global_assignment -name VHDL_FILE hw_image_generator.vhd
+set_global_assignment -name QIP_FILE vga_pll.qip
+set_global_assignment -name QIP_FILE altpll0.qip
+set_global_assignment -name VHDL_FILE SPACEINVADER.vhd
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VHDL_FILE pong.vhd
+set_global_assignment -name VHDL_FILE testbox.vhd
+set_location_assignment PIN_AB28 -to reset
+set_location_assignment PIN_AC28 -to reset2
+set_global_assignment -name VHDL_FILE playerone.vhd
+set_global_assignment -name VHDL_FILE counterblock.vhd
+set_global_assignment -name VHDL_FILE playeronemove.vhd
+set_location_assignment PIN_AB28 -to p1Right
+set_global_assignment -name BDF_FILE counterX3.bdf
+set_global_assignment -name VHDL_FILE counterblockslow.vhd
+set_global_assignment -name VHDL_FILE lightbox.vhd
+set_global_assignment -name VHDL_FILE ../../numpushertop.vhd
+set_global_assignment -name VHDL_FILE ../../numpusherbottom.vhd
+set_global_assignment -name VHDL_FILE ../../numpusherLR.vhd
+set_global_assignment -name VHDL_FILE ../../farleftpush.vhd
+set_global_assignment -name VHDL_FILE ../../farlrightpush.vhd
+set_global_assignment -name VHDL_FILE lrpusherVTWO.vhd
+set_global_assignment -name VHDL_FILE FSMgame.vhd
+set_location_assignment PIN_Y23 -to p1reset
+set_location_assignment PIN_AC28 -to P1Left
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

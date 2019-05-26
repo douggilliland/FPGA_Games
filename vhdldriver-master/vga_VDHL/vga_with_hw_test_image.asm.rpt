@@ -1,0 +1,92 @@
+Assembler report for vga_with_hw_test_image
+Wed Dec 06 13:41:53 2017
+Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Assembler Summary
+  3. Assembler Settings
+  4. Assembler Generated Files
+  5. Assembler Device Options: C:/Users/pigottkj/Desktop/vga_with_hw_test_image_v1_0_restored-20171205T164140Z-001/vga_with_hw_test_image_v1_0_restored/vga_with_hw_test_image.sof
+  6. Assembler Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2014 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus II License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++---------------------------------------------------------------+
+; Assembler Summary                                             ;
++-----------------------+---------------------------------------+
+; Assembler Status      ; Successful - Wed Dec 06 13:41:53 2017 ;
+; Revision Name         ; vga_with_hw_test_image                ;
+; Top-level Entity Name ; vga_with_hw_test_image                ;
+; Family                ; Cyclone IV E                          ;
+; Device                ; EP4CE115F29C7                         ;
++-----------------------+---------------------------------------+
+
+
++----------------------------------+
+; Assembler Settings               ;
++--------+---------+---------------+
+; Option ; Setting ; Default Value ;
++--------+---------+---------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                                                                           ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; File Name                                                                                                                                           ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; C:/Users/pigottkj/Desktop/vga_with_hw_test_image_v1_0_restored-20171205T164140Z-001/vga_with_hw_test_image_v1_0_restored/vga_with_hw_test_image.sof ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/pigottkj/Desktop/vga_with_hw_test_image_v1_0_restored-20171205T164140Z-001/vga_with_hw_test_image_v1_0_restored/vga_with_hw_test_image.sof ;
++----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                                                                                      ;
++----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Device         ; EP4CE115F29C7                                                                                                                                                ;
+; JTAG usercode  ; 0xFFFFFFFF                                                                                                                                                   ;
+; Checksum       ; 0x0058B04C                                                                                                                                                   ;
++----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------+
+; Assembler Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Assembler
+    Info: Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
+    Info: Processing started: Wed Dec 06 13:41:49 2017
+Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off vga_with_hw_test_image -c vga_with_hw_test_image
+Info (115031): Writing out detailed assembly data for power analysis
+Info (115030): Assembler is generating device programming files
+Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 509 megabytes
+    Info: Processing ended: Wed Dec 06 13:41:53 2017
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
+
+

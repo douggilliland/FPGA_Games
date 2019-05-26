@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=
+comment0.target=main()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ main\r\n
+comment1.params=start\ end
+comment1.target=void\ initializer(int,\ int)
+comment1.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \r\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \r\n
+comment2.params=start\ end
+comment2.target=void\ elseifer(int,\ int)
+comment3.params=start\ end
+comment3.target=void\ iner(int,\ int)
+numComments=4

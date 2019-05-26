@@ -1,0 +1,30 @@
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY numpushertop IS
+	GENERIC(
+	
+		X :	INTEGER := 800; 
+		
+	);
+			
+	PORT(
+	
+		numout		: 	OUT	INTEGER
+		
+		); --draws greaterthan
+		
+END lightbox;
+
+ARCHITECTURE behavior OF lightbox IS
+BEGIN
+	PROCESS 
+			BEGIN
+
+				numout <= X;
+			
+			END IF;
+			
+	END PROCESS;
+END behavior;

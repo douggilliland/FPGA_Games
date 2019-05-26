@@ -1,0 +1,34 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity counterblock is
+	Generic(
+	curcount :	INTEGER := 0; 
+	top : INTEGER := 1000;
+	);
+	
+   port( 	
+ 	 Clock: in std_logic;
+ 	 Output: out std_logic);
+end counterblock;
+ 
+architecture Behavioral of counter is
+   
+begin process(Clock)
+   begin
+     
+      if(rising_edge(Clock)) then
+			curcount <= curcount+1;
+			if(cucount<top) then
+				Output <= '1';
+			elsif((curcount > top) AND (curcount < top*2)) then
+				Output <= '0';
+			else
+				curcount <=0;
+         end if;
+      end if;
+   end process;
+   Output <= temp;
+end Behavioral;

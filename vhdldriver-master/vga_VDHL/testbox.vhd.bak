@@ -1,0 +1,33 @@
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY testinbox IS
+	GENERIC(
+	
+		T : INTEGER := 900; --draws greaterthan
+		B : INTEGER := 1000; --draws less than
+		L : INTEGER := 100; -- draws greaterthan
+		R : INTEGER := 200); -- draws lestthan
+		
+	PORT(
+
+		TOUT		: 	out	INTEGER; --draws greaterthan
+		BOUT	:	out INTEGER; --draws less than
+		CLOUT 		:	out INTEGER; -- draws greaterthan
+		ROUT	:	out INTEGER); -- draws lestthan
+		
+END testintbox;
+
+ARCHITECTURE behavior OF testintbox IS
+BEGIN
+	PROCESS
+	BEGIN
+	
+		TOUT := T;
+		BOUT := B;
+		LOUT := L;
+		ROUT := R;
+		
+	END PROCESS;
+END behavior;

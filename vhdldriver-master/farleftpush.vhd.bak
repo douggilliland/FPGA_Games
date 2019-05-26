@@ -1,0 +1,32 @@
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY farleftpush IS
+	GENERIC(
+	
+		X :	INTEGER := 0 
+		
+	);
+			
+	PORT(
+	
+		q		: 	OUT	INTEGER;
+
+		
+		); --draws greaterthan
+		
+END numpusherbottom;
+
+ARCHITECTURE behavior OF farleftpush IS
+BEGIN
+	PROCESS 
+			BEGIN
+
+				q <= X;
+
+			
+	
+			
+	END PROCESS;
+END behavior;
