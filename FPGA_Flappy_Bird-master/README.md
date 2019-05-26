@@ -1,5 +1,7 @@
 # FGPA Flappy Bird
 
+From: https://github.com/lukehsiao/FPGA_Flappy_Bird
+
 Version: 1.0.0<br>
 Original Release date:  27 March 2014<br>
 Updated:  27 March 2014 <br>
