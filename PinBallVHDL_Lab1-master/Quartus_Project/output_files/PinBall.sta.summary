@@ -1,0 +1,165 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -12.242
+TNS   : -3921.498
+
+Type  : Slow 1100mV 85C Model Setup 'AUD_BCLK'
+Slack : -5.632
+TNS   : -251.966
+
+Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 0.223
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'AUD_BCLK'
+Slack : 0.314
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'AUD_BCLK'
+Slack : -5.710
+TNS   : -302.743
+
+Type  : Slow 1100mV 85C Model Recovery 'CLOCK_50'
+Slack : -0.906
+TNS   : -25.570
+
+Type  : Slow 1100mV 85C Model Removal 'CLOCK_50'
+Slack : 0.768
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'AUD_BCLK'
+Slack : 0.899
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -2.174
+TNS   : -761.436
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'AUD_BCLK'
+Slack : -2.174
+TNS   : -228.184
+
+Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -12.374
+TNS   : -3800.706
+
+Type  : Slow 1100mV 0C Model Setup 'AUD_BCLK'
+Slack : -5.433
+TNS   : -242.525
+
+Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
+Slack : 0.213
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'AUD_BCLK'
+Slack : 0.299
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'AUD_BCLK'
+Slack : -5.581
+TNS   : -292.765
+
+Type  : Slow 1100mV 0C Model Recovery 'CLOCK_50'
+Slack : -0.860
+TNS   : -22.949
+
+Type  : Slow 1100mV 0C Model Removal 'CLOCK_50'
+Slack : 0.706
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'AUD_BCLK'
+Slack : 0.770
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -2.174
+TNS   : -808.682
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'AUD_BCLK'
+Slack : -2.174
+TNS   : -219.567
+
+Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -6.208
+TNS   : -1924.453
+
+Type  : Fast 1100mV 85C Model Setup 'AUD_BCLK'
+Slack : -3.922
+TNS   : -80.221
+
+Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 0.131
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'AUD_BCLK'
+Slack : 0.179
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'AUD_BCLK'
+Slack : -3.734
+TNS   : -201.175
+
+Type  : Fast 1100mV 85C Model Recovery 'CLOCK_50'
+Slack : -0.156
+TNS   : -0.776
+
+Type  : Fast 1100mV 85C Model Removal 'CLOCK_50'
+Slack : 0.433
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'AUD_BCLK'
+Slack : 0.844
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -2.174
+TNS   : -258.415
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'AUD_BCLK'
+Slack : -2.174
+TNS   : -159.942
+
+Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -5.688
+TNS   : -1648.068
+
+Type  : Fast 1100mV 0C Model Setup 'AUD_BCLK'
+Slack : -3.280
+TNS   : -61.849
+
+Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
+Slack : 0.120
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'AUD_BCLK'
+Slack : 0.166
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'AUD_BCLK'
+Slack : -3.104
+TNS   : -167.256
+
+Type  : Fast 1100mV 0C Model Recovery 'CLOCK_50'
+Slack : -0.067
+TNS   : -0.332
+
+Type  : Fast 1100mV 0C Model Removal 'CLOCK_50'
+Slack : 0.380
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'AUD_BCLK'
+Slack : 0.544
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -2.174
+TNS   : -257.626
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'AUD_BCLK'
+Slack : -2.174
+TNS   : -160.232
+
+------------------------------------------------------------

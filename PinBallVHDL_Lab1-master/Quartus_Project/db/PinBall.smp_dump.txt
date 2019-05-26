@@ -1,0 +1,125 @@
+
+State Machine - |PIN_BALL_GAMEPLAY|Flipper_Object_Right:inst26|current_pos
+Name current_pos.pos_30 current_pos.pos_20 current_pos.pos_10 current_pos.val_0 current_pos.neg_10 current_pos.neg_20 current_pos.neg_30 
+current_pos.neg_30 0 0 0 0 0 0 0 
+current_pos.neg_20 0 0 0 0 0 1 1 
+current_pos.neg_10 0 0 0 0 1 0 1 
+current_pos.val_0 0 0 0 1 0 0 1 
+current_pos.pos_10 0 0 1 0 0 0 1 
+current_pos.pos_20 0 1 0 0 0 0 1 
+current_pos.pos_30 1 0 0 0 0 0 1 
+
+State Machine - |PIN_BALL_GAMEPLAY|Flipper_Object_Left:inst25|current_pos
+Name current_pos.pos_30 current_pos.pos_20 current_pos.pos_10 current_pos.val_0 current_pos.neg_10 current_pos.neg_20 current_pos.neg_30 
+current_pos.neg_30 0 0 0 0 0 0 0 
+current_pos.neg_20 0 0 0 0 0 1 1 
+current_pos.neg_10 0 0 0 0 1 0 1 
+current_pos.val_0 0 0 0 1 0 0 1 
+current_pos.pos_10 0 0 1 0 0 0 1 
+current_pos.pos_20 0 1 0 0 0 0 1 
+current_pos.pos_30 1 0 0 0 0 0 1 
+
+State Machine - |PIN_BALL_GAMEPLAY|KBDINTF:inst23|Debug_Bitrec_partial:DBP|bitrec:inst|present_state
+Name present_state.NewData present_state.ChkData present_state.LowClk present_state.HighClk present_state.idle 
+present_state.idle 0 0 0 0 0 
+present_state.HighClk 0 0 0 1 1 
+present_state.LowClk 0 0 1 0 1 
+present_state.ChkData 0 1 0 0 1 
+present_state.NewData 1 0 0 0 1 
+
+State Machine - |PIN_BALL_GAMEPLAY|KBDINTF:inst19|Debug_Bitrec_partial:DBP|bitrec:inst|present_state
+Name present_state.NewData present_state.ChkData present_state.LowClk present_state.HighClk present_state.idle 
+present_state.idle 0 0 0 0 0 
+present_state.HighClk 0 0 0 1 1 
+present_state.LowClk 0 0 1 0 1 
+present_state.ChkData 0 1 0 0 1 
+present_state.NewData 1 0 0 0 1 
+
+State Machine - |PIN_BALL_GAMEPLAY|KBDINTF:inst29|Debug_Bitrec_partial:DBP|bitrec:inst|present_state
+Name present_state.NewData present_state.ChkData present_state.LowClk present_state.HighClk present_state.idle 
+present_state.idle 0 0 0 0 0 
+present_state.HighClk 0 0 0 1 1 
+present_state.LowClk 0 0 1 0 1 
+present_state.ChkData 0 1 0 0 1 
+present_state.NewData 1 0 0 0 1 
+
+State Machine - |PIN_BALL_GAMEPLAY|KBDINTF:inst30|Debug_Bitrec_partial:DBP|bitrec:inst|present_state
+Name present_state.NewData present_state.ChkData present_state.LowClk present_state.HighClk present_state.idle 
+present_state.idle 0 0 0 0 0 
+present_state.HighClk 0 0 0 1 1 
+present_state.LowClk 0 0 1 0 1 
+present_state.ChkData 0 1 0 0 1 
+present_state.NewData 1 0 0 0 1 
+
+State Machine - |PIN_BALL_GAMEPLAY|KBDINTF:inst24|Debug_Bitrec_partial:DBP|bitrec:inst|present_state
+Name present_state.NewData present_state.ChkData present_state.LowClk present_state.HighClk present_state.idle 
+present_state.idle 0 0 0 0 0 
+present_state.HighClk 0 0 0 1 1 
+present_state.LowClk 0 0 1 0 1 
+present_state.ChkData 0 1 0 0 1 
+present_state.NewData 1 0 0 0 1 
+
+State Machine - |PIN_BALL_GAMEPLAY|KBDINTF:inst24|Debug_Bitrec_partial:DBP|byterec:byterec|present_state
+Name present_state.sample_ext_rel present_state.wait_ext_rel present_state.sample_ext present_state.wait_ext present_state.new_break present_state.sample_rel present_state.wait_rel present_state.new_make present_state.sample_nor present_state.idle 
+present_state.idle 0 0 0 0 0 0 0 0 0 0 
+present_state.sample_nor 0 0 0 0 0 0 0 0 1 1 
+present_state.new_make 0 0 0 0 0 0 0 1 0 1 
+present_state.wait_rel 0 0 0 0 0 0 1 0 0 1 
+present_state.sample_rel 0 0 0 0 0 1 0 0 0 1 
+present_state.new_break 0 0 0 0 1 0 0 0 0 1 
+present_state.wait_ext 0 0 0 1 0 0 0 0 0 1 
+present_state.sample_ext 0 0 1 0 0 0 0 0 0 1 
+present_state.wait_ext_rel 0 1 0 0 0 0 0 0 0 1 
+present_state.sample_ext_rel 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |PIN_BALL_GAMEPLAY|KBDINTF:inst23|Debug_Bitrec_partial:DBP|byterec:byterec|present_state
+Name present_state.sample_ext_rel present_state.wait_ext_rel present_state.sample_ext present_state.wait_ext present_state.new_break present_state.sample_rel present_state.wait_rel present_state.new_make present_state.sample_nor present_state.idle 
+present_state.idle 0 0 0 0 0 0 0 0 0 0 
+present_state.sample_nor 0 0 0 0 0 0 0 0 1 1 
+present_state.new_make 0 0 0 0 0 0 0 1 0 1 
+present_state.wait_rel 0 0 0 0 0 0 1 0 0 1 
+present_state.sample_rel 0 0 0 0 0 1 0 0 0 1 
+present_state.new_break 0 0 0 0 1 0 0 0 0 1 
+present_state.wait_ext 0 0 0 1 0 0 0 0 0 1 
+present_state.sample_ext 0 0 1 0 0 0 0 0 0 1 
+present_state.wait_ext_rel 0 1 0 0 0 0 0 0 0 1 
+present_state.sample_ext_rel 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |PIN_BALL_GAMEPLAY|KBDINTF:inst19|Debug_Bitrec_partial:DBP|byterec:byterec|present_state
+Name present_state.sample_ext_rel present_state.wait_ext_rel present_state.sample_ext present_state.wait_ext present_state.new_break present_state.sample_rel present_state.wait_rel present_state.new_make present_state.sample_nor present_state.idle 
+present_state.idle 0 0 0 0 0 0 0 0 0 0 
+present_state.sample_nor 0 0 0 0 0 0 0 0 1 1 
+present_state.new_make 0 0 0 0 0 0 0 1 0 1 
+present_state.wait_rel 0 0 0 0 0 0 1 0 0 1 
+present_state.sample_rel 0 0 0 0 0 1 0 0 0 1 
+present_state.new_break 0 0 0 0 1 0 0 0 0 1 
+present_state.wait_ext 0 0 0 1 0 0 0 0 0 1 
+present_state.sample_ext 0 0 1 0 0 0 0 0 0 1 
+present_state.wait_ext_rel 0 1 0 0 0 0 0 0 0 1 
+present_state.sample_ext_rel 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |PIN_BALL_GAMEPLAY|KBDINTF:inst29|Debug_Bitrec_partial:DBP|byterec:byterec|present_state
+Name present_state.sample_ext_rel present_state.wait_ext_rel present_state.sample_ext present_state.wait_ext present_state.new_break present_state.sample_rel present_state.wait_rel present_state.new_make present_state.sample_nor present_state.idle 
+present_state.idle 0 0 0 0 0 0 0 0 0 0 
+present_state.sample_nor 0 0 0 0 0 0 0 0 1 1 
+present_state.new_make 0 0 0 0 0 0 0 1 0 1 
+present_state.wait_rel 0 0 0 0 0 0 1 0 0 1 
+present_state.sample_rel 0 0 0 0 0 1 0 0 0 1 
+present_state.new_break 0 0 0 0 1 0 0 0 0 1 
+present_state.wait_ext 0 0 0 1 0 0 0 0 0 1 
+present_state.sample_ext 0 0 1 0 0 0 0 0 0 1 
+present_state.wait_ext_rel 0 1 0 0 0 0 0 0 0 1 
+present_state.sample_ext_rel 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |PIN_BALL_GAMEPLAY|KBDINTF:inst30|Debug_Bitrec_partial:DBP|byterec:byterec|present_state
+Name present_state.sample_ext_rel present_state.wait_ext_rel present_state.sample_ext present_state.wait_ext present_state.new_break present_state.sample_rel present_state.wait_rel present_state.new_make present_state.sample_nor present_state.idle 
+present_state.idle 0 0 0 0 0 0 0 0 0 0 
+present_state.sample_nor 0 0 0 0 0 0 0 0 1 1 
+present_state.new_make 0 0 0 0 0 0 0 1 0 1 
+present_state.wait_rel 0 0 0 0 0 0 1 0 0 1 
+present_state.sample_rel 0 0 0 0 0 1 0 0 0 1 
+present_state.new_break 0 0 0 0 1 0 0 0 0 1 
+present_state.wait_ext 0 0 0 1 0 0 0 0 0 1 
+present_state.sample_ext 0 0 1 0 0 0 0 0 0 1 
+present_state.wait_ext_rel 0 1 0 0 0 0 0 0 0 1 
+present_state.sample_ext_rel 1 0 0 0 0 0 0 0 0 1 

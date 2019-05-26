@@ -1,0 +1,80 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.std_logic_unsigned.all;
+use ieee.numeric_std.all;
+
+
+entity Flipper_Object is
+	port(
+			CLK : 					in std_logic;
+			resetN : 				in std_logic;
+			enable : 				in std_logic;
+			end_of_frame : 		in std_logic;
+			flipper_pos : in std_logic_vector(2 dwonto 0)
+			oCoord_X	: in integer;
+			oCoord_Y	: in integer;
+			ObjectStartX	: in integer;
+			ObjectStartY 	: in integer;
+			drawing_request	: out std_logic ;
+			mVGA_RGB 	: out std_logic_vector(7 downto 0) 
+		);
+end entity;
+
+architecture Flipper_Object_arch of Flipper_Object is
+
+	constant Draw_Size : integer := 80;
+	
+	type ram_array is array(0 to Draw_Size - 1 , 0 to Draw_Size - 1) of std_logic_vector(7 downto 0);
+	type mask_array is array(0 to Draw_Size - 1, 0 to Draw_Size - 1) of std_logic;
+
+	constant Flipper_Neg_30_Colors : ram_array := (
+	);
+	
+	constant Flipper_Neg_30_Mask : mask_array := (
+	);
+	
+--	constant Flipper_Neg_20_Colors : ram_array := (
+--	);
+	
+--	constant Flipper_Neg_20_Mask : mask_array := (
+--	);
+
+--	constant Flipper_Neg_10_Colors : ram_array := (
+--	);
+	
+--	constant Flipper_Neg_10_Mask : mask_array := (
+--	);
+	
+	constant Flipper_0_Colors : ram_array := (
+	);
+
+	constant Flipper_0_Mask : mask_array := (
+	);
+	
+--	constant Flipper_posit_10_Colors : ram_array := (
+--	);
+
+--	constant Flipper_posit_10_Mask : mask_array := (
+--	);
+
+--	constant Flipper_posit_20_Colors : ram_array := (
+--	);
+
+--	constant Flipper_posit_20_Mask : mask_array := (
+--	);
+
+
+	
+	constant Flipper_posit_30_Colors : ram_array := (
+	);
+
+	constant Flipper_posit_30_Mask : mask_array := (
+	);
+	
+
+	
+	type flip_array
+
+begin
+
+end entity;

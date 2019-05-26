@@ -1,0 +1,76 @@
+library ieee;
+use ieee.numeric_std.all;
+use ieee.std_logic_1164.all;
+use work.tetris_package.all;
+
+
+entity controller is
+	port
+	(
+		CLOCK                : in  std_logic;
+		RESET_N              : in  std_logic;
+		TIME_10MS            : in  std_logic;
+
+		CHANGE_SQUARE_BUTTON : in  std_logic;
+		CHANGE_COLOR_BUTTON  : in  std_logic;
+		CONFIRM_GUESS_BUTTON : in  std_logic;
+
+		-- Connections with Datapath
+		CLEAR                : out std_logic;
+		CHANGE_SQUARE        : out std_logic;
+		CHANGE_COLOR         : out std_logic;
+		CONFIRM_GUESS        : out std_logic;
+
+		-- Connections with View
+		REDRAW               : out std_logic
+	);
+
+end entity;
+
+
+architecture RTL of controller is
+	signal button_time : std_logic;	
+begin
+
+	CLEAR <= '0';
+
+	button_time : process(CLOCK, RESET_N)
+	begin
+		if (RESET_N = '0') then
+			button_time <= '0';
+		elsif rising_edge(CLOCK) then
+			button_time <= '0';
+			if (TIME_10MS = '1') then
+				button_time <= '1'
+			end if;
+		end if;
+	end process;
+	
+	controller_RTL : process (CLOCK, RESET_N)
+	begin
+		if (RESET_N = '0') then
+			CHANGE_SQUARE   <= '0';
+			CHANGE_COLOR    <= '0';
+			CONFIRM_GUESS   <= '0';
+			REDRAW          <= '0';
+		elsif rising_edge(CLOCK) then
+			CHANGE_SQUARE   <= '0';	
+			CHANGE_COLOR    <= '0';
+			CONFIRM_GUESS   <= '0';
+			REDRAW          <= '0';
+			if (button_time = '1') then
+				if (CHANGE_SQUARE_BUTTON = '1') then
+					CHANGE_SQUARE <= '1';
+					REDRAW        <= '1';
+				elsif (CHANGE_COLOR_BUTTON = '1') then
+					CHANGE_COLOR  <= '1';
+					REDRAW        <= '1';
+				elsif (CONFIRM_GUESS_BUTTON = '1') then
+					CONFIRM_GUESS <= '1';
+					REDRAW        <= '1';
+				end if;				
+			end if;
+		end if;
+	end process;
+		
+end architecture;

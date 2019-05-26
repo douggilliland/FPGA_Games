@@ -1,0 +1,26 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.std_logic_unsigned.all;
+use ieee.numeric_std.all;
+
+entity bounce is
+	port(
+			CLK : in std_logic;
+			resetN : in std_logic;
+			enable : in std_logic;
+			
+			
+			
+			bounce_enable : out std_logic;
+			bounce_data : out std_logic_vector (1 downto 0);
+			flipper_hit_enable : in std_logic;
+			flipper_hit_data : in std_logic_vector (2 downto 0);
+			is_dead : in std_logic;
+			game_over : in std_logic;
+			end_of_frame : in std_logic;
+			ballSpeedX : integer;
+			ballSpeedY : integer;
+			currLocation_X : out integer;
+			currLocation_Y : out integer
+	);
+end entity;

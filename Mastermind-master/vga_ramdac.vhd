@@ -1,0 +1,206 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity VGA_RAMDAC is
+	generic
+	(
+		FB_WIDTH    : natural := 512;
+		FB_HEIGHT   : natural := 480;
+		FB_DEPTH    : natural := 12
+	);
+	
+	port
+	(
+		CLOCK               : in    std_logic;
+		RESET_N             : in    std_logic;
+
+		BUFFER_INDEX        : in    std_logic;
+		WR_X                : in    std_logic_vector(10 downto 0);
+		WR_Y                : in    std_logic_vector(10 downto 0);
+		WR_COLOR            : in    std_logic_vector(FB_DEPTH-1 downto 0);
+		WR_REQ              : in    std_logic;
+		WR_ACK              : out   std_logic;
+
+		RD_X                : in    std_logic_vector(10 downto 0);
+		RD_Y                : in    std_logic_vector(10 downto 0);
+		RD_COLOR            : out   std_logic_vector(FB_DEPTH-1 downto 0);
+		RD_REQ              : in    std_logic;
+		RD_ACK              : out   std_logic;
+
+		SRAM_ADDR           : out   std_logic_vector(17 downto 0);
+		SRAM_DQ             : inout std_logic_vector(15 downto 0);
+		SRAM_CE_N           : out   std_logic;
+		SRAM_OE_N           : out   std_logic;
+		SRAM_WE_N           : out   std_logic;
+		SRAM_UB_N           : out   std_logic;
+		SRAM_LB_N           : out   std_logic
+	);
+
+end;
+
+
+architecture RTL of VGA_RAMDAC is
+
+	signal wr_addr       : std_logic_vector(SRAM_ADDR'range);
+	signal rd_addr       : std_logic_vector(SRAM_ADDR'range);
+	signal rd_buf_idx    : std_logic;
+	signal wr_buf_idx    : std_logic;
+	signal encoded_pixel : std_logic_vector(7 downto 0); 
+	signal mem_dir_wr    : std_logic;
+	signal mem_dir_rd    : std_logic;
+	signal latch_ram_rd  : std_logic;
+	signal ram_rd_word   : std_logic_vector(7 downto 0);
+	signal latched_ram   : std_logic_vector(7 downto 0);
+	
+	type   ram_state_type is (IDLE, READING, WRITING, RW_COMPLETED);
+	signal ram_state      : ram_state_type;
+	signal next_ram_state : ram_state_type;
+	
+	function coords_to_addr
+	(
+		x : std_logic_vector;
+		y : std_logic_vector
+	)
+		return std_logic_vector	is
+	begin
+		return y(8 downto 0) & x(8 downto 0);
+	end function;
+
+
+	function encode_pixel(rgb : std_logic_vector(FB_DEPTH-1 downto 0))
+		return std_logic_vector
+	is
+		constant BPC   : natural := FB_DEPTH/3;
+		variable red   : std_logic_vector(BPC-1 downto 0);
+		variable green : std_logic_vector(BPC-1 downto 0);
+		variable blue  : std_logic_vector(BPC-1 downto 0);
+	begin
+		blue  := rgb(BPC-1 downto 0);
+		green := rgb(BPC*2-1 downto BPC);
+		red   := rgb(BPC*3-1 downto BPC*2);
+		
+		return red(red'high downto red'high-2)
+				& green(green'high downto green'high-1)
+				& blue(blue'high downto blue'high-2);
+	end function;
+
+	
+	function decode_pixel(pixel : std_logic_vector(7 downto 0))
+		return std_logic_vector
+	is
+		constant BPC   : natural := FB_DEPTH/3;
+		variable red   : std_logic_vector(BPC-1 downto 0);
+		variable green : std_logic_vector(BPC-1 downto 0);
+		variable blue  : std_logic_vector(BPC-1 downto 0);
+	begin
+		
+		red := (others => pixel(5));
+		red(red'high downto red'high-2) := pixel(7 downto 5);
+
+		green := (others => pixel(3));
+		green(green'high downto green'high-1) := pixel(4 downto 3);
+		
+		blue := (others => pixel(0));
+		blue(blue'high downto blue'high-2) := pixel(2 downto 0);
+		
+		return red & green & blue;
+	end function;
+	
+	
+begin
+	
+	rd_buf_idx    <= BUFFER_INDEX;
+	wr_buf_idx    <= not(BUFFER_INDEX);
+	wr_addr       <= coords_to_addr(WR_X,WR_Y);
+	rd_addr       <= coords_to_addr(RD_X,RD_Y);
+	encoded_pixel <= encode_pixel(WR_COLOR);
+	RD_COLOR      <= decode_pixel(latched_ram);
+	
+
+	
+	ram_fsm : process(RD_REQ, WR_REQ, rd_addr, wr_addr, encoded_pixel, ram_state, CLOCK)
+	begin
+		mem_dir_wr      <= '0';
+		mem_dir_rd      <= '0';
+		RD_ACK          <= '0';
+		WR_ACK          <= '0';
+		SRAM_OE_N       <= '1';
+		SRAM_WE_N       <= '1';
+		latch_ram_rd    <= '0';
+		next_ram_state  <= ram_state;
+			
+		case (ram_state) is
+		
+			when IDLE =>
+				
+				if (RD_REQ = '1') then
+					mem_dir_rd    <= '1';
+					SRAM_OE_N     <= '0';
+					latch_ram_rd  <= '1';
+					RD_ACK        <= '1';
+					
+				elsif (WR_REQ = '1') then
+					mem_dir_wr    <= '1';
+					SRAM_WE_N     <= '0';
+					WR_ACK        <= '1';
+					
+				end if;
+				
+			when others =>
+				assert false severity failure;				
+		
+		end case;
+
+	end process;
+
+	
+	mem_dir_ctrl : process(mem_dir_rd, mem_dir_wr, rd_addr, SRAM_DQ, wr_addr, rd_buf_idx, wr_buf_idx, encoded_pixel)
+	begin
+		SRAM_CE_N       <= '0'; -- We don't care of power saving, RAM is always enabled!	
+		SRAM_ADDR       <= (others => '-');
+		ram_rd_word     <= (others => '-');
+		SRAM_DQ         <= (others => 'Z');
+		SRAM_LB_N       <= '1';
+		SRAM_UB_N       <= '1';
+	
+		if (mem_dir_rd = '1') then
+			SRAM_ADDR       <= rd_addr(SRAM_ADDR'range);
+			if (rd_buf_idx = '0') then
+				SRAM_LB_N   <= '0';
+				ram_rd_word <= SRAM_DQ(7 downto 0);
+			else
+				SRAM_UB_N   <= '0';
+				ram_rd_word <= SRAM_DQ(15 downto 8);
+			end if;
+		
+		elsif (mem_dir_wr = '1') then
+			SRAM_ADDR       <= wr_addr(SRAM_ADDR'range);
+			SRAM_LB_N       <= wr_buf_idx;
+			SRAM_UB_N       <= not(wr_buf_idx);
+			SRAM_DQ         <= encoded_pixel & encoded_pixel;
+		end if;
+		
+	end process;
+	
+	
+	ram_regs : process(CLOCK, RESET_N)
+	begin
+		if (RESET_N = '0') then
+			
+			latched_ram  <= (others => '0');
+			ram_state    <= IDLE;
+			
+		elsif (rising_edge(CLOCK)) then		
+			
+			if (latch_ram_rd = '1') then
+				latched_ram <= ram_rd_word;
+			end if;
+
+			ram_state <= next_ram_state;
+			
+		end if;
+	end process;
+
+	
+end architecture;

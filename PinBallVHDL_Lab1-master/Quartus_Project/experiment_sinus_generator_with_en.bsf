@@ -1,0 +1,128 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 16 16 280 208)
+	(text "experiment_sinus_generator" (rect 5 0 172 19)(font "Intel Clear" (font_size 8)))
+	(text "inst" (rect 8 171 24 188)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "AUD_ADCLRCK" (rect 0 0 92 19)(font "Intel Clear" (font_size 8)))
+		(text "AUD_ADCLRCK" (rect 21 27 113 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "AUD_DACLRCK" (rect 0 0 92 19)(font "Intel Clear" (font_size 8)))
+		(text "AUD_DACLRCK" (rect 21 43 113 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "AUD_BCLK" (rect 0 0 66 19)(font "Intel Clear" (font_size 8)))
+		(text "AUD_BCLK" (rect 21 59 87 78)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "MICROPHON_ON" (rect 0 0 102 19)(font "Intel Clear" (font_size 8)))
+		(text "MICROPHON_ON" (rect 21 75 123 94)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "AUD_ADCDAT" (rect 0 0 86 19)(font "Intel Clear" (font_size 8)))
+		(text "AUD_ADCDAT" (rect 21 91 107 110)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "CLOCK_50" (rect 0 0 64 19)(font "Intel Clear" (font_size 8)))
+		(text "CLOCK_50" (rect 21 107 85 126)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 112)(pt 16 112))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "resetN" (rect 0 0 38 19)(font "Intel Clear" (font_size 8)))
+		(text "resetN" (rect 21 123 59 142)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 128)(pt 16 128))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "mux[3..0]" (rect 0 0 55 19)(font "Intel Clear" (font_size 8)))
+		(text "mux[3..0]" (rect 21 139 76 158)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 144)(pt 16 144)(line_width 3))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "play_en" (rect 0 0 47 19)(font "Intel Clear" (font_size 8)))
+		(text "play_en" (rect 21 155 68 174)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 160)(pt 16 160))
+	)
+	(port
+		(pt 264 32)
+		(output)
+		(text "MICROPHON_LED" (rect 0 0 107 19)(font "Intel Clear" (font_size 8)))
+		(text "MICROPHON_LED" (rect 136 27 243 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 264 32)(pt 248 32))
+	)
+	(port
+		(pt 264 48)
+		(output)
+		(text "AUD_DACDAT" (rect 0 0 86 19)(font "Intel Clear" (font_size 8)))
+		(text "AUD_DACDAT" (rect 157 43 243 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 264 48)(pt 248 48))
+	)
+	(port
+		(pt 264 64)
+		(output)
+		(text "AUD_XCK" (rect 0 0 59 19)(font "Intel Clear" (font_size 8)))
+		(text "AUD_XCK" (rect 184 59 243 78)(font "Intel Clear" (font_size 8)))
+		(line (pt 264 64)(pt 248 64))
+	)
+	(port
+		(pt 264 80)
+		(output)
+		(text "AUD_I2C_SCLK" (rect 0 0 93 19)(font "Intel Clear" (font_size 8)))
+		(text "AUD_I2C_SCLK" (rect 150 75 243 94)(font "Intel Clear" (font_size 8)))
+		(line (pt 264 80)(pt 248 80))
+	)
+	(port
+		(pt 264 96)
+		(bidir)
+		(text "AUD_I2C_SDAT" (rect 0 0 95 19)(font "Intel Clear" (font_size 8)))
+		(text "AUD_I2C_SDAT" (rect 148 91 243 110)(font "Intel Clear" (font_size 8)))
+		(line (pt 264 96)(pt 248 96))
+	)
+	(drawing
+		(rectangle (rect 16 16 248 176))
+	)
+)

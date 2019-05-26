@@ -1,0 +1,32 @@
+library ieee ;
+use IEEE.std_logic_1164.all;
+use IEEE.std_logic_unsigned.all;
+use IEEE.std_logic_arith.all;
+
+entity score_up_counter is
+	port (
+		clk : in std_logic;
+		resetN : in std_logic
+		enable : in std_logic;
+		score_in : in std_logic_vector (3 downto 0);
+		scored : in std_logic;
+		
+		score_out : out std_logic_vector (16 downto 0));
+end entity;
+
+architecture score_up_counter_arch of score_up_counter is
+	signal score_keeper : std_logic_vector (16 downto 0);
+begin
+	score_out <= score_keeper;
+	
+	process (clk, resetN)
+		if (resetN = '0') then
+		elsif rising_edge(clk) then
+			if (enable = '1') then
+				if (scored = '1') then
+					score_keeper <= score_keeper + score_in;
+				end if;
+			end if;
+		end if;
+	end process;
+end architecture;

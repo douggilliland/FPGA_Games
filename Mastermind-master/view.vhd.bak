@@ -1,0 +1,180 @@
+library ieee;
+use ieee.numeric_std.all;
+use ieee.std_logic_1164.all;
+use work.base_package.all;
+use work.vga_package.all;
+
+
+entity view is
+	port
+	(
+		CLOCK          : in  std_logic;
+		RESET_N        : in  std_logic;
+		
+		REDRAW         : in  std_logic;
+		
+		FB_READY       : in  std_logic;
+		FB_CLEAR       : out std_logic;
+		FB_FILL_RECT   : out std_logic;
+		FB_FLIP        : out std_logic;
+
+		FB_COLOR       : out color_type;
+		FB_X0          : out xy_coord_type;
+		FB_Y0          : out xy_coord_type;
+		FB_X1          : out xy_coord_type;
+		FB_Y1          : out xy_coord_type;
+		
+		QUERY_GUESS    : out natural range 0 to GUESSES_NUMBER;
+		GUESS_CONTENT  : in  guess;
+		QUERY_HINT     : out natural range 0 to GUESSES_NUMBER;
+		HINT_CONTENT   : in  hint;
+		GAME_WON       : in  std_logic;
+		GAME_LOST      : in  std_logic;
+		CURRENT_GUESS  : in  natural range 0 to (GUESSES_NUMBER - 1);
+		CURRENT_SQUARE : out natural range 0 to (SQUARES_NUMBER - 1)
+	);
+end entity;
+
+
+architecture RTL of view is
+	constant LEFT_MARGIN    : integer := 8;
+	constant TOP_MARGIN     : integer := 8;
+	constant SQUARE_SIZE    : integer := 24;
+	constant SQUARE_SPACING : integer := 1;
+	
+	type   state_type      is (IDLE, WAIT_FOR_READY, DRAWING);
+	type   substate_type   is (CLEAR_SCENE, DRAW_GUESS_BOARD, DRAW_GUESSES, DRAW_HINT_BOARD, 
+		DRAW_HINTS, DRAW_SELECTABLE_COLORS, FLIP_FRAMEBUFFER);
+	signal state           : state_type;
+	signal substate        : substate_type;
+	signal query_guess     : natural range 0 to GUESSES_NUMBER;
+	signal query_hint      : natural range 0 to GUESSES_NUMBER;
+	signal current_square  : natural range 0 to SQUARES_NUMBER;
+
+begin
+
+	QUERY_GUESS <= query_guess;
+	QUERY_HINT  <= query_hint;
+
+	process(CLOCK, RESET_N)
+	begin
+	
+		if (RESET_N = '0') then
+			state             <= IDLE;
+			substate          <= CLEAR_SCENE;
+			FB_CLEAR          <= '0';
+		
+			-- TODO: controllare i 4 segnali sotto
+			FB_DRAW_RECT      <= '0';
+			FB_DRAW_LINE      <= '0';
+			FB_FILL_RECT      <= '0';
+			FB_FLIP           <= '0';
+
+			query_guess       <= 0;
+			query_hint        <= 0;
+			current_square    <= 0;
+
+		elsif (rising_edge(CLOCK)) then
+		
+			FB_CLEAR       <= '0';
+
+			-- TODO: controllare i 4 segnali sotto
+			FB_DRAW_RECT   <= '0';
+			FB_DRAW_LINE   <= '0';
+			FB_FILL_RECT   <= '0';
+			FB_FLIP        <= '0';
+	
+			case (state) is
+				when IDLE =>
+					if (REDRAW = '1') then
+						state    <= WAIT_FOR_READY;
+						substate <= CLEAR_SCENE;
+					end if;
+					
+				when WAIT_FOR_READY =>
+					if (FB_READY = '1') then
+						state <= DRAWING;
+					end if;
+				
+				when DRAWING =>
+					state <= WAIT_FOR_READY;
+				
+					case (substate) is
+						when CLEAR_SCENE =>
+							FB_COLOR     <= COLOR_BLACK;
+							FB_CLEAR     <= '1';
+							substate     <= DRAW_GUESS_BOARD;
+						
+						when DRAW_GUESS_BOARD =>
+							FB_COLOR     <= COLOR_BROWN;
+							FB_X0        <= LEFT_MARGIN;
+							FB_Y0        <= TOP_MARGIN;
+							FB_X1        <= LEFT_MARGIN + SQUARES_NUMBER * (SQUARE_SIZE + SQUARE_SPACING);
+							FB_Y1        <= TOP_MARGIN  + GUESSES_NUMBER * (SQUARE_SIZE + SQUARE_SPACING);						
+							FB_FILL_RECT <= '1';
+							substate     <= DRAW_GUESSES
+
+						when DRAW_GUESSES =>
+							FB_COLOR     <= GUESS_CONTENT(current_square).guess_peg;
+							FB_X0        <= LEFT_MARGIN + SQUARE_SPACING * (current_square + 1) + SQUARE_SIZE * current_square;
+							FB_Y0        <= TOP_MARGIN + SQUARE_SPACING * (query_guess + 1) + SQUARE_SIZE * query_guess;
+							FB_X1        <= LEFT_MARGIN + SQUARE_SPACING * (current_square + 1) + SQUARE_SIZE * (current_square + 1);
+							FB_Y1        <= TOP_MARGIN + SQUARE_SPACING * (query_guess + 1) + SQUARE_SIZE * (query_guess + 1);	
+							FB_FILL_RECT <= '1';
+							if (current_square + 1 < SQUARES_NUMBER) then
+								current_square <= current_square + 1;
+								substate       <= DRAW_GUESSES;
+							else
+								current_square <= 0;
+								if (query_guess + 1 < CURRENT_GUESS) then
+									query_guess <= query_guess + 1;
+									substate    <= DRAW_GUESSES;
+								else
+									query_guess <= 0;
+									substate    <= DRAW_HINT_BOARD;
+								end if;
+							end if;
+
+						when DRAW_HINT_BOARD =>
+							FB_COLOR     <= COLOR_BROWN;
+							FB_X0        <= LEFT_MARGIN * 2 + SQUARES_NUMBER * (SQUARE_SIZE + SQUARE_SPACING);
+							FB_Y0        <= TOP_MARGIN;
+							FB_X1        <= LEFT_MARGIN * 2 + (SQUARES_NUMBER * (SQUARE_SIZE + SQUARE_SPACING)) * 2;
+							FB_Y1        <= TOP_MARGIN  + GUESSES_NUMBER * (SQUARE_SIZE + SQUARE_SPACING);						
+							FB_FILL_RECT <= '1';
+							substate     <= DRAW_HINTS
+
+						when DRAW_HINTS =>
+							FB_COLOR     <= HINT_CONTENT(current_square).hint_peg;
+							FB_X0        <= LEFT_MARGIN * 2 + SQUARES_NUMBER * (SQUARE_SIZE + SQUARE_SPACING) 
+											+ SQUARE_SPACING * (current_square + 1) + SQUARE_SIZE * current_square;
+							FB_Y0        <= TOP_MARGIN + SQUARE_SPACING * (query_hint + 1) + SQUARE_SIZE * query_hint;
+							FB_X1        <= LEFT_MARGIN * 2 + SQUARES_NUMBER * (SQUARE_SIZE + SQUARE_SPACING) 
+											+ SQUARE_SPACING * (current_square + 1) + SQUARE_SIZE * (current_square + 1);
+							FB_Y1        <= TOP_MARGIN + SQUARE_SPACING * (query_hint + 1) + SQUARE_SIZE * (query_hint + 1);	
+							FB_FILL_RECT <= '1';
+							if (current_square + 1 < SQUARES_NUMBER) and (HINT_CONTENT(current_square + 1).hint_peg /= COLOR_BROWN) then
+								current_square <= current_square + 1;
+								substate       <= DRAW_HINTS;
+							else
+								current_square <= 0;
+								if (query_HINT + 1 < CURRENT_GUESS) then
+									query_hint  <= query_hint + 1;
+									substate    <= DRAW_HINTS;
+								else
+									query_hint <= 0;
+									substate    <= FLIP_FRAMEBUFFER;
+								end if;
+							end if;
+
+						when FLIP_FRAMEBUFFER =>
+							FB_FLIP  <= '1';
+							state    <= IDLE;						
+							
+					end case;
+			end case;
+	
+		end if;
+	end process;
+	
+end architecture;

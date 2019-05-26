@@ -1,0 +1,31 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+
+
+entity middle_layer_draw is
+port 	(
+		--////////////////////	Clock Input	 	////////////////////	
+	   CLK  					: in std_logic;
+		RESETn				: in std_logic;
+		oCoord_X				: in integer;
+		oCoord_Y				: in integer;
+		random				: in std_logic_vector(1 downto 0);
+		space_was_pressed : in std_logic ;
+		game_over			: in std_logic ;
+		drawing_request	: out std_logic ;
+		mVGA_RGB 			: out std_logic_vector(7 downto 0) 
+	);
+end entity;
+
+architecture behave of middle_layer_draw is 
+
+
+	signal sigSpaceWasPressed : std_logic := '0';
+	signal sigGameOver : std_logic := '0';
+	signal sig_draw_req : std_logic := '0';
+	signal sig_draw_data: std_logic_vector (7 downto 0);
+
+
+
+

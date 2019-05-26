@@ -1,0 +1,30 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+
+entity ball_location_signal is
+port 	(
+		--////////////////////	Clock Input	 	////////////////////	
+	   CLK  					: in std_logic;
+		RESETn				: in std_logic;
+		oCoord_X				: in integer;
+		oCoord_Y				: in integer;
+		fell_to_pit			: out std_logic ;
+		game_started 		: out std_logic 
+	);
+end entity;
+
+
+architecture behave of ball_location_signal is
+
+	constant game_started_X_bound : integer := 560;
+	constant fell_to_pit_right_X_bound : integer := 378;
+	constant fell_to_pit_left_X_bound : integer := 192;
+	constant fell_to_pit_upper_Y_bound : integer := 382;
+
+begin
+	process (CLK,RESETn)
+	begin
+		
+	end process;
+end architecture;

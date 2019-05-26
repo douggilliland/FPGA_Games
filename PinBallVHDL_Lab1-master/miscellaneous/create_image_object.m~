@@ -1,0 +1,18 @@
+function [] = create_image_object(object_name,image, width, height, filter)
+%CREATE_IMAGE_OBJECT Summary of this function goes here
+%   Detailed explanation goes here
+file_name = strcat(object_name,'.vhd');
+[IMAGE,MASK] = im_hex( image, width, height, filter );
+
+file_string1 = sprintf('library IEEE;\nuse IEEE.STD_LOGIC_1164.all;\nentity %s is\nport 	(\n		\n	   CLK  		: in std_logic;\n		RESETn		: in std_logic;\n		oCoord_X	: in integer;\n		oCoord_Y	: in integer;\n		ObjectStartX	: in integer;\n		ObjectStartY 	: in integer;\n		drawing_request	: out std_logic ;\n		mVGA_RGB 	: out std_logic_vector(7 downto 0) \n	);\nend entity;\n\n\n',object_name);
+file_string2 = sprintf('architecture behav of %s is \n\nconstant object_X_size : integer := %d;\nconstant object_Y_size : integer := %d;\n',object_name,width,hight);
+file_string3 = sprintf('type ram_array is array(0 to object_Y_size - 1 , 0 to object_X_size - 1) of std_logic_vector(7 downto 0);\nconstant object_colors: ram_array := (\n%s\n);\n\nconstant object : object_form := (\n%s\n);\n\n',IMAGE,MASK);
+file_string4 = sprintf(');
+
+
+fileID = fopen(file_name,'wt');
+
+
+fclose(fileID);
+end
+

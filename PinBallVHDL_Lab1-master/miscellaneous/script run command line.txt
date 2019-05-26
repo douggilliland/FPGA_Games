@@ -1,0 +1,1 @@
+[IM, MA] = im_hex('ball_image_1.jpg', 26, 26, 'FF')

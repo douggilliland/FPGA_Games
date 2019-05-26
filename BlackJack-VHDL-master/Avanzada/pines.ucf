@@ -1,0 +1,95 @@
+#salida del oscilador a 100MHz
+#
+NET clk LOC=T9;
+#
+
+	#switches placa superior
+
+#NET SW<1> LOC=K4;
+#NET SW<2> LOC=K3;
+#NET SW<3> LOC=K2;
+#NET SW<4> LOC=J4;
+
+	#switches placa extendida
+
+NET reset LOC=P12;
+#NET comenzar LOC=J1;
+#NET me_planto LOC=H1;
+#NET A<3> LOC=H3;
+#NET comenzar LOC=G2;
+#NET B<1> LOC=K15;
+#NET B<2> LOC=K16;
+NET comenzar LOC=F15;
+
+#
+	#push buttons placa superior
+NET me_planto LOC=E11; 
+NET otra_carta LOC=A13; 
+
+	# Push button placa extendida
+#NET otra_carta LOC=H4;
+#NET pushb2 LOC=L5;
+#NET pushb3 LOC=N2;
+#NET pushb4 LOC=M3;
+
+
+#barra de leds placa extendida
+
+NET maquina_lista LOC=L5;
+NET carta_incorrecta LOC=N2;
+NET partida_perdida LOC=M3;
+#NET C<3> LOC=N1;
+#NET leds<5> LOC=T13;
+#NET leds<6> LOC=L15;
+#NET leds<7> LOC=J13;
+#NET leds<8> LOC=H15;
+#NET leds<9> LOC=J16;
+#NET leds<10> LOC=J14;
+
+ 
+
+#Display 7-segmentos 
+#
+#		   S0
+#		   ---
+#	    S5	|	|s1
+#		    S6
+#		   ---
+#	    S4	|	|S2
+#
+#		   ---
+#		   S3
+
+
+#Display 7-segmentos de la placa superior
+
+NET carta_actual<0> loc=R10;
+NET carta_actual<1> loc=P10;
+NET carta_actual<2> loc=M11;
+NET carta_actual<3> loc=M6;
+NET carta_actual<4> loc=N6;
+NET carta_actual<5> loc=T7;
+NET carta_actual<6> loc=R7;
+
+#Display 7-segmentos de la parte izquierda de la placa extendida:
+
+NET valor_acumulado<7> LOC=H14;
+NET valor_acumulado<8> LOC=M4;
+NET valor_acumulado<9> LOC=P1;
+NET valor_acumulado<10> LOC=N3;
+NET valor_acumulado<11> LOC=M15;
+NET valor_acumulado<12> LOC=H13;
+NET valor_acumulado<13> LOC=G16;
+
+
+
+
+#Display 7-segmentos de la parte derecha de la placa extendida
+
+NET valor_acumulado<0> loc=E2;
+NET valor_acumulado<1> loc=E1;
+NET valor_acumulado<2> loc=F3;
+NET valor_acumulado<3> loc=F2;
+NET valor_acumulado<4> loc=G4;
+NET valor_acumulado<5> loc=G3;
+NET valor_acumulado<6> loc=G1;

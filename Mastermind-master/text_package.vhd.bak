@@ -1,0 +1,17 @@
+library ieee;
+use ieee.numeric_std.all;
+use ieee.std_logic_1164.all;
+
+package text_package is
+
+	constant FONT_WIDTH : integer := 8;
+	constant FONT_HEIGHT : integer := 16;
+		
+	type point_2d is
+	record
+		x : integer;
+		y : integer;
+	end record;
+
+
+end package;

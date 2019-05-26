@@ -1,0 +1,63 @@
+ball_image_1 - im and mask:
+IM =
+
+    '(x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff"),
+     (x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff"),
+     (x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff"),
+     (x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff"),
+     (x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff"),
+     (x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff"),
+     (x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"db",x"b6",x"b6",x"db",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff"),
+     (x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"b6",x"92",x"72",x"2e",x"2a",x"2e",x"72",x"db",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff"),
+     (x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"92",x"04",x"29",x"25",x"00",x"00",x"00",x"05",x"25",x"db",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff"),
+     (x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"db",x"24",x"00",x"29",x"72",x"6d",x"24",x"00",x"00",x"00",x"6d",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff"),
+     (x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"92",x"00",x"25",x"72",x"ff",x"ff",x"6d",x"24",x"00",x"00",x"49",x"b6",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff"),
+     (x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"6d",x"00",x"24",x"72",x"ff",x"ff",x"4d",x"25",x"00",x"00",x"24",x"92",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff"),
+     (x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"96",x"00",x"04",x"24",x"6d",x"4d",x"29",x"24",x"00",x"00",x"24",x"92",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff"),
+     (x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"db",x"6d",x"00",x"00",x"04",x"04",x"00",x"00",x"00",x"00",x"6d",x"b6",x"db",x"df",x"ff",x"ff",x"ff",x"ff",x"ff"),
+     (x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"db",x"db",x"6d",x"24",x"00",x"00",x"00",x"00",x"24",x"6d",x"b6",x"b6",x"97",x"bb",x"df",x"ff",x"ff",x"ff",x"ff"),
+     (x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"db",x"db",x"b6",x"92",x"8d",x"71",x"92",x"b6",x"da",x"db",x"72",x"52",x"97",x"db",x"ff",x"ff",x"ff",x"ff"),
+     (x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"db",x"db",x"db",x"db",x"db",x"db",x"db",x"db",x"db",x"96",x"4e",x"52",x"97",x"bb",x"ff",x"ff",x"ff",x"ff"),
+     (x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"db",x"db",x"ff",x"db",x"db",x"db",x"da",x"92",x"4e",x"4e",x"72",x"b7",x"df",x"ff",x"ff",x"ff",x"ff"),
+     (x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"db",x"96",x"b6",x"b6",x"b6",x"91",x"49",x"29",x"4e",x"72",x"b7",x"df",x"ff",x"ff",x"ff",x"ff",x"ff"),
+     (x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"db",x"96",x"6d",x"6d",x"6d",x"6d",x"92",x"b6",x"db",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff"),
+     (x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff"),
+     (x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff"),
+     (x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff"),
+     (x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff"),
+     (x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff"),
+     (x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff",x"ff")'
+
+
+MA =
+
+    '("00000000000000000000000000"),
+     ("00000000000000000000000000"),
+     ("00000000000000000000000000"),
+     ("00000000000000000000000000"),
+     ("00000000000000000000000000"),
+     ("00000000000000000000000000"),
+     ("00000000000111100000000000"),
+     ("00000000011111111000000000"),
+     ("00000000111111111100000000"),
+     ("00000001111111111100000000"),
+     ("00000001111001111110000000"),
+     ("00000001111001111110000000"),
+     ("00000001111111111110000000"),
+     ("00000001111111111111100000"),
+     ("00000001111111111111110000"),
+     ("00000000111111111111110000"),
+     ("00000000111111111111110000"),
+     ("00000000011011111111110000"),
+     ("00000000011111111111100000"),
+     ("00000000001111111110000000"),
+     ("00000000000000000000000000"),
+     ("00000000000000000000000000"),
+     ("00000000000000000000000000"),
+     ("00000000000000000000000000"),
+     ("00000000000000000000000000"),
+     ("00000000000000000000000000")'
+
+
+
+

@@ -1,0 +1,52 @@
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
++----------------------------------------------------------------------------+
+; Quartus Prime QXP Design File                                              ;
++------------------+---------------------------------------------------------+
+; Field            ; Value                                                   ;
++------------------+---------------------------------------------------------+
+; Entity           ; audio_codec_controller                                  ;
+; Case Sensitive   ;                                                         ;
+; QXP Source       ; audio_codec_controller.qxp                              ;
+; Software Version ; Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition ;
+; Date             ; Sun Apr 15 14:52:26 2018                                ;
+; Contents         ; Netlist Only                                            ;
+; Family           ; 5CSXFC6D6F31C6                                          ;
+; Device           ; CYCLONEV_SX120F_F896C6                                  ;
++------------------+---------------------------------------------------------+
+
++--------------------------------------------------+
+; Boundary Ports                                   ;
++----------------------+--------+------------------+
+; Port Name            ; Type   ; Default Value    ;
++----------------------+--------+------------------+
+; CLOCK_50             ; input  ; 0                ;
+; resetN               ; input  ; 0                ;
+; MICROPHON_ON         ; input  ; 0                ;
+; MICROPHON_LED        ; output ; 0                ;
+; dacdata_left [15:0]  ; input  ; 0000000000000000 ;
+; dacdata_right [15:0] ; input  ; 0000000000000000 ;
+; adcdata_left [15:0]  ; output ; 0000000000000000 ;
+; adcdata_right [15:0] ; output ; 0000000000000000 ;
+; AUD_ADCDAT           ; input  ; 0                ;
+; AUD_ADCLRCK          ; input  ; 0                ;
+; AUD_BCLK             ; input  ; 0                ;
+; AUD_DACDAT           ; output ; 0                ;
+; AUD_DACLRCK          ; input  ; 0                ;
+; AUD_XCK              ; output ; 0                ;
+; AUD_I2C_SCLK         ; output ; 0                ;
+; AUD_I2C_SDAT         ; bidir  ; 0                ;
++----------------------+--------+------------------+

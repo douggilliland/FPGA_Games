@@ -1,0 +1,92 @@
+library ieee;
+use ieee.numeric_std.all;
+use ieee.std_logic_1164.all;
+use work.tetris_package.all;
+use work.vga_package.all;
+
+
+entity mastermind is
+
+	port
+	(
+		CLOCK_50            : in  std_logic;
+		KEY                 : in  std_logic_vector(3 downto 0);
+
+		SW                  : in  std_logic_vector(9 downto 9);
+		VGA_R               : out std_logic_vector(3 downto 0);
+		VGA_G               : out std_logic_vector(3 downto 0);
+		VGA_B               : out std_logic_vector(3 downto 0);
+		VGA_HS              : out std_logic;
+		VGA_VS              : out std_logic;
+		
+		SRAM_ADDR           : out   std_logic_vector(17 downto 0);
+		SRAM_DQ             : inout std_logic_vector(15 downto 0);
+		SRAM_CE_N           : out   std_logic;
+		SRAM_OE_N           : out   std_logic;
+		SRAM_WE_N           : out   std_logic;
+		SRAM_UB_N           : out   std_logic;
+		SRAM_LB_N           : out   std_logic
+	);
+
+end;
+
+
+architecture RTL of mastermind is
+	signal clock              : std_logic;
+	signal clock_vga          : std_logic;
+	signal RESET_N            : std_logic;
+	signal fb_ready           : std_logic;
+	signal fb_clear           : std_logic;
+	signal fb_flip            : std_logic;
+	signal fb_draw_rect       : std_logic;
+	signal fb_fill_rect       : std_logic;
+	signal fb_draw_line       : std_logic;
+	signal fb_x0              : xy_coord_type;
+	signal fb_y0              : xy_coord_type;
+	signal fb_x1              : xy_coord_type;
+	signal fb_y1              : xy_coord_type;
+	signal fb_color           : color_type;
+	signal time_10ms          : std_logic;
+	signal redraw             : std_logic;
+	signal clear              : std_logic;
+	signal query_cell         : block_pos_type;
+	signal query_cell_content : board_cell_type;
+	signal reset_sync_reg     : std_logic;
+begin
+
+	reset_sync : process(CLOCK_50)
+	begin
+		if (rising_edge(CLOCK_50)) then
+			reset_sync_reg <= SW(9);
+			RESET_N <= reset_sync_reg;
+		end if;
+	end process;
+	
+	button_time_gen : process(CLOCK, RESET_N)
+		variable counter : integer range 0 to (500000-1);
+	begin
+		if (RESET_N = '0') then
+			counter := 0;
+			time_10ms <= '0';
+		elsif (rising_edge(clock)) then
+			if(counter = counter'high) then
+				counter := 0;
+				time_10ms <= '1';
+			else
+				counter := counter+1;
+				time_10ms <= '0';			
+			end if;
+		end if;
+	end process;
+
+	pll : entity work.PLL
+		port map (
+			inclk0  => CLOCK_50,
+			c0      => clock_vga,
+			c1      => clock
+		); 
+	
+					
+	
+		
+end architecture;

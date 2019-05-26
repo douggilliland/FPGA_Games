@@ -1,0 +1,332 @@
+library ieee;
+use ieee.numeric_std.all;
+use ieee.std_logic_1164.all;
+use work.base_package.all;
+
+
+entity datapath is
+	port
+	(
+		CLOCK         	: in  std_logic;
+		RESET_N       	: in  std_logic;
+		
+		-- Connections for the Controller
+		CLEAR         	: in  std_logic;
+		CHANGE_SQUARE 	: in  std_logic;	--segnale utile a cambiare il qudrato selezionato
+		CHANGE_COLOR  	: in  std_logic;	--segnale usato per cambiare il colore del quadrato selezionato
+		CONFIRM_GUESS 	: in  std_logic;	--segnale che conferma la sequenzanza
+		
+		
+		-- Connections for the View
+		QUERY_GUESS   	: in  natural range 0 to (CURRENT_GUESS - 1);
+		GUESS_CONTENT	: out guess;
+		QUERY_HINT		: in  natural range 0 to (CURRENT_GUESS - 1);
+		HINT_CONTENT 	: out hint;
+		CURRENT_SQUARE : out natural range 0 to (SQUARES_NUMBER - 1);
+		CURRENT_COLOR 	: out color_type;
+		CURRENT_GUESS 	: out natural range 0 to (GUESSES_NUMBER - 1);
+		GAME_WON      	: out std_logic;
+		GAME_LOST     	: out std_logic;
+		
+		Color1 			: guess_peg;
+      Color2 			: guess_peg;
+      Color3 			: guess_peg;
+      Color4 			: guess_peg;
+
+	);
+end entity;
+
+
+architecture RTL of datapath is
+
+-- inizializzo il generatore di valori random che mi servirà per creare la sequenza di colori da indovinare 
+	component randomgen Port (clk:in std_logic;
+                                a:out std_logic_vector(11 downto 0));
+   end component;
+	 
+	 -- definisco i 4 stati macchina del progetto
+	 Type StateM is (Initial, Play, SubAns, Dis, CheckEnd);
+    signal State : StateM;
+    
+	 -- numeri generati in modo random che mi rappresentano i 4 valori da ricercare (verranno associati a un colore)
+    signal RandNum : std_logic_vector(11 downto 0);
+	 
+	 -- segnale che mi identifica il cambio dello stato macchina
+    signal change : std_logic;
+	 
+	 -- valori utilizzati per la verifica dei colori immessi dal giocatore
+    signal check1 : guess_peg;
+    signal check2 : guess_peg;
+    signal check3 : guess_peg;
+    signal check4 : guess_peg;
+	 
+    signal RSConnect : std_logic_vector(3 downto 0);
+    signal RCConnect : std_logic_vector(3 downto 0);
+    signal CountdownConnect : std_logic_vector(3 downto 0);
+	 
+	 -- "RightSpotConnect" contatore di colori giusti in posti giusti
+    signal RSpotCount 			: integer;
+	 
+	 -- "RightColorConnect" contatore di colori giusti in posti sbagliati
+    signal RColorCount 			: integer;
+	 
+	 -- contatore di colori non azzeccati ne in posizione ne in colore
+	 signal BlankCount			: integer;
+	 
+	 -- valore usato per gestire l'array dei suggerimenti sui peg
+	 signal num						: integer;
+	 
+	 -- Contatore delle prove a disposizione per indovinare la combinazione
+    signal Countdown 			: integer;
+	 
+	 --quadrato corrente
+	 signal current_square		: integer;
+	 
+	 --colore del quadrato corrente
+	 signal square_color			: integer;
+	 
+	 signal guess_board			: guess_board;
+	 
+	 signal hint_board			: hint_board;
+
+    signal smallcountdown : integer range 0 to 10;
+    signal rs1, rs2, rs3, rs4 : integer;		-- rs=RightSpot
+	 signal rc1, rc2, rc3, rc4 : integer;		-- rc=RightColor
+    signal r1, r2, r3, r4 : std_logic_vector(2 downto 0);
+	 signal i1, i2, i3, i4 : integer;
+	 signal c1, c2, c3, c4 : guess_peg;
+	 
+begin
+
+	-- Genero random i 4 "colori" della combinazione segreta da indovinare (questi colori possono anche essere uguali)
+	RandomGenerator : randomgen port map (clk => CLOCK, a => RandNum);
+    
+     r1 <= RandNum(11 downto 9);
+     r2 <= RandNum(8 downto 6);
+     r3 <= RandNum(5 downto 3);
+     r4 <= RandNum(2 downto 0);
+	  i1 <= to_integer(signed(r1));
+	  i2 <= to_integer(signed(r2));
+	  i3 <= to_integer(signed(r3));
+	  i4 <= to_integer(signed(r4));
+	  c1 <= guess_peg'VAL(i1);
+	  c2 <= guess_peg'VAL(i2);
+	  c3 <= guess_peg'VAL(i3);
+	  c4 <= guess_peg'VAL(i4);
+	  
+	  
+     RSConnect <= std_logic_vector(to_unsigned(RSpotCount, 4));
+     RCConnect <= std_logic_vector(to_unsigned(RColorCount , 4));
+     CountdownConnect <= std_logic_vector(to_unsigned(Countdown , 4));
+	  
+	  queryguess : process (QUERY_GUESS) is
+	  begin
+	  
+			GUESS_CONTENT <= guess_board(QUERY_GUESS).guess;
+	  
+	  end process queryguess;
+	  
+	  hintguess : process (QUERY_HINT) is
+	  begin 
+	
+			HINT_CONTENT <= hint_board(QUERY_HINT).hint;
+		
+	  end process hintguess;
+	  
+    
+     statemachine : process (CLOCK, RESET_N) is	-- CLOCK: clock della scheda, RESET_N: reset button fisico
+     begin
+			-- Ogni volta che viene premuto il RESET_N vado nello stato "Initial"
+         if (RESET_N = '0') then
+             State <= Initial;
+         elsif (rising_edge(CLOCK)) then
+             case State is
+					  -- se al CLOCK sono in "Initial" vado a settare i vari registri e a salvare i "colori" generati random
+                 when Initial =>
+                     Countdown <= 9;
+                     RSpotCount <= 0;
+                     RColorCount <= 0;
+                     smallcountdown <= 9;
+                     check1 <= c1;
+                     check2 <= c2;
+                     check3 <= c3;
+                     check4 <= c4;
+							current_square <= 0;
+							CURRENT_GUESS <= 0;
+							State <=Play;
+							
+						when Play =>
+							if(CHANGE_SQUARE = '1') then
+								current_square <= current_square + 1;
+								CURRENT_SQUARE <= current_square;
+								square_color <= 0;
+								if(current_square = 3) then
+									current_square <= 0;
+								end if;
+							end if;
+							
+							if(CHANGE_COLOR = '1') then
+								square_color <= square_color + 1;
+								guess_board(CURRENT_GUESS).guess(CURRENT_SQUARE).guess_peg := guess_peg'VAL(square_color);
+								CURRENT_COLOR <= guess_board(CURRENT_GUESS).guess(CURRENT_SQUARE).guess_peg;
+								if(square_color = 7) then
+									square_color <= 0;
+								end if;
+							end if;
+							
+							-- Una volta che premo il tasto fisico di "ok_combinazione" passo allo stato "SubAns"
+                     if (CONFIRM_GUESS = '1') then
+                         State <= SubAns;
+                     end if;
+                 when SubAns =>
+					  
+							Color1 <= guess_board(CURRENT_GUESS).guess(0).guess_peg;
+							Color2 <= guess_board(CURRENT_GUESS).guess(1).guess_peg;
+							Color3 <= guess_board(CURRENT_GUESS).guess(2).guess_peg;
+							Color4 <= guess_board(CURRENT_GUESS).guess(3).guess_peg;
+							
+							-- metto change a uno andando a salvarmi il fatto di aver inserito una nuova combinazione da verificare
+                     change <= '1';
+							-- Verifico se il colore random1 è presenta in uno di quelli inseriti dal giocatore
+                     if (Color1 = check1) then
+									 rs1 <= 1;
+									 rc1 <= 0;
+								elsif (Color2 = check1) then
+									 rs1 <= 0;
+									 rc1 <= 1;
+								elsif (Color3 = check1) then
+									 rs1 <= 0;
+									 rc1 <= 1; 
+								elsif (Color4 = check1) then
+									 rs1 <= 0;
+									 rc1 <= 1; 
+								else
+									 rs1 <= 0;
+									 rc1 <= 0;                     
+                     end if;
+							
+							-- Verifico se il colore random2 è presenta in uno di quelli inseriti dal giocatore
+                     if (Color1 = check2) then
+									 rs2 <= 0;
+									 rc2 <= 1;
+								elsif (Color2 = check2) then
+									 rs2 <= 1;
+									 rc2 <= 0;            
+								elsif (Color3 = check2) then
+									 rs2 <= 0;
+									 rc2 <= 1;         
+								elsif (Color4 = check2) then
+									 rs2 <= 0;
+									 rc2 <= 1;
+								else
+									 rs2 <= 0;
+									 rc2 <= 0;            
+                     end if;
+							
+							-- Verifico se il colore random3 è presenta in uno di quelli inseriti dal giocatore
+                     if (Color1 = check3) then
+									 rs3 <= 0;
+									 rc3 <= 1;
+								elsif (Color2 = check3) then
+									 rs3 <= 0;
+									 rc3 <= 1;       
+								elsif (Color3 = check3) then
+									 rs3 <= 1;
+									 rc3 <= 0;            
+								elsif (Color4 = check3) then
+									 rs3 <= 0;
+									 rc3 <= 1;
+								else
+									 rs3 <= 0;
+									 rc3 <= 0;            
+                     end if;
+							
+							-- Verifico se il colore random4 è presenta in uno di quelli inseriti dal giocatore
+                     if (Color1 = check4) then
+									 rs4 <= 0;
+									 rc4 <= 1;
+								elsif (Color2 = check4) then
+									 rs4 <= 0;
+									 rc4 <= 1;
+								elsif (Color3 = check4) then
+									 rs4 <= 0;
+									 rc4 <= 1;
+								elsif (Color4 = check4) then
+									 rs4 <= 1;
+									 rc4 <= 0;
+								else 
+									 rs4 <= 0;
+									 rc4 <= 0;
+                     end if;
+							
+							-- una volta che è stata inserita la cobinazione si entra nello stato "Dis" dysplay di tale cobinazione
+							-- per avere la storia pregressa
+                     if (CONFIRM_GUESS = '0') then
+                         State <= Dis;
+                     end if;
+					  -- si entra nello stato "Dis"
+                 when Dis =>
+							-- se change a 1 decremento il numero dei tentativi e lo rimetto a zero
+                     if (change = '1') then
+                         smallcountdown <= (smallcountdown - 1);
+                         change <= '0';
+                     else
+                     end if; 
+							
+							-- vado a fare la somma delle variabili che tengono memoria degli RSPin e degli RCPin
+                     RSpotCount <= (rs1 + rs2 + rs3 + rs4);
+                     RColorCount <= (rc1 + rc2 + rc3 + rc4);
+							BlankCount <= (4 - (RSpotCount + RColorCount));
+                     Countdown <= smallcountdown;
+							CURRENT_GUESS <= smallcountdown;
+							num <= 0;
+							
+							for i in RSpotCount loop
+								hint_board(CURRENT_GUESS).hint(num).hint_peg := hit_peg'VAL(0);
+								num <= num + 1;
+							end loop;
+							
+							for i in RColorCount loop
+								hint_board(CURRENT_GUESS).hint(num).hint_peg := hit_peg'VAL(1);
+								num <= num + 1;
+							end loop;
+							
+							for i in BlankCount loop
+								hint_board(CURRENT_GUESS).hint(num).hint_peg := hit_peg'VAL(2);
+								num <= num + 1;
+							end loop;
+							
+														
+							-- nel caso siano terminati i tentativi di gioco o si sia azzeccata la combinazione (RSotCount = 4)
+							-- vado nello stato "CheckEnd" per verificare se ho vinto o perso
+							-- altrimenti ritorno nello stato "SubAns" per fare un altro tentativo
+                     if ((Countdown = 0) or (RSpotCount = 4)) then
+                         State <= CheckEnd;
+                     else
+                         State <= Play;
+                     end if;
+                 when CheckEnd =>
+							-- se sono in "CheckEnd" e ho "Countdown" a zero allora ho perso altrimenti vinto
+                     if(Countdown = 0) then
+								 GAME_LOST <= 1;
+                     elsif(RSpotCount = 4) then
+								 GAME_WON <= 1;
+                     else
+                     end if;
+							
+							-- attendo finchè non viene premuto nuovamente il bottone di reset, una volta premuto 
+							-- rientro nello stato "Initial" e riparto da capo
+                     if (RESET_N = '0') then
+                         State <= Initial;
+                     else
+                     end if;
+					  -- qualsiasi altra cosa accada riporto lo stato a "Initial"
+                 when others =>
+                     State <= Initial;
+							
+             end case;  
+         end if;
+     end process statemachine;    
+    
+
+end architecture;

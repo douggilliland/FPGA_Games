@@ -1,0 +1,103 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+
+entity sev is
+	port
+	(
+		CLOCK   : in std_logic;
+		RESET_N : in std_logic;
+		
+		CONFIRM_GUESS: in std_logic;
+		GAME_WON     : in std_logic;
+		GAME_LOST    : in std_logic;
+
+		SEG_1        : out std_logic_vector(6 downto 0);
+		SEG_2        : out std_logic_vector(6 downto 0);
+		SEG_3        : out std_logic_vector(6 downto 0);
+		SEG_4        : out std_logic_vector(6 downto 0)
+	);
+end Source1;
+
+architecture behavioral of sev_seg is
+begin
+
+
+	display: process (clkd) is
+   variable digit : unsigned (1 downto 0) := "00";
+   begin
+   if( rising_edge(clkd) ) then
+		if(finish = '1') then
+			a0 <= '0';
+			a1 <= '0';
+			a2 <= '0';
+			a3 <= '0';
+				-- qui dovrebbero accendersi tutti e 4 i display creando un cerchio in senso orario
+				for i in 50 loop
+					segment7 <="0111111";
+					segment7 <="1011111";
+					segment7 <="1101111";
+					segment7 <="1110111";
+					segment7 <="1111011";
+					segment7 <="1111101";
+				end loop;
+				if(finish = '0') then
+				a0 <= '0';
+				a1 <= '0';
+				a2 <= '0';
+				a3 <= '0';
+				-- qui dovrebbero accendersi i display lampeggiando una "X"
+				for i in 50 loop
+					segment7 <="1011111";
+					segment7 <="1101111";
+					segment7 <="1111011";
+					segment7 <="1111101";
+					segment7 <="1111110";
+				
+				--segment7 <="1111111";
+				end loop;
+				if(digit = "00") then
+					a0 <= '0';
+					a1 <= '1';
+					a2 <= '1';
+					a3 <= '1';
+					segment7 <="1111111";
+				elsif(digit = "01") then
+					a0 <= '1';
+					a1 <= '0';
+					a2 <= '1';
+					a3 <= '1';
+					segment7 <="1111111";
+				elsif(digit = "10") then
+					a0 <= '1';
+					a1 <= '1';
+					a2 <= '0';
+					a3 <= '1';
+				-- qui il display 3 mostra il countdown
+					case (Countdown) is
+            when "0000"=> 	segment7 <="0000001";
+            when "0001"=> 	segment7 <="1001111";
+            when "0010"=> 	segment7 <="0010010";
+            when "0011"=> 	segment7 <="0000110";
+            when "0100"=> 	segment7 <="1001100";
+            when "0101"=> 	segment7 <="0100100";
+            when "0110"=> 	segment7 <="0100000";
+            when "0111"=> 	segment7 <="0001111";
+            when "1000"=> 	segment7 <="0000000";
+            when "1001"=> 	segment7 <="0000100";
+            when others=> 	segment7 <="1111111";
+            end case;
+        else
+            a0 <= '1';
+            a1 <= '1';
+            a2 <= '1';
+            a3 <= '1';
+            segment7 <="1111111";
+        end if;
+        digit := digit + 1;
+        
+    end if;
+    end process Display;
+    
+end Behavioral;
