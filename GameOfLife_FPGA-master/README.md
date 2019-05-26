@@ -1,4 +1,7 @@
 # GameOfLife_FPGA
+
+From: https://github.com/Apollinaire/GameOfLife_FPGA
+
 An implementation of the Game of Life on an FPGA, using VHDL. This was made on the Digilent Zedboard, using Vivado. 
 The const.xdc file is the constraints file, and is specific to the ZedBoard. The rest should be ported to other boards. 
 
