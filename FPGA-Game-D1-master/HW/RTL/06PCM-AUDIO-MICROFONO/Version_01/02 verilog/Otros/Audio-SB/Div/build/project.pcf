@@ -1,0 +1,16 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Wed Nov 29 08:30:52 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "led" LOCATE = SITE "T8" LEVEL 1;
+COMP "clk" LOCATE = SITE "E3" LEVEL 1;
+COMP "clkout" LOCATE = SITE "B13" LEVEL 1;
+COMP "reset" LOCATE = SITE "U9" LEVEL 1;
+TIMEGRP sys_clk_pin = BEL "led" BEL "count_1" BEL "count_0" BEL "count_2" BEL
+        "count_3" BEL "count_4" BEL "count_5" BEL "count_6" BEL "count_7" BEL
+        "count_8" BEL "count_9" BEL "count_10" BEL "count_11" BEL "count_12"
+        BEL "clkout" BEL "clk_BUFGP/BUFG" BEL "clkout_1";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+SCHEMATIC END;
+

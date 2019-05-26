@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/Nathaniel/Documents/school/2013 Fall/CMPEN417/Labs/FinalProject/FinalProject2/VideoROMTest_isim_beh.exe" -prj "C:/Users/Nathaniel/Documents/school/2013 Fall/CMPEN417/Labs/FinalProject/FinalProject2/VideoROMTest_beh.prj" "work.VideoROMTest" "work.glbl" 

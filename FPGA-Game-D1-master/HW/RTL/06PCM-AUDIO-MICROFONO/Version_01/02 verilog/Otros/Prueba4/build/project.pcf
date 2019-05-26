@@ -1,0 +1,31 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Mon Nov 27 21:46:05 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "E3" LEVEL 1;
+COMP "rd" LOCATE = SITE "T16" LEVEL 1;
+COMP "wr" LOCATE = SITE "R10" LEVEL 1;
+COMP "micData" LOCATE = SITE "H5" LEVEL 1;
+COMP "ampPWM" LOCATE = SITE "A11" LEVEL 1;
+COMP "empty" LOCATE = SITE "V9" LEVEL 1;
+COMP "done" LOCATE = SITE "T6" LEVEL 1;
+COMP "ampSD" LOCATE = SITE "D12" LEVEL 1;
+COMP "mclk" LOCATE = SITE "J5" LEVEL 1;
+COMP "reset" LOCATE = SITE "U9" LEVEL 1;
+COMP "ledres" LOCATE = SITE "T8" LEVEL 1;
+COMP "full" LOCATE = SITE "R8" LEVEL 1;
+COMP "micLRSel" LOCATE = SITE "F5" LEVEL 1;
+TIMEGRP sys_clk_pin = BEL "df/led" BEL "df/count_2" BEL "df/count_0" BEL
+        "df/count_1" BEL "df/count_3" BEL "df/count_4" BEL "df/count_7" BEL
+        "df/count_5" BEL "df/count_6" BEL "df/count_8" BEL "df/count_9" BEL
+        "df/count_10" BEL "df/count_11" BEL "df/count_12" BEL "df/count_13"
+        BEL "df/count_16" BEL "df/count_14" BEL "df/count_15" BEL
+        "df/count_17" BEL "df/count_18" BEL "df/count_19" BEL "df/count_20"
+        BEL "df/count_21" BEL "df/count_22" BEL "df/count_25" BEL
+        "df/count_23" BEL "df/count_24" BEL "df/count_26" BEL "df/count_27"
+        BEL "df/count_28" BEL "df/count_29" BEL "df/count_30" BEL
+        "df/count_31" BEL "df/clkout" BEL "clk_BUFGP/BUFG" BEL "df/clkout_1";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+SCHEMATIC END;
+

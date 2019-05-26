@@ -1,0 +1,15 @@
+module JOYSTICK(clk, cs, reset, ds, vin, done, busy)
+(
+	input             clk,
+	input             cs,
+	input             vin,
+	input             reset,
+	output            ds,
+	output            done,
+	output            busy
+
+);
+
+end
+
+endmodule

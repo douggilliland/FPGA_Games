@@ -1,0 +1,34 @@
+#! /usr/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0xef45d0 .scope module, "Comp" "Comp" 2 1;
+ .timescale 0 0;
+v0xef46c0_0 .net *"_s0", 6 0, L_0xf25d40; 1 drivers
+v0xf25290_0 .net *"_s10", 0 0, C4<0>; 1 drivers
+v0xf25330_0 .net *"_s14", 7 0, L_0xf26280; 1 drivers
+v0xf253d0_0 .net *"_s17", 1 0, C4<00>; 1 drivers
+v0xf25480_0 .net *"_s18", 7 0, C4<00100000>; 1 drivers
+v0xf25520_0 .net *"_s20", 0 0, L_0xf26480; 1 drivers
+v0xf25600_0 .net *"_s22", 0 0, C4<1>; 1 drivers
+v0xf256a0_0 .net *"_s24", 0 0, C4<0>; 1 drivers
+v0xf25790_0 .net *"_s3", 0 0, C4<0>; 1 drivers
+v0xf25830_0 .net *"_s4", 6 0, C4<0010010>; 1 drivers
+v0xf25930_0 .net *"_s6", 0 0, L_0xf25ea0; 1 drivers
+v0xf259d0_0 .net *"_s8", 0 0, C4<1>; 1 drivers
+v0xf25ae0_0 .net "count", 5 0, C4<zzzzzz>; 0 drivers
+v0xf25b80_0 .net "count18", 0 0, L_0xf260c0; 1 drivers
+v0xf25ca0_0 .net "count32", 0 0, L_0xf26690; 1 drivers
+L_0xf25d40 .concat [ 6 1 0 0], C4<zzzzzz>, C4<0>;
+L_0xf25ea0 .cmp/eq 7, L_0xf25d40, C4<0010010>;
+L_0xf260c0 .functor MUXZ 1, C4<0>, C4<1>, L_0xf25ea0, C4<>;
+L_0xf26280 .concat [ 6 2 0 0], C4<zzzzzz>, C4<00>;
+L_0xf26480 .cmp/eq 8, L_0xf26280, C4<00100000>;
+L_0xf26690 .functor MUXZ 1, C4<0>, C4<1>, L_0xf26480, C4<>;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "Comp.v";

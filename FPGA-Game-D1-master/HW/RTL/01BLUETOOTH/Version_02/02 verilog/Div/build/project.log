@@ -1,0 +1,343 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "project.src"
+Input Format                       : mixed
+
+---- Target Parameters
+Target Device                      : XC7A100T-1CSG324
+Output File Name                   : "project.ngc"
+Output Format                      : NGC
+
+---- Source Options
+Top Module Name                    : Divisor_Frecuencia
+
+---- General Options
+Optimization Goal                  : Area
+Optimization Effort                : 1
+RTL Output                         : yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/camila/Documentos/Proy.DigI/Códigos PD/BLUETOOTH/Div/Divisor_Frecuencia.v" into library wor
+Parsing module <Divisor_Frecuencia>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <Divisor_Frecuencia>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Divisor_Frecuencia>.
+    Related source file is "/home/camila/Documentos/Proy.DigI/Códigos PD/BLUETOOTH/Div/Divisor_Frecuencia.v"
+    Found 1-bit register for signal <clk_div>.
+    Found 32-bit register for signal <count>.
+    Found 32-bit adder for signal <count[31]_GND_1_o_add_2_OUT> created at line 24.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  33 D-type flip-flop(s).
+Unit <Divisor_Frecuencia> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Registers                                            : 2
+ 1-bit register                                        : 1
+ 32-bit register                                       : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <Divisor_Frecuencia>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <Divisor_Frecuencia> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 1
+ Flip-Flops                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Divisor_Frecuencia> ...
+WARNING:Xst:1710 - FF/Latch <count_31> (without init value) has a constant value of 0 in block <Divisor_Frecuencia>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <count_30> (without init value) has a constant value of 0 in block <Divisor_Frecuencia>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <count_29> (without init value) has a constant value of 0 in block <Divisor_Frecuencia>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <count_28> (without init value) has a constant value of 0 in block <Divisor_Frecuencia>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <count_27> (without init value) has a constant value of 0 in block <Divisor_Frecuencia>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <count_26> (without init value) has a constant value of 0 in block <Divisor_Frecuencia>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <count_25> (without init value) has a constant value of 0 in block <Divisor_Frecuencia>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <count_24> (without init value) has a constant value of 0 in block <Divisor_Frecuencia>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <count_23> (without init value) has a constant value of 0 in block <Divisor_Frecuencia>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <count_22> (without init value) has a constant value of 0 in block <Divisor_Frecuencia>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <count_21> (without init value) has a constant value of 0 in block <Divisor_Frecuencia>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <count_20> (without init value) has a constant value of 0 in block <Divisor_Frecuencia>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <count_19> (without init value) has a constant value of 0 in block <Divisor_Frecuencia>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <count_18> (without init value) has a constant value of 0 in block <Divisor_Frecuencia>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <count_17> (without init value) has a constant value of 0 in block <Divisor_Frecuencia>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <count_16> (without init value) has a constant value of 0 in block <Divisor_Frecuencia>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <count_15> (without init value) has a constant value of 0 in block <Divisor_Frecuencia>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <count_14> (without init value) has a constant value of 0 in block <Divisor_Frecuencia>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <count_13> (without init value) has a constant value of 0 in block <Divisor_Frecuencia>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block Divisor_Frecuencia, actual ratio is 0.
+FlipFlop clk_div has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 15
+ Flip-Flops                                            : 15
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : project.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 45
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 12
+#      LUT3                        : 1
+#      LUT4                        : 1
+#      LUT6                        : 2
+#      MUXCY                       : 12
+#      VCC                         : 1
+#      XORCY                       : 13
+# FlipFlops/Latches                : 15
+#      FDR                         : 13
+#      FDRE                        : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 2
+#      IBUF                        : 1
+#      OBUF                        : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              14  out of  126800     0%  
+ Number of Slice LUTs:                   18  out of  63400     0%  
+    Number used as Logic:                18  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     18
+   Number with an unused Flip Flop:       4  out of     18    22%  
+   Number with an unused LUT:             0  out of     18     0%  
+   Number of fully used LUT-FF pairs:    14  out of     18    77%  
+   Number of unique control sets:         2
+
+IO Utilization: 
+ Number of IOs:                           3
+ Number of bonded IOBs:                   3  out of    210     1%  
+    IOB Flip Flops/Latches:               1
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk_in                             | BUFGP                  | 15    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 3.186ns (Maximum Frequency: 313.873MHz)
+   Minimum input arrival time before clock: 1.888ns
+   Maximum output required time after clock: 0.877ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_in'
+  Clock period: 3.186ns (frequency: 313.873MHz)
+  Total number of paths / destination ports: 288 / 30
+-------------------------------------------------------------------------
+Delay:               3.186ns (Levels of Logic = 2)
+  Source:            count_3 (FF)
+  Destination:       count_1 (FF)
+  Source Clock:      clk_in rising
+  Destination Clock: clk_in rising
+
+  Data Path: count_3 to count_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.478   0.945  count_3 (count_3)
+     LUT6:I0->O            2   0.124   0.542  count[31]_GND_1_o_equal_2_o<31>2 (count[31]_GND_1_o_equal_2_o<31>1)
+     LUT4:I2->O           13   0.124   0.479  Mcount_count_val321 (Mcount_count_val)
+     FDR:R                     0.494          count_0
+    ----------------------------------------
+    Total                      3.186ns (1.220ns logic, 1.966ns route)
+                                       (38.3% logic, 61.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_in'
+  Total number of paths / destination ports: 15 / 15
+-------------------------------------------------------------------------
+Offset:              1.888ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       count_1 (FF)
+  Destination Clock: clk_in rising
+
+  Data Path: reset to count_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   0.001   0.790  reset_IBUF (reset_IBUF)
+     LUT4:I0->O           13   0.124   0.479  Mcount_count_val321 (Mcount_count_val)
+     FDR:R                     0.494          count_0
+    ----------------------------------------
+    Total                      1.888ns (0.619ns logic, 1.269ns route)
+                                       (32.8% logic, 67.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_in'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.877ns (Levels of Logic = 1)
+  Source:            clk_div_1 (FF)
+  Destination:       clk_div (PAD)
+  Source Clock:      clk_in rising
+
+  Data Path: clk_div_1 to clk_div
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             1   0.478   0.399  clk_div_1 (clk_div_1)
+     OBUF:I->O                 0.000          clk_div_OBUF (clk_div)
+    ----------------------------------------
+    Total                      0.877ns (0.478ns logic, 0.399ns route)
+                                       (54.5% logic, 45.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk_in
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_in         |    3.186|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.59 secs
+ 
+--> 
+
+
+Total memory usage is 502892 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   19 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

@@ -1,0 +1,13 @@
+before_install:
+  - sudo apt-get update -qq
+  - sudo apt-get install -qq iverilog
+  - chmod +x script/ci_script.sh
+
+install: true
+
+script:
+  - script/ci_script.sh
+
+after_failure: true
+
+after_script: true  

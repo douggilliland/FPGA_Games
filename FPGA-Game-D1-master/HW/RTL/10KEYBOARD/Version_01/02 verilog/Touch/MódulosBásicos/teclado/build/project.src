@@ -1,0 +1,3 @@
+verilog work ../teclado.v
+verilog work ../psdos.v
+verilog work ../divisorfrec.v

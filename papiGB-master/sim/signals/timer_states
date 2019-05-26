@@ -1,0 +1,7 @@
+0 AFTER_RESET   
+1 WAIT_FOR_TICK 
+2 INC           
+3 INC_BTAKEN    
+4 INC_BTAKEN_NOT_EOF 
+5 WAIT_EOF           
+

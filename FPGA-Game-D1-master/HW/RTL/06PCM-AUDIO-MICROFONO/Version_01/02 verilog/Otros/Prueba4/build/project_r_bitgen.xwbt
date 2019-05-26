@@ -1,0 +1,7 @@
+INFILE=/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4/build/project_r.ncd
+OUTFILE=/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4/build/project_r.bit
+FAMILY=Artix7
+PART=xc7a100t-1csg324
+WORKINGDIR=/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4/build
+LICENSE=WebPack
+USER_INFO=211378749_0_0_358

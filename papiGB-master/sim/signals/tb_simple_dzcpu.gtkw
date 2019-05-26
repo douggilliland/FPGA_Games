@@ -1,0 +1,219 @@
+[*]
+[*] GTKWave Analyzer v3.3.66 (w)1999-2015 BSI
+[*] Sun Aug 21 04:24:36 2016
+[*]
+[dumpfile] "/home/diego/workspace/projects/papiGB/sim/tb_simple_dzcpu.vcd"
+[dumpfile_mtime] "Sun Aug 21 01:21:13 2016"
+[dumpfile_size] 265149706
+[savefile] "/home/diego/workspace/projects/papiGB/sim/signals/tb_simple_dzcpu.gtkw"
+[timestart] 12098558900
+[size] 1366 744
+[pos] -1 -1
+*-15.674738 12098645000 111600 1875031400 1876195000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb_simple_dzcpu.
+[treeopen] tb_simple_dzcpu.uut.
+[sst_width] 256
+[signals_width] 418
+[sst_expanded] 1
+[sst_vpaned_height] 211
+@28
+tb_simple_dzcpu.uut.iClock
+tb_simple_dzcpu.uut.iReset
+@200
+-dzCPU
+@800200
+-TIMERS
+@25
+tb_simple_dzcpu.uut.TIMERS.rMTime[7:0]
+@28
+tb_simple_dzcpu.uut.TIMERS.iMcuWe
+tb_simple_dzcpu.uut.TIMERS.iBranchTaken
+tb_simple_dzcpu.uut.TIMERS.iInterrupt
+tb_simple_dzcpu.uut.TIMERS.iEof
+@22
+tb_simple_dzcpu.uut.TIMERS.iOpcode[7:0]
+@24
+tb_simple_dzcpu.uut.TIMERS.wClockIncrement[2:0]
+@28
+tb_simple_dzcpu.uut.TIMERS.rIncTimer
+@22
+[color] 2
+tb_simple_dzcpu.uut.TIMERS.rCurrentState[7:0]
+tb_simple_dzcpu.uut.TIMERS.iMcuWriteData[7:0]
+tb_simple_dzcpu.uut.TIMERS.iMcuRegSelect[3:0]
+@1000200
+-TIMERS
+@c00200
+-INTERRUPT
+@28
+tb_simple_dzcpu.uut.INTERRUPTS.iClock
+tb_simple_dzcpu.uut.INTERRUPTS.iMcuWe
+@22
+tb_simple_dzcpu.uut.INTERRUPTS.iMcuRegSelect[3:0]
+tb_simple_dzcpu.uut.INTERRUPTS.iMcuWriteData[7:0]
+tb_simple_dzcpu.uut.INTERRUPTS.oInterruptResquestPending[7:0]
+@1401200
+-INTERRUPT
+@800200
+-dzCPU
+@200
+-interrupts
+@c00022
+tb_simple_dzcpu.uut.DZCPU.iInterruptRequests[3:0]
+@28
+(0)tb_simple_dzcpu.uut.DZCPU.iInterruptRequests[3:0]
+(1)tb_simple_dzcpu.uut.DZCPU.iInterruptRequests[3:0]
+(2)tb_simple_dzcpu.uut.DZCPU.iInterruptRequests[3:0]
+(3)tb_simple_dzcpu.uut.DZCPU.iInterruptRequests[3:0]
+@1401200
+-group_end
+@28
+tb_simple_dzcpu.uut.DZCPU.wInterruptRoutineJumpDetected
+@22
+tb_simple_dzcpu.uut.DZCPU.wPc[15:0]
+tb_simple_dzcpu.uut.DZCPU.oMCUAddr[15:0]
+tb_simple_dzcpu.uut.DZCPU.iMCUData[7:0]
+tb_simple_dzcpu.uut.DZCPU.wNextFlow[9:0]
+@24
+tb_simple_dzcpu.uut.DZCPU.wuOpFlowIdx[9:0]
+@22
+tb_simple_dzcpu.uut.DZCPU.wInterruptRequestBitMaps_pre[3:0]
+tb_simple_dzcpu.uut.DZCPU.wInterruptRequestBitMap[3:0]
+tb_simple_dzcpu.uut.DZCPU.wInterruptVectorAddress[15:0]
+@24
+tb_simple_dzcpu.uut.DZCPU.wIsCBFlow
+@200
+-cpu
+@22
+tb_simple_dzcpu.uut.DZCPU.wuOpFlowIdx[9:0]
+@28
+tb_simple_dzcpu.uut.DZCPU.wTimerTick
+@2024
+^1 /home/diego/workspace/projects/papiGB/sim/signals/dzcpu_states
+tb_simple_dzcpu.uut.DZCPU.rCurrentState[7:0]
+@22
+tb_simple_dzcpu.uut.DZCPU.iMCUData[7:0]
+tb_simple_dzcpu.uut.DZCPU.oMCUData[7:0]
+@28
+tb_simple_dzcpu.uut.DZCPU.oMCUwe
+@22
+tb_simple_dzcpu.uut.DZCPU.oMCUAddr[15:0]
+tb_simple_dzcpu.uut.DZCPU.wPc[15:0]
+@28
+tb_simple_dzcpu.uut.DZCPU.wJcbDetected
+@2024
+^2 /home/diego/workspace/projects/papiGB/sim/signals/dzcpu_uop_cmd
+tb_simple_dzcpu.uut.DZCPU.wuCmd[4:0]
+@28
+tb_simple_dzcpu.uut.DZCPU.wIPC
+[color] 6
+tb_simple_dzcpu.uut.DZCPU.wEof
+[color] 3
+tb_simple_dzcpu.uut.DZCPU.rFlowEnable
+tb_simple_dzcpu.uut.DZCPU.wZ
+@22
+tb_simple_dzcpu.uut.DZCPU.wRegData[15:0]
+@c00028
+tb_simple_dzcpu.uut.DZCPU.wBitMask[7:0]
+@28
+(0)tb_simple_dzcpu.uut.DZCPU.wBitMask[7:0]
+(1)tb_simple_dzcpu.uut.DZCPU.wBitMask[7:0]
+(2)tb_simple_dzcpu.uut.DZCPU.wBitMask[7:0]
+(3)tb_simple_dzcpu.uut.DZCPU.wBitMask[7:0]
+(4)tb_simple_dzcpu.uut.DZCPU.wBitMask[7:0]
+(5)tb_simple_dzcpu.uut.DZCPU.wBitMask[7:0]
+(6)tb_simple_dzcpu.uut.DZCPU.wBitMask[7:0]
+(7)tb_simple_dzcpu.uut.DZCPU.wBitMask[7:0]
+@1401200
+-group_end
+@22
+[color] 5
+tb_simple_dzcpu.uut.DZCPU.rUopDstRegData[15:0]
+@200
+-Registers
+@2024
+^3 /home/diego/workspace/projects/papiGB/sim/signals/dzcpu_reg_select
+tb_simple_dzcpu.uut.DZCPU.wUopSrc[15:0]
+@28
+tb_simple_dzcpu.uut.DZCPU.rRegWe
+@22
+tb_simple_dzcpu.uut.DZCPU.wFlags[7:0]
+tb_simple_dzcpu.uut.DZCPU.wSpH[7:0]
+tb_simple_dzcpu.uut.DZCPU.wSpL[7:0]
+tb_simple_dzcpu.uut.DZCPU.wB[7:0]
+tb_simple_dzcpu.uut.DZCPU.wC[7:0]
+tb_simple_dzcpu.uut.DZCPU.wD[7:0]
+tb_simple_dzcpu.uut.DZCPU.wE[7:0]
+@c00022
+tb_simple_dzcpu.uut.DZCPU.wH[7:0]
+@28
+(0)tb_simple_dzcpu.uut.DZCPU.wH[7:0]
+(1)tb_simple_dzcpu.uut.DZCPU.wH[7:0]
+(2)tb_simple_dzcpu.uut.DZCPU.wH[7:0]
+(3)tb_simple_dzcpu.uut.DZCPU.wH[7:0]
+(4)tb_simple_dzcpu.uut.DZCPU.wH[7:0]
+(5)tb_simple_dzcpu.uut.DZCPU.wH[7:0]
+(6)tb_simple_dzcpu.uut.DZCPU.wH[7:0]
+(7)tb_simple_dzcpu.uut.DZCPU.wH[7:0]
+@1401200
+-group_end
+@22
+tb_simple_dzcpu.uut.DZCPU.wL[7:0]
+tb_simple_dzcpu.uut.DZCPU.wA[7:0]
+tb_simple_dzcpu.uut.DZCPU.wX8[7:0]
+tb_simple_dzcpu.uut.DZCPU.wX16[15:0]
+@1000200
+-dzCPU
+@800200
+-MMU
+@22
+tb_simple_dzcpu.uut.MMU.iInterruptRequest[7:0]
+tb_simple_dzcpu.uut.MMU.iInterruptFlag[7:0]
+tb_simple_dzcpu.uut.MMU.iInterruptEnable[7:0]
+@2024
+^4 /home/diego/workspace/projects/papiGB/sim/signals/mmu_cpu_gpu_sel
+tb_simple_dzcpu.uut.MMU.wCPU_GPU_Sel
+@28
+tb_simple_dzcpu.uut.MMU.iCpuReadRequest
+tb_simple_dzcpu.uut.MMU.iGpuReadRequest
+@22
+tb_simple_dzcpu.uut.MMU.iCpuAddr[15:0]
+tb_simple_dzcpu.uut.MMU.wRegMapBootStapRom[7:0]
+tb_simple_dzcpu.uut.MMU.wReadCartridgeBank0[7:0]
+tb_simple_dzcpu.uut.MMU.wCartridgeDataBank0[7:0]
+@28
+tb_simple_dzcpu.uut.MMU.wInBios
+@22
+tb_simple_dzcpu.uut.MMU.oCpuData[7:0]
+tb_simple_dzcpu.uut.MMU.iGpuAddr[15:0]
+tb_simple_dzcpu.uut.MMU.oGpuVmemReadData[7:0]
+tb_simple_dzcpu.uut.MMU.wVmemReadAddr[15:0]
+tb_simple_dzcpu.uut.MMU.wOAMData[7:0]
+tb_simple_dzcpu.uut.MMU.wReadVmem[7:0]
+tb_simple_dzcpu.uut.MMU.wAddr[15:0]
+@28
+tb_simple_dzcpu.uut.MMU.wWeVRam
+tb_simple_dzcpu.uut.MMU.wWeZeroPage
+tb_simple_dzcpu.uut.MMU.wInBios
+tb_simple_dzcpu.uut.MMU.wInCartridgeBank0
+@1000200
+-MMU
+@c00200
+-GPU
+@28
+tb_simple_dzcpu.uut.GPU.iClock
+tb_simple_dzcpu.uut.GPU.iReset
+tb_simple_dzcpu.uut.GPU.wZ
+tb_simple_dzcpu.uut.GPU.wGpuActive
+@24
+tb_simple_dzcpu.uut.GPU.wIp[7:0]
+@22
+tb_simple_dzcpu.uut.GPU.wOp0[15:0]
+tb_simple_dzcpu.uut.GPU.wOp1[15:0]
+@800200
+-tb_simple_dzcpu.uut.GPU.wUop
+@1401200
+-group_end
+-group_end
+[pattern_trace] 1
+[pattern_trace] 0

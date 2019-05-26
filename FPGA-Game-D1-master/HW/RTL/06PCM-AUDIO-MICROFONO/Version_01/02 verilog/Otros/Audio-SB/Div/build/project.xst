@@ -1,0 +1,10 @@
+run
+-top div_freq 
+-p XC7A100T-1CSG324
+-opt_mode Area
+-opt_level 1
+-ifn project.src
+-ifmt mixed
+-ofn project.ngc
+-ofmt NGC
+-rtlview yes

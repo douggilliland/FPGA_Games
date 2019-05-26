@@ -1,0 +1,6 @@
+*.dump
+*.gb
+*.hex
+*.map
+*.obj
+*.sym

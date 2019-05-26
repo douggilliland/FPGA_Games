@@ -1,0 +1,28 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sun Oct 22 11:55:23 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "reset" LOCATE = SITE "E16" LEVEL 1;
+COMP "echo" LOCATE = SITE "F14" LEVEL 1;
+COMP "trigger" LOCATE = SITE "D17" LEVEL 1;
+COMP "distance<7>" LOCATE = SITE "U6" LEVEL 1;
+COMP "distance<8>" LOCATE = SITE "V4" LEVEL 1;
+COMP "distance<5>" LOCATE = SITE "T4" LEVEL 1;
+COMP "distance<6>" LOCATE = SITE "U7" LEVEL 1;
+COMP "distance<15>" LOCATE = SITE "P2" LEVEL 1;
+COMP "distance<9>" LOCATE = SITE "U3" LEVEL 1;
+COMP "distance<0>" LOCATE = SITE "T8" LEVEL 1;
+COMP "distance<3>" LOCATE = SITE "T6" LEVEL 1;
+COMP "distance<4>" LOCATE = SITE "T5" LEVEL 1;
+COMP "distance<1>" LOCATE = SITE "V9" LEVEL 1;
+COMP "distance<2>" LOCATE = SITE "R8" LEVEL 1;
+COMP "distance<10>" LOCATE = SITE "V1" LEVEL 1;
+COMP "distance<11>" LOCATE = SITE "R1" LEVEL 1;
+COMP "distance<12>" LOCATE = SITE "P5" LEVEL 1;
+COMP "distance<13>" LOCATE = SITE "U1" LEVEL 1;
+COMP "distance<14>" LOCATE = SITE "R2" LEVEL 1;
+COMP "clk" LOCATE = SITE "E3" LEVEL 1;
+COMP "done" LOCATE = SITE "F13" LEVEL 1;
+SCHEMATIC END;
+

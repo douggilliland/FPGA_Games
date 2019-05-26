@@ -1,0 +1,7 @@
+INFILE=/home/julian/Documentos/Daniel/Corrección/Nexys4/ultrasonido/build/project_r.ncd
+OUTFILE=/home/julian/Documentos/Daniel/Corrección/Nexys4/ultrasonido/build/project_r.bit
+FAMILY=Artix7
+PART=xc7a100t-3csg324
+WORKINGDIR=/home/julian/Documentos/Daniel/Corrección/Nexys4/ultrasonido/build
+LICENSE=WebPack
+USER_INFO=211103265_0_0_858

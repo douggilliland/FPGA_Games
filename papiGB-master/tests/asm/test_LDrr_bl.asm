@@ -1,0 +1,14 @@
+SECTION "sec", ROM0
+DS $100
+        jp  $200
+DS $100
+        ld sp, $FFFE
+        ld a, $15
+        ld bc, $8897
+        ld l, $65
+        or a,a ;borra las banderas
+
+        ld b, l
+        push bc
+
+        ;the value expected is $6597

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="ConstraintSystem" num="119" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;done&quot;			LOC = &quot;T6&quot;	|&gt; [../microfono.ucf(15)]</arg>: This constraint cannot be distributed from the design objects matching &apos;<arg fmt="%s" index="2">NET &quot;done&quot;</arg>&apos; because those design objects do not contain or drive any instances of the correct type.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;done&quot;			LOC = &quot;T6&quot;	|&gt; [../microfono.ucf(15)]&apos; could not be found and so the Locate constraint will be removed.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="119" delta="new" >Constraint <arg fmt="%s" index="1">&lt;IOSTANDARD = &quot;LVCMOS33&quot;;&gt; [../microfono.ucf(15)]</arg>: This constraint cannot be distributed from the design objects matching &apos;<arg fmt="%s" index="2">NET &quot;done&quot;</arg>&apos; because those design objects do not contain or drive any instances of the correct type.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="478" delta="new" >clock net <arg fmt="%s" index="1">reset_IBUF_BUFG</arg> with clock driver <arg fmt="%s" index="2">reset_IBUF_BUFG</arg> drives no clock pins
+</msg>
+
+</messages>
+

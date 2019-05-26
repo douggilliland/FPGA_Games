@@ -1,0 +1,41 @@
+//! **************************************************************************
+// Written by: Map P.68d on Thu Nov 30 18:34:24 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "d<7>" LOCATE = SITE "U6" LEVEL 1;
+COMP "clk" LOCATE = SITE "E3" LEVEL 1;
+COMP "ENABLE" LOCATE = SITE "T16" LEVEL 1;
+COMP "ECHO" LOCATE = SITE "E7" LEVEL 1;
+COMP "trigg" LOCATE = SITE "K2" LEVEL 1;
+COMP "DONE" LOCATE = SITE "P2" LEVEL 1;
+COMP "reset" LOCATE = SITE "R10" LEVEL 1;
+COMP "d<0>" LOCATE = SITE "T8" LEVEL 1;
+COMP "d<1>" LOCATE = SITE "V9" LEVEL 1;
+COMP "d<2>" LOCATE = SITE "R8" LEVEL 1;
+COMP "d<3>" LOCATE = SITE "T6" LEVEL 1;
+COMP "d<4>" LOCATE = SITE "T5" LEVEL 1;
+COMP "d<5>" LOCATE = SITE "T4" LEVEL 1;
+COMP "d<6>" LOCATE = SITE "U7" LEVEL 1;
+TIMEGRP sys_clk_pin = BEL "divisorfrec0/count_2924_0" BEL
+        "divisorfrec0/count_2924_1" BEL "divisorfrec0/count_2924_2" BEL
+        "divisorfrec0/count_2924_3" BEL "divisorfrec0/count_2924_4" BEL
+        "divisorfrec0/count_2924_5" BEL "divisorfrec0/count_2924_6" BEL
+        "divisorfrec0/count_2924_7" BEL "divisorfrec0/count_2924_8" BEL
+        "divisorfrec0/count_2924_9" BEL "divisorfrec0/count_2924_10" BEL
+        "divisorfrec0/count_2924_11" BEL "divisorfrecgen0/count_1000_0" BEL
+        "divisorfrecgen0/count_1000_1" BEL "divisorfrecgen0/count_1000_2" BEL
+        "divisorfrecgen0/count_1000_3" BEL "divisorfrecgen0/count_1000_4" BEL
+        "divisorfrecgen0/count_1000_5" BEL "divisorfrecgen0/count_1000_6" BEL
+        "divisorfrecgen0/count_1000_7" BEL "divisorfrecgen0/count_1000_8" BEL
+        "divisorfrecgen0/count_1000_9" BEL "divisorfrecd0/count_1462_0" BEL
+        "divisorfrecd0/count_1462_1" BEL "divisorfrecd0/count_1462_2" BEL
+        "divisorfrecd0/count_1462_3" BEL "divisorfrecd0/count_1462_4" BEL
+        "divisorfrecd0/count_1462_5" BEL "divisorfrecd0/count_1462_6" BEL
+        "divisorfrecd0/count_1462_7" BEL "divisorfrecd0/count_1462_8" BEL
+        "divisorfrecd0/count_1462_9" BEL "divisorfrecd0/count_1462_10" BEL
+        "divisorfrec0/CLKOUT" BEL "divisorfrecgen0/CLKOUT1" BEL
+        "divisorfrecd0/CLKOUTD" BEL "clk_BUFGP/BUFG";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+SCHEMATIC END;
+

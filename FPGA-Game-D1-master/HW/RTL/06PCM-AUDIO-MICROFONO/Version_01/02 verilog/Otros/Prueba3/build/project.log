@@ -1,0 +1,497 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "project.src"
+Input Format                       : mixed
+
+---- Target Parameters
+Target Device                      : XC7A100T-1CSG324
+Output File Name                   : "project.ngc"
+Output Format                      : NGC
+
+---- Source Options
+Top Module Name                    : microfono
+
+---- General Options
+Optimization Goal                  : Area
+Optimization Effort                : 1
+RTL Output                         : yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Otro/Prueba3/microfono.v" into library work
+Parsing module <microfono>.
+Analyzing Verilog file "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Otro/Prueba3/div_freq.v" into library work
+Parsing module <div_freq>.
+Analyzing Verilog file "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Otro/Prueba3/pwm.v" into library work
+Parsing module <pwm>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+WARNING:HDLCompiler:1016 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Otro/Prueba3/microfono.v" Line 41: Port ledres is not connected to this instance
+
+Elaborating module <microfono>.
+WARNING:HDLCompiler:1127 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Otro/Prueba3/microfono.v" Line 19: Assignment to mclk3 ignored, since the identifier is never used
+
+Elaborating module <pwm>.
+WARNING:HDLCompiler:413 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Otro/Prueba3/pwm.v" Line 33: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:1127 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Otro/Prueba3/microfono.v" Line 41: Assignment to mclk3 ignored, since the identifier is never used
+
+Elaborating module <div_freq>.
+WARNING:HDLCompiler:413 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Otro/Prueba3/microfono.v" Line 56: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Otro/Prueba3/microfono.v" Line 57: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:1127 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Otro/Prueba3/microfono.v" Line 45: Assignment to sregt1 ignored, since the identifier is never used
+WARNING:HDLCompiler:552 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Otro/Prueba3/microfono.v" Line 41: Input port micData is not connected on this instance
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <microfono>.
+    Related source file is "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Otro/Prueba3/microfono.v".
+WARNING:Xst:2898 - Port 'micData', unconnected in block instance 'pw', is tied to GND.
+WARNING:Xst:2898 - Port 'done1', unconnected in block instance 'pw', is tied to GND.
+INFO:Xst:3210 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Otro/Prueba3/microfono.v" line 41: Output port <ledres> of the instance <pw> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Otro/Prueba3/microfono.v" line 41: Output port <mclk> of the instance <pw> is unconnected or connected to loadless signal.
+WARNING:Xst:2935 - Signal 'micLRSel', unconnected in block 'microfono', is tied to its initial value (0).
+    Found 8-bit register for signal <count>.
+    Found 1-bit register for signal <done>.
+    Found 8-bit register for signal <dout>.
+    Found 8-bit adder for signal <count[7]_GND_1_o_add_4_OUT> created at line 57.
+    Found 8-bit comparator greater for signal <count[7]_INV_45_o> created at line 54
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  17 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <microfono> synthesized.
+
+Synthesizing Unit <pwm>.
+    Related source file is "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Otro/Prueba3/pwm.v".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <micData> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <done1> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <ledres> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <mclk> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:2935 - Signal 'ampSD', unconnected in block 'pwm', is tied to its initial value (1).
+    Found 8-bit register for signal <count>.
+    Found 1-bit register for signal <ampPWM>.
+    Found 8-bit subtractor for signal <GND_2_o_GND_2_o_sub_4_OUT<7:0>> created at line 33.
+    Found 1-bit 8-to-1 multiplexer for signal <count[2]_dout[7]_Mux_2_o> created at line 32.
+    Found 8-bit comparator greater for signal <count[7]_GND_2_o_LessThan_2_o> created at line 30
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   9 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <pwm> synthesized.
+
+Synthesizing Unit <div_freq>.
+    Related source file is "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Otro/Prueba3/div_freq.v".
+        fi = 50000000
+        fs = 3125000
+    Found 32-bit register for signal <count>.
+    Found 1-bit register for signal <clkout>.
+    Found 1-bit register for signal <led>.
+    Found 32-bit subtractor for signal <count[31]_GND_3_o_sub_3_OUT> created at line 30.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  34 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <div_freq> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 32-bit subtractor                                     : 1
+ 8-bit adder                                           : 1
+ 8-bit subtractor                                      : 1
+# Registers                                            : 8
+ 1-bit register                                        : 4
+ 32-bit register                                       : 1
+ 8-bit register                                        : 3
+# Comparators                                          : 2
+ 8-bit comparator greater                              : 2
+# Multiplexers                                         : 2
+ 1-bit 8-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <count_0> (without init value) has a constant value of 1 in block <pw>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_1> (without init value) has a constant value of 1 in block <pw>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_2> (without init value) has a constant value of 1 in block <pw>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_3> (without init value) has a constant value of 0 in block <pw>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_4> (without init value) has a constant value of 0 in block <pw>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_5> (without init value) has a constant value of 0 in block <pw>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_6> (without init value) has a constant value of 0 in block <pw>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_7> (without init value) has a constant value of 0 in block <pw>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ampPWM> (without init value) has a constant value of 0 in block <pw>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <div_freq>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <div_freq> synthesized (advanced).
+
+Synthesizing (advanced) Unit <microfono>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <microfono> synthesized (advanced).
+
+Synthesizing (advanced) Unit <pwm>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <pwm> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 3
+ 32-bit down counter                                   : 1
+ 8-bit down counter                                    : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 12
+ Flip-Flops                                            : 12
+# Comparators                                          : 2
+ 8-bit comparator greater                              : 2
+# Multiplexers                                         : 1
+ 1-bit 8-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <ampPWM> (without init value) has a constant value of 0 in block <pwm>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <microfono> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block microfono, actual ratio is 0.
+FlipFlop sregt_6 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop sregt_5 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop sregt_4 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop sregt_3 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop sregt_2 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop sregt_1 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop sregt_0 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop df/clkout has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop done has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 60
+ Flip-Flops                                            : 60
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : project.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 135
+#      GND                         : 1
+#      INV                         : 33
+#      LUT1                        : 8
+#      LUT2                        : 4
+#      LUT3                        : 1
+#      LUT5                        : 2
+#      LUT6                        : 7
+#      MUXCY                       : 38
+#      VCC                         : 1
+#      XORCY                       : 40
+# FlipFlops/Latches                : 60
+#      FD                          : 3
+#      FDR                         : 33
+#      FDRE                        : 23
+#      FDS                         : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 16
+#      IBUF                        : 2
+#      OBUF                        : 14
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              48  out of  126800     0%  
+ Number of Slice LUTs:                   55  out of  63400     0%  
+    Number used as Logic:                55  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     58
+   Number with an unused Flip Flop:      10  out of     58    17%  
+   Number with an unused LUT:             3  out of     58     5%  
+   Number of fully used LUT-FF pairs:    45  out of     58    77%  
+   Number of unique control sets:         6
+
+IO Utilization: 
+ Number of IOs:                          17
+ Number of bonded IOBs:                  17  out of    210     8%  
+    IOB Flip Flops/Latches:              12
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+df/clkout                          | NONE(sregt_0)          | 25    |
+clk                                | BUFGP                  | 35    |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 4.194ns (Maximum Frequency: 238.418MHz)
+   Minimum input arrival time before clock: 2.139ns
+   Maximum output required time after clock: 0.877ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'df/clkout'
+  Clock period: 2.480ns (frequency: 403.226MHz)
+  Total number of paths / destination ports: 176 / 46
+-------------------------------------------------------------------------
+Delay:               2.480ns (Levels of Logic = 1)
+  Source:            count_7 (FF)
+  Destination:       count_0 (FF)
+  Source Clock:      df/clkout rising
+  Destination Clock: df/clkout rising
+
+  Data Path: count_7 to count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             4   0.478   0.939  count_7 (count_7)
+     LUT6:I1->O            8   0.124   0.445  _n00281 (_n0028)
+     FDRE:R                    0.494          count_0
+    ----------------------------------------
+    Total                      2.480ns (1.096ns logic, 1.384ns route)
+                                       (44.2% logic, 55.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.194ns (frequency: 238.418MHz)
+  Total number of paths / destination ports: 1618 / 65
+-------------------------------------------------------------------------
+Delay:               4.194ns (Levels of Logic = 3)
+  Source:            df/count_25 (FF)
+  Destination:       df/count_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: df/count_25 to df/count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.478   0.945  df/count_25 (df/count_25)
+     LUT6:I0->O            1   0.124   0.919  df/count[31]_GND_3_o_equal_2_o<31>5 (df/count[31]_GND_3_o_equal_2_o<31>4)
+     LUT6:I1->O            3   0.124   0.435  df/count[31]_GND_3_o_equal_2_o<31>7 (df/count[31]_GND_3_o_equal_2_o)
+     LUT2:I1->O           31   0.124   0.551  df/count[31]_GND_3_o_equal_2_o_01 (df/count[31]_GND_3_o_equal_2_o_0)
+     FDR:R                     0.494          df/count_0
+    ----------------------------------------
+    Total                      4.194ns (1.344ns logic, 2.850ns route)
+                                       (32.0% logic, 68.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'df/clkout'
+  Total number of paths / destination ports: 35 / 35
+-------------------------------------------------------------------------
+Offset:              2.139ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       count_0 (FF)
+  Destination Clock: df/clkout rising
+
+  Data Path: reset to count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            22   0.001   1.075  reset_IBUF (reset_IBUF)
+     LUT6:I0->O            8   0.124   0.445  _n00281 (_n0028)
+     FDRE:R                    0.494          count_0
+    ----------------------------------------
+    Total                      2.139ns (0.619ns logic, 1.520ns route)
+                                       (28.9% logic, 71.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 35 / 35
+-------------------------------------------------------------------------
+Offset:              1.842ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       df/count_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: reset to df/count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            22   0.001   0.672  reset_IBUF (reset_IBUF)
+     LUT2:I0->O           31   0.124   0.551  df/count[31]_GND_3_o_equal_2_o_01 (df/count[31]_GND_3_o_equal_2_o_0)
+     FDR:R                     0.494          df/count_0
+    ----------------------------------------
+    Total                      1.842ns (0.619ns logic, 1.223ns route)
+                                       (33.6% logic, 66.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'df/clkout'
+  Total number of paths / destination ports: 9 / 9
+-------------------------------------------------------------------------
+Offset:              0.877ns (Levels of Logic = 1)
+  Source:            sregt_7 (FF)
+  Destination:       dout<7> (PAD)
+  Source Clock:      df/clkout rising
+
+  Data Path: sregt_7 to dout<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             1   0.478   0.399  sregt_7 (sregt_7)
+     OBUF:I->O                 0.000          dout_7_OBUF (dout<7>)
+    ----------------------------------------
+    Total                      0.877ns (0.478ns logic, 0.399ns route)
+                                       (54.5% logic, 45.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              0.877ns (Levels of Logic = 1)
+  Source:            df/led (FF)
+  Destination:       ledres (PAD)
+  Source Clock:      clk rising
+
+  Data Path: df/led to ledres
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.478   0.399  df/led (df/led)
+     OBUF:I->O                 0.000          ledres_OBUF (ledres)
+    ----------------------------------------
+    Total                      0.877ns (0.478ns logic, 0.399ns route)
+                                       (54.5% logic, 45.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    4.194|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock df/clkout
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+df/clkout      |    2.480|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 35.00 secs
+Total CPU time to Xst completion: 23.66 secs
+ 
+--> 
+
+
+Total memory usage is 504512 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   27 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+

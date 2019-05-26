@@ -1,0 +1,211 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "project.src"
+Input Format                       : mixed
+
+---- Target Parameters
+Target Device                      : xc7a100t-1csg324
+Output File Name                   : "project.ngc"
+Output Format                      : NGC
+
+---- Source Options
+Top Module Name                    : j1soc
+
+---- General Options
+Optimization Goal                  : Area
+Optimization Effort                : 1
+RTL Output                         : yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/j1soc.v" into library work
+Parsing module <j1soc>.
+Analyzing Verilog file "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/j1.v" into library work
+Parsing module <j1>.
+Analyzing Verilog file "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/dpram.v" into library work
+Parsing module <dp_ram>.
+INFO:HDLCompiler:693 - "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/dpram.v" Line 24. parameter declaration becomes local in dp_ram with formal parameter declaration list
+Analyzing Verilog file "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/uart/uart.v" into library work
+Parsing module <uart>.
+Analyzing Verilog file "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/uart/peripheral_uart.v" into library work
+Parsing module <peripheral_uart>.
+Analyzing Verilog file "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/multiplier/peripheral_mult.v" into library work
+Parsing module <peripheral_mult>.
+Analyzing Verilog file "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/multiplier/mult_32/acc.v" into library work
+Parsing module <acc>.
+Analyzing Verilog file "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/multiplier/mult_32/comp.v" into library work
+Parsing module <comp>.
+Analyzing Verilog file "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/multiplier/mult_32/control_mult.v" into library work
+Parsing module <control_mult>.
+Analyzing Verilog file "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/multiplier/mult_32/lsr.v" into library work
+Parsing module <lsr>.
+Analyzing Verilog file "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/multiplier/mult_32/rsr.v" into library work
+Parsing module <rsr>.
+Analyzing Verilog file "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/multiplier/mult_32/mult_32.v" into library work
+Parsing module <mult_32>.
+Analyzing Verilog file "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/divider/peripheral_div.v" into library work
+Parsing module <peripheral_div>.
+Analyzing Verilog file "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/divider/div_16/control_div.v" into library work
+Parsing module <control_div>.
+Analyzing Verilog file "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/divider/div_16/counter_div.v" into library work
+Parsing module <counter_div>.
+Analyzing Verilog file "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/divider/div_16/div_16.v" into library work
+Parsing module <div_16>.
+Analyzing Verilog file "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/divider/div_16/final_result.v" into library work
+Parsing module <final_result>.
+Analyzing Verilog file "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/divider/div_16/lsr_div.v" into library work
+Parsing module <lsr_div>.
+Analyzing Verilog file "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/divider/div_16/subtractor.v" into library work
+Parsing module <subtractor>.
+Analyzing Verilog file "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/dpRAM/core_peripheric.v" into library work
+Parsing module <core_peripheric>.
+Analyzing Verilog file "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/dpRAM/dualport_RAM.v" into library work
+Parsing module <dualport_RAM>.
+Analyzing Verilog file "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/dpRAM/dpRAM_interface.v" into library work
+Parsing module <dpRAM_interface>.
+Analyzing Verilog file "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/periferico_ultra/peripheral_ultra.v" into library work
+Parsing module <peripheral_ultra>.
+Analyzing Verilog file "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/periferico_ultra/ultrasonido.v" into library work
+Parsing module <ultrasonido>.
+Analyzing Verilog file "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/periferico_ultra/contador.v" into library work
+Parsing module <contador>.
+Analyzing Verilog file "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/periferico_ultra/divisor.v" into library work
+Parsing module <divisor>.
+Analyzing Verilog file "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/periferico_ultra/genpulsos.v" into library work
+Parsing module <genpulsos>.
+Analyzing Verilog file "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/periferico_ultra/divisorfrec.v" into library work
+Parsing module <divisorfrec>.
+Analyzing Verilog file "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/periferico_ultra/divisorfrecd.v" into library work
+Parsing module <divisorfrecd>.
+Analyzing Verilog file "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/periferico_ultra/divisorfrecgen.v" into library work
+Parsing module <divisorfrecgen>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <j1soc>.
+
+Elaborating module <j1(bootram_file="../firmware/Hello_World/j1.mem")>.
+
+Elaborating module <dp_ram(adr_width=13,dat_width=16,mem_file_name="../firmware/Hello_World/j1.mem")>.
+ERROR:HDLCompiler:990 - "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/dpram.v" Line 52: Cannot open file ../firmware/Hello_World/j1.mem
+Module dp_ram remains a blackbox, due to errors in its contents
+WARNING:HDLCompiler:1499 - "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/dpram.v" Line 5: Empty module <dp_ram(adr_width=13,dat_width=16,mem_file_name="../firmware/Hello_World/j1.mem")> remains a black box.
+WARNING:HDLCompiler:189 - "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/j1.v" Line 46: Size mismatch in connection of port <en_b>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/j1.v" Line 47: Size mismatch in connection of port <adr_a>. Formal port size is 13-bit while actual signal size is 15-bit.
+WARNING:HDLCompiler:413 - "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/j1.v" Line 90: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/j1.v" Line 117: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/j1.v" Line 129: Result of 32-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/j1.v" Line 134: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/j1.v" Line 155: Result of 15-bit expression is truncated to fit in 13-bit target.
+WARNING:HDLCompiler:413 - "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/j1.v" Line 157: Result of 16-bit expression is truncated to fit in 13-bit target.
+
+Elaborating module <peripheral_mult>.
+
+Elaborating module <mult_32>.
+
+Elaborating module <rsr>.
+
+Elaborating module <lsr>.
+WARNING:HDLCompiler:189 - "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/multiplier/mult_32/mult_32.v" Line 21: Size mismatch in connection of port <s_A>. Formal port size is 31-bit while actual signal size is 32-bit.
+
+Elaborating module <comp>.
+
+Elaborating module <acc>.
+
+Elaborating module <control_mult>.
+WARNING:HDLCompiler:413 - "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/multiplier/mult_32/control_mult.v" Line 63: Result of 5-bit expression is truncated to fit in 4-bit target.
+
+Elaborating module <peripheral_div>.
+
+Elaborating module <div_16>.
+
+Elaborating module <lsr_div>.
+WARNING:HDLCompiler:189 - "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/divider/div_16/div_16.v" Line 21: Size mismatch in connection of port <rst>. Formal port size is 1-bit while actual signal size is 32-bit.
+
+Elaborating module <subtractor>.
+WARNING:HDLCompiler:413 - "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/divider/div_16/subtractor.v" Line 19: Result of 32-bit expression is truncated to fit in 16-bit target.
+
+Elaborating module <counter_div>.
+WARNING:HDLCompiler:413 - "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/divider/div_16/counter_div.v" Line 18: Result of 32-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/divider/div_16/counter_div.v" Line 22: Result of 32-bit expression is truncated to fit in 1-bit target.
+
+Elaborating module <control_div>.
+WARNING:HDLCompiler:413 - "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/divider/div_16/control_div.v" Line 69: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:91 - "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/divider/div_16/control_div.v" Line 90: Signal <DV0> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+
+Elaborating module <final_result>.
+
+Elaborating module <peripheral_uart>.
+
+Elaborating module <uart>.
+WARNING:HDLCompiler:413 - "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/uart/uart.v" Line 55: Result of 32-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:189 - "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/j1soc.v" Line 44: Size mismatch in connection of port <d_out>. Formal port size is 16-bit while actual signal size is 1-bit.
+
+Elaborating module <peripheral_ultra>.
+
+Elaborating module <ultrasonido>.
+
+Elaborating module <divisorfrec>.
+WARNING:HDLCompiler:413 - "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/periferico_ultra/divisorfrec.v" Line 18: Result of 13-bit expression is truncated to fit in 12-bit target.
+
+Elaborating module <divisorfrecgen>.
+WARNING:HDLCompiler:413 - "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/periferico_ultra/divisorfrecgen.v" Line 18: Result of 11-bit expression is truncated to fit in 10-bit target.
+
+Elaborating module <divisorfrecd>.
+WARNING:HDLCompiler:413 - "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/periferico_ultra/divisorfrecd.v" Line 18: Result of 12-bit expression is truncated to fit in 11-bit target.
+
+Elaborating module <genpulsos>.
+
+Elaborating module <contador>.
+WARNING:HDLCompiler:413 - "/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/periferico_ultra/contador.v" Line 32: Result of 9-bit expression is truncated to fit in 8-bit target.
+
+Elaborating module <divisor>.
+
+Elaborating module <dpRAM_interface>.
+
+Elaborating module <dualport_RAM>.
+
+Elaborating module <core_peripheric>.
+--> 
+
+
+Total memory usage is 351648 kilobytes
+
+Number of errors   :    1 (   0 filtered)
+Number of warnings :   23 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

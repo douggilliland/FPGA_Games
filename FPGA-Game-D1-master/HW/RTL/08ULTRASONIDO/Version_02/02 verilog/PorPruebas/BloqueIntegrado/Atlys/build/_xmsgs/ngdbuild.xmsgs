@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;JB&lt;2&gt;&quot;  LOC = &quot;P6&quot;;&gt; [../bloqueultrasonido.ucf(43)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">JB&lt;2&gt;</arg>&quot; not found.  Please verify that:
+1. The specified design element actually exists in the original design.
+2. The specified object is spelled correctly in the constraint source file.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;JB&lt;2&gt;&quot;  LOC = &quot;P6&quot;;&gt; [../bloqueultrasonido.ucf(43)]&apos; could not be found and so the Locate constraint will be removed.
+</msg>
+
+<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;JB&lt;3&gt;&quot;  LOC = &quot;N5&quot;;&gt; [../bloqueultrasonido.ucf(44)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">JB&lt;3&gt;</arg>&quot; not found.  Please verify that:
+1. The specified design element actually exists in the original design.
+2. The specified object is spelled correctly in the constraint source file.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;JB&lt;3&gt;&quot;  LOC = &quot;N5&quot;;&gt; [../bloqueultrasonido.ucf(44)]&apos; could not be found and so the Locate constraint will be removed.
+</msg>
+
+<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;JB&lt;4&gt;&quot;  LOC = &quot;V9&quot;;&gt; [../bloqueultrasonido.ucf(45)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">JB&lt;4&gt;</arg>&quot; not found.  Please verify that:
+1. The specified design element actually exists in the original design.
+2. The specified object is spelled correctly in the constraint source file.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;JB&lt;4&gt;&quot;  LOC = &quot;V9&quot;;&gt; [../bloqueultrasonido.ucf(45)]&apos; could not be found and so the Locate constraint will be removed.
+</msg>
+
+<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;JB&lt;5&gt;&quot;  LOC = &quot;T9&quot;;&gt; [../bloqueultrasonido.ucf(46)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">JB&lt;5&gt;</arg>&quot; not found.  Please verify that:
+1. The specified design element actually exists in the original design.
+2. The specified object is spelled correctly in the constraint source file.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;JB&lt;5&gt;&quot;  LOC = &quot;T9&quot;;&gt; [../bloqueultrasonido.ucf(46)]&apos; could not be found and so the Locate constraint will be removed.
+</msg>
+
+<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;JB&lt;6&gt;&quot;  LOC = &quot;V4&quot;;&gt; [../bloqueultrasonido.ucf(47)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">JB&lt;6&gt;</arg>&quot; not found.  Please verify that:
+1. The specified design element actually exists in the original design.
+2. The specified object is spelled correctly in the constraint source file.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;JB&lt;6&gt;&quot;  LOC = &quot;V4&quot;;&gt; [../bloqueultrasonido.ucf(47)]&apos; could not be found and so the Locate constraint will be removed.
+</msg>
+
+<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;JB&lt;7&gt;&quot;  LOC = &quot;T4&quot;;&gt; [../bloqueultrasonido.ucf(48)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">JB&lt;7&gt;</arg>&quot; not found.  Please verify that:
+1. The specified design element actually exists in the original design.
+2. The specified object is spelled correctly in the constraint source file.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;JB&lt;7&gt;&quot;  LOC = &quot;T4&quot;;&gt; [../bloqueultrasonido.ucf(48)]&apos; could not be found and so the Locate constraint will be removed.
+</msg>
+
+</messages>
+

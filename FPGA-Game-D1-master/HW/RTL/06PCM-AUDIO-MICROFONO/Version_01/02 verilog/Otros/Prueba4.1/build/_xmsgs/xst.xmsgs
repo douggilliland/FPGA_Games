@@ -1,0 +1,1040 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="1016" delta="new" >"/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4.1/microfono.v" Line 30: Port <arg fmt="%s" index="1">ledres</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="new" >"/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4.1/microfono.v" Line 31: Port <arg fmt="%s" index="1">ledres</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4.1/microfono.v" Line 23: Assignment to <arg fmt="%s" index="1">mclk3</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4.1/fifo.v" Line 47: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">2</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4.1/fifo.v" Line 69: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">2</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4.1/fifo.v" Line 122: Signal &lt;<arg fmt="%s" index="1">wr_reg</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4.1/fifo.v" Line 122: Result of <arg fmt="%d" index="1">21</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">20</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4.1/fifo.v" Line 123: Signal &lt;<arg fmt="%s" index="1">rd_reg</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4.1/fifo.v" Line 123: Result of <arg fmt="%d" index="1">21</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">20</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4.1/fifo.v" Line 124: Signal &lt;<arg fmt="%s" index="1">wr_reg</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4.1/fifo.v" Line 125: Signal &lt;<arg fmt="%s" index="1">rd_reg</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4.1/fifo.v" Line 126: Signal &lt;<arg fmt="%s" index="1">full_reg</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4.1/fifo.v" Line 127: Signal &lt;<arg fmt="%s" index="1">empty_reg</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4.1/fifo.v" Line 129: Signal &lt;<arg fmt="%s" index="1">db_wr</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4.1/fifo.v" Line 134: Signal &lt;<arg fmt="%s" index="1">empty</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4.1/fifo.v" Line 138: Signal &lt;<arg fmt="%s" index="1">wr_reg</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4.1/fifo.v" Line 145: Signal &lt;<arg fmt="%s" index="1">full</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4.1/pwm.v" Line 32: Result of <arg fmt="%d" index="1">9</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4.1/microfono.v" Line 56: Result of <arg fmt="%d" index="1">9</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4.1/microfono.v" Line 57: Result of <arg fmt="%d" index="1">9</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="552" delta="new" >"/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4.1/microfono.v" Line 31: Input port <arg fmt="%s" index="1">micData</arg> is not connected on this instance
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="new" >Port &apos;<arg fmt="%s" index="1">micData</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">pw</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4.1/microfono.v</arg>&quot; line <arg fmt="%s" index="2">30</arg>: Output port &lt;<arg fmt="%s" index="3">ledres</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">fi</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4.1/microfono.v</arg>&quot; line <arg fmt="%s" index="2">31</arg>: Output port &lt;<arg fmt="%s" index="3">ledres</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">pw</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4.1/microfono.v</arg>&quot; line <arg fmt="%s" index="2">31</arg>: Output port &lt;<arg fmt="%s" index="3">mclk</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">pw</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">micLRSel</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">microfono</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">clk</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">micData</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">ledres</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">mclk</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">ampSD</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">pwm</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">1</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">count_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">pw</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">count_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">pw</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">count_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">pw</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">count_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">pw</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">count_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">pw</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">count_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">pw</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">count_6</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">pw</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">count_7</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">pw</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">ampPWM</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">pw</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">out_0</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">fi</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">out_1</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">fi</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">out_2</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">fi</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">out_3</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">fi</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">out_4</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">fi</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">out_5</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">fi</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">out_6</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">fi</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">sregt1_0</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">sregt1_1</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">sregt1_2</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">sregt1_3</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">sregt1_4</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">sregt1_5</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">sregt1_6</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">sregt_0</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">sregt_1</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">sregt_2</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">sregt_3</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">sregt_4</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">sregt_5</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">sregt_6</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">sregt_7</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">sregt1_7</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">out_7</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">fi</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">Mram_regarray</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">ampPWM</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">pwm</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">sregt_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">sregt_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">sregt_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">sregt_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">sregt_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">sregt_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">sregt_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">sregt_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">sregt1_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">sregt1_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">sregt1_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">sregt1_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">sregt1_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">sregt1_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">sregt1_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">sregt1_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/inst_LPM_FF_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/inst_LPM_FF_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/inst_LPM_FF_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/inst_LPM_FF_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray1281</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray128</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray1271</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray127</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray1261</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray126</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray1251</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray125</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray1241</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray124</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray1231</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray123</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray1211</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray121</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray1201</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray120</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray1221</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray122</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray1191</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray119</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray1181</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray118</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray1171</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray117</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray1161</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray116</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray1151</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray115</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray1141</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray114</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray1121</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray112</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray1111</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray111</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray1131</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray113</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray1101</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray110</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray1091</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray109</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray1071</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray107</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray1061</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray106</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray1081</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray108</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray1051</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray105</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray1041</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray104</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray1021</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray102</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray1011</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray101</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray1031</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray103</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray1001</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray100</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray991</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray99</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray981</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray98</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray971</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray97</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray961</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray96</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray951</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray95</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray931</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray93</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray921</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray92</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray941</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray94</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray911</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray91</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray901</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray90</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray881</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray88</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray871</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray87</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray891</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray89</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray861</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray86</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray851</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray85</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray831</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray83</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray821</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray82</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray841</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray84</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray811</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray81</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray801</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray80</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray791</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray79</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray781</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray78</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray771</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray77</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray761</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray76</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray741</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray74</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray731</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray73</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray751</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray75</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray721</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray72</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray711</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray71</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray691</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray69</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray681</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray68</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray701</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray70</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray671</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray67</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray661</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray66</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray641</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray64</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray631</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray63</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray651</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray65</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray621</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray62</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray611</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray61</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray601</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray60</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray591</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray59</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray581</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray58</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray571</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray57</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray551</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray55</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray541</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray54</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray561</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray56</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray531</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray53</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray521</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray52</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray501</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray50</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray491</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray49</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray511</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray51</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray481</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray48</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray471</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray47</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray451</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray45</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray441</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray44</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray461</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray46</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray431</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray43</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray421</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray42</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray411</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray41</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray401</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray40</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray391</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray39</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray381</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray38</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray361</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray36</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray351</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray35</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray371</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray37</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray341</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray34</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray331</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray33</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray311</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray301</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray321</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray32</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray291</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray281</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray261</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray251</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray271</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray241</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray231</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray221</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray211</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray201</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray191</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray171</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray161</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray181</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray151</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray141</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray1210</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray1110</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray131</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray1010</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray910</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray710</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray610</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray810</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray510</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray410</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray310</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray210</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray129</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/Mram_regarray1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">fi/ledres</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="new" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+</msg>
+
+</messages>
+

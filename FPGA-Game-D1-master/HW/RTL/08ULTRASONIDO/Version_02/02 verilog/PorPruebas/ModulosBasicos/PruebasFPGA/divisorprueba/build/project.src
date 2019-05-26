@@ -1,0 +1,7 @@
+verilog work ../divisorprueba.v
+verilog work ../divisor.v
+verilog work ../divisorfrecd.v
+verilog work ../anteconmutador.v
+verilog work ../conmutacion.v
+verilog work ../display.v
+verilog work ../divisorfrecdisp.v

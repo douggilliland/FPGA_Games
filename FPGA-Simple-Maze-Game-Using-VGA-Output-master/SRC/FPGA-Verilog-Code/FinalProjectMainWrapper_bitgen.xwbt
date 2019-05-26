@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Nathaniel\Documents\school\2013 Fall\CMPEN417\Labs\FinalProject\FinalProject2\FinalProjectMainWrapper.ncd
+OUTFILE=C:\Users\Nathaniel\Documents\school\2013 Fall\CMPEN417\Labs\FinalProject\FinalProject2\FinalProjectMainWrapper.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=C:\Users\Nathaniel\Documents\school\2013 Fall\CMPEN417\Labs\FinalProject\FinalProject2
+LICENSE=WebPack
+USER_INFO=210790758_0_0_272

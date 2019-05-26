@@ -1,0 +1,1314 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -v 25 project_r.ncd
+project.pcf
+
+Design file:              project_r.ncd
+Physical constraint file: project.pcf
+Device,package,speed:     xc7a100t,csg324,C,-3 (PRODUCTION 1.10 2013-10-13)
+Report level:             verbose report, limited to 25 items per constraint
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 
+50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 1279 paths analyzed, 218 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   3.329ns.
+--------------------------------------------------------------------------------
+Slack:                  6.671ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               anteconmutador0/digitT_4 (FF)
+  Destination:          anteconmutador0/centenas_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.261ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.033ns (0.632 - 0.665)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: anteconmutador0/digitT_4 to anteconmutador0/centenas_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X72Y81.BQ      Tcko                  0.341   anteconmutador0/digitT<4>
+                                                       anteconmutador0/digitT_4
+    SLICE_X72Y82.B4      net (fanout=1)        0.406   anteconmutador0/digitT<4>
+    SLICE_X72Y82.BMUX    Tilo                  0.263   anteconmutador0/unidades<3>
+                                                       anteconmutador0/Mmux_digitT[7]_count[7]_mux_1_OUT51
+    SLICE_X73Y81.C5      net (fanout=4)        0.306   anteconmutador0/digitT[7]_count[7]_mux_1_OUT<4>
+    SLICE_X73Y81.C       Tilo                  0.097   anteconmutador0/digitT<6>
+                                                       anteconmutador0/Msub_digitT[7]_GND_5_o_sub_4_OUT_cy<4>11
+    SLICE_X73Y81.D4      net (fanout=4)        0.319   anteconmutador0/Msub_digitT[7]_GND_5_o_sub_4_OUT_cy<4>
+    SLICE_X73Y81.D       Tilo                  0.097   anteconmutador0/digitT<6>
+                                                       anteconmutador0/GND_5_o_digitT[7]_LessThan_3_o1
+    SLICE_X72Y79.B1      net (fanout=10)       0.637   anteconmutador0/GND_5_o_digitT[7]_LessThan_3_o
+    SLICE_X72Y79.B       Tilo                  0.097   contador0/calculate
+                                                       anteconmutador0/_n0136_inv1
+    SLICE_X78Y82.CE      net (fanout=1)        0.579   anteconmutador0/_n0136_inv
+    SLICE_X78Y82.CLK     Tceck                 0.119   anteconmutador0/centenas<3>
+                                                       anteconmutador0/centenas_0
+    -------------------------------------------------  ---------------------------
+    Total                                      3.261ns (1.014ns logic, 2.247ns route)
+                                                       (31.1% logic, 68.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.671ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               anteconmutador0/digitT_4 (FF)
+  Destination:          anteconmutador0/centenas_2 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.261ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.033ns (0.632 - 0.665)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: anteconmutador0/digitT_4 to anteconmutador0/centenas_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X72Y81.BQ      Tcko                  0.341   anteconmutador0/digitT<4>
+                                                       anteconmutador0/digitT_4
+    SLICE_X72Y82.B4      net (fanout=1)        0.406   anteconmutador0/digitT<4>
+    SLICE_X72Y82.BMUX    Tilo                  0.263   anteconmutador0/unidades<3>
+                                                       anteconmutador0/Mmux_digitT[7]_count[7]_mux_1_OUT51
+    SLICE_X73Y81.C5      net (fanout=4)        0.306   anteconmutador0/digitT[7]_count[7]_mux_1_OUT<4>
+    SLICE_X73Y81.C       Tilo                  0.097   anteconmutador0/digitT<6>
+                                                       anteconmutador0/Msub_digitT[7]_GND_5_o_sub_4_OUT_cy<4>11
+    SLICE_X73Y81.D4      net (fanout=4)        0.319   anteconmutador0/Msub_digitT[7]_GND_5_o_sub_4_OUT_cy<4>
+    SLICE_X73Y81.D       Tilo                  0.097   anteconmutador0/digitT<6>
+                                                       anteconmutador0/GND_5_o_digitT[7]_LessThan_3_o1
+    SLICE_X72Y79.B1      net (fanout=10)       0.637   anteconmutador0/GND_5_o_digitT[7]_LessThan_3_o
+    SLICE_X72Y79.B       Tilo                  0.097   contador0/calculate
+                                                       anteconmutador0/_n0136_inv1
+    SLICE_X78Y82.CE      net (fanout=1)        0.579   anteconmutador0/_n0136_inv
+    SLICE_X78Y82.CLK     Tceck                 0.119   anteconmutador0/centenas<3>
+                                                       anteconmutador0/centenas_2
+    -------------------------------------------------  ---------------------------
+    Total                                      3.261ns (1.014ns logic, 2.247ns route)
+                                                       (31.1% logic, 68.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.671ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               anteconmutador0/digitT_4 (FF)
+  Destination:          anteconmutador0/centenas_3 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.261ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.033ns (0.632 - 0.665)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: anteconmutador0/digitT_4 to anteconmutador0/centenas_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X72Y81.BQ      Tcko                  0.341   anteconmutador0/digitT<4>
+                                                       anteconmutador0/digitT_4
+    SLICE_X72Y82.B4      net (fanout=1)        0.406   anteconmutador0/digitT<4>
+    SLICE_X72Y82.BMUX    Tilo                  0.263   anteconmutador0/unidades<3>
+                                                       anteconmutador0/Mmux_digitT[7]_count[7]_mux_1_OUT51
+    SLICE_X73Y81.C5      net (fanout=4)        0.306   anteconmutador0/digitT[7]_count[7]_mux_1_OUT<4>
+    SLICE_X73Y81.C       Tilo                  0.097   anteconmutador0/digitT<6>
+                                                       anteconmutador0/Msub_digitT[7]_GND_5_o_sub_4_OUT_cy<4>11
+    SLICE_X73Y81.D4      net (fanout=4)        0.319   anteconmutador0/Msub_digitT[7]_GND_5_o_sub_4_OUT_cy<4>
+    SLICE_X73Y81.D       Tilo                  0.097   anteconmutador0/digitT<6>
+                                                       anteconmutador0/GND_5_o_digitT[7]_LessThan_3_o1
+    SLICE_X72Y79.B1      net (fanout=10)       0.637   anteconmutador0/GND_5_o_digitT[7]_LessThan_3_o
+    SLICE_X72Y79.B       Tilo                  0.097   contador0/calculate
+                                                       anteconmutador0/_n0136_inv1
+    SLICE_X78Y82.CE      net (fanout=1)        0.579   anteconmutador0/_n0136_inv
+    SLICE_X78Y82.CLK     Tceck                 0.119   anteconmutador0/centenas<3>
+                                                       anteconmutador0/centenas_3
+    -------------------------------------------------  ---------------------------
+    Total                                      3.261ns (1.014ns logic, 2.247ns route)
+                                                       (31.1% logic, 68.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.671ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               anteconmutador0/digitT_4 (FF)
+  Destination:          anteconmutador0/centenas_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.261ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.033ns (0.632 - 0.665)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: anteconmutador0/digitT_4 to anteconmutador0/centenas_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X72Y81.BQ      Tcko                  0.341   anteconmutador0/digitT<4>
+                                                       anteconmutador0/digitT_4
+    SLICE_X72Y82.B4      net (fanout=1)        0.406   anteconmutador0/digitT<4>
+    SLICE_X72Y82.BMUX    Tilo                  0.263   anteconmutador0/unidades<3>
+                                                       anteconmutador0/Mmux_digitT[7]_count[7]_mux_1_OUT51
+    SLICE_X73Y81.C5      net (fanout=4)        0.306   anteconmutador0/digitT[7]_count[7]_mux_1_OUT<4>
+    SLICE_X73Y81.C       Tilo                  0.097   anteconmutador0/digitT<6>
+                                                       anteconmutador0/Msub_digitT[7]_GND_5_o_sub_4_OUT_cy<4>11
+    SLICE_X73Y81.D4      net (fanout=4)        0.319   anteconmutador0/Msub_digitT[7]_GND_5_o_sub_4_OUT_cy<4>
+    SLICE_X73Y81.D       Tilo                  0.097   anteconmutador0/digitT<6>
+                                                       anteconmutador0/GND_5_o_digitT[7]_LessThan_3_o1
+    SLICE_X72Y79.B1      net (fanout=10)       0.637   anteconmutador0/GND_5_o_digitT[7]_LessThan_3_o
+    SLICE_X72Y79.B       Tilo                  0.097   contador0/calculate
+                                                       anteconmutador0/_n0136_inv1
+    SLICE_X78Y82.CE      net (fanout=1)        0.579   anteconmutador0/_n0136_inv
+    SLICE_X78Y82.CLK     Tceck                 0.119   anteconmutador0/centenas<3>
+                                                       anteconmutador0/centenas_1
+    -------------------------------------------------  ---------------------------
+    Total                                      3.261ns (1.014ns logic, 2.247ns route)
+                                                       (31.1% logic, 68.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.740ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               anteconmutador0/digitT_4 (FF)
+  Destination:          anteconmutador0/unidades_3 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.203ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.022ns (0.105 - 0.127)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: anteconmutador0/digitT_4 to anteconmutador0/unidades_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X72Y81.BQ      Tcko                  0.341   anteconmutador0/digitT<4>
+                                                       anteconmutador0/digitT_4
+    SLICE_X72Y82.B4      net (fanout=1)        0.406   anteconmutador0/digitT<4>
+    SLICE_X72Y82.BMUX    Tilo                  0.263   anteconmutador0/unidades<3>
+                                                       anteconmutador0/Mmux_digitT[7]_count[7]_mux_1_OUT51
+    SLICE_X73Y81.C5      net (fanout=4)        0.306   anteconmutador0/digitT[7]_count[7]_mux_1_OUT<4>
+    SLICE_X73Y81.C       Tilo                  0.097   anteconmutador0/digitT<6>
+                                                       anteconmutador0/Msub_digitT[7]_GND_5_o_sub_4_OUT_cy<4>11
+    SLICE_X73Y81.D4      net (fanout=4)        0.319   anteconmutador0/Msub_digitT[7]_GND_5_o_sub_4_OUT_cy<4>
+    SLICE_X73Y81.D       Tilo                  0.097   anteconmutador0/digitT<6>
+                                                       anteconmutador0/GND_5_o_digitT[7]_LessThan_3_o1
+    SLICE_X75Y80.A1      net (fanout=10)       0.662   anteconmutador0/GND_5_o_digitT[7]_LessThan_3_o
+    SLICE_X75Y80.A       Tilo                  0.097   anteconmutador0/U
+                                                       anteconmutador0/_n011911
+    SLICE_X72Y82.CE      net (fanout=4)        0.465   anteconmutador0/_n01191
+    SLICE_X72Y82.CLK     Tceck                 0.150   anteconmutador0/unidades<3>
+                                                       anteconmutador0/unidades_3
+    -------------------------------------------------  ---------------------------
+    Total                                      3.203ns (1.045ns logic, 2.158ns route)
+                                                       (32.6% logic, 67.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.755ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               anteconmutador0/i (FF)
+  Destination:          anteconmutador0/digitT_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.185ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.025ns (0.103 - 0.128)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: anteconmutador0/i to anteconmutador0/digitT_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X73Y82.AQ      Tcko                  0.341   anteconmutador0/i
+                                                       anteconmutador0/i
+    SLICE_X74Y80.D3      net (fanout=12)       0.631   anteconmutador0/i
+    SLICE_X74Y80.DMUX    Tilo                  0.272   anteconmutador0/unidades<1>
+                                                       anteconmutador0/Mmux_digitT[7]_count[7]_mux_1_OUT31
+    SLICE_X72Y82.C1      net (fanout=6)        0.755   anteconmutador0/Msub_digitT[7]_GND_5_o_sub_4_OUT_cy<2>
+    SLICE_X72Y82.C       Tilo                  0.097   anteconmutador0/unidades<3>
+                                                       anteconmutador0/GND_5_o_digitT[7]_LessThan_6_o1
+    SLICE_X72Y81.C5      net (fanout=3)        0.299   anteconmutador0/GND_5_o_digitT[7]_LessThan_6_o1
+    SLICE_X72Y81.C       Tilo                  0.097   anteconmutador0/digitT<4>
+                                                       anteconmutador0/GND_5_o_digitT[7]_LessThan_6_o11
+    SLICE_X72Y80.B1      net (fanout=6)        0.628   anteconmutador0/GND_5_o_digitT[7]_LessThan_6_o
+    SLICE_X72Y80.CLK     Tas                   0.065   anteconmutador0/digitT<3>
+                                                       anteconmutador0/Mmux_digitT[7]_digitT[7]_mux_14_OUT21
+                                                       anteconmutador0/digitT_1
+    -------------------------------------------------  ---------------------------
+    Total                                      3.185ns (0.872ns logic, 2.313ns route)
+                                                       (27.4% logic, 72.6% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.764ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               anteconmutador0/digitT_6 (FF)
+  Destination:          anteconmutador0/digitT_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.177ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.024ns (0.103 - 0.127)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: anteconmutador0/digitT_6 to anteconmutador0/digitT_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X73Y81.BQ      Tcko                  0.341   anteconmutador0/digitT<6>
+                                                       anteconmutador0/digitT_6
+    SLICE_X72Y82.D2      net (fanout=1)        0.821   anteconmutador0/digitT<6>
+    SLICE_X72Y82.DMUX    Tilo                  0.243   anteconmutador0/unidades<3>
+                                                       anteconmutador0/Mmux_digitT[7]_count[7]_mux_1_OUT71
+    SLICE_X72Y82.C3      net (fanout=4)        0.586   anteconmutador0/Msub_digitT[7]_GND_5_o_sub_4_OUT_lut<6>
+    SLICE_X72Y82.C       Tilo                  0.097   anteconmutador0/unidades<3>
+                                                       anteconmutador0/GND_5_o_digitT[7]_LessThan_6_o1
+    SLICE_X72Y81.C5      net (fanout=3)        0.299   anteconmutador0/GND_5_o_digitT[7]_LessThan_6_o1
+    SLICE_X72Y81.C       Tilo                  0.097   anteconmutador0/digitT<4>
+                                                       anteconmutador0/GND_5_o_digitT[7]_LessThan_6_o11
+    SLICE_X72Y80.B1      net (fanout=6)        0.628   anteconmutador0/GND_5_o_digitT[7]_LessThan_6_o
+    SLICE_X72Y80.CLK     Tas                   0.065   anteconmutador0/digitT<3>
+                                                       anteconmutador0/Mmux_digitT[7]_digitT[7]_mux_14_OUT21
+                                                       anteconmutador0/digitT_1
+    -------------------------------------------------  ---------------------------
+    Total                                      3.177ns (0.843ns logic, 2.334ns route)
+                                                       (26.5% logic, 73.5% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.774ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               anteconmutador0/digitT_6 (FF)
+  Destination:          anteconmutador0/centenas_3 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.158ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.033ns (0.632 - 0.665)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: anteconmutador0/digitT_6 to anteconmutador0/centenas_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X73Y81.BQ      Tcko                  0.341   anteconmutador0/digitT<6>
+                                                       anteconmutador0/digitT_6
+    SLICE_X72Y82.D2      net (fanout=1)        0.821   anteconmutador0/digitT<6>
+    SLICE_X72Y82.DMUX    Tilo                  0.243   anteconmutador0/unidades<3>
+                                                       anteconmutador0/Mmux_digitT[7]_count[7]_mux_1_OUT71
+    SLICE_X73Y81.D6      net (fanout=4)        0.224   anteconmutador0/Msub_digitT[7]_GND_5_o_sub_4_OUT_lut<6>
+    SLICE_X73Y81.D       Tilo                  0.097   anteconmutador0/digitT<6>
+                                                       anteconmutador0/GND_5_o_digitT[7]_LessThan_3_o1
+    SLICE_X72Y79.B1      net (fanout=10)       0.637   anteconmutador0/GND_5_o_digitT[7]_LessThan_3_o
+    SLICE_X72Y79.B       Tilo                  0.097   contador0/calculate
+                                                       anteconmutador0/_n0136_inv1
+    SLICE_X78Y82.CE      net (fanout=1)        0.579   anteconmutador0/_n0136_inv
+    SLICE_X78Y82.CLK     Tceck                 0.119   anteconmutador0/centenas<3>
+                                                       anteconmutador0/centenas_3
+    -------------------------------------------------  ---------------------------
+    Total                                      3.158ns (0.897ns logic, 2.261ns route)
+                                                       (28.4% logic, 71.6% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.774ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               anteconmutador0/digitT_6 (FF)
+  Destination:          anteconmutador0/centenas_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.158ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.033ns (0.632 - 0.665)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: anteconmutador0/digitT_6 to anteconmutador0/centenas_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X73Y81.BQ      Tcko                  0.341   anteconmutador0/digitT<6>
+                                                       anteconmutador0/digitT_6
+    SLICE_X72Y82.D2      net (fanout=1)        0.821   anteconmutador0/digitT<6>
+    SLICE_X72Y82.DMUX    Tilo                  0.243   anteconmutador0/unidades<3>
+                                                       anteconmutador0/Mmux_digitT[7]_count[7]_mux_1_OUT71
+    SLICE_X73Y81.D6      net (fanout=4)        0.224   anteconmutador0/Msub_digitT[7]_GND_5_o_sub_4_OUT_lut<6>
+    SLICE_X73Y81.D       Tilo                  0.097   anteconmutador0/digitT<6>
+                                                       anteconmutador0/GND_5_o_digitT[7]_LessThan_3_o1
+    SLICE_X72Y79.B1      net (fanout=10)       0.637   anteconmutador0/GND_5_o_digitT[7]_LessThan_3_o
+    SLICE_X72Y79.B       Tilo                  0.097   contador0/calculate
+                                                       anteconmutador0/_n0136_inv1
+    SLICE_X78Y82.CE      net (fanout=1)        0.579   anteconmutador0/_n0136_inv
+    SLICE_X78Y82.CLK     Tceck                 0.119   anteconmutador0/centenas<3>
+                                                       anteconmutador0/centenas_1
+    -------------------------------------------------  ---------------------------
+    Total                                      3.158ns (0.897ns logic, 2.261ns route)
+                                                       (28.4% logic, 71.6% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.774ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               anteconmutador0/digitT_6 (FF)
+  Destination:          anteconmutador0/centenas_2 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.158ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.033ns (0.632 - 0.665)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: anteconmutador0/digitT_6 to anteconmutador0/centenas_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X73Y81.BQ      Tcko                  0.341   anteconmutador0/digitT<6>
+                                                       anteconmutador0/digitT_6
+    SLICE_X72Y82.D2      net (fanout=1)        0.821   anteconmutador0/digitT<6>
+    SLICE_X72Y82.DMUX    Tilo                  0.243   anteconmutador0/unidades<3>
+                                                       anteconmutador0/Mmux_digitT[7]_count[7]_mux_1_OUT71
+    SLICE_X73Y81.D6      net (fanout=4)        0.224   anteconmutador0/Msub_digitT[7]_GND_5_o_sub_4_OUT_lut<6>
+    SLICE_X73Y81.D       Tilo                  0.097   anteconmutador0/digitT<6>
+                                                       anteconmutador0/GND_5_o_digitT[7]_LessThan_3_o1
+    SLICE_X72Y79.B1      net (fanout=10)       0.637   anteconmutador0/GND_5_o_digitT[7]_LessThan_3_o
+    SLICE_X72Y79.B       Tilo                  0.097   contador0/calculate
+                                                       anteconmutador0/_n0136_inv1
+    SLICE_X78Y82.CE      net (fanout=1)        0.579   anteconmutador0/_n0136_inv
+    SLICE_X78Y82.CLK     Tceck                 0.119   anteconmutador0/centenas<3>
+                                                       anteconmutador0/centenas_2
+    -------------------------------------------------  ---------------------------
+    Total                                      3.158ns (0.897ns logic, 2.261ns route)
+                                                       (28.4% logic, 71.6% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.774ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               anteconmutador0/digitT_6 (FF)
+  Destination:          anteconmutador0/centenas_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.158ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.033ns (0.632 - 0.665)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: anteconmutador0/digitT_6 to anteconmutador0/centenas_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X73Y81.BQ      Tcko                  0.341   anteconmutador0/digitT<6>
+                                                       anteconmutador0/digitT_6
+    SLICE_X72Y82.D2      net (fanout=1)        0.821   anteconmutador0/digitT<6>
+    SLICE_X72Y82.DMUX    Tilo                  0.243   anteconmutador0/unidades<3>
+                                                       anteconmutador0/Mmux_digitT[7]_count[7]_mux_1_OUT71
+    SLICE_X73Y81.D6      net (fanout=4)        0.224   anteconmutador0/Msub_digitT[7]_GND_5_o_sub_4_OUT_lut<6>
+    SLICE_X73Y81.D       Tilo                  0.097   anteconmutador0/digitT<6>
+                                                       anteconmutador0/GND_5_o_digitT[7]_LessThan_3_o1
+    SLICE_X72Y79.B1      net (fanout=10)       0.637   anteconmutador0/GND_5_o_digitT[7]_LessThan_3_o
+    SLICE_X72Y79.B       Tilo                  0.097   contador0/calculate
+                                                       anteconmutador0/_n0136_inv1
+    SLICE_X78Y82.CE      net (fanout=1)        0.579   anteconmutador0/_n0136_inv
+    SLICE_X78Y82.CLK     Tceck                 0.119   anteconmutador0/centenas<3>
+                                                       anteconmutador0/centenas_0
+    -------------------------------------------------  ---------------------------
+    Total                                      3.158ns (0.897ns logic, 2.261ns route)
+                                                       (28.4% logic, 71.6% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.787ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               anteconmutador0/digitT_4 (FF)
+  Destination:          anteconmutador0/decenas_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.141ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.037ns (0.628 - 0.665)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: anteconmutador0/digitT_4 to anteconmutador0/decenas_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X72Y81.BQ      Tcko                  0.341   anteconmutador0/digitT<4>
+                                                       anteconmutador0/digitT_4
+    SLICE_X72Y82.B4      net (fanout=1)        0.406   anteconmutador0/digitT<4>
+    SLICE_X72Y82.BMUX    Tilo                  0.263   anteconmutador0/unidades<3>
+                                                       anteconmutador0/Mmux_digitT[7]_count[7]_mux_1_OUT51
+    SLICE_X73Y81.C5      net (fanout=4)        0.306   anteconmutador0/digitT[7]_count[7]_mux_1_OUT<4>
+    SLICE_X73Y81.C       Tilo                  0.097   anteconmutador0/digitT<6>
+                                                       anteconmutador0/Msub_digitT[7]_GND_5_o_sub_4_OUT_cy<4>11
+    SLICE_X73Y81.D4      net (fanout=4)        0.319   anteconmutador0/Msub_digitT[7]_GND_5_o_sub_4_OUT_cy<4>
+    SLICE_X73Y81.D       Tilo                  0.097   anteconmutador0/digitT<6>
+                                                       anteconmutador0/GND_5_o_digitT[7]_LessThan_3_o1
+    SLICE_X74Y80.A1      net (fanout=10)       0.675   anteconmutador0/GND_5_o_digitT[7]_LessThan_3_o
+    SLICE_X74Y80.A       Tilo                  0.097   anteconmutador0/unidades<1>
+                                                       anteconmutador0/_n0143_inv1
+    SLICE_X76Y82.CE      net (fanout=1)        0.421   anteconmutador0/_n0143_inv
+    SLICE_X76Y82.CLK     Tceck                 0.119   anteconmutador0/decenas<3>
+                                                       anteconmutador0/decenas_1
+    -------------------------------------------------  ---------------------------
+    Total                                      3.141ns (1.014ns logic, 2.127ns route)
+                                                       (32.3% logic, 67.7% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.787ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               anteconmutador0/digitT_4 (FF)
+  Destination:          anteconmutador0/decenas_3 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.141ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.037ns (0.628 - 0.665)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: anteconmutador0/digitT_4 to anteconmutador0/decenas_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X72Y81.BQ      Tcko                  0.341   anteconmutador0/digitT<4>
+                                                       anteconmutador0/digitT_4
+    SLICE_X72Y82.B4      net (fanout=1)        0.406   anteconmutador0/digitT<4>
+    SLICE_X72Y82.BMUX    Tilo                  0.263   anteconmutador0/unidades<3>
+                                                       anteconmutador0/Mmux_digitT[7]_count[7]_mux_1_OUT51
+    SLICE_X73Y81.C5      net (fanout=4)        0.306   anteconmutador0/digitT[7]_count[7]_mux_1_OUT<4>
+    SLICE_X73Y81.C       Tilo                  0.097   anteconmutador0/digitT<6>
+                                                       anteconmutador0/Msub_digitT[7]_GND_5_o_sub_4_OUT_cy<4>11
+    SLICE_X73Y81.D4      net (fanout=4)        0.319   anteconmutador0/Msub_digitT[7]_GND_5_o_sub_4_OUT_cy<4>
+    SLICE_X73Y81.D       Tilo                  0.097   anteconmutador0/digitT<6>
+                                                       anteconmutador0/GND_5_o_digitT[7]_LessThan_3_o1
+    SLICE_X74Y80.A1      net (fanout=10)       0.675   anteconmutador0/GND_5_o_digitT[7]_LessThan_3_o
+    SLICE_X74Y80.A       Tilo                  0.097   anteconmutador0/unidades<1>
+                                                       anteconmutador0/_n0143_inv1
+    SLICE_X76Y82.CE      net (fanout=1)        0.421   anteconmutador0/_n0143_inv
+    SLICE_X76Y82.CLK     Tceck                 0.119   anteconmutador0/decenas<3>
+                                                       anteconmutador0/decenas_3
+    -------------------------------------------------  ---------------------------
+    Total                                      3.141ns (1.014ns logic, 2.127ns route)
+                                                       (32.3% logic, 67.7% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.787ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               anteconmutador0/digitT_4 (FF)
+  Destination:          anteconmutador0/decenas_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.141ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.037ns (0.628 - 0.665)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: anteconmutador0/digitT_4 to anteconmutador0/decenas_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X72Y81.BQ      Tcko                  0.341   anteconmutador0/digitT<4>
+                                                       anteconmutador0/digitT_4
+    SLICE_X72Y82.B4      net (fanout=1)        0.406   anteconmutador0/digitT<4>
+    SLICE_X72Y82.BMUX    Tilo                  0.263   anteconmutador0/unidades<3>
+                                                       anteconmutador0/Mmux_digitT[7]_count[7]_mux_1_OUT51
+    SLICE_X73Y81.C5      net (fanout=4)        0.306   anteconmutador0/digitT[7]_count[7]_mux_1_OUT<4>
+    SLICE_X73Y81.C       Tilo                  0.097   anteconmutador0/digitT<6>
+                                                       anteconmutador0/Msub_digitT[7]_GND_5_o_sub_4_OUT_cy<4>11
+    SLICE_X73Y81.D4      net (fanout=4)        0.319   anteconmutador0/Msub_digitT[7]_GND_5_o_sub_4_OUT_cy<4>
+    SLICE_X73Y81.D       Tilo                  0.097   anteconmutador0/digitT<6>
+                                                       anteconmutador0/GND_5_o_digitT[7]_LessThan_3_o1
+    SLICE_X74Y80.A1      net (fanout=10)       0.675   anteconmutador0/GND_5_o_digitT[7]_LessThan_3_o
+    SLICE_X74Y80.A       Tilo                  0.097   anteconmutador0/unidades<1>
+                                                       anteconmutador0/_n0143_inv1
+    SLICE_X76Y82.CE      net (fanout=1)        0.421   anteconmutador0/_n0143_inv
+    SLICE_X76Y82.CLK     Tceck                 0.119   anteconmutador0/decenas<3>
+                                                       anteconmutador0/decenas_0
+    -------------------------------------------------  ---------------------------
+    Total                                      3.141ns (1.014ns logic, 2.127ns route)
+                                                       (32.3% logic, 67.7% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.787ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               anteconmutador0/digitT_4 (FF)
+  Destination:          anteconmutador0/decenas_2 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.141ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.037ns (0.628 - 0.665)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: anteconmutador0/digitT_4 to anteconmutador0/decenas_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X72Y81.BQ      Tcko                  0.341   anteconmutador0/digitT<4>
+                                                       anteconmutador0/digitT_4
+    SLICE_X72Y82.B4      net (fanout=1)        0.406   anteconmutador0/digitT<4>
+    SLICE_X72Y82.BMUX    Tilo                  0.263   anteconmutador0/unidades<3>
+                                                       anteconmutador0/Mmux_digitT[7]_count[7]_mux_1_OUT51
+    SLICE_X73Y81.C5      net (fanout=4)        0.306   anteconmutador0/digitT[7]_count[7]_mux_1_OUT<4>
+    SLICE_X73Y81.C       Tilo                  0.097   anteconmutador0/digitT<6>
+                                                       anteconmutador0/Msub_digitT[7]_GND_5_o_sub_4_OUT_cy<4>11
+    SLICE_X73Y81.D4      net (fanout=4)        0.319   anteconmutador0/Msub_digitT[7]_GND_5_o_sub_4_OUT_cy<4>
+    SLICE_X73Y81.D       Tilo                  0.097   anteconmutador0/digitT<6>
+                                                       anteconmutador0/GND_5_o_digitT[7]_LessThan_3_o1
+    SLICE_X74Y80.A1      net (fanout=10)       0.675   anteconmutador0/GND_5_o_digitT[7]_LessThan_3_o
+    SLICE_X74Y80.A       Tilo                  0.097   anteconmutador0/unidades<1>
+                                                       anteconmutador0/_n0143_inv1
+    SLICE_X76Y82.CE      net (fanout=1)        0.421   anteconmutador0/_n0143_inv
+    SLICE_X76Y82.CLK     Tceck                 0.119   anteconmutador0/decenas<3>
+                                                       anteconmutador0/decenas_2
+    -------------------------------------------------  ---------------------------
+    Total                                      3.141ns (1.014ns logic, 2.127ns route)
+                                                       (32.3% logic, 67.7% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.804ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               anteconmutador0/i (FF)
+  Destination:          anteconmutador0/unidades_3 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.139ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.022ns (0.097 - 0.119)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: anteconmutador0/i to anteconmutador0/unidades_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X73Y82.AQ      Tcko                  0.341   anteconmutador0/i
+                                                       anteconmutador0/i
+    SLICE_X74Y80.D3      net (fanout=12)       0.631   anteconmutador0/i
+    SLICE_X74Y80.DMUX    Tilo                  0.272   anteconmutador0/unidades<1>
+                                                       anteconmutador0/Mmux_digitT[7]_count[7]_mux_1_OUT31
+    SLICE_X72Y82.C1      net (fanout=6)        0.755   anteconmutador0/Msub_digitT[7]_GND_5_o_sub_4_OUT_cy<2>
+    SLICE_X72Y82.C       Tilo                  0.097   anteconmutador0/unidades<3>
+                                                       anteconmutador0/GND_5_o_digitT[7]_LessThan_6_o1
+    SLICE_X75Y80.A6      net (fanout=3)        0.331   anteconmutador0/GND_5_o_digitT[7]_LessThan_6_o1
+    SLICE_X75Y80.A       Tilo                  0.097   anteconmutador0/U
+                                                       anteconmutador0/_n011911
+    SLICE_X72Y82.CE      net (fanout=4)        0.465   anteconmutador0/_n01191
+    SLICE_X72Y82.CLK     Tceck                 0.150   anteconmutador0/unidades<3>
+                                                       anteconmutador0/unidades_3
+    -------------------------------------------------  ---------------------------
+    Total                                      3.139ns (0.957ns logic, 2.182ns route)
+                                                       (30.5% logic, 69.5% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.812ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               anteconmutador0/digitT_6 (FF)
+  Destination:          anteconmutador0/unidades_3 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.131ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.022ns (0.105 - 0.127)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: anteconmutador0/digitT_6 to anteconmutador0/unidades_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X73Y81.BQ      Tcko                  0.341   anteconmutador0/digitT<6>
+                                                       anteconmutador0/digitT_6
+    SLICE_X72Y82.D2      net (fanout=1)        0.821   anteconmutador0/digitT<6>
+    SLICE_X72Y82.DMUX    Tilo                  0.243   anteconmutador0/unidades<3>
+                                                       anteconmutador0/Mmux_digitT[7]_count[7]_mux_1_OUT71
+    SLICE_X72Y82.C3      net (fanout=4)        0.586   anteconmutador0/Msub_digitT[7]_GND_5_o_sub_4_OUT_lut<6>
+    SLICE_X72Y82.C       Tilo                  0.097   anteconmutador0/unidades<3>
+                                                       anteconmutador0/GND_5_o_digitT[7]_LessThan_6_o1
+    SLICE_X75Y80.A6      net (fanout=3)        0.331   anteconmutador0/GND_5_o_digitT[7]_LessThan_6_o1
+    SLICE_X75Y80.A       Tilo                  0.097   anteconmutador0/U
+                                                       anteconmutador0/_n011911
+    SLICE_X72Y82.CE      net (fanout=4)        0.465   anteconmutador0/_n01191
+    SLICE_X72Y82.CLK     Tceck                 0.150   anteconmutador0/unidades<3>
+                                                       anteconmutador0/unidades_3
+    -------------------------------------------------  ---------------------------
+    Total                                      3.131ns (0.928ns logic, 2.203ns route)
+                                                       (29.6% logic, 70.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.841ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               anteconmutador0/i (FF)
+  Destination:          anteconmutador0/centenas_2 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.090ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.034ns (0.632 - 0.666)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: anteconmutador0/i to anteconmutador0/centenas_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X73Y82.AQ      Tcko                  0.341   anteconmutador0/i
+                                                       anteconmutador0/i
+    SLICE_X72Y82.B5      net (fanout=12)       0.243   anteconmutador0/i
+    SLICE_X72Y82.BMUX    Tilo                  0.255   anteconmutador0/unidades<3>
+                                                       anteconmutador0/Mmux_digitT[7]_count[7]_mux_1_OUT51
+    SLICE_X73Y81.C5      net (fanout=4)        0.306   anteconmutador0/digitT[7]_count[7]_mux_1_OUT<4>
+    SLICE_X73Y81.C       Tilo                  0.097   anteconmutador0/digitT<6>
+                                                       anteconmutador0/Msub_digitT[7]_GND_5_o_sub_4_OUT_cy<4>11
+    SLICE_X73Y81.D4      net (fanout=4)        0.319   anteconmutador0/Msub_digitT[7]_GND_5_o_sub_4_OUT_cy<4>
+    SLICE_X73Y81.D       Tilo                  0.097   anteconmutador0/digitT<6>
+                                                       anteconmutador0/GND_5_o_digitT[7]_LessThan_3_o1
+    SLICE_X72Y79.B1      net (fanout=10)       0.637   anteconmutador0/GND_5_o_digitT[7]_LessThan_3_o
+    SLICE_X72Y79.B       Tilo                  0.097   contador0/calculate
+                                                       anteconmutador0/_n0136_inv1
+    SLICE_X78Y82.CE      net (fanout=1)        0.579   anteconmutador0/_n0136_inv
+    SLICE_X78Y82.CLK     Tceck                 0.119   anteconmutador0/centenas<3>
+                                                       anteconmutador0/centenas_2
+    -------------------------------------------------  ---------------------------
+    Total                                      3.090ns (1.006ns logic, 2.084ns route)
+                                                       (32.6% logic, 67.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.841ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               anteconmutador0/i (FF)
+  Destination:          anteconmutador0/centenas_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.090ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.034ns (0.632 - 0.666)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: anteconmutador0/i to anteconmutador0/centenas_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X73Y82.AQ      Tcko                  0.341   anteconmutador0/i
+                                                       anteconmutador0/i
+    SLICE_X72Y82.B5      net (fanout=12)       0.243   anteconmutador0/i
+    SLICE_X72Y82.BMUX    Tilo                  0.255   anteconmutador0/unidades<3>
+                                                       anteconmutador0/Mmux_digitT[7]_count[7]_mux_1_OUT51
+    SLICE_X73Y81.C5      net (fanout=4)        0.306   anteconmutador0/digitT[7]_count[7]_mux_1_OUT<4>
+    SLICE_X73Y81.C       Tilo                  0.097   anteconmutador0/digitT<6>
+                                                       anteconmutador0/Msub_digitT[7]_GND_5_o_sub_4_OUT_cy<4>11
+    SLICE_X73Y81.D4      net (fanout=4)        0.319   anteconmutador0/Msub_digitT[7]_GND_5_o_sub_4_OUT_cy<4>
+    SLICE_X73Y81.D       Tilo                  0.097   anteconmutador0/digitT<6>
+                                                       anteconmutador0/GND_5_o_digitT[7]_LessThan_3_o1
+    SLICE_X72Y79.B1      net (fanout=10)       0.637   anteconmutador0/GND_5_o_digitT[7]_LessThan_3_o
+    SLICE_X72Y79.B       Tilo                  0.097   contador0/calculate
+                                                       anteconmutador0/_n0136_inv1
+    SLICE_X78Y82.CE      net (fanout=1)        0.579   anteconmutador0/_n0136_inv
+    SLICE_X78Y82.CLK     Tceck                 0.119   anteconmutador0/centenas<3>
+                                                       anteconmutador0/centenas_0
+    -------------------------------------------------  ---------------------------
+    Total                                      3.090ns (1.006ns logic, 2.084ns route)
+                                                       (32.6% logic, 67.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.841ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               anteconmutador0/i (FF)
+  Destination:          anteconmutador0/centenas_3 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.090ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.034ns (0.632 - 0.666)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: anteconmutador0/i to anteconmutador0/centenas_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X73Y82.AQ      Tcko                  0.341   anteconmutador0/i
+                                                       anteconmutador0/i
+    SLICE_X72Y82.B5      net (fanout=12)       0.243   anteconmutador0/i
+    SLICE_X72Y82.BMUX    Tilo                  0.255   anteconmutador0/unidades<3>
+                                                       anteconmutador0/Mmux_digitT[7]_count[7]_mux_1_OUT51
+    SLICE_X73Y81.C5      net (fanout=4)        0.306   anteconmutador0/digitT[7]_count[7]_mux_1_OUT<4>
+    SLICE_X73Y81.C       Tilo                  0.097   anteconmutador0/digitT<6>
+                                                       anteconmutador0/Msub_digitT[7]_GND_5_o_sub_4_OUT_cy<4>11
+    SLICE_X73Y81.D4      net (fanout=4)        0.319   anteconmutador0/Msub_digitT[7]_GND_5_o_sub_4_OUT_cy<4>
+    SLICE_X73Y81.D       Tilo                  0.097   anteconmutador0/digitT<6>
+                                                       anteconmutador0/GND_5_o_digitT[7]_LessThan_3_o1
+    SLICE_X72Y79.B1      net (fanout=10)       0.637   anteconmutador0/GND_5_o_digitT[7]_LessThan_3_o
+    SLICE_X72Y79.B       Tilo                  0.097   contador0/calculate
+                                                       anteconmutador0/_n0136_inv1
+    SLICE_X78Y82.CE      net (fanout=1)        0.579   anteconmutador0/_n0136_inv
+    SLICE_X78Y82.CLK     Tceck                 0.119   anteconmutador0/centenas<3>
+                                                       anteconmutador0/centenas_3
+    -------------------------------------------------  ---------------------------
+    Total                                      3.090ns (1.006ns logic, 2.084ns route)
+                                                       (32.6% logic, 67.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.841ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               anteconmutador0/i (FF)
+  Destination:          anteconmutador0/centenas_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.090ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.034ns (0.632 - 0.666)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: anteconmutador0/i to anteconmutador0/centenas_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X73Y82.AQ      Tcko                  0.341   anteconmutador0/i
+                                                       anteconmutador0/i
+    SLICE_X72Y82.B5      net (fanout=12)       0.243   anteconmutador0/i
+    SLICE_X72Y82.BMUX    Tilo                  0.255   anteconmutador0/unidades<3>
+                                                       anteconmutador0/Mmux_digitT[7]_count[7]_mux_1_OUT51
+    SLICE_X73Y81.C5      net (fanout=4)        0.306   anteconmutador0/digitT[7]_count[7]_mux_1_OUT<4>
+    SLICE_X73Y81.C       Tilo                  0.097   anteconmutador0/digitT<6>
+                                                       anteconmutador0/Msub_digitT[7]_GND_5_o_sub_4_OUT_cy<4>11
+    SLICE_X73Y81.D4      net (fanout=4)        0.319   anteconmutador0/Msub_digitT[7]_GND_5_o_sub_4_OUT_cy<4>
+    SLICE_X73Y81.D       Tilo                  0.097   anteconmutador0/digitT<6>
+                                                       anteconmutador0/GND_5_o_digitT[7]_LessThan_3_o1
+    SLICE_X72Y79.B1      net (fanout=10)       0.637   anteconmutador0/GND_5_o_digitT[7]_LessThan_3_o
+    SLICE_X72Y79.B       Tilo                  0.097   contador0/calculate
+                                                       anteconmutador0/_n0136_inv1
+    SLICE_X78Y82.CE      net (fanout=1)        0.579   anteconmutador0/_n0136_inv
+    SLICE_X78Y82.CLK     Tceck                 0.119   anteconmutador0/centenas<3>
+                                                       anteconmutador0/centenas_1
+    -------------------------------------------------  ---------------------------
+    Total                                      3.090ns (1.006ns logic, 2.084ns route)
+                                                       (32.6% logic, 67.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.843ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               anteconmutador0/i (FF)
+  Destination:          anteconmutador0/digitT_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.097ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.025ns (0.103 - 0.128)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: anteconmutador0/i to anteconmutador0/digitT_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X73Y82.AQ      Tcko                  0.341   anteconmutador0/i
+                                                       anteconmutador0/i
+    SLICE_X74Y80.D3      net (fanout=12)       0.631   anteconmutador0/i
+    SLICE_X74Y80.D       Tilo                  0.097   anteconmutador0/unidades<1>
+                                                       anteconmutador0/Mmux_digitT[7]_count[7]_mux_1_OUT21
+    SLICE_X72Y82.C2      net (fanout=6)        0.842   anteconmutador0/Msub_digitT[7]_GND_5_o_sub_7_OUT_cy<1>
+    SLICE_X72Y82.C       Tilo                  0.097   anteconmutador0/unidades<3>
+                                                       anteconmutador0/GND_5_o_digitT[7]_LessThan_6_o1
+    SLICE_X72Y81.C5      net (fanout=3)        0.299   anteconmutador0/GND_5_o_digitT[7]_LessThan_6_o1
+    SLICE_X72Y81.C       Tilo                  0.097   anteconmutador0/digitT<4>
+                                                       anteconmutador0/GND_5_o_digitT[7]_LessThan_6_o11
+    SLICE_X72Y80.B1      net (fanout=6)        0.628   anteconmutador0/GND_5_o_digitT[7]_LessThan_6_o
+    SLICE_X72Y80.CLK     Tas                   0.065   anteconmutador0/digitT<3>
+                                                       anteconmutador0/Mmux_digitT[7]_digitT[7]_mux_14_OUT21
+                                                       anteconmutador0/digitT_1
+    -------------------------------------------------  ---------------------------
+    Total                                      3.097ns (0.697ns logic, 2.400ns route)
+                                                       (22.5% logic, 77.5% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.843ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               anteconmutador0/digitT_6 (FF)
+  Destination:          anteconmutador0/unidades_3 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.100ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.022ns (0.105 - 0.127)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: anteconmutador0/digitT_6 to anteconmutador0/unidades_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X73Y81.BQ      Tcko                  0.341   anteconmutador0/digitT<6>
+                                                       anteconmutador0/digitT_6
+    SLICE_X72Y82.D2      net (fanout=1)        0.821   anteconmutador0/digitT<6>
+    SLICE_X72Y82.DMUX    Tilo                  0.243   anteconmutador0/unidades<3>
+                                                       anteconmutador0/Mmux_digitT[7]_count[7]_mux_1_OUT71
+    SLICE_X73Y81.D6      net (fanout=4)        0.224   anteconmutador0/Msub_digitT[7]_GND_5_o_sub_4_OUT_lut<6>
+    SLICE_X73Y81.D       Tilo                  0.097   anteconmutador0/digitT<6>
+                                                       anteconmutador0/GND_5_o_digitT[7]_LessThan_3_o1
+    SLICE_X75Y80.A1      net (fanout=10)       0.662   anteconmutador0/GND_5_o_digitT[7]_LessThan_3_o
+    SLICE_X75Y80.A       Tilo                  0.097   anteconmutador0/U
+                                                       anteconmutador0/_n011911
+    SLICE_X72Y82.CE      net (fanout=4)        0.465   anteconmutador0/_n01191
+    SLICE_X72Y82.CLK     Tceck                 0.150   anteconmutador0/unidades<3>
+                                                       anteconmutador0/unidades_3
+    -------------------------------------------------  ---------------------------
+    Total                                      3.100ns (0.928ns logic, 2.172ns route)
+                                                       (29.9% logic, 70.1% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.854ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               anteconmutador0/i (FF)
+  Destination:          anteconmutador0/decenas_2 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.073ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.038ns (0.628 - 0.666)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: anteconmutador0/i to anteconmutador0/decenas_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X73Y82.AQ      Tcko                  0.341   anteconmutador0/i
+                                                       anteconmutador0/i
+    SLICE_X74Y80.D3      net (fanout=12)       0.631   anteconmutador0/i
+    SLICE_X74Y80.DMUX    Tilo                  0.272   anteconmutador0/unidades<1>
+                                                       anteconmutador0/Mmux_digitT[7]_count[7]_mux_1_OUT31
+    SLICE_X72Y82.C1      net (fanout=6)        0.755   anteconmutador0/Msub_digitT[7]_GND_5_o_sub_4_OUT_cy<2>
+    SLICE_X72Y82.C       Tilo                  0.097   anteconmutador0/unidades<3>
+                                                       anteconmutador0/GND_5_o_digitT[7]_LessThan_6_o1
+    SLICE_X74Y80.A6      net (fanout=3)        0.340   anteconmutador0/GND_5_o_digitT[7]_LessThan_6_o1
+    SLICE_X74Y80.A       Tilo                  0.097   anteconmutador0/unidades<1>
+                                                       anteconmutador0/_n0143_inv1
+    SLICE_X76Y82.CE      net (fanout=1)        0.421   anteconmutador0/_n0143_inv
+    SLICE_X76Y82.CLK     Tceck                 0.119   anteconmutador0/decenas<3>
+                                                       anteconmutador0/decenas_2
+    -------------------------------------------------  ---------------------------
+    Total                                      3.073ns (0.926ns logic, 2.147ns route)
+                                                       (30.1% logic, 69.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.854ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               anteconmutador0/i (FF)
+  Destination:          anteconmutador0/decenas_3 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.073ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.038ns (0.628 - 0.666)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: anteconmutador0/i to anteconmutador0/decenas_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X73Y82.AQ      Tcko                  0.341   anteconmutador0/i
+                                                       anteconmutador0/i
+    SLICE_X74Y80.D3      net (fanout=12)       0.631   anteconmutador0/i
+    SLICE_X74Y80.DMUX    Tilo                  0.272   anteconmutador0/unidades<1>
+                                                       anteconmutador0/Mmux_digitT[7]_count[7]_mux_1_OUT31
+    SLICE_X72Y82.C1      net (fanout=6)        0.755   anteconmutador0/Msub_digitT[7]_GND_5_o_sub_4_OUT_cy<2>
+    SLICE_X72Y82.C       Tilo                  0.097   anteconmutador0/unidades<3>
+                                                       anteconmutador0/GND_5_o_digitT[7]_LessThan_6_o1
+    SLICE_X74Y80.A6      net (fanout=3)        0.340   anteconmutador0/GND_5_o_digitT[7]_LessThan_6_o1
+    SLICE_X74Y80.A       Tilo                  0.097   anteconmutador0/unidades<1>
+                                                       anteconmutador0/_n0143_inv1
+    SLICE_X76Y82.CE      net (fanout=1)        0.421   anteconmutador0/_n0143_inv
+    SLICE_X76Y82.CLK     Tceck                 0.119   anteconmutador0/decenas<3>
+                                                       anteconmutador0/decenas_3
+    -------------------------------------------------  ---------------------------
+    Total                                      3.073ns (0.926ns logic, 2.147ns route)
+                                                       (30.1% logic, 69.9% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 8.408ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.592ns (628.141MHz) (Tbcper_I(Fmax))
+  Physical resource: clk_BUFGP/BUFG/I0
+  Logical resource: clk_BUFGP/BUFG/I0
+  Location pin: BUFGCTRL_X0Y31.I0
+  Clock network: clk_BUFGP/IBUFG
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 0.500ns (Tcl)
+  Physical resource: divisorfrecdisp0/count_100000<3>/CLK
+  Logical resource: divisorfrecdisp0/count_100000_0/CK
+  Location pin: SLICE_X80Y82.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 0.500ns (Tch)
+  Physical resource: divisorfrecdisp0/count_100000<3>/CLK
+  Logical resource: divisorfrecdisp0/count_100000_0/CK
+  Location pin: SLICE_X80Y82.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.000ns (1000.000MHz) (Tcp)
+  Physical resource: divisorfrecdisp0/count_100000<3>/CLK
+  Logical resource: divisorfrecdisp0/count_100000_0/CK
+  Location pin: SLICE_X80Y82.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 0.500ns (Tcl)
+  Physical resource: divisorfrecdisp0/count_100000<3>/CLK
+  Logical resource: divisorfrecdisp0/count_100000_1/CK
+  Location pin: SLICE_X80Y82.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 0.500ns (Tch)
+  Physical resource: divisorfrecdisp0/count_100000<3>/CLK
+  Logical resource: divisorfrecdisp0/count_100000_1/CK
+  Location pin: SLICE_X80Y82.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.000ns (1000.000MHz) (Tcp)
+  Physical resource: divisorfrecdisp0/count_100000<3>/CLK
+  Logical resource: divisorfrecdisp0/count_100000_1/CK
+  Location pin: SLICE_X80Y82.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 0.500ns (Tcl)
+  Physical resource: divisorfrecdisp0/count_100000<3>/CLK
+  Logical resource: divisorfrecdisp0/count_100000_2/CK
+  Location pin: SLICE_X80Y82.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 0.500ns (Tch)
+  Physical resource: divisorfrecdisp0/count_100000<3>/CLK
+  Logical resource: divisorfrecdisp0/count_100000_2/CK
+  Location pin: SLICE_X80Y82.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.000ns (1000.000MHz) (Tcp)
+  Physical resource: divisorfrecdisp0/count_100000<3>/CLK
+  Logical resource: divisorfrecdisp0/count_100000_2/CK
+  Location pin: SLICE_X80Y82.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 0.500ns (Tcl)
+  Physical resource: divisorfrecdisp0/count_100000<3>/CLK
+  Logical resource: divisorfrecdisp0/count_100000_3/CK
+  Location pin: SLICE_X80Y82.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 0.500ns (Tch)
+  Physical resource: divisorfrecdisp0/count_100000<3>/CLK
+  Logical resource: divisorfrecdisp0/count_100000_3/CK
+  Location pin: SLICE_X80Y82.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.000ns (1000.000MHz) (Tcp)
+  Physical resource: divisorfrecdisp0/count_100000<3>/CLK
+  Logical resource: divisorfrecdisp0/count_100000_3/CK
+  Location pin: SLICE_X80Y82.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 0.500ns (Tcl)
+  Physical resource: divisorfrecdisp0/count_100000<7>/CLK
+  Logical resource: divisorfrecdisp0/count_100000_4/CK
+  Location pin: SLICE_X80Y83.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 0.500ns (Tch)
+  Physical resource: divisorfrecdisp0/count_100000<7>/CLK
+  Logical resource: divisorfrecdisp0/count_100000_4/CK
+  Location pin: SLICE_X80Y83.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.000ns (1000.000MHz) (Tcp)
+  Physical resource: divisorfrecdisp0/count_100000<7>/CLK
+  Logical resource: divisorfrecdisp0/count_100000_4/CK
+  Location pin: SLICE_X80Y83.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 0.500ns (Tcl)
+  Physical resource: divisorfrecdisp0/count_100000<7>/CLK
+  Logical resource: divisorfrecdisp0/count_100000_5/CK
+  Location pin: SLICE_X80Y83.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 0.500ns (Tch)
+  Physical resource: divisorfrecdisp0/count_100000<7>/CLK
+  Logical resource: divisorfrecdisp0/count_100000_5/CK
+  Location pin: SLICE_X80Y83.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.000ns (1000.000MHz) (Tcp)
+  Physical resource: divisorfrecdisp0/count_100000<7>/CLK
+  Logical resource: divisorfrecdisp0/count_100000_5/CK
+  Location pin: SLICE_X80Y83.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 0.500ns (Tcl)
+  Physical resource: divisorfrecdisp0/count_100000<7>/CLK
+  Logical resource: divisorfrecdisp0/count_100000_6/CK
+  Location pin: SLICE_X80Y83.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 0.500ns (Tch)
+  Physical resource: divisorfrecdisp0/count_100000<7>/CLK
+  Logical resource: divisorfrecdisp0/count_100000_6/CK
+  Location pin: SLICE_X80Y83.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.000ns (1000.000MHz) (Tcp)
+  Physical resource: divisorfrecdisp0/count_100000<7>/CLK
+  Logical resource: divisorfrecdisp0/count_100000_6/CK
+  Location pin: SLICE_X80Y83.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 0.500ns (Tcl)
+  Physical resource: divisorfrecdisp0/count_100000<7>/CLK
+  Logical resource: divisorfrecdisp0/count_100000_7/CK
+  Location pin: SLICE_X80Y83.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 0.500ns (Tch)
+  Physical resource: divisorfrecdisp0/count_100000<7>/CLK
+  Logical resource: divisorfrecdisp0/count_100000_7/CK
+  Location pin: SLICE_X80Y83.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.000ns (1000.000MHz) (Tcp)
+  Physical resource: divisorfrecdisp0/count_100000<7>/CLK
+  Logical resource: divisorfrecdisp0/count_100000_7/CK
+  Location pin: SLICE_X80Y83.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.329|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 1279 paths, 0 nets, and 215 connections
+
+Design statistics:
+   Minimum period:   3.329ns{1}   (Maximum frequency: 300.391MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Wed Nov 15 00:08:18 2017 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 774 MB
+
+
+

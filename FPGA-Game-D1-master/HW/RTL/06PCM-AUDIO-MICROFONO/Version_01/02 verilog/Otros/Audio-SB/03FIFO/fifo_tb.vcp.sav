@@ -1,0 +1,43 @@
+[*]
+[*] GTKWave Analyzer v3.3.66 (w)1999-2015 BSI
+[*] Wed Oct 11 05:50:35 2017
+[*]
+[dumpfile] "/home/ferney/FERNEY/NACHO/Digital1/proyectos/FPGA-Game-D1/HW/RTL/00EJEMPLOS/03FIFO/simulation/fifo_TB.vcd"
+[dumpfile_mtime] "Wed Oct 11 05:48:17 2017"
+[dumpfile_size] 3299
+[savefile] "/home/ferney/FERNEY/NACHO/Digital1/proyectos/FPGA-Game-D1/HW/RTL/00EJEMPLOS/03FIFO/fifo_tb.vcp.sav"
+[timestart] 0
+[size] 1366 702
+[pos] -1 -1
+*-14.936091 18400 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] fifo_TB.
+[sst_width] 229
+[signals_width] 270
+[sst_expanded] 1
+[sst_vpaned_height] 174
+@28
+fifo_TB.uut.clk
+fifo_TB.uut.empty
+fifo_TB.uut.full
+fifo_TB.uut.reset
+fifo_TB.uut.wr
+fifo_TB.uut.wr_en
+fifo_TB.uut.rd
+@22
+fifo_TB.uut.data_in[7:0]
+@c00022
+fifo_TB.uut.w_ptr_reg[3:0]
+@28
+(0)fifo_TB.uut.w_ptr_reg[3:0]
+(1)fifo_TB.uut.w_ptr_reg[3:0]
+(2)fifo_TB.uut.w_ptr_reg[3:0]
+(3)fifo_TB.uut.w_ptr_reg[3:0]
+@1401200
+-group_end
+@22
+fifo_TB.uut.r_ptr_reg[3:0]
+@820
+fifo_TB.uut.data_in[7:0]
+fifo_TB.uut.data_out[7:0]
+[pattern_trace] 1
+[pattern_trace] 0

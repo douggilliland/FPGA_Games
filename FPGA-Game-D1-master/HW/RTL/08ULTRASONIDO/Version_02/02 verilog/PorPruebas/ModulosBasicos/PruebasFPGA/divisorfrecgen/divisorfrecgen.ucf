@@ -1,0 +1,17 @@
+## This file is a general .ucf for the Nexys4 rev B board
+## To use it in a project:
+## - uncomment the lines corresponding to used pins
+## - rename the used signals according to the project
+
+## Clock signal
+NET "clk"   LOC = "E3"	| IOSTANDARD = "LVCMOS33";					#Bank = 35, Pin name = IO_L12P_T1_MRCC_35,					Sch name = CLK100MHZ
+NET "clk" TNM_NET = sys_clk_pin;
+TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 100 MHz HIGH 50%; 
+#NET "clk" CLOCK_DEDICATED_ROUTE = FALSE; 
+
+ 
+## Pmod Header JA
+
+NET "CLKOUT1"			LOC = "F14"	| IOSTANDARD = "LVCMOS33";		
+
+

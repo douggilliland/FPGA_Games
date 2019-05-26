@@ -1,0 +1,3 @@
+verilog work ../genpulsosprueba.v
+verilog work ../divisorfrecgen.v
+verilog work ../genpulsos.v

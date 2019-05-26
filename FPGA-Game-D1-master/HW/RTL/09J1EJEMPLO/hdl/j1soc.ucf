@@ -1,0 +1,16 @@
+
+## Clock signal
+NET "sys_clk_i"   LOC = "E3"	| IOSTANDARD = "LVCMOS33";
+NET "sys_clk_i" TNM_NET = sys_clk_pin;
+TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 100 MHz HIGH 50%; 
+ 
+## Buttons
+NET "sys_rst_i"	LOC = "R10"	| IOSTANDARD = "LVCMOS33";
+
+NET "uart_tx"	LOC = "D4"	| IOSTANDARD = "LVCMOS33";		
+
+
+## LEDs
+NET "ledout" LOC = "T8"	| IOSTANDARD = "LVCMOS33"; #Bank = 34, Pin name = IO_L24N_T3_34,Sch name = LED0
+
+

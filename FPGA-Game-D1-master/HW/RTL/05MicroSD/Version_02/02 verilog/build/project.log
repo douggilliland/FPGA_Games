@@ -1,0 +1,779 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "project.src"
+Input Format                       : mixed
+
+---- Target Parameters
+Target Device                      : xc7a100t-csg324-1
+Output File Name                   : "project.ngc"
+Output Format                      : NGC
+
+---- Source Options
+Top Module Name                    : spi
+
+---- General Options
+Optimization Goal                  : Area
+Optimization Effort                : 1
+RTL Output                         : yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/dfnietoa/FPGA-Game-D1/HW/RTL/05MicroSD/Version_02/02 verilog/spi.v" into library work
+Parsing module <spi>.
+Analyzing Verilog file "/home/dfnietoa/FPGA-Game-D1/HW/RTL/05MicroSD/Version_02/02 verilog/contador.v" into library work
+Parsing module <contador>.
+Analyzing Verilog file "/home/dfnietoa/FPGA-Game-D1/HW/RTL/05MicroSD/Version_02/02 verilog/shifti.v" into library work
+Parsing module <shifti>.
+Analyzing Verilog file "/home/dfnietoa/FPGA-Game-D1/HW/RTL/05MicroSD/Version_02/02 verilog/shiftd.v" into library work
+Parsing module <shiftd>.
+Analyzing Verilog file "/home/dfnietoa/FPGA-Game-D1/HW/RTL/05MicroSD/Version_02/02 verilog/divfreq.v" into library work
+Parsing module <divfreq>.
+Analyzing Verilog file "/home/dfnietoa/FPGA-Game-D1/HW/RTL/05MicroSD/Version_02/02 verilog/comparador.v" into library work
+Parsing module <comparador>.
+WARNING:HDLCompiler:751 - "/home/dfnietoa/FPGA-Game-D1/HW/RTL/05MicroSD/Version_02/02 verilog/comparador.v" Line 3: Redeclaration of ansi port cs is not allowed
+WARNING:HDLCompiler:751 - "/home/dfnietoa/FPGA-Game-D1/HW/RTL/05MicroSD/Version_02/02 verilog/comparador.v" Line 4: Redeclaration of ansi port run is not allowed
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <spi>.
+
+Elaborating module <comparador>.
+
+Elaborating module <divfreq>.
+
+Elaborating module <shifti>.
+
+Elaborating module <shiftd>.
+
+Elaborating module <contador>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <spi>.
+    Related source file is "/home/dfnietoa/FPGA-Game-D1/HW/RTL/05MicroSD/Version_02/02 verilog/spi.v".
+        N = 8
+    Summary:
+	no macro.
+Unit <spi> synthesized.
+
+Synthesizing Unit <comparador>.
+    Related source file is "/home/dfnietoa/FPGA-Game-D1/HW/RTL/05MicroSD/Version_02/02 verilog/comparador.v".
+    Summary:
+	no macro.
+Unit <comparador> synthesized.
+
+Synthesizing Unit <divfreq>.
+    Related source file is "/home/dfnietoa/FPGA-Game-D1/HW/RTL/05MicroSD/Version_02/02 verilog/divfreq.v".
+        tope = 1000
+    Found 1-bit register for signal <sclk>.
+    Found 1-bit register for signal <sclkn>.
+    Found 32-bit register for signal <div>.
+    Found 32-bit adder for signal <div[31]_GND_3_o_add_3_OUT> created at line 21.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  34 D-type flip-flop(s).
+Unit <divfreq> synthesized.
+
+Synthesizing Unit <shifti>.
+    Related source file is "/home/dfnietoa/FPGA-Game-D1/HW/RTL/05MicroSD/Version_02/02 verilog/shifti.v".
+        N = 8
+    Found 1-bit register for signal <mosi>.
+    Found 1-bit register for signal <dezi<7>>.
+    Found 1-bit register for signal <dezi<6>>.
+    Found 1-bit register for signal <dezi<5>>.
+    Found 1-bit register for signal <dezi<4>>.
+    Found 1-bit register for signal <dezi<3>>.
+    Found 1-bit register for signal <dezi<2>>.
+    Found 1-bit register for signal <dezi<1>>.
+    Found 1-bit register for signal <dezi<0>>.
+    Summary:
+	inferred   9 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <shifti> synthesized.
+
+Synthesizing Unit <shiftd>.
+    Related source file is "/home/dfnietoa/FPGA-Game-D1/HW/RTL/05MicroSD/Version_02/02 verilog/shiftd.v".
+        N = 8
+    Found 8-bit register for signal <dezd>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <shiftd> synthesized.
+
+Synthesizing Unit <contador>.
+    Related source file is "/home/dfnietoa/FPGA-Game-D1/HW/RTL/05MicroSD/Version_02/02 verilog/contador.v".
+        N = 8
+    Found 1-bit register for signal <done>.
+    Found 32-bit register for signal <countd>.
+    Found 32-bit adder for signal <countd[31]_GND_7_o_add_2_OUT> created at line 21.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  33 D-type flip-flop(s).
+Unit <contador> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 32-bit adder                                          : 2
+# Registers                                            : 15
+ 1-bit register                                        : 12
+ 32-bit register                                       : 2
+ 8-bit register                                        : 1
+# Multiplexers                                         : 1
+ 8-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <contador>.
+The following registers are absorbed into counter <countd>: 1 register on signal <countd>.
+Unit <contador> synthesized (advanced).
+
+Synthesizing (advanced) Unit <divfreq>.
+The following registers are absorbed into counter <div>: 1 register on signal <div>.
+Unit <divfreq> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 32-bit up counter                                     : 2
+# Registers                                            : 20
+ Flip-Flops                                            : 20
+# Multiplexers                                         : 1
+ 8-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:3001 - This design contains one or more registers or latches with an active
+   asynchronous set and asynchronous reset. While this circuit can be built,
+   it creates a sub-optimal implementation in terms of area, power and
+   performance. For a more optimal implementation Xilinx highly recommends
+   one of the following:
+
+          1) Remove either the set or reset from all registers and latches if
+             not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Artix7 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    dezi_7 in unit <shifti>
+    dezi_1 in unit <shifti>
+    dezi_2 in unit <shifti>
+    dezi_0 in unit <shifti>
+    dezi_3 in unit <shifti>
+    dezi_4 in unit <shifti>
+    dezi_6 in unit <shifti>
+    dezi_5 in unit <shifti>
+
+
+Optimizing unit <shiftd> ...
+
+Optimizing unit <spi> ...
+
+Optimizing unit <shifti> ...
+
+Optimizing unit <divfreq> ...
+WARNING:Xst:1293 - FF/Latch <cnt/countd_31> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cnt/countd_30> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cnt/countd_29> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cnt/countd_28> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cnt/countd_27> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cnt/countd_26> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cnt/countd_24> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cnt/countd_23> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cnt/countd_25> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cnt/countd_22> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cnt/countd_21> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cnt/countd_20> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cnt/countd_19> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cnt/countd_18> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cnt/countd_4> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cnt/countd_7> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cnt/countd_5> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cnt/countd_6> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cnt/countd_8> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cnt/countd_9> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cnt/countd_10> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cnt/countd_11> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cnt/countd_12> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cnt/countd_13> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cnt/countd_16> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cnt/countd_14> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cnt/countd_15> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cnt/countd_17> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/div_20> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/div_19> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/div_18> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/div_17> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/div_16> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/div_15> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/div_14> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/div_13> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/div_12> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/div_11> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/div_10> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/div_21> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/div_22> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/div_23> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/div_24> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/div_25> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/div_26> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/div_27> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/div_28> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/div_29> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/div_30> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/div_31> has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:3203 - The FF/Latch <df/sclkn> in Unit <spi> is the opposite to the following FF/Latch, which will be removed : <df/sclk> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block spi, actual ratio is 0.
+FlipFlop shd/dezd_7 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop shd/dezd_6 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop shd/dezd_5 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop shd/dezd_4 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop shd/dezd_3 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop shd/dezd_2 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop shd/dezd_1 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop cnt/done has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 49
+ Flip-Flops                                            : 49
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : project.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 83
+#      GND                         : 1
+#      INV                         : 4
+#      LUT1                        : 12
+#      LUT2                        : 19
+#      LUT3                        : 16
+#      LUT4                        : 1
+#      LUT5                        : 1
+#      LUT6                        : 2
+#      MUXCY                       : 12
+#      VCC                         : 1
+#      XORCY                       : 14
+# FlipFlops/Latches                : 57
+#      FDC                         : 23
+#      FDP                         : 8
+#      FDPE                        : 1
+#      FDR                         : 16
+#      FDSE                        : 1
+#      LDC                         : 8
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 23
+#      IBUF                        : 11
+#      OBUF                        : 12
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              46  out of  126800     0%  
+ Number of Slice LUTs:                   55  out of  63400     0%  
+    Number used as Logic:                55  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     66
+   Number with an unused Flip Flop:      20  out of     66    30%  
+   Number with an unused LUT:            11  out of     66    16%  
+   Number of fully used LUT-FF pairs:    35  out of     66    53%  
+   Number of unique control sets:        30
+
+IO Utilization: 
+ Number of IOs:                          24
+ Number of bonded IOBs:                  24  out of    210    11%  
+    IOB Flip Flops/Latches:              11
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------------------------+------------------------+-------+
+Clock Signal                                                 | Clock buffer(FF name)  | Load  |
+-------------------------------------------------------------+------------------------+-------+
+df/sclkn                                                     | BUFG                   | 38    |
+clk                                                          | BUFGP                  | 11    |
+shi/reset_datase[7]_AND_4_o(shi/reset_datase[7]_AND_4_o1:O)  | NONE(*)(shi/dezi_7_LDC)| 1     |
+shi/reset_datase[1]_AND_16_o(shi/reset_datase[1]_AND_16_o1:O)| NONE(*)(shi/dezi_1_LDC)| 1     |
+shi/reset_datase[2]_AND_14_o(shi/reset_datase[2]_AND_14_o1:O)| NONE(*)(shi/dezi_2_LDC)| 1     |
+shi/reset_datase[0]_AND_18_o(shi/reset_datase[0]_AND_18_o1:O)| NONE(*)(shi/dezi_0_LDC)| 1     |
+shi/reset_datase[3]_AND_12_o(shi/reset_datase[3]_AND_12_o1:O)| NONE(*)(shi/dezi_3_LDC)| 1     |
+shi/reset_datase[4]_AND_10_o(shi/reset_datase[4]_AND_10_o1:O)| NONE(*)(shi/dezi_4_LDC)| 1     |
+shi/reset_datase[6]_AND_6_o(shi/reset_datase[6]_AND_6_o1:O)  | NONE(*)(shi/dezi_6_LDC)| 1     |
+shi/reset_datase[5]_AND_8_o(shi/reset_datase[5]_AND_8_o1:O)  | NONE(*)(shi/dezi_5_LDC)| 1     |
+-------------------------------------------------------------+------------------------+-------+
+(*) These 8 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 3.575ns (Maximum Frequency: 279.720MHz)
+   Minimum input arrival time before clock: 3.844ns
+   Maximum output required time after clock: 1.557ns
+   Maximum combinational path delay: 1.023ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'df/sclkn'
+  Clock period: 2.448ns (frequency: 408.497MHz)
+  Total number of paths / destination ports: 109 / 40
+-------------------------------------------------------------------------
+Delay:               2.448ns (Levels of Logic = 1)
+  Source:            cnt/countd_3 (FF)
+  Destination:       cnt/countd_0 (FF)
+  Source Clock:      df/sclkn rising
+  Destination Clock: df/sclkn rising
+
+  Data Path: cnt/countd_3 to cnt/countd_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.478   0.933  cnt/countd_3 (cnt/countd_3)
+     LUT5:I0->O            4   0.124   0.419  cnt/Mcount_countd_val321 (cnt/Mcount_countd_val)
+     FDR:R                     0.494          cnt/countd_0
+    ----------------------------------------
+    Total                      2.448ns (1.096ns logic, 1.352ns route)
+                                       (44.8% logic, 55.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.575ns (frequency: 279.720MHz)
+  Total number of paths / destination ports: 166 / 22
+-------------------------------------------------------------------------
+Delay:               3.575ns (Levels of Logic = 3)
+  Source:            df/div_3 (FF)
+  Destination:       df/div_9 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: df/div_3 to df/div_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.478   0.925  df/div_3 (df/div_3)
+     LUT6:I1->O            1   0.124   0.421  df/div[31]_run_AND_3_o_SW0 (N3)
+     LUT6:I5->O            2   0.124   0.427  df/div[31]_run_AND_3_o (df/div[31]_run_AND_3_o)
+     LUT3:I2->O           10   0.124   0.458  df/Mcount_div_val321 (df/Mcount_div_val)
+     FDR:R                     0.494          df/div_0
+    ----------------------------------------
+    Total                      3.575ns (1.344ns logic, 2.231ns route)
+                                       (37.6% logic, 62.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'df/sclkn'
+  Total number of paths / destination ports: 73 / 57
+-------------------------------------------------------------------------
+Offset:              1.713ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       shi/dezi_7_C_7 (FF)
+  Destination Clock: df/sclkn rising
+
+  Data Path: reset to shi/dezi_7_C_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            35   0.001   0.689  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.124   0.405  shi/reset_datase[0]_AND_19_o1 (shi/reset_datase[0]_AND_19_o)
+     FDC:CLR                   0.494          shi/dezi_0_C_0
+    ----------------------------------------
+    Total                      1.713ns (0.619ns logic, 1.094ns route)
+                                       (36.1% logic, 63.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 22 / 12
+-------------------------------------------------------------------------
+Offset:              3.844ns (Levels of Logic = 5)
+  Source:            en (PAD)
+  Destination:       df/div_9 (FF)
+  Destination Clock: clk rising
+
+  Data Path: en to df/div_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            12   0.001   0.608  en_IBUF (en_IBUF)
+     LUT2:I0->O            1   0.124   0.939  cmp/run1 (rund)
+     LUT6:I0->O            1   0.124   0.421  df/div[31]_run_AND_3_o_SW0 (N3)
+     LUT6:I5->O            2   0.124   0.427  df/div[31]_run_AND_3_o (df/div[31]_run_AND_3_o)
+     LUT3:I2->O           10   0.124   0.458  df/Mcount_div_val321 (df/Mcount_div_val)
+     FDR:R                     0.494          df/div_0
+    ----------------------------------------
+    Total                      3.844ns (0.991ns logic, 2.853ns route)
+                                       (25.8% logic, 74.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'shi/reset_datase[7]_AND_4_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.713ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       shi/dezi_7_LDC (LATCH)
+  Destination Clock: shi/reset_datase[7]_AND_4_o falling
+
+  Data Path: reset to shi/dezi_7_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            35   0.001   0.689  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.124   0.405  shi/reset_datase[7]_AND_5_o1 (shi/reset_datase[7]_AND_5_o)
+     LDC:CLR                   0.494          shi/dezi_7_LDC
+    ----------------------------------------
+    Total                      1.713ns (0.619ns logic, 1.094ns route)
+                                       (36.1% logic, 63.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'shi/reset_datase[1]_AND_16_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.713ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       shi/dezi_1_LDC (LATCH)
+  Destination Clock: shi/reset_datase[1]_AND_16_o falling
+
+  Data Path: reset to shi/dezi_1_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            35   0.001   0.689  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.124   0.405  shi/reset_datase[1]_AND_17_o1 (shi/reset_datase[1]_AND_17_o)
+     LDC:CLR                   0.494          shi/dezi_1_LDC
+    ----------------------------------------
+    Total                      1.713ns (0.619ns logic, 1.094ns route)
+                                       (36.1% logic, 63.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'shi/reset_datase[2]_AND_14_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.713ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       shi/dezi_2_LDC (LATCH)
+  Destination Clock: shi/reset_datase[2]_AND_14_o falling
+
+  Data Path: reset to shi/dezi_2_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            35   0.001   0.689  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.124   0.405  shi/reset_datase[2]_AND_15_o1 (shi/reset_datase[2]_AND_15_o)
+     LDC:CLR                   0.494          shi/dezi_2_LDC
+    ----------------------------------------
+    Total                      1.713ns (0.619ns logic, 1.094ns route)
+                                       (36.1% logic, 63.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'shi/reset_datase[0]_AND_18_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.713ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       shi/dezi_0_LDC (LATCH)
+  Destination Clock: shi/reset_datase[0]_AND_18_o falling
+
+  Data Path: reset to shi/dezi_0_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            35   0.001   0.689  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.124   0.405  shi/reset_datase[0]_AND_19_o1 (shi/reset_datase[0]_AND_19_o)
+     LDC:CLR                   0.494          shi/dezi_0_LDC
+    ----------------------------------------
+    Total                      1.713ns (0.619ns logic, 1.094ns route)
+                                       (36.1% logic, 63.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'shi/reset_datase[3]_AND_12_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.713ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       shi/dezi_3_LDC (LATCH)
+  Destination Clock: shi/reset_datase[3]_AND_12_o falling
+
+  Data Path: reset to shi/dezi_3_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            35   0.001   0.689  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.124   0.405  shi/reset_datase[3]_AND_13_o1 (shi/reset_datase[3]_AND_13_o)
+     LDC:CLR                   0.494          shi/dezi_3_LDC
+    ----------------------------------------
+    Total                      1.713ns (0.619ns logic, 1.094ns route)
+                                       (36.1% logic, 63.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'shi/reset_datase[4]_AND_10_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.713ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       shi/dezi_4_LDC (LATCH)
+  Destination Clock: shi/reset_datase[4]_AND_10_o falling
+
+  Data Path: reset to shi/dezi_4_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            35   0.001   0.689  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.124   0.405  shi/reset_datase[4]_AND_11_o1 (shi/reset_datase[4]_AND_11_o)
+     LDC:CLR                   0.494          shi/dezi_4_LDC
+    ----------------------------------------
+    Total                      1.713ns (0.619ns logic, 1.094ns route)
+                                       (36.1% logic, 63.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'shi/reset_datase[6]_AND_6_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.713ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       shi/dezi_6_LDC (LATCH)
+  Destination Clock: shi/reset_datase[6]_AND_6_o falling
+
+  Data Path: reset to shi/dezi_6_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            35   0.001   0.689  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.124   0.405  shi/reset_datase[6]_AND_7_o1 (shi/reset_datase[6]_AND_7_o)
+     LDC:CLR                   0.494          shi/dezi_6_LDC
+    ----------------------------------------
+    Total                      1.713ns (0.619ns logic, 1.094ns route)
+                                       (36.1% logic, 63.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'shi/reset_datase[5]_AND_8_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.713ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       shi/dezi_5_LDC (LATCH)
+  Destination Clock: shi/reset_datase[5]_AND_8_o falling
+
+  Data Path: reset to shi/dezi_5_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            35   0.001   0.689  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.124   0.405  shi/reset_datase[5]_AND_9_o1 (shi/reset_datase[5]_AND_9_o)
+     LDC:CLR                   0.494          shi/dezi_5_LDC
+    ----------------------------------------
+    Total                      1.713ns (0.619ns logic, 1.094ns route)
+                                       (36.1% logic, 63.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'df/sclkn'
+  Total number of paths / destination ports: 11 / 11
+-------------------------------------------------------------------------
+Offset:              1.557ns (Levels of Logic = 2)
+  Source:            cnt/done (FF)
+  Destination:       cs (PAD)
+  Source Clock:      df/sclkn rising
+
+  Data Path: cnt/done to cs
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.478   0.550  cnt/done (cnt/done)
+     LUT2:I0->O            2   0.124   0.405  cmp/cs1 (cs_OBUF)
+     OBUF:I->O                 0.000          cs_OBUF (cs)
+    ----------------------------------------
+    Total                      1.557ns (0.602ns logic, 0.955ns route)
+                                       (38.7% logic, 61.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.428ns (Levels of Logic = 2)
+  Source:            df/sclkn (FF)
+  Destination:       sclk (PAD)
+  Source Clock:      clk rising
+
+  Data Path: df/sclkn to sclk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDSE:C->Q             1   0.478   0.399  df/sclkn (df/sclkn)
+     INV:I->O              2   0.146   0.405  df/sclkn_BUFG_LUT1_INV_0 (df/sclkn_BUFG_LUT1)
+     OBUF:I->O                 0.000          sclk_OBUF (sclk)
+    ----------------------------------------
+    Total                      1.428ns (0.624ns logic, 0.804ns route)
+                                       (43.7% logic, 56.3% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.023ns (Levels of Logic = 3)
+  Source:            en (PAD)
+  Destination:       cs (PAD)
+
+  Data Path: en to cs
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            12   0.001   0.493  en_IBUF (en_IBUF)
+     LUT2:I1->O            2   0.124   0.405  cmp/cs1 (cs_OBUF)
+     OBUF:I->O                 0.000          cs_OBUF (cs)
+    ----------------------------------------
+    Total                      1.023ns (0.125ns logic, 0.898ns route)
+                                       (12.2% logic, 87.8% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.575|         |         |         |
+df/sclkn       |    4.148|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock df/sclkn
+----------------------------+---------+---------+---------+---------+
+                            | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------+---------+---------+---------+---------+
+df/sclkn                    |    2.448|         |    0.913|         |
+shi/reset_datase[0]_AND_18_o|         |    2.046|         |         |
+shi/reset_datase[1]_AND_16_o|         |    2.161|         |         |
+shi/reset_datase[2]_AND_14_o|         |    2.161|         |         |
+shi/reset_datase[3]_AND_12_o|         |    2.161|         |         |
+shi/reset_datase[4]_AND_10_o|         |    2.161|         |         |
+shi/reset_datase[5]_AND_8_o |         |    2.161|         |         |
+shi/reset_datase[6]_AND_6_o |         |    2.161|         |         |
+shi/reset_datase[7]_AND_4_o |         |    2.161|         |         |
+----------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 8.83 secs
+ 
+--> 
+
+
+Total memory usage is 504648 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   53 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

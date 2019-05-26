@@ -1,0 +1,23 @@
+## Clock signal
+NET "clk_in"   LOC = "E3"	| IOSTANDARD = "LVCMOS33";					#Bank = 35, Pin name = IO_L12P_T1_MRCC_35,					Sch name = CLK100MHZ
+NET "clk_in" TNM_NET = sys_clk_pin;
+TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 100 MHz HIGH 50%; 
+
+NET "reset"			LOC = "P3"	| IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L14N_T2_SRCC_34,					Sch name = SW14 NET "reset" CLOCK_DEDICATED_ROUTE = FALSE;
+
+NET "clk_div"			LOC = "G14"	| IOSTANDARD = "LVCMOS33";		#Bank = 15, Pin name = IO_L15N_T2_DQS_ADV_B_15,				Sch name = JB1
+
+NET "done"    			LOC = "K16"	| IOSTANDARD = "LVCMOS33";		#Bank = 15, Pin name = IO_25_15,						Sch name = JB7
+
+NET "Din"			LOC = "P15"	| IOSTANDARD = "LVCMOS33";		#Bank = 14, Pin name = IO_L13P_T2_MRCC_14,					Sch name = JB2
+NET "rd"			LOC = "P4"	| IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L14P_T2_SRCC_34,					Sch name = SW15
+
+NET "D0f<0>"			LOC = "T8"	| IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L24N_T3_34,						Sch name = LED0
+NET "D0f<1>"			LOC = "V9"	| IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L21N_T3_DQS_34,					Sch name = LED1
+NET "D0f<2>"			LOC = "R8"	| IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L24P_T3_34,						Sch name = LED2
+NET "D0f<3>"			LOC = "T6"	| IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L23N_T3_34,						Sch name = LED3
+NET "D0f<4>"			LOC = "T5"	| IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L12P_T1_MRCC_34,					Sch name = LED4
+NET "D0f<5>"			LOC = "T4"	| IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L12N_T1_MRCC_34,					Sch	name = LED5
+NET "D0f<6>"			LOC = "U7"	| IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L22P_T3_34,						Sch name = LED6
+NET "D0f<7>"			LOC = "U6"	| IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L22N_T3_34,						Sch name = LED7
+NET "reset" CLOCK_DEDICATED_ROUTE = FALSE;

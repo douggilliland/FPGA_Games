@@ -1,0 +1,3 @@
+verilog work ../peripheral_bt.v
+verilog work ../Divisor_Frecuencia.v
+verilog work ../transmision.v

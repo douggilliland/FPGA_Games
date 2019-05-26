@@ -1,0 +1,11 @@
+verilog work ../bloqueultrasonido.v
+verilog work ../contador.v
+verilog work ../divisorfrec.v
+verilog work ../divisor.v
+verilog work ../divisorfrecgen.v
+verilog work ../genpulsos.v
+verilog work ../divisorfrecd.v
+verilog work ../meultrasonido.v
+verilog work ../divisorfrecme.v
+verilog work ../maquinadeestados.v
+verilog work ../ultrasonido.v

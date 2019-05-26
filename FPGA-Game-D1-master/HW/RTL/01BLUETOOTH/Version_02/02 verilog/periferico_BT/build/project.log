@@ -1,0 +1,545 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "project.src"
+Input Format                       : mixed
+
+---- Target Parameters
+Target Device                      : xc7a100t-1csg324
+Output File Name                   : "project.ngc"
+Output Format                      : NGC
+
+---- Source Options
+Top Module Name                    : peripheral_bt
+
+---- General Options
+Optimization Goal                  : Area
+Optimization Effort                : 1
+RTL Output                         : yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/camila/Documentos/Proy.DigI/BLUETOOTH/periferico_BT/peripheral_bt.v" into library work
+Parsing module <peripheral_bt>.
+Analyzing Verilog file "/home/camila/Documentos/Proy.DigI/BLUETOOTH/periferico_BT/Divisor_Frecuencia.v" into library work
+Parsing module <Divisor_Frecuencia>.
+Analyzing Verilog file "/home/camila/Documentos/Proy.DigI/BLUETOOTH/periferico_BT/transmision.v" into library work
+Parsing module <transmision>.
+Analyzing Verilog file "/home/camila/Documentos/Proy.DigI/BLUETOOTH/periferico_BT/recepcion.v" into library work
+Parsing module <recepcion>.
+Analyzing Verilog file "/home/camila/Documentos/Proy.DigI/BLUETOOTH/periferico_BT/bluetooth.v" into library work
+Parsing module <bluetooth>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <peripheral_bt>.
+WARNING:HDLCompiler:1016 - "/home/camila/Documentos/Proy.DigI/BLUETOOTH/periferico_BT/bluetooth.v" Line 18: Port clk_in is not connected to this instance
+
+Elaborating module <bluetooth>.
+
+Elaborating module <Divisor_Frecuencia>.
+
+Elaborating module <recepcion>.
+WARNING:HDLCompiler:413 - "/home/camila/Documentos/Proy.DigI/BLUETOOTH/periferico_BT/recepcion.v" Line 33: Result of 5-bit expression is truncated to fit in 4-bit target.
+
+Elaborating module <transmision>.
+WARNING:HDLCompiler:413 - "/home/camila/Documentos/Proy.DigI/BLUETOOTH/periferico_BT/transmision.v" Line 50: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:552 - "/home/camila/Documentos/Proy.DigI/BLUETOOTH/periferico_BT/bluetooth.v" Line 18: Input port clk_in is not connected on this instance
+WARNING:HDLCompiler:189 - "/home/camila/Documentos/Proy.DigI/BLUETOOTH/periferico_BT/peripheral_bt.v" Line 27: Size mismatch in connection of port <dout>. Formal port size is 8-bit while actual signal size is 1-bit.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <peripheral_bt>.
+    Related source file is "/home/camila/Documentos/Proy.DigI/BLUETOOTH/periferico_BT/peripheral_bt.v".
+WARNING:Xst:647 - Input <d_in<15:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <uart_rx> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 1-bit register for signal <uart_enable>.
+    Found 1-bit register for signal <d_out<15>>.
+    Found 1-bit register for signal <d_out<14>>.
+    Found 1-bit register for signal <d_out<13>>.
+    Found 1-bit register for signal <d_out<12>>.
+    Found 1-bit register for signal <d_out<11>>.
+    Found 1-bit register for signal <d_out<10>>.
+    Found 1-bit register for signal <d_out<9>>.
+    Found 1-bit register for signal <d_out<8>>.
+    Found 1-bit register for signal <d_out<7>>.
+    Found 1-bit register for signal <d_out<6>>.
+    Found 1-bit register for signal <d_out<5>>.
+    Found 1-bit register for signal <d_out<4>>.
+    Found 1-bit register for signal <d_out<3>>.
+    Found 1-bit register for signal <d_out<2>>.
+    Found 1-bit register for signal <d_out<1>>.
+    Found 1-bit register for signal <d_out<0>>.
+    Found 8-bit register for signal <din_uart>.
+    Found 6-bit 7-to-1 multiplexer for signal <_n0082> created at line 16.
+    Summary:
+	inferred  25 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <peripheral_bt> synthesized.
+
+Synthesizing Unit <bluetooth>.
+    Related source file is "/home/camila/Documentos/Proy.DigI/BLUETOOTH/periferico_BT/bluetooth.v".
+WARNING:Xst:2898 - Port 'clk_in', unconnected in block instance 'trs', is tied to GND.
+WARNING:Xst:2898 - Port 'reset', unconnected in block instance 'trs', is tied to GND.
+    Summary:
+	no macro.
+Unit <bluetooth> synthesized.
+
+Synthesizing Unit <Divisor_Frecuencia>.
+    Related source file is "/home/camila/Documentos/Proy.DigI/BLUETOOTH/periferico_BT/Divisor_Frecuencia.v".
+    Found 1-bit register for signal <clk_div>.
+    Found 32-bit register for signal <count>.
+    Found 32-bit adder for signal <count[31]_GND_3_o_add_2_OUT> created at line 24.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  33 D-type flip-flop(s).
+Unit <Divisor_Frecuencia> synthesized.
+
+Synthesizing Unit <recepcion>.
+    Related source file is "/home/camila/Documentos/Proy.DigI/BLUETOOTH/periferico_BT/recepcion.v".
+        RX_STATE_START = 2'b00
+        RX_STATE_DATA = 2'b01
+        RX_STATE_STOP = 2'b10
+    Found 8-bit register for signal <dout>.
+    Found 1-bit register for signal <avail>.
+    Found 4-bit register for signal <bitpos>.
+    Found 2-bit register for signal <state>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 4                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk_div (falling_edge)                         |
+    | Power Up State     | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 4-bit adder for signal <bitpos[3]_GND_4_o_add_8_OUT> created at line 33.
+    Found 4-bit comparator greater for signal <n0005> created at line 32
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  13 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <recepcion> synthesized.
+
+Synthesizing Unit <transmision>.
+    Related source file is "/home/camila/Documentos/Proy.DigI/BLUETOOTH/periferico_BT/transmision.v".
+        count = 8
+        STATE_IDLE = 2'b00
+        STATE_START = 2'b01
+        STATE_DATA = 2'b10
+        STATE_STOP = 2'b11
+    Found 1-bit register for signal <done>.
+    Found 2-bit register for signal <state>.
+    Found 32-bit register for signal <counter>.
+    Found 4-bit register for signal <bitpos>.
+    Found 9-bit register for signal <data>.
+    Found 1-bit register for signal <tx>.
+    Found finite state machine <FSM_1> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 4                                              |
+    | Outputs            | 4                                              |
+    | Clock              | reset (rising_edge)                            |
+    | Power Up State     | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 32-bit adder for signal <counter[31]_GND_5_o_add_5_OUT> created at line 47.
+    Found 4-bit adder for signal <bitpos[3]_GND_5_o_add_8_OUT> created at line 50.
+    Found 1-bit 9-to-1 multiplexer for signal <bitpos[3]_X_5_o_Mux_7_o> created at line 49.
+    Found 4-bit comparator greater for signal <n0003> created at line 46
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  47 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   4 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <transmision> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 4
+ 32-bit adder                                          : 2
+ 4-bit adder                                           : 2
+# Registers                                            : 13
+ 1-bit register                                        : 5
+ 16-bit register                                       : 1
+ 32-bit register                                       : 2
+ 4-bit register                                        : 2
+ 8-bit register                                        : 2
+ 9-bit register                                        : 1
+# Comparators                                          : 2
+ 4-bit comparator greater                              : 2
+# Multiplexers                                         : 7
+ 1-bit 2-to-1 multiplexer                              : 2
+ 1-bit 9-to-1 multiplexer                              : 1
+ 4-bit 2-to-1 multiplexer                              : 2
+ 6-bit 2-to-1 multiplexer                              : 1
+ 6-bit 7-to-1 multiplexer                              : 1
+# FSMs                                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1426 - The value init of the FF/Latch data_8 hinder the constant cleaning in the block trs.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1293 - FF/Latch <counter_15> has a constant value of 0 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_16> has a constant value of 0 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_17> has a constant value of 0 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_18> has a constant value of 0 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_19> has a constant value of 0 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_20> has a constant value of 0 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_21> has a constant value of 0 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_22> has a constant value of 0 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_23> has a constant value of 0 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_24> has a constant value of 0 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_25> has a constant value of 0 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_26> has a constant value of 0 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_27> has a constant value of 0 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_28> has a constant value of 0 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_29> has a constant value of 0 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_30> has a constant value of 0 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_31> has a constant value of 0 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <bitpos_0> has a constant value of 0 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <bitpos_1> has a constant value of 0 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <bitpos_2> has a constant value of 0 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <bitpos_3> has a constant value of 0 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <done> has a constant value of 0 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <dout_0> has a constant value of 0 in block <rcp>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <avail> has a constant value of 0 in block <rcp>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <data_0> has a constant value of 1 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <data_1> has a constant value of 1 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <data_2> has a constant value of 1 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <data_3> has a constant value of 1 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <data_4> has a constant value of 1 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <data_5> has a constant value of 1 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <data_6> has a constant value of 1 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <data_7> has a constant value of 1 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <data_8> has a constant value of 0 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <tx> has a constant value of 1 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_0> has a constant value of 0 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_1> has a constant value of 0 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_2> has a constant value of 0 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_3> has a constant value of 0 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_4> has a constant value of 0 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_5> has a constant value of 0 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_6> has a constant value of 0 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_7> has a constant value of 0 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_8> has a constant value of 0 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_9> has a constant value of 0 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_10> has a constant value of 0 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_11> has a constant value of 0 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_12> has a constant value of 0 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_13> has a constant value of 0 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_14> has a constant value of 0 in block <trs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <dout_1> of sequential type is unconnected in block <rcp>.
+WARNING:Xst:2677 - Node <dout_2> of sequential type is unconnected in block <rcp>.
+WARNING:Xst:2677 - Node <dout_3> of sequential type is unconnected in block <rcp>.
+WARNING:Xst:2677 - Node <dout_4> of sequential type is unconnected in block <rcp>.
+WARNING:Xst:2677 - Node <dout_5> of sequential type is unconnected in block <rcp>.
+WARNING:Xst:2677 - Node <dout_6> of sequential type is unconnected in block <rcp>.
+WARNING:Xst:2677 - Node <dout_7> of sequential type is unconnected in block <rcp>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <din_uart_0> is unconnected in block <peripheral_bt>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <din_uart_1> is unconnected in block <peripheral_bt>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <din_uart_2> is unconnected in block <peripheral_bt>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <din_uart_3> is unconnected in block <peripheral_bt>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <din_uart_4> is unconnected in block <peripheral_bt>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <din_uart_5> is unconnected in block <peripheral_bt>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <din_uart_6> is unconnected in block <peripheral_bt>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <din_uart_7> is unconnected in block <peripheral_bt>.
+
+Synthesizing (advanced) Unit <Divisor_Frecuencia>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <Divisor_Frecuencia> synthesized (advanced).
+
+Synthesizing (advanced) Unit <recepcion>.
+The following registers are absorbed into counter <bitpos>: 1 register on signal <bitpos>.
+Unit <recepcion> synthesized (advanced).
+
+Synthesizing (advanced) Unit <transmision>.
+The following registers are absorbed into counter <bitpos>: 1 register on signal <bitpos>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <transmision> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 4
+ 32-bit up counter                                     : 2
+ 4-bit up counter                                      : 2
+# Registers                                            : 46
+ Flip-Flops                                            : 46
+# Comparators                                          : 2
+ 4-bit comparator greater                              : 2
+# Multiplexers                                         : 5
+ 1-bit 2-to-1 multiplexer                              : 2
+ 1-bit 9-to-1 multiplexer                              : 1
+ 6-bit 2-to-1 multiplexer                              : 1
+ 6-bit 7-to-1 multiplexer                              : 1
+# FSMs                                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1426 - The value init of the FF/Latch data_8 hinder the constant cleaning in the block transmision.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1293 - FF/Latch <data_8> has a constant value of 0 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <tx> has a constant value of 1 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <done> has a constant value of 0 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_0> has a constant value of 1 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_1> has a constant value of 1 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_2> has a constant value of 1 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_3> has a constant value of 1 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_4> has a constant value of 1 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_5> has a constant value of 1 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_6> has a constant value of 1 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_7> has a constant value of 1 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <dout_0> has a constant value of 0 in block <recepcion>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dout_1> has a constant value of 0 in block <recepcion>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dout_2> has a constant value of 0 in block <recepcion>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dout_3> has a constant value of 0 in block <recepcion>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dout_4> has a constant value of 0 in block <recepcion>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dout_5> has a constant value of 0 in block <recepcion>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dout_6> has a constant value of 0 in block <recepcion>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dout_7> has a constant value of 0 in block <recepcion>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <avail> has a constant value of 0 in block <recepcion>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <bt/div/clk_div> of sequential type is unconnected in block <peripheral_bt>.
+WARNING:Xst:1710 - FF/Latch <d_out_1> (without init value) has a constant value of 0 in block <peripheral_bt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <d_out_2> (without init value) has a constant value of 0 in block <peripheral_bt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <d_out_3> (without init value) has a constant value of 0 in block <peripheral_bt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <d_out_4> (without init value) has a constant value of 0 in block <peripheral_bt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <d_out_5> (without init value) has a constant value of 0 in block <peripheral_bt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <d_out_6> (without init value) has a constant value of 0 in block <peripheral_bt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <d_out_7> (without init value) has a constant value of 0 in block <peripheral_bt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <d_out_8> (without init value) has a constant value of 0 in block <peripheral_bt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <d_out_9> (without init value) has a constant value of 0 in block <peripheral_bt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <d_out_10> (without init value) has a constant value of 0 in block <peripheral_bt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <d_out_11> (without init value) has a constant value of 0 in block <peripheral_bt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <d_out_12> (without init value) has a constant value of 0 in block <peripheral_bt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <d_out_13> (without init value) has a constant value of 0 in block <peripheral_bt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <d_out_14> (without init value) has a constant value of 0 in block <peripheral_bt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <d_out_15> (without init value) has a constant value of 0 in block <peripheral_bt>. This FF/Latch will be trimmed during the optimization process.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <bt/trs/FSM_1> on signal <state[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
+ 11    | 11
+-------------------
+WARNING:Xst:1293 - FF/Latch <counter_14> has a constant value of 0 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_15> has a constant value of 0 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_16> has a constant value of 0 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_17> has a constant value of 0 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_18> has a constant value of 0 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_19> has a constant value of 0 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_20> has a constant value of 0 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_21> has a constant value of 0 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_22> has a constant value of 0 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_23> has a constant value of 0 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_24> has a constant value of 0 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_25> has a constant value of 0 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_26> has a constant value of 0 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_27> has a constant value of 0 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_28> has a constant value of 0 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_29> has a constant value of 0 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_30> has a constant value of 0 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_31> has a constant value of 0 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <state_FSM_FFd2> has a constant value of 0 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <bitpos_0> has a constant value of 0 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <bitpos_1> has a constant value of 0 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <bitpos_2> has a constant value of 0 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <bitpos_3> has a constant value of 0 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <state_FSM_FFd1> has a constant value of 0 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_0> has a constant value of 0 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_1> has a constant value of 0 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_2> has a constant value of 0 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_3> has a constant value of 0 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_4> has a constant value of 0 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_5> has a constant value of 0 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_6> has a constant value of 0 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_7> has a constant value of 0 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_8> has a constant value of 0 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_9> has a constant value of 0 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_10> has a constant value of 0 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_11> has a constant value of 0 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_12> has a constant value of 0 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter_13> has a constant value of 0 in block <transmision>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <d_out_0> (without init value) has a constant value of 0 in block <peripheral_bt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <din_uart_0> of sequential type is unconnected in block <peripheral_bt>.
+WARNING:Xst:2677 - Node <din_uart_1> of sequential type is unconnected in block <peripheral_bt>.
+WARNING:Xst:2677 - Node <din_uart_2> of sequential type is unconnected in block <peripheral_bt>.
+WARNING:Xst:2677 - Node <din_uart_3> of sequential type is unconnected in block <peripheral_bt>.
+WARNING:Xst:2677 - Node <din_uart_4> of sequential type is unconnected in block <peripheral_bt>.
+WARNING:Xst:2677 - Node <din_uart_5> of sequential type is unconnected in block <peripheral_bt>.
+WARNING:Xst:2677 - Node <din_uart_6> of sequential type is unconnected in block <peripheral_bt>.
+WARNING:Xst:2677 - Node <din_uart_7> of sequential type is unconnected in block <peripheral_bt>.
+WARNING:Xst:2677 - Node <uart_enable> of sequential type is unconnected in block <peripheral_bt>.
+
+Optimizing unit <peripheral_bt> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block peripheral_bt, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : project.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 2
+#      GND                         : 1
+#      VCC                         : 1
+# IO Buffers                       : 18
+#      OBUF                        : 18
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-1 
+
+
+Slice Logic Utilization: 
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:      0
+   Number with an unused Flip Flop:       0  out of      0         
+   Number with an unused LUT:             0  out of      0         
+   Number of fully used LUT-FF pairs:     0  out of      0         
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                          43
+ Number of bonded IOBs:                  18  out of    210     8%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 7.37 secs
+ 
+--> 
+
+
+Total memory usage is 503720 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  159 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

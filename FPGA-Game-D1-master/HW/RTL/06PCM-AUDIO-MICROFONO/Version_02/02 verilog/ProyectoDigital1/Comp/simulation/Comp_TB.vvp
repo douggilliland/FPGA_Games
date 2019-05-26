@@ -1,0 +1,80 @@
+#! /usr/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 9;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x13d10a0 .scope module, "Comp_TB" "Comp_TB" 2 2;
+ .timescale -9 -9;
+v0x1407720_0 .var "count", 5 0;
+v0x14077c0_0 .net "count18", 0 0, L_0x1407ca0; 1 drivers
+v0x1407870_0 .net "count32", 0 0, L_0x1408240; 1 drivers
+S_0x13f40d0 .scope module, "DUT" "Comp" 2 8, 3 1, S_0x13d10a0;
+ .timescale 0 0;
+v0x13f41c0_0 .net *"_s0", 6 0, L_0x1407920; 1 drivers
+v0x1406c70_0 .net *"_s10", 0 0, C4<0>; 1 drivers
+v0x1406d10_0 .net *"_s14", 7 0, L_0x1407e80; 1 drivers
+v0x1406db0_0 .net *"_s17", 1 0, C4<00>; 1 drivers
+v0x1406e60_0 .net *"_s18", 7 0, C4<00100000>; 1 drivers
+v0x1406f00_0 .net *"_s20", 0 0, L_0x1408030; 1 drivers
+v0x1406fe0_0 .net *"_s22", 0 0, C4<1>; 1 drivers
+v0x1407080_0 .net *"_s24", 0 0, C4<0>; 1 drivers
+v0x1407170_0 .net *"_s3", 0 0, C4<0>; 1 drivers
+v0x1407210_0 .net *"_s4", 6 0, C4<0010010>; 1 drivers
+v0x1407310_0 .net *"_s6", 0 0, L_0x1407a80; 1 drivers
+v0x14073b0_0 .net *"_s8", 0 0, C4<1>; 1 drivers
+v0x14074c0_0 .net "count", 5 0, v0x1407720_0; 1 drivers
+v0x1407560_0 .alias "count18", 0 0, v0x14077c0_0;
+v0x1407680_0 .alias "count32", 0 0, v0x1407870_0;
+L_0x1407920 .concat [ 6 1 0 0], v0x1407720_0, C4<0>;
+L_0x1407a80 .cmp/eq 7, L_0x1407920, C4<0010010>;
+L_0x1407ca0 .functor MUXZ 1, C4<0>, C4<1>, L_0x1407a80, C4<>;
+L_0x1407e80 .concat [ 6 2 0 0], v0x1407720_0, C4<00>;
+L_0x1408030 .cmp/eq 8, L_0x1407e80, C4<00100000>;
+L_0x1408240 .functor MUXZ 1, C4<0>, C4<1>, L_0x1408030, C4<>;
+S_0x13f3fe0 .scope begin, "TEST_CASE" "TEST_CASE" 2 15, 2 15, S_0x13d10a0;
+ .timescale -9 -9;
+    .scope S_0x13d10a0;
+T_0 ;
+    %fork t_1, S_0x13f3fe0;
+    %jmp t_0;
+    .scope S_0x13f3fe0;
+t_1 ;
+    %vpi_call 2 16 "$dumpfile", "Comp_TB.vcd";
+    %vpi_call 2 17 "$dumpvars", 3'sb111, S_0x13f40d0;
+    %delay 500, 0;
+    %vpi_call 2 18 "$finish";
+    %end;
+    .scope S_0x13d10a0;
+t_0 %join;
+    %end;
+    .thread T_0;
+    .scope S_0x13d10a0;
+T_1 ;
+    %set/v v0x1407720_0, 0, 6;
+    %delay 5, 0;
+    %movi 8, 17, 6;
+    %set/v v0x1407720_0, 8, 6;
+    %delay 5, 0;
+    %movi 8, 18, 6;
+    %set/v v0x1407720_0, 8, 6;
+    %delay 5, 0;
+    %movi 8, 19, 6;
+    %set/v v0x1407720_0, 8, 6;
+    %delay 5, 0;
+    %movi 8, 31, 6;
+    %set/v v0x1407720_0, 8, 6;
+    %delay 5, 0;
+    %movi 8, 32, 6;
+    %set/v v0x1407720_0, 8, 6;
+    %delay 5, 0;
+    %movi 8, 33, 6;
+    %set/v v0x1407720_0, 8, 6;
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "Comp_TB.v";
+    "Comp.v";

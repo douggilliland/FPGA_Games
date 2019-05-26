@@ -1,0 +1,27 @@
+//! **************************************************************************
+// Written by: Map P.68d on Thu Nov 30 14:17:28 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "DATA<0>" LOCATE = SITE "T8" LEVEL 1;
+COMP "DATA<1>" LOCATE = SITE "V9" LEVEL 1;
+COMP "DATA<2>" LOCATE = SITE "R8" LEVEL 1;
+COMP "clk" LOCATE = SITE "E3" LEVEL 1;
+COMP "DATA<3>" LOCATE = SITE "T6" LEVEL 1;
+COMP "DATA<4>" LOCATE = SITE "T5" LEVEL 1;
+COMP "DATA<5>" LOCATE = SITE "T4" LEVEL 1;
+COMP "DATA<6>" LOCATE = SITE "U7" LEVEL 1;
+COMP "DATA<7>" LOCATE = SITE "U6" LEVEL 1;
+COMP "DONE" LOCATE = SITE "U1" LEVEL 1;
+COMP "Rx" LOCATE = SITE "K2" LEVEL 1;
+COMP "CLKOUTt" LOCATE = SITE "E7" LEVEL 1;
+COMP "Rx_error" LOCATE = SITE "P2" LEVEL 1;
+TIMEGRP sys_clk_pin = BEL "dfuno/count_0" BEL "dfuno/count_1" BEL
+        "dfuno/count_2" BEL "dfuno/count_3" BEL "dfuno/count_4" BEL
+        "dfuno/count_5" BEL "dfuno/count_6" BEL "dfuno/count_7" BEL
+        "dfuno/count_8" BEL "dfuno/count_9" BEL "dfuno/count_10" BEL
+        "dfuno/count_11" BEL "dfuno/count_12" BEL "dfuno/CLKOUT" BEL
+        "clk_BUFGP/BUFG" BEL "dfuno/CLKOUT_1";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+SCHEMATIC END;
+

@@ -1,0 +1,7 @@
+INFILE=/home/daniel/Documentos/E_Digital/Proyecto/Ultrasonido/Código/ModulosBasicos/PruebasFPGA/genpulsosprueba/Atlys/build/project_r.ncd
+OUTFILE=/home/daniel/Documentos/E_Digital/Proyecto/Ultrasonido/Código/ModulosBasicos/PruebasFPGA/genpulsosprueba/Atlys/build/project_r.bit
+FAMILY=Spartan6
+PART=xc6slx45-3csg324
+WORKINGDIR=/home/daniel/Documentos/E_Digital/Proyecto/Ultrasonido/Código/ModulosBasicos/PruebasFPGA/genpulsosprueba/Atlys/build
+LICENSE=WebPack
+USER_INFO=211315578_0_0_050

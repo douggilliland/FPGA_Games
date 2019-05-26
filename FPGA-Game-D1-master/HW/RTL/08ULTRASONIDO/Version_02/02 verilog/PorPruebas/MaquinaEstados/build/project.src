@@ -1,0 +1,3 @@
+verilog work ../maquinadeestados.v
+verilog work ../meultrasonido.v
+verilog work ../divisorfrecme.v

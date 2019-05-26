@@ -1,0 +1,978 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "project.src"
+Input Format                       : mixed
+
+---- Target Parameters
+Target Device                      : XC7A100T-1CSG324
+Output File Name                   : "project.ngc"
+Output Format                      : NGC
+
+---- Source Options
+Top Module Name                    : microfono
+
+---- General Options
+Optimization Goal                  : Area
+Optimization Effort                : 1
+RTL Output                         : yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4/microfono.v" into library work
+Parsing module <microfono>.
+Analyzing Verilog file "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4/div_freq.v" into library work
+Parsing module <div_freq>.
+Analyzing Verilog file "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4/fifo.v" into library work
+Parsing module <fifo>.
+Analyzing Verilog file "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4/pwm.v" into library work
+Parsing module <pwm>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+WARNING:HDLCompiler:1016 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4/microfono.v" Line 30: Port ledres is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4/microfono.v" Line 31: Port ledres is not connected to this instance
+
+Elaborating module <microfono>.
+WARNING:HDLCompiler:1127 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4/microfono.v" Line 23: Assignment to mclk3 ignored, since the identifier is never used
+
+Elaborating module <fifo>.
+WARNING:HDLCompiler:413 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4/fifo.v" Line 47: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4/fifo.v" Line 69: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:91 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4/fifo.v" Line 122: Signal <wr_reg> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4/fifo.v" Line 122: Result of 21-bit expression is truncated to fit in 20-bit target.
+WARNING:HDLCompiler:91 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4/fifo.v" Line 123: Signal <rd_reg> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4/fifo.v" Line 123: Result of 21-bit expression is truncated to fit in 20-bit target.
+WARNING:HDLCompiler:91 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4/fifo.v" Line 124: Signal <wr_reg> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4/fifo.v" Line 125: Signal <rd_reg> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4/fifo.v" Line 126: Signal <full_reg> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4/fifo.v" Line 127: Signal <empty_reg> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4/fifo.v" Line 129: Signal <db_wr> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4/fifo.v" Line 134: Signal <empty> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4/fifo.v" Line 138: Signal <wr_reg> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4/fifo.v" Line 145: Signal <full> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+
+Elaborating module <pwm>.
+WARNING:HDLCompiler:413 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4/pwm.v" Line 32: Result of 9-bit expression is truncated to fit in 8-bit target.
+
+Elaborating module <div_freq>.
+WARNING:HDLCompiler:413 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4/microfono.v" Line 56: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4/microfono.v" Line 57: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:552 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4/microfono.v" Line 31: Input port micData is not connected on this instance
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <microfono>.
+    Related source file is "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4/microfono.v".
+WARNING:Xst:2898 - Port 'micData', unconnected in block instance 'pw', is tied to GND.
+INFO:Xst:3210 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4/microfono.v" line 30: Output port <ledres> of the instance <fi> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4/microfono.v" line 31: Output port <ledres> of the instance <pw> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4/microfono.v" line 31: Output port <mclk> of the instance <pw> is unconnected or connected to loadless signal.
+WARNING:Xst:2935 - Signal 'micLRSel', unconnected in block 'microfono', is tied to its initial value (0).
+    Found 8-bit register for signal <count>.
+    Found 1-bit register for signal <done>.
+    Found 8-bit register for signal <sregt1>.
+    Found 8-bit register for signal <sregt>.
+    Found 8-bit adder for signal <count[7]_GND_1_o_add_3_OUT> created at line 57.
+    Found 8-bit comparator greater for signal <count[7]_INV_44_o> created at line 54
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  25 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <microfono> synthesized.
+
+Synthesizing Unit <fifo>.
+    Related source file is "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4/fifo.v".
+        abits = 20
+        dbits = 8
+    Found 1048576x8-bit dual-port RAM <Mram_regarray> for signal <regarray>.
+    Found 1-bit register for signal <empty_reg>.
+    Found 20-bit register for signal <wr_reg>.
+    Found 20-bit register for signal <rd_reg>.
+    Found 1-bit register for signal <full_reg>.
+    Found 1-bit register for signal <ledres>.
+    Found 2-bit register for signal <count>.
+    Found 1-bit register for signal <dffr1>.
+    Found 2-bit register for signal <count1>.
+    Found 8-bit register for signal <out>.
+    Found 1-bit register for signal <dffw1>.
+    Found 2-bit adder for signal <count[1]_GND_2_o_add_2_OUT> created at line 47.
+    Found 2-bit adder for signal <count1[1]_GND_2_o_add_8_OUT> created at line 69.
+    Found 20-bit adder for signal <wr_succ> created at line 122.
+    Found 20-bit adder for signal <rd_succ> created at line 123.
+    Found 20-bit comparator not equal for signal <rd_reg[19]_wr_reg[19]_equal_23_o> created at line 138
+    Summary:
+	inferred   1 RAM(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred  57 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <fifo> synthesized.
+
+Synthesizing Unit <pwm>.
+    Related source file is "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4/pwm.v".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <micData> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <ledres> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <mclk> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:2935 - Signal 'ampSD', unconnected in block 'pwm', is tied to its initial value (1).
+    Found 1-bit register for signal <ampPWM>.
+    Found 8-bit register for signal <count>.
+    Found 8-bit adder for signal <count[7]_GND_4_o_add_3_OUT> created at line 32.
+    Found 1-bit 8-to-1 multiplexer for signal <count[2]_dout[7]_Mux_2_o> created at line 31.
+    Found 8-bit comparator greater for signal <n0000> created at line 29
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   9 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <pwm> synthesized.
+
+Synthesizing Unit <div_freq>.
+    Related source file is "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba4/div_freq.v".
+        fi = 50000000
+        fs = 3125000
+    Found 32-bit register for signal <count>.
+    Found 1-bit register for signal <clkout>.
+    Found 1-bit register for signal <led>.
+    Found 32-bit subtractor for signal <count[31]_GND_5_o_sub_3_OUT> created at line 30.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  34 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <div_freq> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 1048576x8-bit dual-port RAM                           : 1
+# Adders/Subtractors                                   : 7
+ 2-bit adder                                           : 2
+ 20-bit adder                                          : 2
+ 32-bit subtractor                                     : 1
+ 8-bit adder                                           : 2
+# Registers                                            : 19
+ 1-bit register                                        : 9
+ 2-bit register                                        : 2
+ 20-bit register                                       : 2
+ 32-bit register                                       : 1
+ 8-bit register                                        : 5
+# Comparators                                          : 3
+ 20-bit comparator not equal                           : 1
+ 8-bit comparator greater                              : 2
+# Multiplexers                                         : 2
+ 1-bit 8-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <count_0> (without init value) has a constant value of 0 in block <pw>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_1> (without init value) has a constant value of 0 in block <pw>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_2> (without init value) has a constant value of 0 in block <pw>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_3> (without init value) has a constant value of 0 in block <pw>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_4> (without init value) has a constant value of 0 in block <pw>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_5> (without init value) has a constant value of 0 in block <pw>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_6> (without init value) has a constant value of 0 in block <pw>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_7> (without init value) has a constant value of 0 in block <pw>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ampPWM> (without init value) has a constant value of 0 in block <pw>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <out_0> is unconnected in block <fi>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <out_1> is unconnected in block <fi>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <out_2> is unconnected in block <fi>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <out_3> is unconnected in block <fi>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <out_4> is unconnected in block <fi>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <out_5> is unconnected in block <fi>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <out_6> is unconnected in block <fi>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <sregt1_0> is unconnected in block <microfono>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <sregt1_1> is unconnected in block <microfono>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <sregt1_2> is unconnected in block <microfono>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <sregt1_3> is unconnected in block <microfono>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <sregt1_4> is unconnected in block <microfono>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <sregt1_5> is unconnected in block <microfono>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <sregt1_6> is unconnected in block <microfono>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <sregt_0> is unconnected in block <microfono>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <sregt_1> is unconnected in block <microfono>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <sregt_2> is unconnected in block <microfono>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <sregt_3> is unconnected in block <microfono>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <sregt_4> is unconnected in block <microfono>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <sregt_5> is unconnected in block <microfono>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <sregt_6> is unconnected in block <microfono>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <sregt_7> is unconnected in block <microfono>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <sregt1_7> is unconnected in block <microfono>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <out_7> is unconnected in block <fi>.
+
+Synthesizing (advanced) Unit <div_freq>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <div_freq> synthesized (advanced).
+
+Synthesizing (advanced) Unit <fifo>.
+The following registers are absorbed into counter <wr_reg>: 1 register on signal <wr_reg>.
+The following registers are absorbed into counter <rd_reg>: 1 register on signal <rd_reg>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+The following registers are absorbed into counter <count1>: 1 register on signal <count1>.
+INFO:Xst:3226 - The RAM <Mram_regarray> will be implemented as a BLOCK RAM, absorbing the following register(s): <out>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1048576-word x 8-bit                |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clock>         | rise     |
+    |     weA            | connected to signal <wr_en>         | high     |
+    |     addrA          | connected to signal <wr_reg>        |          |
+    |     diA            | connected to signal <din>           |          |
+    -----------------------------------------------------------------------
+    | optimization       | area                                |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 1048576-word x 8-bit                |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clock>         | rise     |
+    |     enB            | connected to signal <dffr1>         | high     |
+    |     addrB          | connected to signal <rd_reg>        |          |
+    |     doB            | connected to signal <out>           |          |
+    -----------------------------------------------------------------------
+    | optimization       | area                                |          |
+    -----------------------------------------------------------------------
+Unit <fifo> synthesized (advanced).
+
+Synthesizing (advanced) Unit <microfono>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <microfono> synthesized (advanced).
+
+Synthesizing (advanced) Unit <pwm>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <pwm> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 1048576x8-bit dual-port block RAM                     : 1
+# Adders/Subtractors                                   : 2
+ 20-bit adder                                          : 2
+# Counters                                             : 7
+ 2-bit up counter                                      : 2
+ 20-bit up counter                                     : 2
+ 32-bit down counter                                   : 1
+ 8-bit up counter                                      : 2
+# Registers                                            : 25
+ Flip-Flops                                            : 25
+# Comparators                                          : 3
+ 20-bit comparator not equal                           : 1
+ 8-bit comparator greater                              : 2
+# Multiplexers                                         : 1
+ 1-bit 8-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <ampPWM> (without init value) has a constant value of 0 in block <pwm>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <microfono> ...
+
+Optimizing unit <fifo> ...
+WARNING:Xst:2677 - Node <sregt_0> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <sregt_1> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <sregt_2> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <sregt_3> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <sregt_4> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <sregt_5> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <sregt_6> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <sregt_7> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <sregt1_0> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <sregt1_1> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <sregt1_2> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <sregt1_3> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <sregt1_4> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <sregt1_5> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <sregt1_6> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <sregt1_7> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/inst_LPM_FF_0> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/inst_LPM_FF_1> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/inst_LPM_FF_2> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/inst_LPM_FF_3> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray1281> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray128> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray1271> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray127> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray1261> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray126> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray1251> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray125> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray1241> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray124> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray1231> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray123> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray1211> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray121> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray1201> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray120> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray1221> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray122> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray1191> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray119> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray1181> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray118> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray1171> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray117> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray1161> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray116> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray1151> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray115> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray1141> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray114> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray1121> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray112> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray1111> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray111> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray1131> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray113> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray1101> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray110> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray1091> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray109> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray1071> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray107> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray1061> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray106> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray1081> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray108> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray1051> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray105> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray1041> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray104> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray1021> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray102> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray1011> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray101> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray1031> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray103> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray1001> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray100> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray991> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray99> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray981> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray98> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray971> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray97> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray961> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray96> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray951> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray95> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray931> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray93> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray921> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray92> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray941> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray94> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray911> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray91> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray901> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray90> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray891> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray89> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray881> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray88> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray871> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray87> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray861> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray86> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray841> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray84> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray831> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray83> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray851> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray85> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray821> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray82> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray811> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray81> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray801> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray80> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray791> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray79> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray781> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray78> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray771> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray77> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray751> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray75> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray741> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray74> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray761> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray76> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray731> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray73> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray721> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray72> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray701> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray70> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray691> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray69> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray711> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray71> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray681> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray68> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray671> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray67> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray651> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray65> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray641> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray64> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray661> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray66> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray631> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray63> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray621> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray62> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray611> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray61> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray601> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray60> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray591> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray59> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray581> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray58> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray561> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray56> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray551> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray55> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray571> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray57> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray541> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray54> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray531> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray53> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray521> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray52> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray511> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray51> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray501> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray50> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray491> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray49> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray471> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray47> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray461> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray46> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray481> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray48> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray451> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray45> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray441> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray44> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray431> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray43> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray421> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray42> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray411> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray41> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray401> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray40> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray381> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray38> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray371> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray37> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray391> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray39> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray361> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray36> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray351> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray35> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray331> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray33> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray321> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray32> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray341> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray34> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray311> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray31> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray301> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray30> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray281> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray28> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray271> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray27> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray291> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray29> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray261> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray26> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray251> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray25> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray241> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray24> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray231> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray23> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray221> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray22> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray211> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray21> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray191> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray19> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray181> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray18> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray201> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray20> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray171> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray17> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray161> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray16> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray141> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray14> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray131> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray13> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray151> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray15> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray1210> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray12> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray1110> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray11> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray910> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray9> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray810> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray8> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray1010> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray10> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray710> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray7> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray610> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray6> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray510> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray5> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray410> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray4> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray310> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray3> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray210> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray2> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray129> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray1> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/ledres> of sequential type is unconnected in block <microfono>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block microfono, actual ratio is 0.
+FlipFlop df/clkout has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop fi/empty_reg has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop fi/full_reg has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop done has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 95
+ Flip-Flops                                            : 95
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : project.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 401
+#      GND                         : 1
+#      INV                         : 39
+#      LUT1                        : 84
+#      LUT2                        : 8
+#      LUT3                        : 3
+#      LUT4                        : 5
+#      LUT5                        : 3
+#      LUT6                        : 16
+#      MUXCY                       : 121
+#      VCC                         : 1
+#      XORCY                       : 120
+# FlipFlops/Latches                : 95
+#      FD                          : 5
+#      FDCE                        : 42
+#      FDP                         : 2
+#      FDR                         : 33
+#      FDRE                        : 12
+#      FDS                         : 1
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 11
+#      IBUF                        : 3
+#      OBUF                        : 8
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              90  out of  126800     0%  
+ Number of Slice LUTs:                  158  out of  63400     0%  
+    Number used as Logic:               158  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    158
+   Number with an unused Flip Flop:      68  out of    158    43%  
+   Number with an unused LUT:             0  out of    158     0%  
+   Number of fully used LUT-FF pairs:    90  out of    158    56%  
+   Number of unique control sets:        12
+
+IO Utilization: 
+ Number of IOs:                          13
+ Number of bonded IOBs:                  12  out of    210     5%  
+    IOB Flip Flops/Latches:               5
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 35    |
+df/clkout                          | NONE(count_0)          | 10    |
+done_OBUF                          | BUFG                   | 50    |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 4.698ns (Maximum Frequency: 212.879MHz)
+   Minimum input arrival time before clock: 2.160ns
+   Maximum output required time after clock: 0.877ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.194ns (frequency: 238.418MHz)
+  Total number of paths / destination ports: 1618 / 65
+-------------------------------------------------------------------------
+Delay:               4.194ns (Levels of Logic = 3)
+  Source:            df/count_25 (FF)
+  Destination:       df/count_2 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: df/count_25 to df/count_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.478   0.945  df/count_25 (df/count_25)
+     LUT6:I0->O            1   0.124   0.919  df/count[31]_GND_5_o_equal_2_o<31>5 (df/count[31]_GND_5_o_equal_2_o<31>4)
+     LUT6:I1->O            3   0.124   0.435  df/count[31]_GND_5_o_equal_2_o<31>7 (df/count[31]_GND_5_o_equal_2_o)
+     LUT2:I1->O           31   0.124   0.551  df/count[31]_GND_5_o_equal_2_o_01 (df/count[31]_GND_5_o_equal_2_o_0)
+     FDR:R                     0.494          df/count_2
+    ----------------------------------------
+    Total                      4.194ns (1.344ns logic, 2.850ns route)
+                                       (32.0% logic, 68.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'df/clkout'
+  Clock period: 2.474ns (frequency: 404.204MHz)
+  Total number of paths / destination ports: 88 / 18
+-------------------------------------------------------------------------
+Delay:               2.474ns (Levels of Logic = 1)
+  Source:            count_7 (FF)
+  Destination:       count_0 (FF)
+  Source Clock:      df/clkout rising
+  Destination Clock: df/clkout rising
+
+  Data Path: count_7 to count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             3   0.478   0.933  count_7 (count_7)
+     LUT6:I1->O            8   0.124   0.445  _n00331 (_n0033)
+     FDRE:R                    0.494          count_0
+    ----------------------------------------
+    Total                      2.474ns (1.096ns logic, 1.378ns route)
+                                       (44.3% logic, 55.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'done_OBUF'
+  Clock period: 4.698ns (frequency: 212.879MHz)
+  Total number of paths / destination ports: 1460 / 96
+-------------------------------------------------------------------------
+Delay:               4.698ns (Levels of Logic = 23)
+  Source:            fi/wr_reg_0 (FF)
+  Destination:       fi/full_reg (FF)
+  Source Clock:      done_OBUF rising
+  Destination Clock: done_OBUF rising
+
+  Data Path: fi/wr_reg_0 to fi/full_reg
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.478   0.413  fi/wr_reg_0 (fi/wr_reg_0)
+     INV:I->O              1   0.146   0.000  fi/Madd_wr_succ_lut<0>_INV_0 (fi/Madd_wr_succ_lut<0>)
+     MUXCY:S->O            1   0.472   0.000  fi/Madd_wr_succ_cy<0> (fi/Madd_wr_succ_cy<0>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<1> (fi/Madd_wr_succ_cy<1>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<2> (fi/Madd_wr_succ_cy<2>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<3> (fi/Madd_wr_succ_cy<3>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<4> (fi/Madd_wr_succ_cy<4>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<5> (fi/Madd_wr_succ_cy<5>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<6> (fi/Madd_wr_succ_cy<6>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<7> (fi/Madd_wr_succ_cy<7>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<8> (fi/Madd_wr_succ_cy<8>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<9> (fi/Madd_wr_succ_cy<9>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<10> (fi/Madd_wr_succ_cy<10>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<11> (fi/Madd_wr_succ_cy<11>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<12> (fi/Madd_wr_succ_cy<12>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<13> (fi/Madd_wr_succ_cy<13>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<14> (fi/Madd_wr_succ_cy<14>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<15> (fi/Madd_wr_succ_cy<15>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<16> (fi/Madd_wr_succ_cy<16>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<17> (fi/Madd_wr_succ_cy<17>)
+     MUXCY:CI->O           0   0.029   0.000  fi/Madd_wr_succ_cy<18> (fi/Madd_wr_succ_cy<18>)
+     XORCY:CI->O           1   0.510   0.939  fi/Madd_wr_succ_xor<19> (fi/wr_succ<19>)
+     LUT6:I0->O            1   0.124   0.421  fi/_n0147_inv2 (fi/_n0147_inv2)
+     LUT6:I5->O            2   0.124   0.405  fi/_n0147_inv6 (fi/_n0147_inv)
+     FDCE:CE                   0.139          fi/full_reg
+    ----------------------------------------
+    Total                      4.698ns (2.520ns logic, 2.178ns route)
+                                       (53.6% logic, 46.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 35 / 35
+-------------------------------------------------------------------------
+Offset:              1.863ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       df/count_2 (FF)
+  Destination Clock: clk rising
+
+  Data Path: reset to df/count_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            51   0.001   0.693  reset_IBUF (reset_IBUF)
+     LUT2:I0->O           31   0.124   0.551  df/count[31]_GND_5_o_equal_2_o_01 (df/count[31]_GND_5_o_equal_2_o_0)
+     FDR:R                     0.494          df/count_2
+    ----------------------------------------
+    Total                      1.863ns (0.619ns logic, 1.244ns route)
+                                       (33.2% logic, 66.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'df/clkout'
+  Total number of paths / destination ports: 18 / 18
+-------------------------------------------------------------------------
+Offset:              2.160ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       count_0 (FF)
+  Destination Clock: df/clkout rising
+
+  Data Path: reset to count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            51   0.001   1.096  reset_IBUF (reset_IBUF)
+     LUT6:I0->O            8   0.124   0.445  _n00331 (_n0033)
+     FDRE:R                    0.494          count_0
+    ----------------------------------------
+    Total                      2.160ns (0.619ns logic, 1.541ns route)
+                                       (28.7% logic, 71.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'done_OBUF'
+  Total number of paths / destination ports: 64 / 54
+-------------------------------------------------------------------------
+Offset:              1.828ns (Levels of Logic = 2)
+  Source:            wr (PAD)
+  Destination:       fi/count1_1 (FF)
+  Destination Clock: done_OBUF rising
+
+  Data Path: wr to fi/count1_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   0.001   0.796  wr_IBUF (wr_IBUF)
+     LUT4:I0->O            3   0.124   0.413  fi/_n00951 (fi/dffr1_rstpot)
+     FDRE:R                    0.494          fi/count1_0
+    ----------------------------------------
+    Total                      1.828ns (0.619ns logic, 1.209ns route)
+                                       (33.9% logic, 66.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              0.877ns (Levels of Logic = 1)
+  Source:            df/led (FF)
+  Destination:       ledres (PAD)
+  Source Clock:      clk rising
+
+  Data Path: df/led to ledres
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.478   0.399  df/led (df/led)
+     OBUF:I->O                 0.000          ledres_OBUF (ledres)
+    ----------------------------------------
+    Total                      0.877ns (0.478ns logic, 0.399ns route)
+                                       (54.5% logic, 45.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'done_OBUF'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              0.877ns (Levels of Logic = 1)
+  Source:            fi/empty_reg_1 (FF)
+  Destination:       empty (PAD)
+  Source Clock:      done_OBUF rising
+
+  Data Path: fi/empty_reg_1 to empty
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              1   0.478   0.399  fi/empty_reg_1 (fi/empty_reg_1)
+     OBUF:I->O                 0.000          empty_OBUF (empty)
+    ----------------------------------------
+    Total                      0.877ns (0.478ns logic, 0.399ns route)
+                                       (54.5% logic, 45.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'df/clkout'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.877ns (Levels of Logic = 1)
+  Source:            done_1 (FF)
+  Destination:       done (PAD)
+  Source Clock:      df/clkout rising
+
+  Data Path: done_1 to done
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.478   0.399  done_1 (done_1)
+     OBUF:I->O                 0.000          done_OBUF (done)
+    ----------------------------------------
+    Total                      0.877ns (0.478ns logic, 0.399ns route)
+                                       (54.5% logic, 45.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    4.194|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock df/clkout
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+df/clkout      |    2.474|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock done_OBUF
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+done_OBUF      |    4.698|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 166.00 secs
+Total CPU time to Xst completion: 156.61 secs
+ 
+--> 
+
+
+Total memory usage is 999844 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  339 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+

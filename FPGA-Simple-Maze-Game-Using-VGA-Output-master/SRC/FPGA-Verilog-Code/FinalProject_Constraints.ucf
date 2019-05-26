@@ -1,0 +1,70 @@
+
+NET "uclk"         LOC = "V10" | IOSTANDARD = "LVCMOS33";
+
+NET "hsync"         LOC = "N6" | IOSTANDARD = "LVCMOS33";
+NET "vsync"         LOC = "P7" | IOSTANDARD = "LVCMOS33";
+NET "RED[0]"         LOC = "U7" | IOSTANDARD = "LVCMOS33";
+NET "RED[1]"         LOC = "V7" | IOSTANDARD = "LVCMOS33";
+NET "RED[2]"         LOC = "N7" | IOSTANDARD = "LVCMOS33";
+NET "GREEN[0]"         LOC = "P8" | IOSTANDARD = "LVCMOS33";
+NET "GREEN[1]"         LOC = "T6" | IOSTANDARD = "LVCMOS33";
+NET "GREEN[2]"         LOC = "V6" | IOSTANDARD = "LVCMOS33";
+NET "BLUE[0]"         LOC = "R7" | IOSTANDARD = "LVCMOS33";
+NET "BLUE[1]"         LOC = "T7" | IOSTANDARD = "LVCMOS33";
+
+
+
+## Buttons
+NET "btn[0]"         LOC = "B8"  | IOSTANDARD = "LVCMOS33";
+NET "btn[1]"         LOC = "A8"  | IOSTANDARD = "LVCMOS33";
+NET "btn[2]"         LOC = "C4"  | IOSTANDARD = "LVCMOS33";
+NET "btn[3]"         LOC = "C9"  | IOSTANDARD = "LVCMOS33";
+NET "btn[4]"         LOC = "D9"  | IOSTANDARD = "LVCMOS33";
+
+
+
+
+
+## Leds
+#NET "Led[0]"         LOC = "U16" | IOSTANDARD = "LVCMOS33";
+#NET "Led[1]"         LOC = "V16" | IOSTANDARD = "LVCMOS33";
+#NET "Led[2]"         LOC = "U15" | IOSTANDARD = "LVCMOS33";
+#NET "Led[3]"         LOC = "V15" | IOSTANDARD = "LVCMOS33";
+#NET "Led[4]"         LOC = "M11" | IOSTANDARD = "LVCMOS33";
+#NET "Led[5]"         LOC = "N11" | IOSTANDARD = "LVCMOS33";
+#NET "Led[6]"         LOC = "R11" | IOSTANDARD = "LVCMOS33";
+#NET "Led[7]"         LOC = "T11" | IOSTANDARD = "LVCMOS33";
+
+
+
+
+
+## Switches
+#NET "sw[0]"          LOC = "T10" | IOSTANDARD = "LVCMOS33";
+#NET "sw[1]"          LOC = "T9"  | IOSTANDARD = "LVCMOS33";
+#NET "sw[2]"          LOC = "V9"  | IOSTANDARD = "LVCMOS33";
+#NET "sw[3]"          LOC = "M8"  | IOSTANDARD = "LVCMOS33";
+#NET "sw[4]"          LOC = "N8"  | IOSTANDARD = "LVCMOS33";
+#NET "sw[5]"          LOC = "U8"  | IOSTANDARD = "LVCMOS33";
+#NET "sw[6]"          LOC = "V8"  | IOSTANDARD = "LVCMOS33";
+#NET "sw[7]"          LOC = "T5"  | IOSTANDARD = "LVCMOS33";
+
+
+
+
+
+
+#NET "A"    LOC = "T17" | IOSTANDARD = "LVCMOS33";
+#NET "B"    LOC = "T18" | IOSTANDARD = "LVCMOS33";
+#NET "C"    LOC = "U17" | IOSTANDARD = "LVCMOS33";
+#NET "D"    LOC = "U18" | IOSTANDARD = "LVCMOS33";
+#NET "E"    LOC = "M14" | IOSTANDARD = "LVCMOS33";
+#NET "F"    LOC = "N14" | IOSTANDARD = "LVCMOS33";
+#NET "G"    LOC = "L14" | IOSTANDARD = "LVCMOS33";
+#NET "DecimalPoint"    LOC = "M13" | IOSTANDARD = "LVCMOS33";
+
+
+#NET "AN[0]"    LOC = "N16" | IOSTANDARD = "LVCMOS33";
+#NET "AN[1]"    LOC = "N15" | IOSTANDARD = "LVCMOS33";
+#NET "AN[2]"    LOC = "P18" | IOSTANDARD = "LVCMOS33";
+#NET "AN[3]"    LOC = "P17" | IOSTANDARD = "LVCMOS33";

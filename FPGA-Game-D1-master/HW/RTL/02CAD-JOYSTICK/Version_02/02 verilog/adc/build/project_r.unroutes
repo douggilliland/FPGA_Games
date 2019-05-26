@@ -1,0 +1,44 @@
+Release 14.7 - par P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Fri Dec  1 11:56:46 2017
+
+All signals are completely routed.
+
+WARNING:ParHelpers:361 - There are 32 loadless signals in this design. This design will cause Bitgen to issue DRC
+   warnings.
+
+   fif/Mram_array_reg10_RAMD_O
+   fif/Mram_array_reg11_RAMD_O
+   fif/Mram_array_reg12_RAMD_O
+   fif/Mram_array_reg13_RAMD_O
+   fif/Mram_array_reg14_RAMD_O
+   fif/Mram_array_reg15_RAMD_O
+   fif/Mram_array_reg16_RAMD_O
+   fif/Mram_array_reg17_RAMD_O
+   fif/Mram_array_reg18_RAMD_O
+   fif/Mram_array_reg19_RAMD_O
+   fif/Mram_array_reg1_RAMD_O
+   fif/Mram_array_reg20_RAMD_O
+   fif/Mram_array_reg21_RAMD_O
+   fif/Mram_array_reg22_RAMD_O
+   fif/Mram_array_reg23_RAMD_O
+   fif/Mram_array_reg24_RAMD_O
+   fif/Mram_array_reg25_RAMD_O
+   fif/Mram_array_reg26_RAMD_O
+   fif/Mram_array_reg27_RAMD_O
+   fif/Mram_array_reg28_RAMD_O
+   fif/Mram_array_reg29_RAMD_O
+   fif/Mram_array_reg2_RAMD_O
+   fif/Mram_array_reg30_RAMD_O
+   fif/Mram_array_reg31_RAMD_O
+   fif/Mram_array_reg32_RAMD_O
+   fif/Mram_array_reg3_RAMD_O
+   fif/Mram_array_reg4_RAMD_O
+   fif/Mram_array_reg5_RAMD_O
+   fif/Mram_array_reg6_RAMD_O
+   fif/Mram_array_reg7_RAMD_O
+   fif/Mram_array_reg8_RAMD_O
+   fif/Mram_array_reg9_RAMD_O
+
+

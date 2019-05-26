@@ -1,0 +1,8 @@
+verilog work ../contadorprueba.v
+verilog work ../contador.v
+verilog work ../divisorfrec.v
+verilog work ../anteconmutador.v
+verilog work ../conmutacion.v
+verilog work ../display.v
+verilog work ../divisorfrecdisp.v
+verilog work ../cantidadecho.v

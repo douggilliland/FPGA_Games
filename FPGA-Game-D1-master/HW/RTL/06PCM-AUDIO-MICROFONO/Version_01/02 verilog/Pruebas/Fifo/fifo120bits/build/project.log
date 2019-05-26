@@ -1,0 +1,495 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "project.src"
+Input Format                       : mixed
+
+---- Target Parameters
+Target Device                      : XC7A100T-1CSG324
+Output File Name                   : "project.ngc"
+Output Format                      : NGC
+
+---- Source Options
+Top Module Name                    : fifo
+
+---- General Options
+Optimization Goal                  : Area
+Optimization Effort                : 1
+RTL Output                         : yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/fifo.v" into library work
+Parsing module <fifo>.
+Analyzing Verilog file "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/div_freq.v" into library work
+Parsing module <div_freq>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <fifo>.
+
+Elaborating module <div_freq>.
+WARNING:HDLCompiler:413 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/fifo.v" Line 52: Result of 32-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/fifo.v" Line 74: Result of 32-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:91 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/fifo.v" Line 127: Signal <wr_reg> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/fifo.v" Line 127: Result of 16-bit expression is truncated to fit in 15-bit target.
+WARNING:HDLCompiler:91 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/fifo.v" Line 128: Signal <rd_reg> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/fifo.v" Line 128: Result of 16-bit expression is truncated to fit in 15-bit target.
+WARNING:HDLCompiler:91 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/fifo.v" Line 129: Signal <wr_reg> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/fifo.v" Line 130: Signal <rd_reg> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/fifo.v" Line 131: Signal <full_reg> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/fifo.v" Line 132: Signal <empty_reg> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/fifo.v" Line 134: Signal <db_wr> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/fifo.v" Line 139: Signal <empty> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/fifo.v" Line 143: Signal <wr_reg> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/fifo.v" Line 150: Signal <full> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <fifo>.
+    Related source file is "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/fifo.v".
+        abits = 15
+        dbits = 8
+    Found 32768x8-bit dual-port RAM <Mram_regarray> for signal <regarray>.
+    Found 1-bit register for signal <empty>.
+    Found 15-bit register for signal <wr_reg>.
+    Found 15-bit register for signal <rd_reg>.
+    Found 1-bit register for signal <full>.
+    Found 1-bit register for signal <ledres>.
+    Found 2-bit register for signal <count>.
+    Found 1-bit register for signal <dffr1>.
+    Found 2-bit register for signal <count1>.
+    Found 8-bit register for signal <dout>.
+    Found 1-bit register for signal <dffw1>.
+    Found 15-bit adder for signal <wr_succ> created at line 127.
+    Found 15-bit adder for signal <rd_succ> created at line 128.
+    Found 2-bit subtractor for signal <GND_1_o_GND_1_o_sub_3_OUT<1:0>> created at line 52.
+    Found 2-bit subtractor for signal <GND_1_o_GND_1_o_sub_9_OUT<1:0>> created at line 74.
+    Found 15-bit comparator not equal for signal <rd_reg[14]_wr_reg[14]_equal_23_o> created at line 143
+    Summary:
+	inferred   1 RAM(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred  47 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <fifo> synthesized.
+
+Synthesizing Unit <div_freq>.
+    Related source file is "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/div_freq.v".
+        fi = 50000000
+        fs = 15000
+    Found 1-bit register for signal <clkout>.
+    Found 32-bit register for signal <count>.
+    Found 32-bit subtractor for signal <count[31]_GND_2_o_sub_3_OUT> created at line 30.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  33 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <div_freq> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 32768x8-bit dual-port RAM                             : 1
+# Adders/Subtractors                                   : 5
+ 15-bit adder                                          : 2
+ 2-bit subtractor                                      : 2
+ 32-bit subtractor                                     : 1
+# Registers                                            : 12
+ 1-bit register                                        : 6
+ 15-bit register                                       : 2
+ 2-bit register                                        : 2
+ 32-bit register                                       : 1
+ 8-bit register                                        : 1
+# Comparators                                          : 1
+ 15-bit comparator not equal                           : 1
+# Multiplexers                                         : 1
+ 32-bit 2-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <div_freq>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <div_freq> synthesized (advanced).
+
+Synthesizing (advanced) Unit <fifo>.
+The following registers are absorbed into counter <wr_reg>: 1 register on signal <wr_reg>.
+The following registers are absorbed into counter <rd_reg>: 1 register on signal <rd_reg>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+The following registers are absorbed into counter <count1>: 1 register on signal <count1>.
+INFO:Xst:3226 - The RAM <Mram_regarray> will be implemented as a BLOCK RAM, absorbing the following register(s): <out>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32768-word x 8-bit                  |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clock>         | rise     |
+    |     weA            | connected to signal <wr_en>         | high     |
+    |     addrA          | connected to signal <wr_reg>        |          |
+    |     diA            | connected to signal <din>           |          |
+    -----------------------------------------------------------------------
+    | optimization       | area                                |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32768-word x 8-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clock>         | rise     |
+    |     enB            | connected to signal <dffr1>         | high     |
+    |     addrB          | connected to signal <rd_reg>        |          |
+    |     doB            | connected to signal <dout>          |          |
+    -----------------------------------------------------------------------
+    | optimization       | area                                |          |
+    -----------------------------------------------------------------------
+Unit <fifo> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 32768x8-bit dual-port block RAM                       : 1
+# Adders/Subtractors                                   : 2
+ 15-bit adder                                          : 2
+# Counters                                             : 5
+ 15-bit up counter                                     : 2
+ 2-bit down counter                                    : 2
+ 32-bit down counter                                   : 1
+# Registers                                            : 6
+ Flip-Flops                                            : 6
+# Comparators                                          : 1
+ 15-bit comparator not equal                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <fifo> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block fifo, actual ratio is 0.
+FlipFlop empty_reg has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop full_reg has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 74
+ Flip-Flops                                            : 74
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : project.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 315
+#      GND                         : 1
+#      INV                         : 37
+#      LUT1                        : 57
+#      LUT2                        : 13
+#      LUT3                        : 3
+#      LUT4                        : 4
+#      LUT5                        : 2
+#      LUT6                        : 13
+#      MUXCY                       : 92
+#      VCC                         : 1
+#      XORCY                       : 92
+# FlipFlops/Latches                : 74
+#      FD                          : 2
+#      FDC                         : 3
+#      FDCE                        : 30
+#      FDP                         : 2
+#      FDR                         : 28
+#      FDRE                        : 2
+#      FDS                         : 5
+#      FDSE                        : 2
+# RAMS                             : 8
+#      RAMB36E1                    : 8
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 22
+#      IBUF                        : 11
+#      OBUF                        : 11
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              71  out of  126800     0%  
+ Number of Slice LUTs:                  129  out of  63400     0%  
+    Number used as Logic:               129  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    129
+   Number with an unused Flip Flop:      58  out of    129    44%  
+   Number with an unused LUT:             0  out of    129     0%  
+   Number of fully used LUT-FF pairs:    71  out of    129    55%  
+   Number of unique control sets:         8
+
+IO Utilization: 
+ Number of IOs:                          23
+ Number of bonded IOBs:                  23  out of    210    10%  
+    IOB Flip Flops/Latches:               3
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                8  out of    135     5%  
+    Number using Block RAM only:          8
+ Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+df/clkout                          | BUFG                   | 49    |
+clk                                | BUFGP                  | 33    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 4.588ns (Maximum Frequency: 217.984MHz)
+   Minimum input arrival time before clock: 1.860ns
+   Maximum output required time after clock: 0.877ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'df/clkout'
+  Clock period: 4.588ns (frequency: 217.984MHz)
+  Total number of paths / destination ports: 882 / 74
+-------------------------------------------------------------------------
+Delay:               4.588ns (Levels of Logic = 8)
+  Source:            wr_reg_0 (FF)
+  Destination:       full_reg (FF)
+  Source Clock:      df/clkout rising
+  Destination Clock: df/clkout rising
+
+  Data Path: wr_reg_0 to full_reg
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            11   0.478   0.465  wr_reg_0 (wr_reg_0)
+     INV:I->O              1   0.146   0.000  Madd_wr_succ_lut<0>_INV_0 (Madd_wr_succ_lut<0>)
+     MUXCY:S->O            1   0.472   0.000  Madd_wr_succ_cy<0> (Madd_wr_succ_cy<0>)
+     MUXCY:CI->O           1   0.029   0.000  Madd_wr_succ_cy<1> (Madd_wr_succ_cy<1>)
+     MUXCY:CI->O           1   0.029   0.000  Madd_wr_succ_cy<2> (Madd_wr_succ_cy<2>)
+     XORCY:CI->O           1   0.510   0.919  Madd_wr_succ_xor<3> (wr_succ<3>)
+     LUT6:I1->O            1   0.124   0.716  _n0147_inv4 (_n0147_inv4)
+     LUT6:I3->O            1   0.124   0.421  _n0147_inv5 (_n0147_inv)
+     LUT3:I2->O            2   0.124   0.000  full_reg_rstpot (full_reg_rstpot)
+     FDC:D                     0.030          full_reg
+    ----------------------------------------
+    Total                      4.588ns (2.067ns logic, 2.521ns route)
+                                       (45.0% logic, 55.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.219ns (frequency: 236.998MHz)
+  Total number of paths / destination ports: 1585 / 60
+-------------------------------------------------------------------------
+Delay:               4.219ns (Levels of Logic = 3)
+  Source:            df/count_25 (FF)
+  Destination:       df/count_3 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: df/count_25 to df/count_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.478   0.945  df/count_25 (df/count_25)
+     LUT6:I0->O            1   0.124   0.919  df/count[31]_GND_2_o_equal_2_o<31>5 (df/count[31]_GND_2_o_equal_2_o<31>4)
+     LUT6:I1->O            7   0.124   0.461  df/count[31]_GND_2_o_equal_2_o<31>7 (df/count[31]_GND_2_o_equal_2_o)
+     LUT2:I1->O           27   0.124   0.550  df/count[31]_GND_2_o_equal_2_o_01 (df/count[31]_GND_2_o_equal_2_o_0)
+     FDR:R                     0.494          df/count_3
+    ----------------------------------------
+    Total                      4.219ns (1.344ns logic, 2.875ns route)
+                                       (31.9% logic, 68.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'df/clkout'
+  Total number of paths / destination ports: 63 / 53
+-------------------------------------------------------------------------
+Offset:              1.828ns (Levels of Logic = 2)
+  Source:            rd (PAD)
+  Destination:       count_0 (FF)
+  Destination Clock: df/clkout rising
+
+  Data Path: rd to count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   0.001   0.796  rd_IBUF (rd_IBUF)
+     LUT4:I0->O            3   0.124   0.413  _n00931 (dffw1_rstpot)
+     FDSE:S                    0.494          count_0
+    ----------------------------------------
+    Total                      1.828ns (0.619ns logic, 1.209ns route)
+                                       (33.9% logic, 66.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 33 / 33
+-------------------------------------------------------------------------
+Offset:              1.860ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       df/count_3 (FF)
+  Destination Clock: clk rising
+
+  Data Path: reset to df/count_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            42   0.001   0.691  reset_IBUF (reset_IBUF)
+     LUT2:I0->O           27   0.124   0.550  df/count[31]_GND_2_o_equal_2_o_01 (df/count[31]_GND_2_o_equal_2_o_0)
+     FDR:R                     0.494          df/count_3
+    ----------------------------------------
+    Total                      1.860ns (0.619ns logic, 1.241ns route)
+                                       (33.3% logic, 66.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'df/clkout'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              0.877ns (Levels of Logic = 1)
+  Source:            empty_reg_1 (FF)
+  Destination:       empty (PAD)
+  Source Clock:      df/clkout rising
+
+  Data Path: empty_reg_1 to empty
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              1   0.478   0.399  empty_reg_1 (empty_reg_1)
+     OBUF:I->O                 0.000          empty_OBUF (empty)
+    ----------------------------------------
+    Total                      0.877ns (0.478ns logic, 0.399ns route)
+                                       (54.5% logic, 45.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    4.219|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock df/clkout
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+df/clkout      |    4.588|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 29.00 secs
+Total CPU time to Xst completion: 27.35 secs
+ 
+--> 
+
+
+Total memory usage is 506700 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   14 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

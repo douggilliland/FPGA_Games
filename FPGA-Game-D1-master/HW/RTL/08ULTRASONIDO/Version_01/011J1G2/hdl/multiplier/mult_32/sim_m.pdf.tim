@@ -1,0 +1,191 @@
+Timing Analyzer Settings
+     Time_Scale:        1.000000E-12
+     Time_Per_Division: 1.210000E+05
+     NumberDivisions:   10
+     Start_Time:        0.0
+     End_Time:          1210000.0
+Digital_Signal
+     Position:          1
+     Height:            24
+     Space_Above:       24
+     Name:              clk
+     Start_State:       0
+     Number_Edges:      121
+     Rise_Time:         0.2
+     Fall_Time:         0.2
+          Edge:               10000.0 1
+          Edge:               20000.0 0
+          Edge:               30000.0 1
+          Edge:               40000.0 0
+          Edge:               50000.0 1
+          Edge:               60000.0 0
+          Edge:               70000.0 1
+          Edge:               80000.0 0
+          Edge:               90000.0 1
+          Edge:               100000.0 0
+          Edge:               110000.0 1
+          Edge:               120000.0 0
+          Edge:               130000.0 1
+          Edge:               140000.0 0
+          Edge:               150000.0 1
+          Edge:               160000.0 0
+          Edge:               170000.0 1
+          Edge:               180000.0 0
+          Edge:               190000.0 1
+          Edge:               200000.0 0
+          Edge:               210000.0 1
+          Edge:               220000.0 0
+          Edge:               230000.0 1
+          Edge:               240000.0 0
+          Edge:               250000.0 1
+          Edge:               260000.0 0
+          Edge:               270000.0 1
+          Edge:               280000.0 0
+          Edge:               290000.0 1
+          Edge:               300000.0 0
+          Edge:               310000.0 1
+          Edge:               320000.0 0
+          Edge:               330000.0 1
+          Edge:               340000.0 0
+          Edge:               350000.0 1
+          Edge:               360000.0 0
+          Edge:               370000.0 1
+          Edge:               380000.0 0
+          Edge:               390000.0 1
+          Edge:               400000.0 0
+          Edge:               410000.0 1
+          Edge:               420000.0 0
+          Edge:               430000.0 1
+          Edge:               440000.0 0
+          Edge:               450000.0 1
+          Edge:               460000.0 0
+          Edge:               470000.0 1
+          Edge:               480000.0 0
+          Edge:               490000.0 1
+          Edge:               500000.0 0
+          Edge:               510000.0 1
+          Edge:               520000.0 0
+          Edge:               530000.0 1
+          Edge:               540000.0 0
+          Edge:               550000.0 1
+          Edge:               560000.0 0
+          Edge:               570000.0 1
+          Edge:               580000.0 0
+          Edge:               590000.0 1
+          Edge:               600000.0 0
+          Edge:               610000.0 1
+          Edge:               620000.0 0
+          Edge:               630000.0 1
+          Edge:               640000.0 0
+          Edge:               650000.0 1
+          Edge:               660000.0 0
+          Edge:               670000.0 1
+          Edge:               680000.0 0
+          Edge:               690000.0 1
+          Edge:               700000.0 0
+          Edge:               710000.0 1
+          Edge:               720000.0 0
+          Edge:               730000.0 1
+          Edge:               740000.0 0
+          Edge:               750000.0 1
+          Edge:               760000.0 0
+          Edge:               770000.0 1
+          Edge:               780000.0 0
+          Edge:               790000.0 1
+          Edge:               800000.0 0
+          Edge:               810000.0 1
+          Edge:               820000.0 0
+          Edge:               830000.0 1
+          Edge:               840000.0 0
+          Edge:               850000.0 1
+          Edge:               860000.0 0
+          Edge:               870000.0 1
+          Edge:               880000.0 0
+          Edge:               890000.0 1
+          Edge:               900000.0 0
+          Edge:               910000.0 1
+          Edge:               920000.0 0
+          Edge:               930000.0 1
+          Edge:               940000.0 0
+          Edge:               950000.0 1
+          Edge:               960000.0 0
+          Edge:               970000.0 1
+          Edge:               980000.0 0
+          Edge:               990000.0 1
+          Edge:               1000000.0 0
+          Edge:               1010000.0 1
+          Edge:               1020000.0 0
+          Edge:               1030000.0 1
+          Edge:               1040000.0 0
+          Edge:               1050000.0 1
+          Edge:               1060000.0 0
+          Edge:               1070000.0 1
+          Edge:               1080000.0 0
+          Edge:               1090000.0 1
+          Edge:               1100000.0 0
+          Edge:               1110000.0 1
+          Edge:               1120000.0 0
+          Edge:               1130000.0 1
+          Edge:               1140000.0 0
+          Edge:               1150000.0 1
+          Edge:               1160000.0 0
+          Edge:               1170000.0 1
+          Edge:               1180000.0 0
+          Edge:               1190000.0 1
+          Edge:               1200000.0 0
+          Edge:               1210000.0 1
+Digital_Bus
+     Position:          2
+     Height:            24
+     Space_Above:       24
+     Name:              A[15:0]
+     Start_State:       0005
+     State_Format:      Hex
+     Number_Edges:      0
+     Rise_Time:         0.2
+     Fall_Time:         0.2
+Digital_Bus
+     Position:          3
+     Height:            24
+     Space_Above:       24
+     Name:              B[15:0]
+     Start_State:       0003
+     State_Format:      Hex
+     Number_Edges:      0
+     Rise_Time:         0.2
+     Fall_Time:         0.2
+Digital_Signal
+     Position:          4
+     Height:            24
+     Space_Above:       24
+     Name:              init
+     Start_State:       0
+     Number_Edges:      2
+     Rise_Time:         0.2
+     Fall_Time:         0.2
+          Edge:               50000.0 1
+          Edge:               90000.0 0
+Digital_Bus
+     Position:          5
+     Height:            24
+     Space_Above:       24
+     Name:              pp[31:0]
+     Start_State:       0
+     State_Format:      Hex
+     Number_Edges:      3
+     Rise_Time:         0.2
+     Fall_Time:         0.2
+          Edge:               80000.0 5
+          Edge:               140000.0 15
+          Edge:               380000.0 0
+Digital_Signal
+     Position:          6
+     Height:            24
+     Space_Above:       24
+     Name:              done
+     Start_State:       0
+     Number_Edges:      2
+     Rise_Time:         0.2
+     Fall_Time:         0.2
+          Edge:               170000.0 1
+          Edge:               370000.0 0

@@ -1,0 +1,68 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Wed Nov 15 00:07:00 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "an<0>" LOCATE = SITE "N6" LEVEL 1;
+COMP "an<1>" LOCATE = SITE "M6" LEVEL 1;
+COMP "entrada" LOCATE = SITE "P4" LEVEL 1;
+COMP "an<2>" LOCATE = SITE "M3" LEVEL 1;
+COMP "an<3>" LOCATE = SITE "N5" LEVEL 1;
+COMP "clk" LOCATE = SITE "E3" LEVEL 1;
+COMP "ENABLE" LOCATE = SITE "P3" LEVEL 1;
+COMP "seg<0>" LOCATE = SITE "L3" LEVEL 1;
+COMP "seg<1>" LOCATE = SITE "N1" LEVEL 1;
+COMP "pulse" LOCATE = SITE "T8" LEVEL 1;
+COMP "seg<2>" LOCATE = SITE "L5" LEVEL 1;
+COMP "seg<3>" LOCATE = SITE "L4" LEVEL 1;
+COMP "seg<4>" LOCATE = SITE "K3" LEVEL 1;
+COMP "seg<5>" LOCATE = SITE "M2" LEVEL 1;
+COMP "seg<6>" LOCATE = SITE "L6" LEVEL 1;
+COMP "cantidad<0>" LOCATE = SITE "U9" LEVEL 1;
+COMP "cantidad<1>" LOCATE = SITE "U8" LEVEL 1;
+COMP "cantidad<2>" LOCATE = SITE "R7" LEVEL 1;
+COMP "reset" LOCATE = SITE "C12" LEVEL 1;
+COMP "cantidad<3>" LOCATE = SITE "R6" LEVEL 1;
+COMP "cantidad<4>" LOCATE = SITE "R5" LEVEL 1;
+COMP "cantidad<5>" LOCATE = SITE "V7" LEVEL 1;
+COMP "cantidad<6>" LOCATE = SITE "V6" LEVEL 1;
+COMP "cantidad<7>" LOCATE = SITE "V5" LEVEL 1;
+TIMEGRP sys_clk_pin = BEL "divisorfrec0/count_2924_0" BEL
+        "divisorfrec0/count_2924_1" BEL "divisorfrec0/count_2924_2" BEL
+        "divisorfrec0/count_2924_3" BEL "divisorfrec0/count_2924_4" BEL
+        "divisorfrec0/count_2924_5" BEL "divisorfrec0/count_2924_6" BEL
+        "divisorfrec0/count_2924_7" BEL "divisorfrec0/count_2924_8" BEL
+        "divisorfrec0/count_2924_9" BEL "divisorfrec0/count_2924_10" BEL
+        "divisorfrec0/count_2924_11" BEL "divisorfrecdisp0/count_100000_0" BEL
+        "divisorfrecdisp0/count_100000_1" BEL
+        "divisorfrecdisp0/count_100000_2" BEL
+        "divisorfrecdisp0/count_100000_3" BEL
+        "divisorfrecdisp0/count_100000_4" BEL
+        "divisorfrecdisp0/count_100000_5" BEL
+        "divisorfrecdisp0/count_100000_6" BEL
+        "divisorfrecdisp0/count_100000_7" BEL
+        "divisorfrecdisp0/count_100000_8" BEL
+        "divisorfrecdisp0/count_100000_9" BEL
+        "divisorfrecdisp0/count_100000_10" BEL
+        "divisorfrecdisp0/count_100000_11" BEL
+        "divisorfrecdisp0/count_100000_12" BEL
+        "divisorfrecdisp0/count_100000_13" BEL
+        "divisorfrecdisp0/count_100000_14" BEL
+        "divisorfrecdisp0/count_100000_15" BEL
+        "divisorfrecdisp0/count_100000_16" BEL "anteconmutador0/centenas_3"
+        BEL "anteconmutador0/centenas_2" BEL "anteconmutador0/centenas_1" BEL
+        "anteconmutador0/centenas_0" BEL "anteconmutador0/decenas_3" BEL
+        "anteconmutador0/decenas_2" BEL "anteconmutador0/decenas_1" BEL
+        "anteconmutador0/decenas_0" BEL "anteconmutador0/unidades_3" BEL
+        "anteconmutador0/unidades_2" BEL "anteconmutador0/unidades_1" BEL
+        "anteconmutador0/unidades_0" BEL "anteconmutador0/digitT_7" BEL
+        "anteconmutador0/digitT_6" BEL "anteconmutador0/digitT_5" BEL
+        "anteconmutador0/digitT_4" BEL "anteconmutador0/digitT_3" BEL
+        "anteconmutador0/digitT_2" BEL "anteconmutador0/digitT_1" BEL
+        "anteconmutador0/digitT_0" BEL "anteconmutador0/U" BEL
+        "anteconmutador0/De" BEL "divisorfrec0/CLKOUT" BEL
+        "divisorfrecdisp0/CLKOUTseg" BEL "anteconmutador0/i" BEL
+        "clk_BUFGP/BUFG";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+SCHEMATIC END;
+

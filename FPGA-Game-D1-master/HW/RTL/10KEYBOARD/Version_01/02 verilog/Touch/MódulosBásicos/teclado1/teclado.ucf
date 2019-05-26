@@ -1,0 +1,35 @@
+## This file is a general .ucf for the Nexys4 rev B board
+## To use it in a project:
+## - uncomment the lines corresponding to used pins
+## - rename the used signals according to the project
+
+## Clock signal
+NET "clk"   LOC = "E3"	| IOSTANDARD = "LVCMOS33";					#Bank = 35, Pin name = IO_L12P_T1_MRCC_35,					Sch name = CLK100MHZ
+NET "clk" TNM_NET = sys_clk_pin;
+TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 100 MHz HIGH 50%; 
+ 
+
+## Pmod Header JB
+NET "DATA<0>"			LOC = "G14"	| IOSTANDARD = "LVCMOS33";		#Bank = 15, Pin name = IO_L15N_T2_DQS_ADV_B_15,				Sch name = JB1
+NET "DATA<1>"			LOC = "P15"	| IOSTANDARD = "LVCMOS33";		#Bank = 14, Pin name = IO_L13P_T2_MRCC_14,					Sch name = JB2
+NET "DATA<2>"			LOC = "V11"	| IOSTANDARD = "LVCMOS33";		#Bank = 14, Pin name = IO_L21N_T3_DQS_A06_D22_14,			Sch name = JB3
+NET "DATA<3>"			LOC = "V15"	| IOSTANDARD = "LVCMOS33";		#Bank = CONFIG, Pin name = IO_L16P_T2_CSI_B_14,				Sch name = JB4
+NET "DATA<4>"			LOC = "K16"	| IOSTANDARD = "LVCMOS33";		#Bank = 15, Pin name = IO_25_15,							Sch name = JB7
+NET "DATA<5>"			LOC = "R16"	| IOSTANDARD = "LVCMOS33";		#Bank = CONFIG, Pin name = IO_L15P_T2_DQS_RWR_B_14,			Sch name = JB8
+NET "DATA<6>"			LOC = "T9"  | IOSTANDARD = "LVCMOS33";		#Bank = 14, Pin name = IO_L24P_T3_A01_D17_14,				Sch name = JB9
+NET "DATA<7>"			LOC = "U11"	| IOSTANDARD = "LVCMOS33";		#Bank = 14, Pin name = IO_L19N_T3_A09_D25_VREF_14,			Sch name = JB10 
+
+
+
+NET "DONE"			LOC = "U1"	| IOSTANDARD = "LVCMOS33";		
+
+NET "Rx_error"			LOC = "P2"	| IOSTANDARD = "LVCMOS33";		
+ 
+## Pmod Header JC
+NET "Rx"			LOC = "K2"	| IOSTANDARD = "LVCMOS33";		
+NET "CLKOUTt"			LOC = "E7"	| IOSTANDARD = "LVCMOS33";		
+
+
+
+ 
+

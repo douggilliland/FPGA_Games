@@ -1,0 +1,305 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "project.src"
+Input Format                       : mixed
+
+---- Target Parameters
+Target Device                      : xc7a100t-csg324
+Output File Name                   : "project.ngc"
+Output Format                      : NGC
+
+---- Source Options
+Top Module Name                    : divisorfrecgen
+
+---- General Options
+Optimization Goal                  : Area
+Optimization Effort                : 1
+RTL Output                         : yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/daniel/Documentos/E_Digital/Proyecto/Ultrasonido/Código/ModulosBasicos/divisorfrecgen/divisorfrecgen.v" into library wor
+Parsing module <divisorfrecgen>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <divisorfrecgen>.
+WARNING:HDLCompiler:413 - "/home/daniel/Documentos/E_Digital/Proyecto/Ultrasonido/C  digo/ModulosBasicos/divisorfrecgen/divisorfrecgen.v" Line 18: Result of 11-bit expression is truncated to fit in 10-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <divisorfrecgen>.
+    Related source file is "/home/daniel/Documentos/E_Digital/Proyecto/Ultrasonido/Código/ModulosBasicos/divisorfrecgen/divisorfrecgen.v"
+        top = 10'b1111101000
+    Found 1-bit register for signal <CLKOUT1>.
+    Found 10-bit register for signal <count_1000>.
+    Found 10-bit adder for signal <count_1000[9]_GND_1_o_add_1_OUT> created at line 18.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  11 D-type flip-flop(s).
+Unit <divisorfrecgen> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 10-bit adder                                          : 1
+# Registers                                            : 2
+ 1-bit register                                        : 1
+ 10-bit register                                       : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <divisorfrecgen>.
+The following registers are absorbed into counter <count_1000>: 1 register on signal <count_1000>.
+Unit <divisorfrecgen> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 10-bit up counter                                     : 1
+# Registers                                            : 1
+ Flip-Flops                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <divisorfrecgen> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block divisorfrecgen, actual ratio is 0.
+FlipFlop CLKOUT1 has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 12
+ Flip-Flops                                            : 12
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : project.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 34
+#      GND                         : 1
+#      INV                         : 1
+#      LUT1                        : 9
+#      LUT2                        : 1
+#      LUT5                        : 1
+#      LUT6                        : 1
+#      MUXCY                       : 9
+#      VCC                         : 1
+#      XORCY                       : 10
+# FlipFlops/Latches                : 12
+#      FD                          : 2
+#      FDR                         : 10
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 1
+#      OBUF                        : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              11  out of  126800     0%  
+ Number of Slice LUTs:                   13  out of  63400     0%  
+    Number used as Logic:                13  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     13
+   Number with an unused Flip Flop:       2  out of     13    15%  
+   Number with an unused LUT:             0  out of     13     0%  
+   Number of fully used LUT-FF pairs:    11  out of     13    84%  
+   Number of unique control sets:         2
+
+IO Utilization: 
+ Number of IOs:                           2
+ Number of bonded IOBs:                   2  out of    210     0%  
+    IOB Flip Flops/Latches:               1
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 12    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 2.212ns (Maximum Frequency: 452.018MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 0.640ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 2.212ns (frequency: 452.018MHz)
+  Total number of paths / destination ports: 177 / 22
+-------------------------------------------------------------------------
+Delay:               2.212ns (Levels of Logic = 2)
+  Source:            count_1000_5 (FF)
+  Destination:       count_1000_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: count_1000_5 to count_1000_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.361   0.688  count_1000_5 (count_1000_5)
+     LUT5:I0->O            1   0.097   0.295  count_1000[9]_PWR_1_o_equal_3_o<9>_SW0 (N3)
+     LUT6:I5->O           11   0.097   0.325  count_1000[9]_PWR_1_o_equal_3_o<9> (count_1000[9]_PWR_1_o_equal_3_o)
+     FDR:R                     0.349          count_1000_0
+    ----------------------------------------
+    Total                      2.212ns (0.904ns logic, 1.308ns route)
+                                       (40.9% logic, 59.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.640ns (Levels of Logic = 1)
+  Source:            CLKOUT1_1 (FF)
+  Destination:       CLKOUT1 (PAD)
+  Source Clock:      clk rising
+
+  Data Path: CLKOUT1_1 to CLKOUT1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.361   0.279  CLKOUT1_1 (CLKOUT1_1)
+     OBUF:I->O                 0.000          CLKOUT1_OBUF (CLKOUT1)
+    ----------------------------------------
+    Total                      0.640ns (0.361ns logic, 0.279ns route)
+                                       (56.4% logic, 43.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    2.212|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 79.00 secs
+Total CPU time to Xst completion: 78.01 secs
+ 
+--> 
+
+
+Total memory usage is 504140 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

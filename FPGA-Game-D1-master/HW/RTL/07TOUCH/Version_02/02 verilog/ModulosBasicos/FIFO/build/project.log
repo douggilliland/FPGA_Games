@@ -1,0 +1,75 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "project.src"
+Input Format                       : mixed
+
+---- Target Parameters
+Target Device                      : xc7a100t-1csg324
+Output File Name                   : "project.ngc"
+Output Format                      : NGC
+
+---- Source Options
+Top Module Name                    : fifo
+
+---- General Options
+Optimization Goal                  : Area
+Optimization Effort                : 1
+RTL Output                         : yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/lisseth/FPGA-Game-D1/HW/RTL/00EJEMPLOS/03FIFO/fifo.v" into library work
+Parsing module <fifo>.
+INFO:HDLCompiler:693 - "/home/lisseth/FPGA-Game-D1/HW/RTL/00EJEMPLOS/03FIFO/fifo.v" Line 19. parameter declaration becomes local in fifo with formal parameter declaration list
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <fifo>.
+WARNING:HDLCompiler:91 - "/home/lisseth/FPGA-Game-D1/HW/RTL/00EJEMPLOS/03FIFO/fifo.v" Line 69: Signal <full_reg> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+ERROR:HDLCompiler:1128 - "/home/lisseth/FPGA-Game-D1/HW/RTL/00EJEMPLOS/03FIFO/fifo.v" Line 69: Assignment under multiple single edges is not supported for synthesis
+INFO - You can change the severity of this error message to warning using switch -change_error_to_warning "HDLCompiler:1128"
+Module fifo remains a blackbox, due to errors in its contents
+WARNING:HDLCompiler:1499 - "/home/lisseth/FPGA-Game-D1/HW/RTL/00EJEMPLOS/03FIFO/fifo.v" Line 4: Empty module <fifo> remains a black box.
+--> 
+
+
+Total memory usage is 344116 kilobytes
+
+Number of errors   :    1 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

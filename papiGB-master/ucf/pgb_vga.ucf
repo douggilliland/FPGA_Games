@@ -1,0 +1,23 @@
+# UCF file for the Papilio DUO board
+
+## Prohibit the automatic placement of pins that are connected to VCC or GND for configuration.
+CONFIG PROHIBIT=P144;
+CONFIG PROHIBIT=P69;
+CONFIG PROHIBIT=P60;
+
+NET iClock         LOC="P94"  | IOSTANDARD=LVTTL | PERIOD=31.25ns;               # CLK
+NET iReset        LOC="P116" | IOSTANDARD=LVTTL;                                 # A0
+NET oVgaRed(0)     LOC="P98"  | IOSTANDARD=LVTTL | DRIVE=8 | SLEW=FAST;          # D0
+NET oVgaRed(1)     LOC="P95"  | IOSTANDARD=LVTTL | DRIVE=8 | SLEW=FAST;          # D1
+NET oVgaRed(2)     LOC="P92"  | IOSTANDARD=LVTTL | DRIVE=8 | SLEW=FAST;          # D2
+NET oVgaRed(3)     LOC="P87"  | IOSTANDARD=LVTTL | DRIVE=8 | SLEW=FAST;          # D3
+NET oVgaGreen(3)   LOC="P84"  | IOSTANDARD=LVTTL | DRIVE=8 | SLEW=FAST;          # D4
+NET oVgaGreen(2)   LOC="P82"  | IOSTANDARD=LVTTL | DRIVE=8 | SLEW=FAST;          # D5
+NET oVgaGreen(1)   LOC="P80"  | IOSTANDARD=LVTTL | DRIVE=8 | SLEW=FAST;          # D6
+NET oVgaGreen(0)   LOC="P78"  | IOSTANDARD=LVTTL | DRIVE=8 | SLEW=FAST;          # D7
+NET oVgaBlue(3)    LOC="P74"  | IOSTANDARD=LVTTL | DRIVE=8 | SLEW=FAST;          # D8
+NET oVgaBlue(2)    LOC="P66"  | IOSTANDARD=LVTTL | DRIVE=8 | SLEW=FAST;          # D9
+NET oVgaBlue(1)    LOC="P61"  | IOSTANDARD=LVTTL | DRIVE=8 | SLEW=FAST;          # D10
+NET oVgaBlue(0)    LOC="P51"  | IOSTANDARD=LVTTL | DRIVE=8 | SLEW=FAST;          # D13
+NET oVgaVsync      LOC="P48"  | IOSTANDARD=LVTTL | DRIVE=8 | SLEW=FAST;          # D14
+NET oVgaHsync      LOC="P39"  | IOSTANDARD=LVTTL | DRIVE=8 | SLEW=FAST;          # D15

@@ -1,0 +1,4 @@
+verilog work ../bluetooth.v
+verilog work ../Divisor_Frecuencia.v
+verilog work ../recepcion.v
+verilog work ../transmision.v

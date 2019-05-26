@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="LIT" num="244" delta="new" >All of the single ended outputs in this design are using slew rate limited output drivers. The delay on speed critical single ended outputs can be dramatically reduced by designating them as fast outputs.
+</msg>
+
+<msg type="warning" file="Pack" num="2912" delta="new" >The LUT-1 inverter &quot;<arg fmt="%s" index="1">done_INV_40_o1_INV_0</arg>&quot; failed to join the &quot;<arg fmt="%s" index="2">OLOGICE2</arg>&quot; comp matched to output buffer &quot;<arg fmt="%s" index="3">empty_OBUF</arg>&quot;.  This may result in suboptimal timing.  <arg fmt="%z" index="4">The LUT-1 inverter done_INV_40_o1_INV_0 drives multiple loads.</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2912" delta="new" >The LUT-1 inverter &quot;<arg fmt="%s" index="1">df/clkout_INV_6_o1_INV_0</arg>&quot; failed to join the &quot;<arg fmt="%s" index="2">OLOGICE2</arg>&quot; comp matched to output buffer &quot;<arg fmt="%s" index="3">mclk_OBUF</arg>&quot;.  This may result in suboptimal timing.  <arg fmt="%z" index="4">The LUT-1 inverter df/clkout_INV_6_o1_INV_0 drives multiple loads.</arg>
+</msg>
+
+<msg type="info" file="Pack" num="1716" delta="new" >Initializing temperature to <arg fmt="%0.3f" index="1">85.000</arg> Celsius. (default - Range: <arg fmt="%0.3f" index="2">0.000</arg> to <arg fmt="%0.3f" index="3">85.000</arg> Celsius)
+</msg>
+
+<msg type="info" file="Pack" num="1720" delta="new" >Initializing voltage to <arg fmt="%0.3f" index="1">0.950</arg> Volts. (default - Range: <arg fmt="%0.3f" index="2">0.950</arg> to <arg fmt="%0.3f" index="3">1.050</arg> Volts)
+</msg>
+
+<msg type="info" file="Map" num="215" delta="new" >The Interim Design Summary has been generated in the MAP Report (.mrp).
+</msg>
+
+<msg type="warning" file="Place" num="1399" delta="new" >A clock IOB / BUFGCTRL clock component pair have been found that are not placed at an optimal clock IOB / BUFGCTRL site pair. The clock IOB component &lt;<arg fmt="%s" index="1">reset</arg>&gt; is placed at site &lt;<arg fmt="%s" index="2">U9</arg>&gt;. The corresponding BUFGCTRL component &lt;<arg fmt="%s" index="3">reset_IBUF_BUFG</arg>&gt; is placed at site &lt;<arg fmt="%s" index="4">BUFGCTRL_X0Y10</arg>&gt;. The clock IO can use the fast path between the IOB and the Clock Buffer if the IOB is placed on a Clock Capable IOB site that has dedicated fast path to BUFGCTRL sites in its half of the device (TOP or BOTTOM). You may want to analyze why this problem exists and correct it. This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint was applied on COMP.PIN &lt;<arg fmt="%s" index="5">reset.PAD</arg>&gt; allowing your design to continue. This constraint disables all clock placer rules related to the specified COMP.PIN. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
+</msg>
+
+<msg type="info" file="Pack" num="1650" delta="new" >Map created a placed design.
+</msg>
+
+</messages>
+

@@ -1,0 +1,136 @@
+#! /usr/bin/vvp
+:ivl_version "0.9.5 " "(v0_9_5)";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0xce0340 .scope module, "transmitirps2_TB" "transmitirps2_TB" 2 2;
+ .timescale -9 -12;
+v0xcf5940_0 .var "CLKOUT", 0 0;
+v0xcf59c0_0 .net "Rx", 0 0, v0xcf4b10_0; 1 drivers
+v0xcf5a70_0 .var "d_in", 7 0;
+v0xcf5b20_0 .var "enable", 0 0;
+S_0xccfb50 .scope module, "uut" "transmitirps2" 2 9, 3 1, S_0xce0340;
+ .timescale 0 0;
+L_0xcf5090 .functor OR 1, L_0xcf5bd0, L_0xcf5cd0, C4<0>, C4<0>;
+L_0xcf5ee0 .functor OR 1, L_0xcf5090, L_0xcf5e40, C4<0>, C4<0>;
+L_0xcf6110 .functor OR 1, L_0xcf5ee0, L_0xcf5fe0, C4<0>, C4<0>;
+L_0xcf6290 .functor OR 1, L_0xcf6110, L_0xcf61f0, C4<0>, C4<0>;
+L_0xcf6430 .functor OR 1, L_0xcf6290, L_0xcf6390, C4<0>, C4<0>;
+L_0xcf65d0 .functor OR 1, L_0xcf6430, L_0xcf6530, C4<0>, C4<0>;
+L_0xcf68c0 .functor OR 1, L_0xcf65d0, L_0xcf6710, C4<0>, C4<0>;
+v0xccfc40_0 .net "CLKOUT", 0 0, v0xcf5940_0; 1 drivers
+v0xcf4a70_0 .var "DATA", 7 0;
+v0xcf4b10_0 .var "Rx", 0 0;
+v0xcf4bb0_0 .net *"_s1", 0 0, L_0xcf5bd0; 1 drivers
+v0xcf4c60_0 .net *"_s11", 0 0, L_0xcf5fe0; 1 drivers
+v0xcf4d00_0 .net *"_s12", 0 0, L_0xcf6110; 1 drivers
+v0xcf4de0_0 .net *"_s15", 0 0, L_0xcf61f0; 1 drivers
+v0xcf4e80_0 .net *"_s16", 0 0, L_0xcf6290; 1 drivers
+v0xcf4f70_0 .net *"_s19", 0 0, L_0xcf6390; 1 drivers
+v0xcf5010_0 .net *"_s20", 0 0, L_0xcf6430; 1 drivers
+v0xcf5110_0 .net *"_s23", 0 0, L_0xcf6530; 1 drivers
+v0xcf51b0_0 .net *"_s24", 0 0, L_0xcf65d0; 1 drivers
+v0xcf52c0_0 .net *"_s27", 0 0, L_0xcf6710; 1 drivers
+v0xcf5360_0 .net *"_s3", 0 0, L_0xcf5cd0; 1 drivers
+v0xcf5480_0 .net *"_s4", 0 0, L_0xcf5090; 1 drivers
+v0xcf5520_0 .net *"_s7", 0 0, L_0xcf5e40; 1 drivers
+v0xcf53e0_0 .net *"_s8", 0 0, L_0xcf5ee0; 1 drivers
+v0xcf5670_0 .net "d_in", 7 0, v0xcf5a70_0; 1 drivers
+v0xcf5790_0 .net "enable", 0 0, v0xcf5b20_0; 1 drivers
+v0xcf5810_0 .var "i", 3 0;
+v0xcf56f0_0 .net "logico", 0 0, L_0xcf68c0; 1 drivers
+E_0xccd110 .event posedge, v0xccfc40_0;
+L_0xcf5bd0 .part v0xcf4a70_0, 7, 1;
+L_0xcf5cd0 .part v0xcf4a70_0, 6, 1;
+L_0xcf5e40 .part v0xcf4a70_0, 5, 1;
+L_0xcf5fe0 .part v0xcf4a70_0, 4, 1;
+L_0xcf61f0 .part v0xcf4a70_0, 3, 1;
+L_0xcf6390 .part v0xcf4a70_0, 2, 1;
+L_0xcf6530 .part v0xcf4a70_0, 1, 1;
+L_0xcf6710 .part v0xcf4a70_0, 0, 1;
+S_0xce0430 .scope begin, "TEST_CASE" "TEST_CASE" 2 31, 2 31, S_0xce0340;
+ .timescale -9 -12;
+    .scope S_0xccfb50;
+T_0 ;
+    %ix/load 0, 1, 0;
+    %assign/v0 v0xcf4b10_0, 0, 1;
+    %set/v v0xcf4a70_0, 0, 8;
+    %ix/load 0, 4, 0;
+    %assign/v0 v0xcf5810_0, 0, 0;
+    %end;
+    .thread T_0;
+    .scope S_0xccfb50;
+T_1 ;
+    %wait E_0xccd110;
+    %load/v 8, v0xcf5790_0, 1;
+    %jmp/0xz  T_1.0, 8;
+    %load/v 8, v0xcf5670_0, 8;
+    %set/v v0xcf4a70_0, 8, 8;
+T_1.0 ;
+    %load/v 8, v0xcf5790_0, 1;
+    %load/v 9, v0xcf56f0_0, 1;
+    %and 8, 9, 1;
+    %jmp/0xz  T_1.2, 8;
+    %ix/getv 1, v0xcf5810_0;
+    %jmp/1 T_1.4, 4;
+    %load/x1p 8, v0xcf5670_0, 1;
+    %jmp T_1.5;
+T_1.4 ;
+    %mov 8, 2, 1;
+T_1.5 ;
+; Save base=8 wid=1 in lookaside.
+    %ix/load 0, 1, 0;
+    %assign/v0 v0xcf4b10_0, 0, 8;
+    %load/v 8, v0xcf5810_0, 4;
+    %mov 12, 0, 28;
+    %addi 8, 1, 32;
+    %ix/load 0, 4, 0;
+    %assign/v0 v0xcf5810_0, 0, 8;
+    %load/v 8, v0xcf5810_0, 4;
+    %mov 12, 0, 2;
+    %cmpi/u 8, 9, 6;
+    %jmp/0xz  T_1.6, 4;
+    %set/v v0xcf4a70_0, 0, 8;
+T_1.6 ;
+T_1.2 ;
+    %jmp T_1;
+    .thread T_1;
+    .scope S_0xce0340;
+T_2 ;
+    %set/v v0xcf5940_0, 1, 1;
+    %delay 1000, 0;
+    %set/v v0xcf5940_0, 0, 1;
+    %delay 1000, 0;
+    %jmp T_2;
+    .thread T_2;
+    .scope S_0xce0340;
+T_3 ;
+    %movi 8, 12, 8;
+    %set/v v0xcf5a70_0, 8, 8;
+    %set/v v0xcf5b20_0, 0, 1;
+    %delay 4000, 0;
+    %set/v v0xcf5b20_0, 1, 1;
+    %end;
+    .thread T_3;
+    .scope S_0xce0340;
+T_4 ;
+    %fork t_1, S_0xce0430;
+    %jmp t_0;
+    .scope S_0xce0430;
+t_1 ;
+    %vpi_call 2 32 "$dumpfile", "transmitirps2_TB.vcd";
+    %vpi_call 2 33 "$dumpvars", 3'sb111, S_0xccfb50;
+    %delay 1000000000, 0;
+    %vpi_call 2 34 "$finish";
+    %end;
+    .scope S_0xce0340;
+t_0 %join;
+    %end;
+    .thread T_4;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "transmitirps2_TB.v";
+    "transmitirps2.v";

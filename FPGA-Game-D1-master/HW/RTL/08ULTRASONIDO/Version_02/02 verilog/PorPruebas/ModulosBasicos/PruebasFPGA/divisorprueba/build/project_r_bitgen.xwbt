@@ -1,0 +1,7 @@
+INFILE=/home/daniel/Documentos/Digital/Proyecto/Ultrasonido/ModulosBasicos/PruebasFPGA/divisorprueba/build/project_r.ncd
+OUTFILE=/home/daniel/Documentos/Digital/Proyecto/Ultrasonido/ModulosBasicos/PruebasFPGA/divisorprueba/build/project_r.bit
+FAMILY=Artix7
+PART=xc7a100t-3csg324
+WORKINGDIR=/home/daniel/Documentos/Digital/Proyecto/Ultrasonido/ModulosBasicos/PruebasFPGA/divisorprueba/build
+LICENSE=WebPack
+USER_INFO=211133029_0_0_875

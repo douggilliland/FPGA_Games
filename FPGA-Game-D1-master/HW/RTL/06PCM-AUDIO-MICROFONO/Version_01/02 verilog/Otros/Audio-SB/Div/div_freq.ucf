@@ -1,0 +1,11 @@
+## Clock signal
+NET "clk"   LOC = "E3"	| IOSTANDARD = "LVCMOS33";					#Bank = 35, Pin name = IO_L12P_T1_MRCC_35,					Sch name = CLK100MHZ
+NET "clk" TNM_NET = sys_clk_pin;
+TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 100 MHz HIGH 50%; 
+
+NET "reset"	LOC = "U9"| IOSTANDARD = "LVCMOS33";#Bank = 34, Pin name = IO_L21P_T3_DQS_34,	Sch name = SW0
+NET "led"	LOC = "T8"| IOSTANDARD = "LVCMOS33";#Bank = 34, Pin name =IO_L24N_T3_34,	Sch name = LED0
+NET "clkout"	LOC = "B13"| IOSTANDARD = "LVCMOS33";#Bank = 15, Pin name = IO_L1N_T0_AD0N_15, Sch name = JA1
+
+
+

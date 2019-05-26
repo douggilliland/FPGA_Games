@@ -1,0 +1,24 @@
+#inputs
+NET "clk" 		LOC = "E3" 	| IOSTANDARD = "LVCMOS33"; #CLK100MHZ
+NET "echo" 		LOC = "F14" | IOSTANDARD = "LVCMOS33"; #PMOD JA2
+NET "reset" 	LOC = "E16" | IOSTANDARD = "LVCMOS33"; #BTNC
+
+#outputs
+NET "trigger" 		LOC = "D17" | IOSTANDARD = "LVCMOS33"; #PMOD JA3
+NET "done" 			LOC = "F13"	| IOSTANDARD = "LVCMOS33"; #RGB LED16_G
+NET "distance<0>" 	LOC = "T8" 	| IOSTANDARD = "LVCMOS33"; #LED0
+NET "distance<1>" 	LOC = "V9"	| IOSTANDARD = "LVCMOS33"; #LED1
+NET "distance<2>" 	LOC = "R8"	| IOSTANDARD = "LVCMOS33"; #LED2
+NET "distance<3>"	LOC = "T6"	| IOSTANDARD = "LVCMOS33"; #LED3
+NET "distance<4>" 	LOC = "T5"	| IOSTANDARD = "LVCMOS33"; #LED4
+NET "distance<5>"  	LOC = "T4"	| IOSTANDARD = "LVCMOS33"; #LED5
+NET "distance<6>" 	LOC = "U7"	| IOSTANDARD = "LVCMOS33"; #LED6
+NET "distance<7>"   LOC = "U6"	| IOSTANDARD = "LVCMOS33"; #LED7
+NET "distance<8>" 	LOC = "V4"	| IOSTANDARD = "LVCMOS33"; #LED8
+NET "distance<9>"  	LOC = "U3"	| IOSTANDARD = "LVCMOS33"; #LED9
+NET "distance<10>"  LOC = "V1"	| IOSTANDARD = "LVCMOS33"; #LED10
+NET "distance<11>"  LOC = "R1"	| IOSTANDARD = "LVCMOS33"; #LED11
+NET "distance<12>"  LOC = "P5"	| IOSTANDARD = "LVCMOS33"; #LED12
+NET "distance<13>"  LOC = "U1"	| IOSTANDARD = "LVCMOS33"; #LED13
+NET "distance<14>"  LOC = "R2"	| IOSTANDARD = "LVCMOS33"; #LED14
+NET "distance<15>"  LOC = "P2"	| IOSTANDARD = "LVCMOS33"; #LED15

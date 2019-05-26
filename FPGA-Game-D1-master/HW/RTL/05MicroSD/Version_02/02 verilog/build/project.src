@@ -1,0 +1,6 @@
+verilog work ../spi.v
+verilog work ../contador.v
+verilog work ../shifti.v
+verilog work ../shiftd.v
+verilog work ../divfreq.v
+verilog work ../comparador.v

@@ -1,0 +1,2 @@
+verilog work ../peripheral_SD.v
+verilog work ../spi.v

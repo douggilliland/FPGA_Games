@@ -1,0 +1,51 @@
+$date
+	Wed Mar  1 17:32:09 2017
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module BCDtoSSeg_TB $end
+$scope module uut $end
+$var wire 1 ! clk $end
+$var wire 4 " inBCD [3:0] $end
+$var reg 7 # SSeg [6:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1111110 #
+b0 "
+z!
+$end
+#10
+b110000 #
+b1 "
+#20
+b1101101 #
+b10 "
+#30
+b1111001 #
+b11 "
+#40
+b110011 #
+b100 "
+#50
+b1011011 #
+b101 "
+#60
+b1011111 #
+b110 "
+#70
+b1110000 #
+b111 "
+#80
+b1111111 #
+b1000 "
+#90
+b1111011 #
+b1001 "
+#200

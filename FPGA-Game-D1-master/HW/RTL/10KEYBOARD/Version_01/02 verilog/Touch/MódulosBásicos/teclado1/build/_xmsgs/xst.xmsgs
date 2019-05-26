@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/julian/Documentos/Daniel/Proyecto/Touch/MódulosBásicos/teclado1/psdos.v" Line 44: Result of <arg fmt="%d" index="1">5</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">4</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/julian/Documentos/Daniel/Proyecto/Touch/MódulosBásicos/teclado1/psdos.v" Line 47: Result of <arg fmt="%d" index="1">5</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">4</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/julian/Documentos/Daniel/Proyecto/Touch/MódulosBásicos/teclado1/divisorfrec.v" Line 18: Result of <arg fmt="%d" index="1">14</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">13</arg>-bit target.
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="new" >Unit &lt;<arg fmt="%s" index="1">teclado</arg>&gt;: instances &lt;<arg fmt="%s" index="2">dfuno</arg>&gt;, &lt;<arg fmt="%s" index="3">dfdos</arg>&gt; of unit &lt;<arg fmt="%s" index="4">divisorfrec</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">j_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">psdos</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">j_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">psdos</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">j_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">psdos</arg>&gt;.
+</msg>
+
+</messages>
+

@@ -1,0 +1,7 @@
+INFILE=/home/ed/FPGA-Game-D1/HW/RTL/02CAD-JOYSTICK/Version_02/02 verilog/adc/build/project_r.ncd
+OUTFILE=/home/ed/FPGA-Game-D1/HW/RTL/02CAD-JOYSTICK/Version_02/02 verilog/adc/build/project_r.bit
+FAMILY=Artix7
+PART=xc7a100t-1csg324
+WORKINGDIR=/home/ed/FPGA-Game-D1/HW/RTL/02CAD-JOYSTICK/Version_02/02 verilog/adc/build
+LICENSE=WebPack
+USER_INFO=211383221_0_0_971

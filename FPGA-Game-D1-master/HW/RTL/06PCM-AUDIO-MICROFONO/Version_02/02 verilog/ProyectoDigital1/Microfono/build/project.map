@@ -1,0 +1,36 @@
+Release 14.7 Map P.20131013 (lin64)
+Xilinx Map Application Log File for Design 'Microfono'
+
+Design Information
+------------------
+Command Line   : map -pr b -p XC6SLX45-CSG324-3 project.ngd 
+Target Device  : xc6slx45
+Target Package : csg324
+Target Speed   : -3
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Tue Oct 10 08:55:03 2017
+
+Mapping design into LUTs...
+ERROR:MapLib:30 - LOC constraint T16 on D_IN is invalid: No such site on the
+   device. To bypass this error set the environment variable 'XIL_MAP_LOCWARN'.
+ERROR:MapLib:30 - LOC constraint U6 on D_OUT<8> is invalid: No such site on the
+   device. To bypass this error set the environment variable 'XIL_MAP_LOCWARN'.
+ERROR:MapLib:30 - LOC constraint V1 on D_OUT<5> is invalid: No such site on the
+   device. To bypass this error set the environment variable 'XIL_MAP_LOCWARN'.
+ERROR:MapLib:30 - LOC constraint R1 on D_OUT<4> is invalid: No such site on the
+   device. To bypass this error set the environment variable 'XIL_MAP_LOCWARN'.
+ERROR:MapLib:30 - LOC constraint P5 on D_OUT<3> is invalid: No such site on the
+   device. To bypass this error set the environment variable 'XIL_MAP_LOCWARN'.
+ERROR:MapLib:30 - LOC constraint R2 on D_OUT<1> is invalid: No such site on the
+   device. To bypass this error set the environment variable 'XIL_MAP_LOCWARN'.
+ERROR:MapLib:30 - LOC constraint B13 on BCLK is invalid: No such site on the
+   device. To bypass this error set the environment variable 'XIL_MAP_LOCWARN'.
+
+Error found in mapping process, exiting...
+Errors found during the mapping phase.  Please see map report file for more
+details.  Output files will not be written.
+
+Design Summary
+--------------
+Number of errors   :   7
+Number of warnings :   0

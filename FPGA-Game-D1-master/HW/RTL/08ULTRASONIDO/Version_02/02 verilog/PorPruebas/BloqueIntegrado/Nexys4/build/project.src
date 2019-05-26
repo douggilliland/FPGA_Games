@@ -1,0 +1,4 @@
+verilog work ../Ultrasonido.v
+verilog work ../contador.v
+verilog work ../divisorFrec.v
+verilog work ../multiplo.v

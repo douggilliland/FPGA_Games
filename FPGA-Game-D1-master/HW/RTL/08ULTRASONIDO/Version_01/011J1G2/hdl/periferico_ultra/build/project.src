@@ -1,0 +1,8 @@
+verilog work ../peripheral_ultra.v
+verilog work ../contador.v
+verilog work ../divisor.v
+verilog work ../genpulsos.v
+verilog work ../divisorfrec.v
+verilog work ../divisorfrecd.v
+verilog work ../divisorfrecgen.v
+verilog work ../ultrasonido.v

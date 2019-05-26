@@ -1,0 +1,41 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Mon Nov 27 20:37:12 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "din<2>" LOCATE = SITE "V7" LEVEL 1;
+COMP "din<3>" LOCATE = SITE "V6" LEVEL 1;
+COMP "din<4>" LOCATE = SITE "V5" LEVEL 1;
+COMP "din<5>" LOCATE = SITE "U4" LEVEL 1;
+COMP "din<6>" LOCATE = SITE "V2" LEVEL 1;
+COMP "din<7>" LOCATE = SITE "U2" LEVEL 1;
+COMP "dout<0>" LOCATE = SITE "T6" LEVEL 1;
+COMP "dout<1>" LOCATE = SITE "T5" LEVEL 1;
+COMP "dout<2>" LOCATE = SITE "T4" LEVEL 1;
+COMP "rd" LOCATE = SITE "T16" LEVEL 1;
+COMP "dout<3>" LOCATE = SITE "U7" LEVEL 1;
+COMP "dout<4>" LOCATE = SITE "U6" LEVEL 1;
+COMP "dout<5>" LOCATE = SITE "V4" LEVEL 1;
+COMP "dout<6>" LOCATE = SITE "U3" LEVEL 1;
+COMP "dout<7>" LOCATE = SITE "V1" LEVEL 1;
+COMP "ledres" LOCATE = SITE "T8" LEVEL 1;
+COMP "wr" LOCATE = SITE "R10" LEVEL 1;
+COMP "empty" LOCATE = SITE "V9" LEVEL 1;
+COMP "clock" LOCATE = SITE "E3" LEVEL 1;
+COMP "reset" LOCATE = SITE "U9" LEVEL 1;
+COMP "full" LOCATE = SITE "R8" LEVEL 1;
+COMP "din<0>" LOCATE = SITE "R6" LEVEL 1;
+COMP "din<1>" LOCATE = SITE "R5" LEVEL 1;
+PIN Mram_regarray_pins<32> = BEL "Mram_regarray" PINNAME CLKARDCLK;
+PIN Mram_regarray_pins<33> = BEL "Mram_regarray" PINNAME CLKBWRCLK;
+TIMEGRP sys_clk_pin = BEL "ledres" BEL "dffr1" BEL "dffw1" BEL "full_reg" BEL
+        "count_0" BEL "count1_0" BEL "wr_reg_0" BEL "wr_reg_1" BEL "wr_reg_2"
+        BEL "wr_reg_3" BEL "wr_reg_4" BEL "wr_reg_5" BEL "wr_reg_6" BEL
+        "wr_reg_7" BEL "wr_reg_8" BEL "wr_reg_9" BEL "rd_reg_0" BEL "rd_reg_1"
+        BEL "rd_reg_2" BEL "rd_reg_3" BEL "rd_reg_4" BEL "rd_reg_5" BEL
+        "rd_reg_6" BEL "rd_reg_7" BEL "rd_reg_8" BEL "rd_reg_9" BEL
+        "empty_reg" BEL "clock_BUFGP/BUFG" BEL "empty_reg_1" BEL "full_reg_1"
+        PIN "Mram_regarray_pins<32>" PIN "Mram_regarray_pins<33>";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+SCHEMATIC END;
+

@@ -1,0 +1,75 @@
+Release 14.6 - xst P.68d (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "project.src"
+Input Format                       : mixed
+
+---- Target Parameters
+Target Device                      : xc7a100t-csg324
+Output File Name                   : "project.ngc"
+Output Format                      : NGC
+
+---- Source Options
+Top Module Name                    : ps2
+
+---- General Options
+Optimization Goal                  : Area
+Optimization Effort                : 1
+RTL Output                         : yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/julian/Documentos/Daniel/Proyecto/Touch/MódulosBásicos/ps2/ps2.v" into library wo
+Parsing module <ps2>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <ps2>.
+WARNING:HDLCompiler:413 - "/home/julian/Documentos/Daniel/Proyecto/Touch/M  dulosB  sicos/ps2/ps2.v" Line 42: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/julian/Documentos/Daniel/Proyecto/Touch/M  dulosB  sicos/ps2/ps2.v" Line 45: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/julian/Documentos/Daniel/Proyecto/Touch/M  dulosB  sicos/ps2/ps2.v" Line 50: Result of 3-bit expression is truncated to fit in 2-bit target.
+ERROR:HDLCompiler:592 - "/home/julian/Documentos/Daniel/Proyecto/Touch/M  dulosB  sicos/ps2/ps2.v" Line 89: Mixed blocking and non-blocking assignments on init is not supported
+Module ps2 remains a blackbox, due to errors in its contents
+WARNING:HDLCompiler:1499 - "/home/julian/Documentos/Daniel/Proyecto/Touch/M  dulosB  sicos/ps2/ps2.v" Line 1: Empty module <ps2> remains a black box.
+--> 
+
+
+Total memory usage is 339664 kilobytes
+
+Number of errors   :    1 (   0 filtered)
+Number of warnings :    4 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

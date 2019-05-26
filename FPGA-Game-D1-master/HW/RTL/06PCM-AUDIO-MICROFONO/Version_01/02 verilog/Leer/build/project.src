@@ -1,0 +1,3 @@
+verilog work ../pwm.v
+verilog work ../div_freq.v
+verilog work ../fifo.v

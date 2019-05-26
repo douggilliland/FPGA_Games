@@ -1,0 +1,911 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "project.src"
+Input Format                       : mixed
+
+---- Target Parameters
+Target Device                      : XC7A100T-1CSG324
+Output File Name                   : "project.ngc"
+Output Format                      : NGC
+
+---- Source Options
+Top Module Name                    : microfono
+
+---- General Options
+Optimization Goal                  : Area
+Optimization Effort                : 1
+RTL Output                         : yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/prueba4.3/microfono.v" into library work
+Parsing module <microfono>.
+Analyzing Verilog file "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/prueba4.3/div_freq.v" into library work
+Parsing module <div_freq>.
+Analyzing Verilog file "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/prueba4.3/fifo.v" into library work
+Parsing module <fifo>.
+Analyzing Verilog file "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/prueba4.3/pwm.v" into library work
+Parsing module <pwm>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+WARNING:HDLCompiler:1016 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/prueba4.3/microfono.v" Line 38: Port ledres is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/prueba4.3/microfono.v" Line 39: Port ledres is not connected to this instance
+
+Elaborating module <microfono>.
+
+Elaborating module <fifo>.
+WARNING:HDLCompiler:413 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/prueba4.3/fifo.v" Line 47: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/prueba4.3/fifo.v" Line 69: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:91 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/prueba4.3/fifo.v" Line 122: Signal <wr_reg> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/prueba4.3/fifo.v" Line 123: Signal <rd_reg> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/prueba4.3/fifo.v" Line 124: Signal <wr_reg> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/prueba4.3/fifo.v" Line 125: Signal <rd_reg> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/prueba4.3/fifo.v" Line 126: Signal <full_reg> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/prueba4.3/fifo.v" Line 127: Signal <empty_reg> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/prueba4.3/fifo.v" Line 129: Signal <db_wr> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/prueba4.3/fifo.v" Line 134: Signal <empty> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/prueba4.3/fifo.v" Line 138: Signal <wr_reg> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/prueba4.3/fifo.v" Line 145: Signal <full> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+
+Elaborating module <pwm>.
+
+Elaborating module <div_freq>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <microfono>.
+    Related source file is "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/prueba4.3/microfono.v".
+INFO:Xst:3210 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/prueba4.3/microfono.v" line 38: Output port <ledres> of the instance <fi> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/prueba4.3/microfono.v" line 39: Output port <ledres> of the instance <pw> is unconnected or connected to loadless signal.
+WARNING:Xst:2935 - Signal 'micLRSel', unconnected in block 'microfono', is tied to its initial value (0).
+    Found 1-bit register for signal <micData1>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <microfono> synthesized.
+
+Synthesizing Unit <fifo>.
+    Related source file is "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/prueba4.3/fifo.v".
+        abits = 400
+        dbits = 1
+    Found 1-bit register for signal <empty_reg>.
+    Found 400-bit register for signal <wr_reg>.
+    Found 400-bit register for signal <rd_reg>.
+    Found 1-bit register for signal <full_reg>.
+    Found 1-bit register for signal <ledres>.
+    Found 2-bit register for signal <count>.
+    Found 1-bit register for signal <dffr1>.
+    Found 2-bit register for signal <count1>.
+    Found 1-bit register for signal <out>.
+    Found 1-bit register for signal <dffw1>.
+    Found 1-bit register for signal <regarray_ff_0>.
+    Found 1-bit register for signal <regarray_ff_1>.
+    Found 2-bit adder for signal <count[1]_GND_2_o_add_2_OUT> created at line 47.
+    Found 2-bit adder for signal <count1[1]_GND_2_o_add_8_OUT> created at line 69.
+    Found 400-bit adder for signal <wr_succ> created at line 122.
+    Found 400-bit adder for signal <rd_succ> created at line 123.
+    Found 400-bit comparator not equal for signal <rd_reg[399]_wr_reg[399]_equal_21_o> created at line 138
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred 812 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <fifo> synthesized.
+
+Synthesizing Unit <pwm>.
+    Related source file is "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/prueba4.3/pwm.v".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <ledres> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:2935 - Signal 'ampSD', unconnected in block 'pwm', is tied to its initial value (1).
+    Found 1-bit register for signal <ampPWM>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <pwm> synthesized.
+
+Synthesizing Unit <div_freq>.
+    Related source file is "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/prueba4.3/div_freq.v".
+        fi = 50000000
+        fs = 3125000
+    Found 32-bit register for signal <count>.
+    Found 1-bit register for signal <clkout>.
+    Found 1-bit register for signal <led>.
+    Found 32-bit subtractor for signal <count[31]_GND_5_o_sub_3_OUT> created at line 30.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  34 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <div_freq> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 5
+ 2-bit adder                                           : 2
+ 32-bit subtractor                                     : 1
+ 400-bit adder                                         : 2
+# Registers                                            : 17
+ 1-bit register                                        : 12
+ 2-bit register                                        : 2
+ 32-bit register                                       : 1
+ 400-bit register                                      : 2
+# Comparators                                          : 1
+ 400-bit comparator not equal                          : 1
+# Multiplexers                                         : 2
+ 1-bit 2-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <div_freq>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <div_freq> synthesized (advanced).
+
+Synthesizing (advanced) Unit <fifo>.
+The following registers are absorbed into counter <wr_reg>: 1 register on signal <wr_reg>.
+The following registers are absorbed into counter <rd_reg>: 1 register on signal <rd_reg>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+The following registers are absorbed into counter <count1>: 1 register on signal <count1>.
+Unit <fifo> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 400-bit adder                                         : 2
+# Counters                                             : 5
+ 2-bit up counter                                      : 2
+ 32-bit down counter                                   : 1
+ 400-bit up counter                                    : 2
+# Registers                                            : 12
+ Flip-Flops                                            : 12
+# Comparators                                          : 1
+ 400-bit comparator not equal                          : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <microfono> ...
+
+Optimizing unit <fifo> ...
+WARNING:Xst:2677 - Node <fi/ledres> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:1710 - FF/Latch <fi/count_1> (without init value) has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <fi/count_0> (without init value) has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <fi/count1_1> (without init value) has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <fi/count1_0> (without init value) has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block microfono, actual ratio is 3.
+FlipFlop df/clkout has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop fi/empty_reg has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop fi/full_reg has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 846
+ Flip-Flops                                            : 846
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : project.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 5264
+#      GND                         : 1
+#      INV                         : 37
+#      LUT1                        : 1597
+#      LUT2                        : 6
+#      LUT3                        : 6
+#      LUT4                        : 1
+#      LUT5                        : 11
+#      LUT6                        : 211
+#      MUXCY                       : 1761
+#      VCC                         : 1
+#      XORCY                       : 1632
+# FlipFlops/Latches                : 846
+#      FD                          : 1
+#      FDCE                        : 802
+#      FDE                         : 3
+#      FDP                         : 2
+#      FDR                         : 35
+#      FDRE                        : 2
+#      FDS                         : 1
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 11
+#      IBUF                        : 4
+#      OBUF                        : 7
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             840  out of  126800     0%  
+ Number of Slice LUTs:                 1869  out of  63400     2%  
+    Number used as Logic:              1869  out of  63400     2%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1872
+   Number with an unused Flip Flop:    1032  out of   1872    55%  
+   Number with an unused LUT:             3  out of   1872     0%  
+   Number of fully used LUT-FF pairs:   837  out of   1872    44%  
+   Number of unique control sets:        14
+
+IO Utilization: 
+ Number of IOs:                          12
+ Number of bonded IOBs:                  12  out of    210     5%  
+    IOB Flip Flops/Latches:               6
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+df/clkout                          | BUFG                   | 811   |
+clk                                | BUFGP                  | 35    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 16.091ns (Maximum Frequency: 62.148MHz)
+   Minimum input arrival time before clock: 1.860ns
+   Maximum output required time after clock: 0.877ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'df/clkout'
+  Clock period: 16.091ns (frequency: 62.148MHz)
+  Total number of paths / destination ports: 484435 / 1613
+-------------------------------------------------------------------------
+Delay:               16.091ns (Levels of Logic = 400)
+  Source:            fi/wr_reg_0 (FF)
+  Destination:       fi/full_reg (FF)
+  Source Clock:      df/clkout rising
+  Destination Clock: df/clkout rising
+
+  Data Path: fi/wr_reg_0 to fi/full_reg
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             5   0.478   0.426  fi/wr_reg_0 (fi/wr_reg_0)
+     INV:I->O              1   0.146   0.000  fi/Madd_wr_succ_lut<0>_INV_0 (fi/Madd_wr_succ_lut<0>)
+     MUXCY:S->O            1   0.472   0.000  fi/Madd_wr_succ_cy<0> (fi/Madd_wr_succ_cy<0>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<1> (fi/Madd_wr_succ_cy<1>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<2> (fi/Madd_wr_succ_cy<2>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<3> (fi/Madd_wr_succ_cy<3>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<4> (fi/Madd_wr_succ_cy<4>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<5> (fi/Madd_wr_succ_cy<5>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<6> (fi/Madd_wr_succ_cy<6>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<7> (fi/Madd_wr_succ_cy<7>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<8> (fi/Madd_wr_succ_cy<8>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<9> (fi/Madd_wr_succ_cy<9>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<10> (fi/Madd_wr_succ_cy<10>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<11> (fi/Madd_wr_succ_cy<11>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<12> (fi/Madd_wr_succ_cy<12>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<13> (fi/Madd_wr_succ_cy<13>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<14> (fi/Madd_wr_succ_cy<14>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<15> (fi/Madd_wr_succ_cy<15>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<16> (fi/Madd_wr_succ_cy<16>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<17> (fi/Madd_wr_succ_cy<17>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<18> (fi/Madd_wr_succ_cy<18>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<19> (fi/Madd_wr_succ_cy<19>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<20> (fi/Madd_wr_succ_cy<20>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<21> (fi/Madd_wr_succ_cy<21>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<22> (fi/Madd_wr_succ_cy<22>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<23> (fi/Madd_wr_succ_cy<23>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<24> (fi/Madd_wr_succ_cy<24>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<25> (fi/Madd_wr_succ_cy<25>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<26> (fi/Madd_wr_succ_cy<26>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<27> (fi/Madd_wr_succ_cy<27>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<28> (fi/Madd_wr_succ_cy<28>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<29> (fi/Madd_wr_succ_cy<29>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<30> (fi/Madd_wr_succ_cy<30>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<31> (fi/Madd_wr_succ_cy<31>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<32> (fi/Madd_wr_succ_cy<32>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<33> (fi/Madd_wr_succ_cy<33>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<34> (fi/Madd_wr_succ_cy<34>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<35> (fi/Madd_wr_succ_cy<35>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<36> (fi/Madd_wr_succ_cy<36>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<37> (fi/Madd_wr_succ_cy<37>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<38> (fi/Madd_wr_succ_cy<38>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<39> (fi/Madd_wr_succ_cy<39>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<40> (fi/Madd_wr_succ_cy<40>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<41> (fi/Madd_wr_succ_cy<41>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<42> (fi/Madd_wr_succ_cy<42>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<43> (fi/Madd_wr_succ_cy<43>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<44> (fi/Madd_wr_succ_cy<44>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<45> (fi/Madd_wr_succ_cy<45>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<46> (fi/Madd_wr_succ_cy<46>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<47> (fi/Madd_wr_succ_cy<47>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<48> (fi/Madd_wr_succ_cy<48>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<49> (fi/Madd_wr_succ_cy<49>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<50> (fi/Madd_wr_succ_cy<50>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<51> (fi/Madd_wr_succ_cy<51>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<52> (fi/Madd_wr_succ_cy<52>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<53> (fi/Madd_wr_succ_cy<53>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<54> (fi/Madd_wr_succ_cy<54>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<55> (fi/Madd_wr_succ_cy<55>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<56> (fi/Madd_wr_succ_cy<56>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<57> (fi/Madd_wr_succ_cy<57>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<58> (fi/Madd_wr_succ_cy<58>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<59> (fi/Madd_wr_succ_cy<59>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<60> (fi/Madd_wr_succ_cy<60>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<61> (fi/Madd_wr_succ_cy<61>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<62> (fi/Madd_wr_succ_cy<62>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<63> (fi/Madd_wr_succ_cy<63>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<64> (fi/Madd_wr_succ_cy<64>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<65> (fi/Madd_wr_succ_cy<65>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<66> (fi/Madd_wr_succ_cy<66>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<67> (fi/Madd_wr_succ_cy<67>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<68> (fi/Madd_wr_succ_cy<68>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<69> (fi/Madd_wr_succ_cy<69>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<70> (fi/Madd_wr_succ_cy<70>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<71> (fi/Madd_wr_succ_cy<71>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<72> (fi/Madd_wr_succ_cy<72>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<73> (fi/Madd_wr_succ_cy<73>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<74> (fi/Madd_wr_succ_cy<74>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<75> (fi/Madd_wr_succ_cy<75>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<76> (fi/Madd_wr_succ_cy<76>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<77> (fi/Madd_wr_succ_cy<77>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<78> (fi/Madd_wr_succ_cy<78>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<79> (fi/Madd_wr_succ_cy<79>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<80> (fi/Madd_wr_succ_cy<80>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<81> (fi/Madd_wr_succ_cy<81>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<82> (fi/Madd_wr_succ_cy<82>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<83> (fi/Madd_wr_succ_cy<83>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<84> (fi/Madd_wr_succ_cy<84>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<85> (fi/Madd_wr_succ_cy<85>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<86> (fi/Madd_wr_succ_cy<86>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<87> (fi/Madd_wr_succ_cy<87>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<88> (fi/Madd_wr_succ_cy<88>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<89> (fi/Madd_wr_succ_cy<89>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<90> (fi/Madd_wr_succ_cy<90>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<91> (fi/Madd_wr_succ_cy<91>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<92> (fi/Madd_wr_succ_cy<92>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<93> (fi/Madd_wr_succ_cy<93>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<94> (fi/Madd_wr_succ_cy<94>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<95> (fi/Madd_wr_succ_cy<95>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<96> (fi/Madd_wr_succ_cy<96>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<97> (fi/Madd_wr_succ_cy<97>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<98> (fi/Madd_wr_succ_cy<98>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<99> (fi/Madd_wr_succ_cy<99>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<100> (fi/Madd_wr_succ_cy<100>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<101> (fi/Madd_wr_succ_cy<101>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<102> (fi/Madd_wr_succ_cy<102>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<103> (fi/Madd_wr_succ_cy<103>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<104> (fi/Madd_wr_succ_cy<104>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<105> (fi/Madd_wr_succ_cy<105>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<106> (fi/Madd_wr_succ_cy<106>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<107> (fi/Madd_wr_succ_cy<107>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<108> (fi/Madd_wr_succ_cy<108>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<109> (fi/Madd_wr_succ_cy<109>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<110> (fi/Madd_wr_succ_cy<110>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<111> (fi/Madd_wr_succ_cy<111>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<112> (fi/Madd_wr_succ_cy<112>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<113> (fi/Madd_wr_succ_cy<113>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<114> (fi/Madd_wr_succ_cy<114>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<115> (fi/Madd_wr_succ_cy<115>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<116> (fi/Madd_wr_succ_cy<116>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<117> (fi/Madd_wr_succ_cy<117>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<118> (fi/Madd_wr_succ_cy<118>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<119> (fi/Madd_wr_succ_cy<119>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<120> (fi/Madd_wr_succ_cy<120>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<121> (fi/Madd_wr_succ_cy<121>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<122> (fi/Madd_wr_succ_cy<122>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<123> (fi/Madd_wr_succ_cy<123>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<124> (fi/Madd_wr_succ_cy<124>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<125> (fi/Madd_wr_succ_cy<125>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<126> (fi/Madd_wr_succ_cy<126>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<127> (fi/Madd_wr_succ_cy<127>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<128> (fi/Madd_wr_succ_cy<128>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<129> (fi/Madd_wr_succ_cy<129>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<130> (fi/Madd_wr_succ_cy<130>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<131> (fi/Madd_wr_succ_cy<131>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<132> (fi/Madd_wr_succ_cy<132>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<133> (fi/Madd_wr_succ_cy<133>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<134> (fi/Madd_wr_succ_cy<134>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<135> (fi/Madd_wr_succ_cy<135>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<136> (fi/Madd_wr_succ_cy<136>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<137> (fi/Madd_wr_succ_cy<137>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<138> (fi/Madd_wr_succ_cy<138>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<139> (fi/Madd_wr_succ_cy<139>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<140> (fi/Madd_wr_succ_cy<140>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<141> (fi/Madd_wr_succ_cy<141>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<142> (fi/Madd_wr_succ_cy<142>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<143> (fi/Madd_wr_succ_cy<143>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<144> (fi/Madd_wr_succ_cy<144>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<145> (fi/Madd_wr_succ_cy<145>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<146> (fi/Madd_wr_succ_cy<146>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<147> (fi/Madd_wr_succ_cy<147>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<148> (fi/Madd_wr_succ_cy<148>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<149> (fi/Madd_wr_succ_cy<149>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<150> (fi/Madd_wr_succ_cy<150>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<151> (fi/Madd_wr_succ_cy<151>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<152> (fi/Madd_wr_succ_cy<152>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<153> (fi/Madd_wr_succ_cy<153>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<154> (fi/Madd_wr_succ_cy<154>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<155> (fi/Madd_wr_succ_cy<155>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<156> (fi/Madd_wr_succ_cy<156>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<157> (fi/Madd_wr_succ_cy<157>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<158> (fi/Madd_wr_succ_cy<158>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<159> (fi/Madd_wr_succ_cy<159>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<160> (fi/Madd_wr_succ_cy<160>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<161> (fi/Madd_wr_succ_cy<161>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<162> (fi/Madd_wr_succ_cy<162>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<163> (fi/Madd_wr_succ_cy<163>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<164> (fi/Madd_wr_succ_cy<164>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<165> (fi/Madd_wr_succ_cy<165>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<166> (fi/Madd_wr_succ_cy<166>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<167> (fi/Madd_wr_succ_cy<167>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<168> (fi/Madd_wr_succ_cy<168>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<169> (fi/Madd_wr_succ_cy<169>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<170> (fi/Madd_wr_succ_cy<170>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<171> (fi/Madd_wr_succ_cy<171>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<172> (fi/Madd_wr_succ_cy<172>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<173> (fi/Madd_wr_succ_cy<173>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<174> (fi/Madd_wr_succ_cy<174>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<175> (fi/Madd_wr_succ_cy<175>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<176> (fi/Madd_wr_succ_cy<176>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<177> (fi/Madd_wr_succ_cy<177>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<178> (fi/Madd_wr_succ_cy<178>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<179> (fi/Madd_wr_succ_cy<179>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<180> (fi/Madd_wr_succ_cy<180>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<181> (fi/Madd_wr_succ_cy<181>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<182> (fi/Madd_wr_succ_cy<182>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<183> (fi/Madd_wr_succ_cy<183>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<184> (fi/Madd_wr_succ_cy<184>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<185> (fi/Madd_wr_succ_cy<185>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<186> (fi/Madd_wr_succ_cy<186>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<187> (fi/Madd_wr_succ_cy<187>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<188> (fi/Madd_wr_succ_cy<188>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<189> (fi/Madd_wr_succ_cy<189>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<190> (fi/Madd_wr_succ_cy<190>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<191> (fi/Madd_wr_succ_cy<191>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<192> (fi/Madd_wr_succ_cy<192>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<193> (fi/Madd_wr_succ_cy<193>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<194> (fi/Madd_wr_succ_cy<194>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<195> (fi/Madd_wr_succ_cy<195>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<196> (fi/Madd_wr_succ_cy<196>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<197> (fi/Madd_wr_succ_cy<197>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<198> (fi/Madd_wr_succ_cy<198>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<199> (fi/Madd_wr_succ_cy<199>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<200> (fi/Madd_wr_succ_cy<200>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<201> (fi/Madd_wr_succ_cy<201>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<202> (fi/Madd_wr_succ_cy<202>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<203> (fi/Madd_wr_succ_cy<203>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<204> (fi/Madd_wr_succ_cy<204>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<205> (fi/Madd_wr_succ_cy<205>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<206> (fi/Madd_wr_succ_cy<206>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<207> (fi/Madd_wr_succ_cy<207>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<208> (fi/Madd_wr_succ_cy<208>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<209> (fi/Madd_wr_succ_cy<209>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<210> (fi/Madd_wr_succ_cy<210>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<211> (fi/Madd_wr_succ_cy<211>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<212> (fi/Madd_wr_succ_cy<212>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<213> (fi/Madd_wr_succ_cy<213>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<214> (fi/Madd_wr_succ_cy<214>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<215> (fi/Madd_wr_succ_cy<215>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<216> (fi/Madd_wr_succ_cy<216>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<217> (fi/Madd_wr_succ_cy<217>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<218> (fi/Madd_wr_succ_cy<218>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<219> (fi/Madd_wr_succ_cy<219>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<220> (fi/Madd_wr_succ_cy<220>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<221> (fi/Madd_wr_succ_cy<221>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<222> (fi/Madd_wr_succ_cy<222>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<223> (fi/Madd_wr_succ_cy<223>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<224> (fi/Madd_wr_succ_cy<224>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<225> (fi/Madd_wr_succ_cy<225>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<226> (fi/Madd_wr_succ_cy<226>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<227> (fi/Madd_wr_succ_cy<227>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<228> (fi/Madd_wr_succ_cy<228>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<229> (fi/Madd_wr_succ_cy<229>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<230> (fi/Madd_wr_succ_cy<230>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<231> (fi/Madd_wr_succ_cy<231>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<232> (fi/Madd_wr_succ_cy<232>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<233> (fi/Madd_wr_succ_cy<233>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<234> (fi/Madd_wr_succ_cy<234>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<235> (fi/Madd_wr_succ_cy<235>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<236> (fi/Madd_wr_succ_cy<236>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<237> (fi/Madd_wr_succ_cy<237>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<238> (fi/Madd_wr_succ_cy<238>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<239> (fi/Madd_wr_succ_cy<239>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<240> (fi/Madd_wr_succ_cy<240>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<241> (fi/Madd_wr_succ_cy<241>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<242> (fi/Madd_wr_succ_cy<242>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<243> (fi/Madd_wr_succ_cy<243>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<244> (fi/Madd_wr_succ_cy<244>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<245> (fi/Madd_wr_succ_cy<245>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<246> (fi/Madd_wr_succ_cy<246>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<247> (fi/Madd_wr_succ_cy<247>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<248> (fi/Madd_wr_succ_cy<248>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<249> (fi/Madd_wr_succ_cy<249>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<250> (fi/Madd_wr_succ_cy<250>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<251> (fi/Madd_wr_succ_cy<251>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<252> (fi/Madd_wr_succ_cy<252>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<253> (fi/Madd_wr_succ_cy<253>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<254> (fi/Madd_wr_succ_cy<254>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<255> (fi/Madd_wr_succ_cy<255>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<256> (fi/Madd_wr_succ_cy<256>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<257> (fi/Madd_wr_succ_cy<257>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<258> (fi/Madd_wr_succ_cy<258>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<259> (fi/Madd_wr_succ_cy<259>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<260> (fi/Madd_wr_succ_cy<260>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<261> (fi/Madd_wr_succ_cy<261>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<262> (fi/Madd_wr_succ_cy<262>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<263> (fi/Madd_wr_succ_cy<263>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<264> (fi/Madd_wr_succ_cy<264>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<265> (fi/Madd_wr_succ_cy<265>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<266> (fi/Madd_wr_succ_cy<266>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<267> (fi/Madd_wr_succ_cy<267>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<268> (fi/Madd_wr_succ_cy<268>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<269> (fi/Madd_wr_succ_cy<269>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<270> (fi/Madd_wr_succ_cy<270>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<271> (fi/Madd_wr_succ_cy<271>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<272> (fi/Madd_wr_succ_cy<272>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<273> (fi/Madd_wr_succ_cy<273>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<274> (fi/Madd_wr_succ_cy<274>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<275> (fi/Madd_wr_succ_cy<275>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<276> (fi/Madd_wr_succ_cy<276>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<277> (fi/Madd_wr_succ_cy<277>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<278> (fi/Madd_wr_succ_cy<278>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<279> (fi/Madd_wr_succ_cy<279>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<280> (fi/Madd_wr_succ_cy<280>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<281> (fi/Madd_wr_succ_cy<281>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<282> (fi/Madd_wr_succ_cy<282>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<283> (fi/Madd_wr_succ_cy<283>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<284> (fi/Madd_wr_succ_cy<284>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<285> (fi/Madd_wr_succ_cy<285>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<286> (fi/Madd_wr_succ_cy<286>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<287> (fi/Madd_wr_succ_cy<287>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<288> (fi/Madd_wr_succ_cy<288>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<289> (fi/Madd_wr_succ_cy<289>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<290> (fi/Madd_wr_succ_cy<290>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<291> (fi/Madd_wr_succ_cy<291>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<292> (fi/Madd_wr_succ_cy<292>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<293> (fi/Madd_wr_succ_cy<293>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<294> (fi/Madd_wr_succ_cy<294>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<295> (fi/Madd_wr_succ_cy<295>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<296> (fi/Madd_wr_succ_cy<296>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<297> (fi/Madd_wr_succ_cy<297>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<298> (fi/Madd_wr_succ_cy<298>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<299> (fi/Madd_wr_succ_cy<299>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<300> (fi/Madd_wr_succ_cy<300>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<301> (fi/Madd_wr_succ_cy<301>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<302> (fi/Madd_wr_succ_cy<302>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<303> (fi/Madd_wr_succ_cy<303>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<304> (fi/Madd_wr_succ_cy<304>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<305> (fi/Madd_wr_succ_cy<305>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<306> (fi/Madd_wr_succ_cy<306>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<307> (fi/Madd_wr_succ_cy<307>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<308> (fi/Madd_wr_succ_cy<308>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<309> (fi/Madd_wr_succ_cy<309>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<310> (fi/Madd_wr_succ_cy<310>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<311> (fi/Madd_wr_succ_cy<311>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<312> (fi/Madd_wr_succ_cy<312>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<313> (fi/Madd_wr_succ_cy<313>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<314> (fi/Madd_wr_succ_cy<314>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<315> (fi/Madd_wr_succ_cy<315>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<316> (fi/Madd_wr_succ_cy<316>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<317> (fi/Madd_wr_succ_cy<317>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<318> (fi/Madd_wr_succ_cy<318>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<319> (fi/Madd_wr_succ_cy<319>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<320> (fi/Madd_wr_succ_cy<320>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<321> (fi/Madd_wr_succ_cy<321>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<322> (fi/Madd_wr_succ_cy<322>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<323> (fi/Madd_wr_succ_cy<323>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<324> (fi/Madd_wr_succ_cy<324>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<325> (fi/Madd_wr_succ_cy<325>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<326> (fi/Madd_wr_succ_cy<326>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<327> (fi/Madd_wr_succ_cy<327>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<328> (fi/Madd_wr_succ_cy<328>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<329> (fi/Madd_wr_succ_cy<329>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<330> (fi/Madd_wr_succ_cy<330>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<331> (fi/Madd_wr_succ_cy<331>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<332> (fi/Madd_wr_succ_cy<332>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<333> (fi/Madd_wr_succ_cy<333>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<334> (fi/Madd_wr_succ_cy<334>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<335> (fi/Madd_wr_succ_cy<335>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<336> (fi/Madd_wr_succ_cy<336>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<337> (fi/Madd_wr_succ_cy<337>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<338> (fi/Madd_wr_succ_cy<338>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<339> (fi/Madd_wr_succ_cy<339>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<340> (fi/Madd_wr_succ_cy<340>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<341> (fi/Madd_wr_succ_cy<341>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<342> (fi/Madd_wr_succ_cy<342>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<343> (fi/Madd_wr_succ_cy<343>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<344> (fi/Madd_wr_succ_cy<344>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<345> (fi/Madd_wr_succ_cy<345>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<346> (fi/Madd_wr_succ_cy<346>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<347> (fi/Madd_wr_succ_cy<347>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<348> (fi/Madd_wr_succ_cy<348>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<349> (fi/Madd_wr_succ_cy<349>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<350> (fi/Madd_wr_succ_cy<350>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<351> (fi/Madd_wr_succ_cy<351>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<352> (fi/Madd_wr_succ_cy<352>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<353> (fi/Madd_wr_succ_cy<353>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<354> (fi/Madd_wr_succ_cy<354>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<355> (fi/Madd_wr_succ_cy<355>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<356> (fi/Madd_wr_succ_cy<356>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<357> (fi/Madd_wr_succ_cy<357>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<358> (fi/Madd_wr_succ_cy<358>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<359> (fi/Madd_wr_succ_cy<359>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<360> (fi/Madd_wr_succ_cy<360>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<361> (fi/Madd_wr_succ_cy<361>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<362> (fi/Madd_wr_succ_cy<362>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<363> (fi/Madd_wr_succ_cy<363>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<364> (fi/Madd_wr_succ_cy<364>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<365> (fi/Madd_wr_succ_cy<365>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<366> (fi/Madd_wr_succ_cy<366>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<367> (fi/Madd_wr_succ_cy<367>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<368> (fi/Madd_wr_succ_cy<368>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<369> (fi/Madd_wr_succ_cy<369>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<370> (fi/Madd_wr_succ_cy<370>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<371> (fi/Madd_wr_succ_cy<371>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<372> (fi/Madd_wr_succ_cy<372>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<373> (fi/Madd_wr_succ_cy<373>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<374> (fi/Madd_wr_succ_cy<374>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<375> (fi/Madd_wr_succ_cy<375>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<376> (fi/Madd_wr_succ_cy<376>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<377> (fi/Madd_wr_succ_cy<377>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<378> (fi/Madd_wr_succ_cy<378>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<379> (fi/Madd_wr_succ_cy<379>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<380> (fi/Madd_wr_succ_cy<380>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<381> (fi/Madd_wr_succ_cy<381>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<382> (fi/Madd_wr_succ_cy<382>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<383> (fi/Madd_wr_succ_cy<383>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<384> (fi/Madd_wr_succ_cy<384>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<385> (fi/Madd_wr_succ_cy<385>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<386> (fi/Madd_wr_succ_cy<386>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<387> (fi/Madd_wr_succ_cy<387>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<388> (fi/Madd_wr_succ_cy<388>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<389> (fi/Madd_wr_succ_cy<389>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<390> (fi/Madd_wr_succ_cy<390>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<391> (fi/Madd_wr_succ_cy<391>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<392> (fi/Madd_wr_succ_cy<392>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<393> (fi/Madd_wr_succ_cy<393>)
+     MUXCY:CI->O           1   0.029   0.000  fi/Madd_wr_succ_cy<394> (fi/Madd_wr_succ_cy<394>)
+     XORCY:CI->O           1   0.510   0.776  fi/Madd_wr_succ_xor<395> (fi/wr_succ<395>)
+     LUT6:I2->O            1   0.124   0.421  fi/_n0147_inv56 (fi/_n0147_inv56)
+     LUT6:I5->O            1   0.124   0.421  fi/_n0147_inv85_SW0 (N9)
+     LUT6:I5->O            2   0.124   0.405  fi/_n0147_inv85 (fi/_n0147_inv)
+     FDCE:CE                   0.139          fi/full_reg
+    ----------------------------------------
+    Total                     16.091ns (13.642ns logic, 2.449ns route)
+                                       (84.8% logic, 15.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.335ns (frequency: 230.664MHz)
+  Total number of paths / destination ports: 1618 / 67
+-------------------------------------------------------------------------
+Delay:               4.335ns (Levels of Logic = 3)
+  Source:            df/count_13 (FF)
+  Destination:       df/count_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: df/count_13 to df/count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.478   0.945  df/count_13 (df/count_13)
+     LUT6:I0->O            1   0.124   0.939  df/count[31]_GND_5_o_equal_2_o<31>1 (df/count[31]_GND_5_o_equal_2_o<31>)
+     LUT6:I0->O            4   0.124   0.556  df/count[31]_GND_5_o_equal_2_o<31>7 (df/count[31]_GND_5_o_equal_2_o)
+     LUT2:I0->O           31   0.124   0.551  df/count[31]_GND_5_o_equal_2_o_01 (df/count[31]_GND_5_o_equal_2_o_0)
+     FDR:R                     0.494          df/count_0
+    ----------------------------------------
+    Total                      4.335ns (1.344ns logic, 2.991ns route)
+                                       (31.0% logic, 69.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'df/clkout'
+  Total number of paths / destination ports: 811 / 809
+-------------------------------------------------------------------------
+Offset:              1.560ns (Levels of Logic = 2)
+  Source:            rd (PAD)
+  Destination:       fi/dffw1 (FF)
+  Destination Clock: df/clkout rising
+
+  Data Path: rd to fi/dffw1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   0.001   0.542  rd_IBUF (rd_IBUF)
+     LUT2:I0->O            1   0.124   0.399  fi/wr_rd_AND_2_o_inv1 (fi/wr_rd_AND_2_o_inv)
+     FDR:R                     0.494          fi/dffw1
+    ----------------------------------------
+    Total                      1.560ns (0.619ns logic, 0.941ns route)
+                                       (39.7% logic, 60.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 35 / 35
+-------------------------------------------------------------------------
+Offset:              1.860ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       df/count_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: reset to df/count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           811   0.001   0.690  reset_IBUF (reset_IBUF)
+     LUT2:I1->O           31   0.124   0.551  df/count[31]_GND_5_o_equal_2_o_01 (df/count[31]_GND_5_o_equal_2_o_0)
+     FDR:R                     0.494          df/count_0
+    ----------------------------------------
+    Total                      1.860ns (0.619ns logic, 1.241ns route)
+                                       (33.3% logic, 66.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              0.877ns (Levels of Logic = 1)
+  Source:            df/led (FF)
+  Destination:       ledres (PAD)
+  Source Clock:      clk rising
+
+  Data Path: df/led to ledres
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.478   0.399  df/led (df/led)
+     OBUF:I->O                 0.000          ledres_OBUF (ledres)
+    ----------------------------------------
+    Total                      0.877ns (0.478ns logic, 0.399ns route)
+                                       (54.5% logic, 45.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'df/clkout'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              0.877ns (Levels of Logic = 1)
+  Source:            pw/ampPWM (FF)
+  Destination:       ampPWM (PAD)
+  Source Clock:      df/clkout rising
+
+  Data Path: pw/ampPWM to ampPWM
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.478   0.399  pw/ampPWM (pw/ampPWM)
+     OBUF:I->O                 0.000          ampPWM_OBUF (ampPWM)
+    ----------------------------------------
+    Total                      0.877ns (0.478ns logic, 0.399ns route)
+                                       (54.5% logic, 45.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    4.335|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock df/clkout
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+df/clkout      |   16.091|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 53.00 secs
+Total CPU time to Xst completion: 50.18 secs
+ 
+--> 
+
+
+Total memory usage is 507392 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   23 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

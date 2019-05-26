@@ -1,0 +1,385 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "project.src"
+Input Format                       : mixed
+
+---- Target Parameters
+Target Device                      : xc7a100t-1csg324
+Output File Name                   : "project.ngc"
+Output Format                      : NGC
+
+---- Source Options
+Top Module Name                    : fifo
+
+---- General Options
+Optimization Goal                  : Area
+Optimization Effort                : 1
+RTL Output                         : yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/daniel/Documentos/Digital/Proyecto/Touch/MódulosBásicos/FIFO/fifo.v" into library wo
+Parsing module <fifo>.
+INFO:HDLCompiler:693 - "/home/daniel/Documentos/Digital/Proyecto/Touch/MódulosBásicos/FIFO/fifo.v" Line 19. parameter declaration becomes local in fifo with formal parameter declaration li
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <fifo>.
+WARNING:HDLCompiler:413 - "/home/daniel/Documentos/Digital/Proyecto/Touch/M  dulosB  sicos/FIFO/fifo.v" Line 92: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/daniel/Documentos/Digital/Proyecto/Touch/M  dulosB  sicos/FIFO/fifo.v" Line 100: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/daniel/Documentos/Digital/Proyecto/Touch/M  dulosB  sicos/FIFO/fifo.v" Line 107: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/daniel/Documentos/Digital/Proyecto/Touch/M  dulosB  sicos/FIFO/fifo.v" Line 108: Result of 5-bit expression is truncated to fit in 4-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <fifo>.
+    Related source file is "/home/daniel/Documentos/Digital/Proyecto/Touch/MódulosBásicos/FIFO/fifo.v
+        adr_width = 4
+        dat_width = 8
+    Found 16x8-bit dual-port RAM <Mram_array_reg> for signal <array_reg>.
+    Found 1-bit register for signal <empty>.
+    Found 4-bit register for signal <r_ptr_reg>.
+    Found 4-bit register for signal <w_ptr_reg>.
+    Found 1-bit register for signal <full>.
+    Found 2-bit register for signal <orden>.
+    Found 4-bit register for signal <w_ptr_next>.
+    Found 4-bit register for signal <r_ptr_next>.
+    Found 1-bit register for signal <full_next>.
+    Found 1-bit register for signal <empty_next>.
+    Found 4-bit adder for signal <w_ptr_reg[3]_GND_1_o_add_17_OUT> created at line 107.
+    Found 4-bit adder for signal <r_ptr_reg[3]_GND_1_o_add_18_OUT> created at line 108.
+    Found 1-bit 4-to-1 multiplexer for signal <orden[1]_empty_reg_Mux_21_o> created at line 88.
+    Found 1-bit 4-to-1 multiplexer for signal <orden[1]_full_reg_Mux_22_o> created at line 88.
+    Found 4-bit comparator equal for signal <r_ptr_reg[3]_w_ptr_reg[3]_equal_13_o> created at line 94
+    Found 4-bit comparator equal for signal <w_ptr_reg[3]_r_ptr_reg[3]_equal_16_o> created at line 102
+    Summary:
+	inferred   1 RAM(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  22 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   8 Multiplexer(s).
+Unit <fifo> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 16x8-bit dual-port RAM                                : 1
+# Adders/Subtractors                                   : 2
+ 4-bit adder                                           : 2
+# Registers                                            : 9
+ 1-bit register                                        : 4
+ 2-bit register                                        : 1
+ 4-bit register                                        : 4
+# Comparators                                          : 2
+ 4-bit comparator equal                                : 2
+# Multiplexers                                         : 8
+ 1-bit 2-to-1 multiplexer                              : 6
+ 1-bit 4-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <fifo>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_array_reg> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <wr_en>         | high     |
+    |     addrA          | connected to signal <w_ptr_reg>     |          |
+    |     diA            | connected to signal <data_in>       |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     addrB          | connected to signal <r_ptr_reg>     |          |
+    |     doB            | connected to signal <data_out>      |          |
+    -----------------------------------------------------------------------
+Unit <fifo> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 16x8-bit dual-port distributed RAM                    : 1
+# Adders/Subtractors                                   : 2
+ 4-bit adder                                           : 2
+# Registers                                            : 22
+ Flip-Flops                                            : 22
+# Comparators                                          : 2
+ 4-bit comparator equal                                : 2
+# Multiplexers                                         : 8
+ 1-bit 2-to-1 multiplexer                              : 6
+ 1-bit 4-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <fifo> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block fifo, actual ratio is 0.
+FlipFlop empty_reg has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop full_reg has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 24
+ Flip-Flops                                            : 24
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : project.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 24
+#      GND                         : 1
+#      INV                         : 3
+#      LUT2                        : 8
+#      LUT3                        : 4
+#      LUT4                        : 2
+#      LUT5                        : 2
+#      LUT6                        : 4
+# FlipFlops/Latches                : 24
+#      FDC                         : 10
+#      FDE                         : 2
+#      FDP                         : 2
+#      FDRE                        : 8
+#      FDSE                        : 2
+# RAMS                             : 3
+#      RAM32M                      : 1
+#      RAM32X1D                    : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 21
+#      IBUF                        : 11
+#      OBUF                        : 10
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              22  out of  126800     0%  
+ Number of Slice LUTs:                   31  out of  63400     0%  
+    Number used as Logic:                23  out of  63400     0%  
+    Number used as Memory:                8  out of  19000     0%  
+       Number used as RAM:                8
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     35
+   Number with an unused Flip Flop:      13  out of     35    37%  
+   Number with an unused LUT:             4  out of     35    11%  
+   Number of fully used LUT-FF pairs:    18  out of     35    51%  
+   Number of unique control sets:         5
+
+IO Utilization: 
+ Number of IOs:                          22
+ Number of bonded IOBs:                  22  out of    210    10%  
+    IOB Flip Flops/Latches:               2
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 27    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 2.701ns (Maximum Frequency: 370.233MHz)
+   Minimum input arrival time before clock: 1.587ns
+   Maximum output required time after clock: 2.067ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 2.701ns (frequency: 370.233MHz)
+  Total number of paths / destination ports: 113 / 53
+-------------------------------------------------------------------------
+Delay:               2.701ns (Levels of Logic = 3)
+  Source:            w_ptr_reg_2 (FF)
+  Destination:       empty_next (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: w_ptr_reg_2 to empty_next
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              7   0.478   0.979  w_ptr_reg_2 (w_ptr_reg_2)
+     LUT6:I0->O            1   0.124   0.421  Mmux_orden[1]_empty_reg_Mux_21_o12_SW0 (N4)
+     LUT6:I5->O            1   0.124   0.421  Mmux_orden[1]_empty_reg_Mux_21_o12 (Mmux_orden[1]_empty_reg_Mux_21_o11)
+     LUT5:I4->O            1   0.124   0.000  Mmux_orden[1]_empty_reg_Mux_21_o13 (orden[1]_empty_reg_Mux_21_o)
+     FDE:D                     0.030          empty_next
+    ----------------------------------------
+    Total                      2.701ns (0.880ns logic, 1.821ns route)
+                                       (32.6% logic, 67.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 45 / 39
+-------------------------------------------------------------------------
+Offset:              1.587ns (Levels of Logic = 2)
+  Source:            wr (PAD)
+  Destination:       orden_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: wr to orden_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   0.001   0.563  wr_IBUF (wr_IBUF)
+     LUT2:I0->O            2   0.124   0.405  wr_rd_AND_4_o1 (wr_rd_AND_4_o)
+     FDSE:S                    0.494          orden_0
+    ----------------------------------------
+    Total                      1.587ns (0.619ns logic, 0.968ns route)
+                                       (39.0% logic, 61.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 42 / 10
+-------------------------------------------------------------------------
+Offset:              2.067ns (Levels of Logic = 1)
+  Source:            Mram_array_reg1 (RAM)
+  Destination:       data_out<5> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: Mram_array_reg1 to data_out<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAM32M:WCLK->DOC1     1   1.668   0.399  Mram_array_reg1 (data_out_5_OBUF)
+     OBUF:I->O                 0.000          data_out_5_OBUF (data_out<5>)
+    ----------------------------------------
+    Total                      2.067ns (1.668ns logic, 0.399ns route)
+                                       (80.7% logic, 19.3% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    2.701|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 16.00 secs
+Total CPU time to Xst completion: 16.63 secs
+ 
+--> 
+
+
+Total memory usage is 504232 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    4 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

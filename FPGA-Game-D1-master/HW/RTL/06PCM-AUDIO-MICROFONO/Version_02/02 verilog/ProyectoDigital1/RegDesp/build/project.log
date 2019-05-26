@@ -1,0 +1,319 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "project.src"
+Input Format                       : mixed
+
+---- Target Parameters
+Target Device                      : XC6SLX45-CSG324
+Output File Name                   : "project.ngc"
+Output Format                      : NGC
+
+---- Source Options
+Top Module Name                    : RegAcum
+
+---- General Options
+Optimization Goal                  : Area
+Optimization Effort                : 1
+RTL Output                         : yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/alexandra/Documentos/ProyectoDigital/RegAcum/RegAcum.v" into library work
+Parsing module <RegAcum>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <RegAcum>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <RegAcum>.
+    Related source file is "/home/alexandra/Documentos/ProyectoDigital/RegAcum/RegAcum.v".
+    Found 6-bit register for signal <COUNT>.
+    Found 6-bit adder for signal <COUNT[5]_GND_1_o_add_1_OUT> created at line 21.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   6 D-type flip-flop(s).
+Unit <RegAcum> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 6-bit adder                                           : 1
+# Registers                                            : 1
+ 6-bit register                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <RegAcum>.
+The following registers are absorbed into counter <COUNT>: 1 register on signal <COUNT>.
+Unit <RegAcum> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 6-bit up counter                                      : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <RegAcum> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block RegAcum, actual ratio is 0.
+FlipFlop COUNT_5 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop COUNT_4 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop COUNT_3 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop COUNT_2 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop COUNT_1 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop COUNT_0 has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 12
+ Flip-Flops                                            : 12
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : project.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 7
+#      LUT2                        : 2
+#      LUT3                        : 2
+#      LUT4                        : 1
+#      LUT5                        : 1
+#      LUT6                        : 1
+# FlipFlops/Latches                : 12
+#      FDR                         : 12
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 8
+#      IBUF                        : 2
+#      OBUF                        : 6
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx45csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:               6  out of  54576     0%  
+ Number of Slice LUTs:                    7  out of  27288     0%  
+    Number used as Logic:                 7  out of  27288     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     13
+   Number with an unused Flip Flop:       7  out of     13    53%  
+   Number with an unused LUT:             6  out of     13    46%  
+   Number of fully used LUT-FF pairs:     0  out of     13     0%  
+   Number of unique control sets:         2
+
+IO Utilization: 
+ Number of IOs:                           9
+ Number of bonded IOBs:                   9  out of    218     4%  
+    IOB Flip Flops/Latches:               6
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+BCLK                               | BUFGP                  | 12    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 1.713ns (Maximum Frequency: 583.686MHz)
+   Minimum input arrival time before clock: 3.499ns
+   Maximum output required time after clock: 3.597ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'BCLK'
+  Clock period: 1.713ns (frequency: 583.686MHz)
+  Total number of paths / destination ports: 42 / 12
+-------------------------------------------------------------------------
+Delay:               1.713ns (Levels of Logic = 1)
+  Source:            COUNT_4 (FF)
+  Destination:       COUNT_5 (FF)
+  Source Clock:      BCLK rising
+  Destination Clock: BCLK rising
+
+  Data Path: COUNT_4 to COUNT_5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.447   0.961  COUNT_4 (COUNT_4)
+     LUT5:I0->O            2   0.203   0.000  Mcount_COUNT_xor<4>11 (Result<4>)
+     FDR:D                     0.102          COUNT_4
+    ----------------------------------------
+    Total                      1.713ns (0.752ns logic, 0.961ns route)
+                                       (43.9% logic, 56.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'BCLK'
+  Total number of paths / destination ports: 26 / 14
+-------------------------------------------------------------------------
+Offset:              3.499ns (Levels of Logic = 2)
+  Source:            RESET (PAD)
+  Destination:       COUNT_1 (FF)
+  Destination Clock: BCLK rising
+
+  Data Path: RESET to COUNT_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.222   0.788  RESET_IBUF (RESET_IBUF)
+     LUT2:I0->O           10   0.203   0.856  Mcount_COUNT_val1 (Mcount_COUNT_val)
+     FDR:R                     0.430          COUNT_1
+    ----------------------------------------
+    Total                      3.499ns (1.855ns logic, 1.643ns route)
+                                       (53.0% logic, 47.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'BCLK'
+  Total number of paths / destination ports: 6 / 6
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            COUNT_5_1 (FF)
+  Destination:       COUNT<5> (PAD)
+  Source Clock:      BCLK rising
+
+  Data Path: COUNT_5_1 to COUNT<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.447   0.579  COUNT_5_1 (COUNT_5_1)
+     OBUF:I->O                 2.571          COUNT_5_OBUF (COUNT<5>)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock BCLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+BCLK           |    1.713|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.44 secs
+ 
+--> 
+
+
+Total memory usage is 380792 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

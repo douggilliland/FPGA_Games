@@ -1,0 +1,8 @@
+verilog work ../Microfono.v
+verilog work ../Comp.v
+verilog work ../DivFreq.v
+verilog work ../FSM.v
+verilog work ../RegAcum.v
+verilog work ../RegDes.v
+verilog work ../RegSal.v
+verilog work ../RegWS.v

@@ -1,0 +1,35 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Wed Oct 18 15:17:59 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "datain<4>" LOCATE = SITE "R5" LEVEL 1;
+COMP "datain<5>" LOCATE = SITE "V7" LEVEL 1;
+COMP "datain<6>" LOCATE = SITE "V6" LEVEL 1;
+COMP "datain<7>" LOCATE = SITE "V5" LEVEL 1;
+COMP "en" LOCATE = SITE "U4" LEVEL 1;
+COMP "cs" LOCATE = SITE "E17" LEVEL 1;
+COMP "dataout<0>" LOCATE = SITE "T8" LEVEL 1;
+COMP "dataout<1>" LOCATE = SITE "V9" LEVEL 1;
+COMP "clk" LOCATE = SITE "E3" LEVEL 1;
+COMP "dataout<2>" LOCATE = SITE "R8" LEVEL 1;
+COMP "dataout<3>" LOCATE = SITE "T6" LEVEL 1;
+COMP "miso" LOCATE = SITE "D17" LEVEL 1;
+COMP "dataout<4>" LOCATE = SITE "T5" LEVEL 1;
+COMP "dataout<5>" LOCATE = SITE "T4" LEVEL 1;
+COMP "dataout<6>" LOCATE = SITE "U7" LEVEL 1;
+COMP "sclk" LOCATE = SITE "B13" LEVEL 1;
+COMP "dataout<7>" LOCATE = SITE "U6" LEVEL 1;
+COMP "mosi" LOCATE = SITE "F14" LEVEL 1;
+COMP "done" LOCATE = SITE "V4" LEVEL 1;
+COMP "reset" LOCATE = SITE "V2" LEVEL 1;
+COMP "datain<0>" LOCATE = SITE "U9" LEVEL 1;
+COMP "datain<1>" LOCATE = SITE "U8" LEVEL 1;
+COMP "datain<2>" LOCATE = SITE "R7" LEVEL 1;
+COMP "datain<3>" LOCATE = SITE "R6" LEVEL 1;
+TIMEGRP sys_clk_pin = BEL "df/div_9" BEL "df/div_8" BEL "df/div_7" BEL
+        "df/div_6" BEL "df/div_5" BEL "df/div_4" BEL "df/div_3" BEL "df/div_2"
+        BEL "df/div_0" BEL "df/div_1" BEL "df/sclkn" BEL "clk_BUFGP/BUFG";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+SCHEMATIC END;
+

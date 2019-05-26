@@ -1,0 +1,133 @@
+#! /usr/bin/vvp
+:ivl_version "10.1 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x55dfde18da30 .scope module, "utrasonido_TB" "utrasonido_TB" 2 1;
+ .timescale 0 0;
+v0x55dfde1b4390_0 .var "clk", 0 0;
+v0x55dfde1b4450_0 .var "trigger", 0 0;
+v0x55dfde1b44f0_0 .net "trigger_s", 0 0, v0x55dfde1b41d0_0;  1 drivers
+S_0x55dfde18dbb0 .scope begin, "TEST_CASE" "TEST_CASE" 2 24, 2 24 0, S_0x55dfde18da30;
+ .timescale 0 0;
+S_0x55dfde154b50 .scope module, "uut" "ultrasonido" 2 5, 3 1 0, S_0x55dfde18da30;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "reset"
+    .port_info 1 /INPUT 1 "clk"
+    .port_info 2 /INPUT 1 "echo"
+    .port_info 3 /OUTPUT 1 "done"
+    .port_info 4 /OUTPUT 1 "trigger"
+    .port_info 5 /OUTPUT 32 "distance"
+P_0x55dfde18a610 .param/l "divH" 0 3 3, +C4<00000000000000000000000000001010>;
+P_0x55dfde18a650 .param/l "divL" 0 3 4, +C4<00000000000000000000000000101000>;
+v0x55dfde154e10_0 .net "clk", 0 0, v0x55dfde1b4390_0;  1 drivers
+v0x55dfde1b3c90_0 .var/i "countF", 31 0;
+v0x55dfde1b3d70_0 .var/i "countecho", 31 0;
+v0x55dfde1b3e60_0 .var "distance", 31 0;
+v0x55dfde1b3f40_0 .var "done", 0 0;
+o0x7f6b02cc9108 .functor BUFZ 1, C4<z>; HiZ drive
+v0x55dfde1b4050_0 .net "echo", 0 0, o0x7f6b02cc9108;  0 drivers
+o0x7f6b02cc9138 .functor BUFZ 1, C4<z>; HiZ drive
+v0x55dfde1b4110_0 .net "reset", 0 0, o0x7f6b02cc9138;  0 drivers
+v0x55dfde1b41d0_0 .var "trigger", 0 0;
+E_0x55dfde18aaf0 .event posedge, v0x55dfde154e10_0;
+    .scope S_0x55dfde154b50;
+T_0 ;
+    %wait E_0x55dfde18aaf0;
+    %load/vec4 v0x55dfde1b4110_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0x55dfde1b3f40_0, 0;
+    %pushi/vec4 0, 0, 32;
+    %assign/vec4 v0x55dfde1b3c90_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0x55dfde1b41d0_0, 0;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/vec4 v0x55dfde1b3c90_0;
+    %addi 1, 0, 32;
+    %assign/vec4 v0x55dfde1b3c90_0, 0;
+    %load/vec4 v0x55dfde1b3c90_0;
+    %cmpi/s 10, 0, 32;
+    %jmp/0xz  T_0.2, 5;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v0x55dfde1b41d0_0, 0;
+    %jmp T_0.3;
+T_0.2 ;
+    %load/vec4 v0x55dfde1b3c90_0;
+    %cmpi/s 40, 0, 32;
+    %jmp/0xz  T_0.4, 5;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0x55dfde1b41d0_0, 0;
+    %jmp T_0.5;
+T_0.4 ;
+    %pushi/vec4 0, 0, 32;
+    %assign/vec4 v0x55dfde1b3c90_0, 0;
+T_0.5 ;
+T_0.3 ;
+T_0.1 ;
+    %load/vec4 v0x55dfde1b4050_0;
+    %pad/u 32;
+    %cmpi/e 0, 0, 32;
+    %jmp/0xz  T_0.6, 4;
+    %load/vec4 v0x55dfde1b3d70_0;
+    %pushi/vec4 5800, 0, 32;
+    %div/s;
+    %assign/vec4 v0x55dfde1b3e60_0, 0;
+    %pushi/vec4 0, 0, 32;
+    %assign/vec4 v0x55dfde1b3d70_0, 0;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v0x55dfde1b3f40_0, 0;
+    %jmp T_0.7;
+T_0.6 ;
+    %load/vec4 v0x55dfde1b3d70_0;
+    %addi 1, 0, 32;
+    %assign/vec4 v0x55dfde1b3d70_0, 0;
+T_0.7 ;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_0x55dfde18da30;
+T_1 ;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55dfde1b4390_0, 0, 1;
+    %delay 2, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55dfde1b4390_0, 0, 1;
+    %delay 2, 0;
+    %jmp T_1;
+    .thread T_1;
+    .scope S_0x55dfde18da30;
+T_2 ;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v0x55dfde1b4450_0, 0;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0x55dfde1b4450_0, 0;
+    %delay 40, 0;
+    %jmp T_2;
+    .thread T_2;
+    .scope S_0x55dfde18da30;
+T_3 ;
+    %fork t_1, S_0x55dfde18dbb0;
+    %jmp t_0;
+    .scope S_0x55dfde18dbb0;
+t_1 ;
+    %vpi_call 2 25 "$dumpfile", "ultrasonido_TB.vcd" {0 0 0};
+    %vpi_call 2 26 "$dumpvars", 32'sb11111111111111111111111111111111, S_0x55dfde154b50 {0 0 0};
+    %delay 500, 0;
+    %vpi_call 2 27 "$finish" {0 0 0};
+    %end;
+    .scope S_0x55dfde18da30;
+t_0 %join;
+    %end;
+    .thread T_3;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "ultrasonido_TB.v";
+    "ultrasonido.v";

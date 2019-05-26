@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="error" file="HDLCompiler" num="806" delta="new" >"/home/gilbert/FPGA-Game-D1/HW/RTL/011J1G2/hdl/j1soc.v" Line 62: Syntax error near &quot;<arg fmt="%s" index="1">dpRAM_interface</arg>&quot;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="53" delta="new" >"/home/gilbert/FPGA-Game-D1/HW/RTL/011J1G2/hdl/j1soc.v" Line 7: &lt;<arg fmt="%s" index="1">ampPWM</arg>&gt; is not a port.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="715" delta="new" >"/home/gilbert/FPGA-Game-D1/HW/RTL/011J1G2/hdl/j1soc.v" Line 18: Port <arg fmt="%s" index="1">trigg</arg> is not defined
+</msg>
+
+<msg type="error" file="HDLCompiler" num="715" delta="new" >"/home/gilbert/FPGA-Game-D1/HW/RTL/011J1G2/hdl/j1soc.v" Line 19: Port <arg fmt="%s" index="1">echo</arg> is not defined
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"/home/gilbert/FPGA-Game-D1/HW/RTL/011J1G2/hdl/j1soc.v" Line 89: &lt;<arg fmt="%s" index="1">pwm_dout</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="598" delta="new" >"/home/gilbert/FPGA-Game-D1/HW/RTL/011J1G2/hdl/j1soc.v" Line 1: Module &lt;<arg fmt="%s" index="1">j1soc</arg>&gt; ignored due to previous errors.
+</msg>
+
+</messages>
+

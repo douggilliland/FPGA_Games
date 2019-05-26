@@ -1,0 +1,405 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "project.src"
+Input Format                       : mixed
+
+---- Target Parameters
+Target Device                      : XC6SLX45-3CSG324
+Output File Name                   : "project.ngc"
+Output Format                      : NGC
+
+---- Source Options
+Top Module Name                    : genpulsosprueba
+
+---- General Options
+Optimization Goal                  : Area
+Optimization Effort                : 1
+RTL Output                         : yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/daniel/Documentos/E_Digital/Proyecto/Ultrasonido/Código/ModulosBasicos/PruebasFPGA/genpulsosprueba/Atlys_p2/genpulsosprueba.v" into library wor
+Parsing module <genpulsosprueba>.
+Analyzing Verilog file "/home/daniel/Documentos/E_Digital/Proyecto/Ultrasonido/Código/ModulosBasicos/PruebasFPGA/genpulsosprueba/Atlys_p2/divisorfrecgen.v" into library wor
+Parsing module <divisorfrecgen>.
+Analyzing Verilog file "/home/daniel/Documentos/E_Digital/Proyecto/Ultrasonido/Código/ModulosBasicos/PruebasFPGA/genpulsosprueba/Atlys_p2/genpulsos.v" into library wor
+Parsing module <genpulsos>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <genpulsosprueba>.
+
+Elaborating module <genpulsos>.
+
+Elaborating module <divisorfrecgen>.
+WARNING:HDLCompiler:413 - "/home/daniel/Documentos/E_Digital/Proyecto/Ultrasonido/C  digo/ModulosBasicos/PruebasFPGA/genpulsosprueba/Atlys_p2/divisorfrecgen.v" Line 18: Result of 10-bit expression is truncated to fit in 9-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <genpulsosprueba>.
+    Related source file is "/home/daniel/Documentos/E_Digital/Proyecto/Ultrasonido/Código/ModulosBasicos/PruebasFPGA/genpulsosprueba/Atlys_p2/genpulsosprueba.v"
+    Summary:
+	no macro.
+Unit <genpulsosprueba> synthesized.
+
+Synthesizing Unit <genpulsos>.
+    Related source file is "/home/daniel/Documentos/E_Digital/Proyecto/Ultrasonido/Código/ModulosBasicos/PruebasFPGA/genpulsosprueba/Atlys_p2/genpulsos.v"
+    Found 1-bit register for signal <NoDoit>.
+    Found 1-bit register for signal <ledpul0>.
+    Found 1-bit register for signal <ledpul1>.
+    Found 1-bit register for signal <Doit>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <genpulsos> synthesized.
+
+Synthesizing Unit <divisorfrecgen>.
+    Related source file is "/home/daniel/Documentos/E_Digital/Proyecto/Ultrasonido/Código/ModulosBasicos/PruebasFPGA/genpulsosprueba/Atlys_p2/divisorfrecgen.v"
+        top = 9'b111110100
+    Found 1-bit register for signal <CLKOUT1>.
+    Found 9-bit register for signal <count_500>.
+    Found 9-bit adder for signal <count_500[8]_GND_3_o_add_1_OUT> created at line 18.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  10 D-type flip-flop(s).
+Unit <divisorfrecgen> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 9-bit adder                                           : 1
+# Registers                                            : 6
+ 1-bit register                                        : 5
+ 9-bit register                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <divisorfrecgen>.
+The following registers are absorbed into counter <count_500>: 1 register on signal <count_500>.
+Unit <divisorfrecgen> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 9-bit up counter                                      : 1
+# Registers                                            : 5
+ Flip-Flops                                            : 5
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <genpulsosprueba> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block genpulsosprueba, actual ratio is 0.
+FlipFlop divisorfrecgen0/CLKOUT1 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop genpulsos0/ledpul0 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop genpulsos0/ledpul1 has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 17
+ Flip-Flops                                            : 17
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : project.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 36
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 8
+#      LUT2                        : 3
+#      LUT3                        : 2
+#      LUT4                        : 1
+#      LUT6                        : 1
+#      MUXCY                       : 8
+#      VCC                         : 1
+#      XORCY                       : 9
+# FlipFlops/Latches                : 17
+#      FDE                         : 2
+#      FDR                         : 15
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 6
+#      IBUF                        : 2
+#      OBUF                        : 4
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx45csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              14  out of  54576     0%  
+ Number of Slice LUTs:                   17  out of  27288     0%  
+    Number used as Logic:                17  out of  27288     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     17
+   Number with an unused Flip Flop:       3  out of     17    17%  
+   Number with an unused LUT:             0  out of     17     0%  
+   Number of fully used LUT-FF pairs:    14  out of     17    82%  
+   Number of unique control sets:         3
+
+IO Utilization: 
+ Number of IOs:                           7
+ Number of bonded IOBs:                   7  out of    218     3%  
+    IOB Flip Flops/Latches:               3
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+-------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)   | Load  |
+-----------------------------------+-------------------------+-------+
+clk                                | BUFGP                   | 11    |
+divisorfrecgen0/CLKOUT1            | NONE(genpulsos0/ledpul1)| 6     |
+-----------------------------------+-------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.611ns (Maximum Frequency: 276.901MHz)
+   Minimum input arrival time before clock: 2.441ns
+   Maximum output required time after clock: 4.587ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.611ns (frequency: 276.901MHz)
+  Total number of paths / destination ports: 146 / 22
+-------------------------------------------------------------------------
+Delay:               3.611ns (Levels of Logic = 2)
+  Source:            divisorfrecgen0/count_500_4 (FF)
+  Destination:       divisorfrecgen0/count_500_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: divisorfrecgen0/count_500_4 to divisorfrecgen0/count_500_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.447   0.864  divisorfrecgen0/count_500_4 (divisorfrecgen0/count_500_4)
+     LUT4:I0->O            1   0.203   0.580  divisorfrecgen0/count_500[8]_PWR_3_o_equal_3_o<8>_SW0 (N3)
+     LUT6:I5->O           11   0.205   0.882  divisorfrecgen0/count_500[8]_PWR_3_o_equal_3_o<8> (divisorfrecgen0/count_500[8]_PWR_3_o_equal_3_o)
+     FDR:R                     0.430          divisorfrecgen0/count_500_0
+    ----------------------------------------
+    Total                      3.611ns (1.285ns logic, 2.326ns route)
+                                       (35.6% logic, 64.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'divisorfrecgen0/CLKOUT1'
+  Clock period: 1.540ns (frequency: 649.540MHz)
+  Total number of paths / destination ports: 9 / 6
+-------------------------------------------------------------------------
+Delay:               1.540ns (Levels of Logic = 1)
+  Source:            genpulsos0/Doit (FF)
+  Destination:       genpulsos0/ledpul1 (FF)
+  Source Clock:      divisorfrecgen0/CLKOUT1 rising
+  Destination Clock: divisorfrecgen0/CLKOUT1 rising
+
+  Data Path: genpulsos0/Doit to genpulsos0/ledpul1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              4   0.447   0.788  genpulsos0/Doit (genpulsos0/Doit)
+     LUT2:I0->O            1   0.203   0.000  genpulsos0/Doit_glue_set (genpulsos0/Doit_glue_set)
+     FDR:D                     0.102          genpulsos0/Doit
+    ----------------------------------------
+    Total                      1.540ns (0.752ns logic, 0.788ns route)
+                                       (48.8% logic, 51.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'divisorfrecgen0/CLKOUT1'
+  Total number of paths / destination ports: 12 / 12
+-------------------------------------------------------------------------
+Offset:              2.441ns (Levels of Logic = 2)
+  Source:            pulse (PAD)
+  Destination:       genpulsos0/ledpul1 (FF)
+  Destination Clock: divisorfrecgen0/CLKOUT1 rising
+
+  Data Path: pulse to genpulsos0/ledpul1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.222   0.912  pulse_IBUF (pulse_IBUF)
+     LUT3:I0->O            2   0.205   0.000  genpulsos0/ledpul1_glue_set (genpulsos0/ledpul1_glue_set)
+     FDR:D                     0.102          genpulsos0/ledpul1
+    ----------------------------------------
+    Total                      2.441ns (1.529ns logic, 0.912ns route)
+                                       (62.6% logic, 37.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'divisorfrecgen0/CLKOUT1'
+  Total number of paths / destination ports: 4 / 3
+-------------------------------------------------------------------------
+Offset:              4.587ns (Levels of Logic = 2)
+  Source:            genpulsos0/Doit (FF)
+  Destination:       trigg (PAD)
+  Source Clock:      divisorfrecgen0/CLKOUT1 rising
+
+  Data Path: genpulsos0/Doit to trigg
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              4   0.447   0.788  genpulsos0/Doit (genpulsos0/Doit)
+     LUT2:I0->O            1   0.203   0.579  genpulsos0/trigg1 (trigg_OBUF)
+     OBUF:I->O                 2.571          trigg_OBUF (trigg)
+    ----------------------------------------
+    Total                      4.587ns (3.221ns logic, 1.366ns route)
+                                       (70.2% logic, 29.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            divisorfrecgen0/CLKOUT1_1 (FF)
+  Destination:       CLKOUT1 (PAD)
+  Source Clock:      clk rising
+
+  Data Path: divisorfrecgen0/CLKOUT1_1 to CLKOUT1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.447   0.579  divisorfrecgen0/CLKOUT1_1 (divisorfrecgen0/CLKOUT1_1)
+     OBUF:I->O                 2.571          CLKOUT1_OBUF (CLKOUT1)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.611|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock divisorfrecgen0/CLKOUT1
+-----------------------+---------+---------+---------+---------+
+                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------+---------+---------+---------+---------+
+divisorfrecgen0/CLKOUT1|    1.540|         |         |         |
+-----------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 30.00 secs
+Total CPU time to Xst completion: 29.91 secs
+ 
+--> 
+
+
+Total memory usage is 385488 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

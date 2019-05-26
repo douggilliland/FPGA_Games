@@ -1,0 +1,29 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Fri Dec 01 11:56:24 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "D0f<0>" LOCATE = SITE "T8" LEVEL 1;
+COMP "D0f<1>" LOCATE = SITE "V9" LEVEL 1;
+COMP "D0f<2>" LOCATE = SITE "R8" LEVEL 1;
+COMP "D0f<3>" LOCATE = SITE "T6" LEVEL 1;
+COMP "D0f<4>" LOCATE = SITE "T5" LEVEL 1;
+COMP "rd" LOCATE = SITE "P4" LEVEL 1;
+COMP "D0f<5>" LOCATE = SITE "T4" LEVEL 1;
+COMP "D0f<6>" LOCATE = SITE "U7" LEVEL 1;
+COMP "D0f<7>" LOCATE = SITE "U6" LEVEL 1;
+COMP "clk_div" LOCATE = SITE "G14" LEVEL 1;
+COMP "done" LOCATE = SITE "K16" LEVEL 1;
+COMP "reset" LOCATE = SITE "P3" LEVEL 1;
+PIN reset_pin<0> = BEL "reset" PINNAME PAD;
+PIN "reset_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "Din" LOCATE = SITE "P15" LEVEL 1;
+COMP "clk_in" LOCATE = SITE "E3" LEVEL 1;
+TIMEGRP sys_clk_pin = BEL "div/clk_div" BEL "div/count_0" BEL "div/count_1"
+        BEL "div/count_2" BEL "div/count_3" BEL "div/count_4" BEL
+        "div/count_5" BEL "div/count_6" BEL "div/count_7" BEL "div/count_8"
+        BEL "div/count_9" BEL "div/count_10" BEL "div/count_11" BEL
+        "div/count_12" BEL "clk_in_BUFGP/BUFG" BEL "div/clk_div_1";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+SCHEMATIC END;
+

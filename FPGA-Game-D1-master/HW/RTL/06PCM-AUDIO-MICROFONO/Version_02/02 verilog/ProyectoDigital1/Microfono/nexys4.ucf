@@ -1,0 +1,19 @@
+## This file is a general .ucf for the Nexys4 rev B board
+## To use it in a project:
+## - uncomment the lines corresponding to used pins
+## - rename the used signals according to the project
+
+## Clock signal
+NET "clk"   LOC = "E3"	| IOSTANDARD = "LVCMOS33";					Bank = 35, Pin name = IO_L12P_T1_MRCC_35,					Sch name = CLK100MHZ
+NET "clk" TNM_NET = sys_clk_pin;
+TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 100 MHz HIGH 50%; 
+
+
+## Omnidirectional Microphone
+NET "reset"			LOC = "J5"	| IOSTANDARD = "LVCMOS33";		Bank = 35, Pin name = IO_25_35,								Sch name = M_CLK
+NET "d_in"			LOC = "H5"	| IOSTANDARD = "LVCMOS33";		Bank = 35, Pin name = IO_L24N_T3_35,						Sch name = M_DATA
+NET "clk"			LOC = "F5"	| IOSTANDARD = "LVCMOS33";		Bank = 35, Pin name = IO_0_35,								Sch name = M_LRSEL
+
+## PWM Audio Amplifier
+NET "d_out"			LOC = "A11"	| IOSTANDARD = "LVCMOS33";		Bank = 15, Pin name = IO_L4N_T0_15,						Sch name = AUD_PWM
+NET "enable"			LOC = "D12"	| IOSTANDARD = "LVCMOS33";		Bank = 15, Pin name = IO_L6P_T0_15,						Sch name = AUD_SD

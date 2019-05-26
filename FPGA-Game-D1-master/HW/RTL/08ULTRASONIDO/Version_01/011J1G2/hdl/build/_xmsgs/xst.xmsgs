@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="error" file="HDLCompiler" num="990" delta="new" >"/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/dpram.v" Line 52: Cannot open file <arg fmt="%s" index="1">../firmware/Hello_World/j1.mem</arg>
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1499" delta="new" >"/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/dpram.v" Line 5: Empty module &lt;<arg fmt="%s" index="1">dp_ram(adr_width=13,dat_width=16,mem_file_name=&quot;../firmware/Hello_World/j1.mem&quot;)</arg>&gt; remains a black box.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/j1.v" Line 46: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">en_b</arg>&gt;. Formal port size is <arg fmt="%d" index="2">1</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/j1.v" Line 47: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">adr_a</arg>&gt;. Formal port size is <arg fmt="%d" index="2">13</arg>-bit while actual signal size is <arg fmt="%d" index="1">15</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/j1.v" Line 90: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">16</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/j1.v" Line 117: Result of <arg fmt="%d" index="1">6</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">5</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/j1.v" Line 129: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">5</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/j1.v" Line 134: Result of <arg fmt="%d" index="1">6</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">5</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/j1.v" Line 155: Result of <arg fmt="%d" index="1">15</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">13</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/j1.v" Line 157: Result of <arg fmt="%d" index="1">16</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">13</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/multiplier/mult_32/mult_32.v" Line 21: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">s_A</arg>&gt;. Formal port size is <arg fmt="%d" index="2">31</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/multiplier/mult_32/control_mult.v" Line 63: Result of <arg fmt="%d" index="1">5</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">4</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/divider/div_16/div_16.v" Line 21: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">rst</arg>&gt;. Formal port size is <arg fmt="%d" index="2">1</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/divider/div_16/subtractor.v" Line 19: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">16</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/divider/div_16/counter_div.v" Line 18: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">5</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/divider/div_16/counter_div.v" Line 22: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/divider/div_16/control_div.v" Line 69: Result of <arg fmt="%d" index="1">5</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">4</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/divider/div_16/control_div.v" Line 90: Signal &lt;<arg fmt="%s" index="1">DV0</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/uart/uart.v" Line 55: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">4</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/j1soc.v" Line 44: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">d_out</arg>&gt;. Formal port size is <arg fmt="%d" index="2">16</arg>-bit while actual signal size is <arg fmt="%d" index="1">1</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/periferico_ultra/divisorfrec.v" Line 18: Result of <arg fmt="%d" index="1">13</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">12</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/periferico_ultra/divisorfrecgen.v" Line 18: Result of <arg fmt="%d" index="1">11</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">10</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/periferico_ultra/divisorfrecd.v" Line 18: Result of <arg fmt="%d" index="1">12</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">11</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/gilbert/FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/011J1G2/hdl/periferico_ultra/contador.v" Line 32: Result of <arg fmt="%d" index="1">9</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
+</msg>
+
+</messages>
+

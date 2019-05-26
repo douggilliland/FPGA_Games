@@ -1,0 +1,14 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Nov 21 12:25:10 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "L15" LEVEL 1;
+COMP "CLKOUT1" LOCATE = SITE "R3" LEVEL 1;
+COMP "ledpul0" LOCATE = SITE "U18" LEVEL 1;
+COMP "ledpul1" LOCATE = SITE "M14" LEVEL 1;
+COMP "pulse" LOCATE = SITE "A10" LEVEL 1;
+COMP "trigg" LOCATE = SITE "T3" LEVEL 1;
+COMP "reset" LOCATE = SITE "D14" LEVEL 1;
+SCHEMATIC END;
+

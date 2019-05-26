@@ -1,0 +1,34 @@
+## This file is a general .ucf for the Nexys4 rev B board
+
+NET "clk"   LOC = "E3"	| IOSTANDARD = "LVCMOS33";					#Bank = 35, Pin name = IO_L12P_T1_MRCC_35,					Sch name = CLK100MHZ
+NET "clk" TNM_NET = sys_clk_pin;
+#TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 100 MHz HIGH 50%; 
+ 
+## LEDs..............................................................................................................
+NET "led<0>"			LOC = "T8"	| IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L24N_T3_34,						Sch name = LED0
+NET "led<1>"			LOC = "V9"	| IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L21N_T3_DQS_34,					Sch name = LED1
+NET "led<2>"			LOC = "R8"	| IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L24P_T3_34,						Sch name = LED2
+NET "led<3>"			LOC = "T6"	| IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L23N_T3_34,						Sch name = LED3
+NET "led<4>"			LOC = "T5"	| IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L12P_T1_MRCC_34,					Sch name = LED4
+NET "led<5>"			LOC = "T4"	| IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L12N_T1_MRCC_34,					Sch	name = LED5
+NET "led<6>"			LOC = "U7"	| IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L22P_T3_34,						Sch name = LED6
+NET "led<7>"			LOC = "U6"	| IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L22N_T3_34,						Sch name = LED7
+NET "led<8>"			LOC = "V4"	| IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L10N_T1_34,						Sch name = LED8
+NET "led<9>"			LOC = "U3"	| IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L8N_T1_34,						Sch name = LED9
+NET "led<10>"			LOC = "V1"	| IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L7N_T1_34,						Sch name = LED10
+NET "led<11>"			LOC = "R1"	| IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L17P_T2_34,						Sch name = LED11
+NET "led<12>"			LOC = "P5"	| IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L13N_T2_MRCC_34,					Sch name = LED12
+NET "led<13>"			LOC = "U1"	| IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L7P_T1_34,						Sch name = LED13
+NET "led<14>"			LOC = "R2"	| IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L15N_T2_DQS_34,					Sch name = LED14
+NET "led<15>"			LOC = "P2"	| IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L15P_T2_DQS_34,					Sch name = LED15
+
+##PULSADOR
+					
+
+## Omnidirectional Microphone
+NET "bclk"			LOC = "J5"	| IOSTANDARD = "LVCMOS33";		#Bank = 35, Pin name = IO_25_35,								Sch name = M_CLK
+NET "d_in"			LOC = "H5"	| IOSTANDARD = "LVCMOS33";		#Bank = 35, Pin name = IO_L24N_T3_35,						Sch name = M_DATA
+NET "micLRSel"			LOC = "F5"	| IOSTANDARD = "LVCMOS33";		#Bank = 35, Pin name = IO_0_35,								Sch name = M_LRSEL
+
+
+

@@ -1,0 +1,30 @@
+# This file is a general .ucf for Atlys rev C board
+# To use it in a project:
+# - remove or comment the lines corresponding to unused pins
+# - rename the used signals according to the project
+
+
+# clock pin for Atlys rev C board
+ NET "clk"   LOC = "L15"; # Bank = 1, Pin name = IO_L42P_GCLK7_M1UDM, Type = GCLK, Sch name = GCLK
+
+
+
+# onBoard Leds
+ NET "ledpul0" LOC = "U18"; 		# Bank = 1, Pin name = IO_L52N_M1DQ15, 	   	Sch name = LD0
+ NET "ledpul1" LOC = "M14"; 		# Bank = 1, Pin name = IO_L53P, 		Sch name = LD1
+
+ 
+# onBoard PUSH BUTTONS 
+# NET "reset" LOC = "T15"; 		# Bank = 2, Pin name = IO_L1N_M0_CMPMISO_2, Sch name = M0/RESET
+
+ 
+# onBoard SWITCHES
+ NET "pulse" LOC = "A10"; 		# Bank = 0, Pin name = IO_L37N_GCLK12,      	Sch name = SW0
+ NET "reset" LOC = "D14";
+ 
+# PMOD Connector
+ NET "trigg"  LOC = "T3"; 		# Bank = 2,  Pin name = IO_L62N_D6,     	Sch name = JA-D0_N
+ NET "CLKOUT1"  LOC = "R3"; 		# Bank = 2,  Pin name = IO_L62P_D5,     	Sch name = JA-D0_P
+
+
+

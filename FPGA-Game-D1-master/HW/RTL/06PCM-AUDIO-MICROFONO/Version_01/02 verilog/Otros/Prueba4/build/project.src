@@ -1,0 +1,4 @@
+verilog work ../microfono.v
+verilog work ../div_freq.v
+verilog work ../fifo.v
+verilog work ../pwm.v

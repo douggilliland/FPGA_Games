@@ -1,0 +1,40 @@
+$date
+	Wed Oct 11 06:23:05 2017
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module Comp_TB $end
+$scope module DUT $end
+$var wire 6 ! count [5:0] $end
+$var wire 1 " count18 $end
+$var wire 1 # count32 $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0#
+0"
+b0 !
+$end
+#5
+b10001 !
+#10
+1"
+b10010 !
+#15
+0"
+b10011 !
+#20
+b11111 !
+#25
+1#
+b100000 !
+#30
+0#
+b100001 !
+#500

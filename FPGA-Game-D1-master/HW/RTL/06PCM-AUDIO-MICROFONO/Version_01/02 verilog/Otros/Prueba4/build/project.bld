@@ -1,0 +1,37 @@
+Release 14.7 ngdbuild P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild -p
+XC7A100T-1CSG324 project.ngc -uc ../microfono.ucf
+
+Reading NGO file
+"/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02
+verilog/Prueba4/build/project.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "../microfono.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Total memory usage is 460076 kilobytes
+
+Writing NGD file "project.ngd" ...
+Total REAL time to NGDBUILD completion:  13 sec
+Total CPU time to NGDBUILD completion:   12 sec
+
+Writing NGDBUILD log file "project.bld"...

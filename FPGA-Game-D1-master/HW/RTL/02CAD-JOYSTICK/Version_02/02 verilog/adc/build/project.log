@@ -1,0 +1,683 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "project.src"
+Input Format                       : mixed
+
+---- Target Parameters
+Target Device                      : xc7a100t-1csg324
+Output File Name                   : "project.ngc"
+Output Format                      : NGC
+
+---- Source Options
+Top Module Name                    : adc
+
+---- General Options
+Optimization Goal                  : Area
+Optimization Effort                : 1
+RTL Output                         : yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/ed/FPGA-Game-D1/HW/RTL/02CAD-JOYSTICK/Version_02/02 verilog/adc/adc.v" into library work
+Parsing module <adc>.
+Analyzing Verilog file "/home/ed/FPGA-Game-D1/HW/RTL/02CAD-JOYSTICK/Version_02/02 verilog/adc/Divisor_Frecuencia.v" into library work
+Parsing module <Divisor_Frecuencia>.
+Analyzing Verilog file "/home/ed/FPGA-Game-D1/HW/RTL/02CAD-JOYSTICK/Version_02/02 verilog/adc/fifo.v" into library work
+Parsing module <fifo>.
+INFO:HDLCompiler:693 - "/home/ed/FPGA-Game-D1/HW/RTL/02CAD-JOYSTICK/Version_02/02 verilog/adc/fifo.v" Line 19. parameter declaration becomes local in fifo with formal parameter declaration list
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+WARNING:HDLCompiler:1016 - "/home/ed/FPGA-Game-D1/HW/RTL/02CAD-JOYSTICK/Version_02/02 verilog/adc/adc.v" Line 12: Port empty is not connected to this instance
+
+Elaborating module <adc>.
+
+Elaborating module <Divisor_Frecuencia>.
+
+Elaborating module <fifo>.
+WARNING:HDLCompiler:413 - "/home/ed/FPGA-Game-D1/HW/RTL/02CAD-JOYSTICK/Version_02/02 verilog/adc/fifo.v" Line 76: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "/home/ed/FPGA-Game-D1/HW/RTL/02CAD-JOYSTICK/Version_02/02 verilog/adc/fifo.v" Line 84: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "/home/ed/FPGA-Game-D1/HW/RTL/02CAD-JOYSTICK/Version_02/02 verilog/adc/fifo.v" Line 91: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "/home/ed/FPGA-Game-D1/HW/RTL/02CAD-JOYSTICK/Version_02/02 verilog/adc/fifo.v" Line 92: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "/home/ed/FPGA-Game-D1/HW/RTL/02CAD-JOYSTICK/Version_02/02 verilog/adc/adc.v" Line 40: Result of 5-bit expression is truncated to fit in 4-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <adc>.
+    Related source file is "/home/ed/FPGA-Game-D1/HW/RTL/02CAD-JOYSTICK/Version_02/02 verilog/adc/adc.v".
+        CS_STATE_START = 2'b00
+        CS_STATE_DATA = 2'b01
+        CS_STATE_STOP = 2'b10
+INFO:Xst:3210 - "/home/ed/FPGA-Game-D1/HW/RTL/02CAD-JOYSTICK/Version_02/02 verilog/adc/adc.v" line 12: Output port <empty> of the instance <fif> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ed/FPGA-Game-D1/HW/RTL/02CAD-JOYSTICK/Version_02/02 verilog/adc/adc.v" line 12: Output port <full> of the instance <fif> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <done>.
+    Found 2-bit register for signal <state>.
+    Found 8-bit register for signal <scratch>.
+    Found 4-bit register for signal <bitpos>.
+    Found 8-bit register for signal <D0>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk_div (falling_edge)                         |
+    | Power Up State     | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 4-bit adder for signal <bitpos[3]_GND_1_o_add_8_OUT> created at line 40.
+    Found 4-bit comparator greater for signal <n0006> created at line 38
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  21 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred  11 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <adc> synthesized.
+
+Synthesizing Unit <Divisor_Frecuencia>.
+    Related source file is "/home/ed/FPGA-Game-D1/HW/RTL/02CAD-JOYSTICK/Version_02/02 verilog/adc/Divisor_Frecuencia.v".
+    Found 1-bit register for signal <clk_div>.
+    Found 32-bit register for signal <count>.
+    Found 32-bit adder for signal <count[31]_GND_2_o_add_2_OUT> created at line 25.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  33 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <Divisor_Frecuencia> synthesized.
+
+Synthesizing Unit <fifo>.
+    Related source file is "/home/ed/FPGA-Game-D1/HW/RTL/02CAD-JOYSTICK/Version_02/02 verilog/adc/fifo.v".
+        adr_width = 10
+        dat_width = 8
+    Found 1024x8-bit dual-port RAM <Mram_array_reg> for signal <array_reg>.
+    Found 1-bit register for signal <empty_reg>.
+    Found 10-bit register for signal <r_ptr_reg>.
+    Found 10-bit register for signal <w_ptr_reg>.
+    Found 1-bit register for signal <full_reg>.
+    Found 10-bit adder for signal <w_ptr_reg[9]_GND_3_o_add_11_OUT> created at line 91.
+    Found 10-bit adder for signal <r_ptr_reg[9]_GND_3_o_add_12_OUT> created at line 92.
+    Found 1-bit 4-to-1 multiplexer for signal <wr_empty_reg_Mux_15_o> created at line 72.
+    Found 1-bit 4-to-1 multiplexer for signal <wr_full_reg_Mux_16_o> created at line 72.
+WARNING:Xst:737 - Found 1-bit latch for signal <w_ptr_next<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <w_ptr_next<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <w_ptr_next<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <w_ptr_next<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <w_ptr_next<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <w_ptr_next<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <w_ptr_next<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <w_ptr_next<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <w_ptr_next<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <w_ptr_next<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <r_ptr_next<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <r_ptr_next<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <r_ptr_next<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <r_ptr_next<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <r_ptr_next<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <r_ptr_next<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <r_ptr_next<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <r_ptr_next<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <r_ptr_next<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <r_ptr_next<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <full_next>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <empty_next>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 10-bit comparator equal for signal <r_ptr_reg[9]_w_ptr_reg[9]_equal_7_o> created at line 78
+    Found 10-bit comparator equal for signal <w_ptr_reg[9]_r_ptr_reg[9]_equal_10_o> created at line 86
+    Summary:
+	inferred   1 RAM(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  22 D-type flip-flop(s).
+	inferred  22 Latch(s).
+	inferred   2 Comparator(s).
+	inferred   8 Multiplexer(s).
+Unit <fifo> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 1024x8-bit dual-port RAM                              : 1
+# Adders/Subtractors                                   : 4
+ 10-bit adder                                          : 2
+ 32-bit adder                                          : 1
+ 4-bit adder                                           : 1
+# Registers                                            : 10
+ 1-bit register                                        : 4
+ 10-bit register                                       : 2
+ 32-bit register                                       : 1
+ 4-bit register                                        : 1
+ 8-bit register                                        : 2
+# Latches                                              : 22
+ 1-bit latch                                           : 22
+# Comparators                                          : 3
+ 10-bit comparator equal                               : 2
+ 4-bit comparator greater                              : 1
+# Multiplexers                                         : 20
+ 1-bit 2-to-1 multiplexer                              : 14
+ 1-bit 4-to-1 multiplexer                              : 2
+ 32-bit 2-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <Divisor_Frecuencia>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <Divisor_Frecuencia> synthesized (advanced).
+
+Synthesizing (advanced) Unit <fifo>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_array_reg> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 8-bit                   |          |
+    |     clkA           | connected to signal <clk_div>       | rise     |
+    |     weA            | connected to signal <wr_en>         | high     |
+    |     addrA          | connected to signal <w_ptr_reg>     |          |
+    |     diA            | connected to signal <data_in>       |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 1024-word x 8-bit                   |          |
+    |     addrB          | connected to signal <r_ptr_reg>     |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <fifo> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 1024x8-bit dual-port distributed RAM                  : 1
+# Adders/Subtractors                                   : 3
+ 10-bit adder                                          : 2
+ 4-bit adder                                           : 1
+# Counters                                             : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 44
+ Flip-Flops                                            : 44
+# Comparators                                          : 3
+ 10-bit comparator equal                               : 2
+ 4-bit comparator greater                              : 1
+# Multiplexers                                         : 19
+ 1-bit 2-to-1 multiplexer                              : 14
+ 1-bit 4-to-1 multiplexer                              : 2
+ 4-bit 2-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <state[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
+-------------------
+
+Optimizing unit <adc> ...
+
+Optimizing unit <fifo> ...
+WARNING:Xst:1293 - FF/Latch <div/count_31> has a constant value of 0 in block <adc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <div/count_30> has a constant value of 0 in block <adc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <div/count_29> has a constant value of 0 in block <adc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <div/count_28> has a constant value of 0 in block <adc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <div/count_27> has a constant value of 0 in block <adc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <div/count_26> has a constant value of 0 in block <adc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <div/count_25> has a constant value of 0 in block <adc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <div/count_24> has a constant value of 0 in block <adc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <div/count_23> has a constant value of 0 in block <adc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <div/count_22> has a constant value of 0 in block <adc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <div/count_21> has a constant value of 0 in block <adc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <div/count_20> has a constant value of 0 in block <adc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <div/count_19> has a constant value of 0 in block <adc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <div/count_18> has a constant value of 0 in block <adc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <div/count_17> has a constant value of 0 in block <adc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <div/count_16> has a constant value of 0 in block <adc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <div/count_15> has a constant value of 0 in block <adc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <div/count_14> has a constant value of 0 in block <adc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <div/count_13> has a constant value of 0 in block <adc>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block adc, actual ratio is 0.
+FlipFlop div/clk_div has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop done has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 61
+ Flip-Flops                                            : 61
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : project.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 212
+#      GND                         : 1
+#      INV                         : 4
+#      LUT1                        : 30
+#      LUT2                        : 1
+#      LUT3                        : 11
+#      LUT4                        : 4
+#      LUT5                        : 19
+#      LUT6                        : 54
+#      MUXCY                       : 30
+#      MUXF7                       : 16
+#      MUXF8                       : 8
+#      VCC                         : 1
+#      XORCY                       : 33
+# FlipFlops/Latches                : 83
+#      FD_1                        : 2
+#      FDC                         : 21
+#      FDE_1                       : 22
+#      FDP                         : 1
+#      FDR                         : 13
+#      FDRE                        : 2
+#      LD_1                        : 2
+#      LDC                         : 20
+# RAMS                             : 64
+#      RAM64M                      : 32
+#      RAM64X1D                    : 32
+# Clock Buffers                    : 3
+#      BUFG                        : 2
+#      BUFGP                       : 1
+# IO Buffers                       : 13
+#      IBUF                        : 3
+#      OBUF                        : 10
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              81  out of  126800     0%  
+ Number of Slice LUTs:                  315  out of  63400     0%  
+    Number used as Logic:               123  out of  63400     0%  
+    Number used as Memory:              192  out of  19000     1%  
+       Number used as RAM:              192
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    332
+   Number with an unused Flip Flop:     251  out of    332    75%  
+   Number with an unused LUT:            17  out of    332     5%  
+   Number of fully used LUT-FF pairs:    64  out of    332    19%  
+   Number of unique control sets:        11
+
+IO Utilization: 
+ Number of IOs:                          14
+ Number of bonded IOBs:                  14  out of    210     6%  
+    IOB Flip Flops/Latches:               2
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                3  out of     32     9%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------------------------+--------------------------+-------+
+Clock Signal                                         | Clock buffer(FF name)    | Load  |
+-----------------------------------------------------+--------------------------+-------+
+div/clk_div                                          | BUFG                     | 110   |
+clk_in                                               | BUFGP                    | 15    |
+reset                                                | IBUF+BUFG                | 2     |
+fif/wr_PWR_14_o_Mux_40_o(fif/wr_PWR_14_o_Mux_40_o1:O)| NONE(*)(fif/r_ptr_next_0)| 10    |
+fif/wr_PWR_4_o_Mux_20_o(fif/wr_PWR_4_o_Mux_20_o1:O)  | NONE(*)(fif/w_ptr_next_0)| 10    |
+-----------------------------------------------------+--------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 4.174ns (Maximum Frequency: 239.578MHz)
+   Minimum input arrival time before clock: 2.029ns
+   Maximum output required time after clock: 3.631ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'div/clk_div'
+  Clock period: 4.174ns (frequency: 239.578MHz)
+  Total number of paths / destination ports: 1247 / 814
+-------------------------------------------------------------------------
+Delay:               2.087ns (Levels of Logic = 1)
+  Source:            done (FF)
+  Destination:       fif/Mram_array_reg481 (RAM)
+  Source Clock:      div/clk_div falling
+  Destination Clock: div/clk_div rising
+
+  Data Path: done to fif/Mram_array_reg481
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE_1:C->Q           22   0.484   0.557  done (done_OBUF)
+     LUT6:I5->O            4   0.124   0.419  fif/write_ctrl15 (fif/write_ctrl15)
+     RAM64X1D:WE               0.503          fif/Mram_array_reg482
+    ----------------------------------------
+    Total                      2.087ns (1.111ns logic, 0.976ns route)
+                                       (53.2% logic, 46.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_in'
+  Clock period: 3.186ns (frequency: 313.873MHz)
+  Total number of paths / destination ports: 288 / 30
+-------------------------------------------------------------------------
+Delay:               3.186ns (Levels of Logic = 2)
+  Source:            div/count_2 (FF)
+  Destination:       div/count_0 (FF)
+  Source Clock:      clk_in rising
+  Destination Clock: clk_in rising
+
+  Data Path: div/count_2 to div/count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.478   0.945  div/count_2 (div/count_2)
+     LUT6:I0->O            2   0.124   0.542  div/count[31]_GND_2_o_equal_2_o<31>2 (div/count[31]_GND_2_o_equal_2_o<31>1)
+     LUT4:I2->O           13   0.124   0.479  div/count[31]_GND_2_o_equal_2_o_01 (div/count[31]_GND_2_o_equal_2_o_0)
+     FDR:R                     0.494          div/count_0
+    ----------------------------------------
+    Total                      3.186ns (1.220ns logic, 1.966ns route)
+                                       (38.3% logic, 61.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'div/clk_div'
+  Total number of paths / destination ports: 45 / 45
+-------------------------------------------------------------------------
+Offset:              1.317ns (Levels of Logic = 2)
+  Source:            Din (PAD)
+  Destination:       scratch_0 (FF)
+  Destination Clock: div/clk_div falling
+
+  Data Path: Din to scratch_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            12   0.001   0.608  Din_IBUF (Din_IBUF)
+     LUT4:I2->O            8   0.124   0.445  _n0092_inv1 (_n0092_inv)
+     FDE_1:CE                  0.139          scratch_0
+    ----------------------------------------
+    Total                      1.317ns (0.264ns logic, 1.053ns route)
+                                       (20.0% logic, 80.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_in'
+  Total number of paths / destination ports: 15 / 15
+-------------------------------------------------------------------------
+Offset:              2.029ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       div/count_0 (FF)
+  Destination Clock: clk_in rising
+
+  Data Path: reset to div/count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            45   0.001   0.931  reset_IBUF (reset_IBUF)
+     LUT4:I0->O           13   0.124   0.479  div/count[31]_GND_2_o_equal_2_o_01 (div/count[31]_GND_2_o_equal_2_o_0)
+     FDR:R                     0.494          div/count_0
+    ----------------------------------------
+    Total                      2.029ns (0.619ns logic, 1.410ns route)
+                                       (30.5% logic, 69.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'reset'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              0.692ns (Levels of Logic = 2)
+  Source:            rd (PAD)
+  Destination:       fif/empty_next (LATCH)
+  Destination Clock: reset rising
+
+  Data Path: rd to fif/empty_next
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   0.001   0.556  rd_IBUF (rd_IBUF)
+     LUT5:I3->O            1   0.124   0.000  fif/Mmux_wr_full_reg_Mux_16_o16 (fif/wr_full_reg_Mux_16_o)
+     LD_1:D                    0.011          fif/full_next
+    ----------------------------------------
+    Total                      0.692ns (0.136ns logic, 0.556ns route)
+                                       (19.7% logic, 80.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'fif/wr_PWR_14_o_Mux_40_o'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              1.049ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       fif/r_ptr_next_0 (LATCH)
+  Destination Clock: fif/wr_PWR_14_o_Mux_40_o falling
+
+  Data Path: reset to fif/r_ptr_next_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            45   0.001   0.554  reset_IBUF (reset_IBUF)
+     LDC:CLR                   0.494          fif/r_ptr_next_7
+    ----------------------------------------
+    Total                      1.049ns (0.495ns logic, 0.554ns route)
+                                       (47.2% logic, 52.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'fif/wr_PWR_4_o_Mux_20_o'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              1.049ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       fif/w_ptr_next_0 (LATCH)
+  Destination Clock: fif/wr_PWR_4_o_Mux_20_o falling
+
+  Data Path: reset to fif/w_ptr_next_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            45   0.001   0.554  reset_IBUF (reset_IBUF)
+     LDC:CLR                   0.494          fif/w_ptr_next_7
+    ----------------------------------------
+    Total                      1.049ns (0.495ns logic, 0.554ns route)
+                                       (47.2% logic, 52.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'div/clk_div'
+  Total number of paths / destination ports: 409 / 9
+-------------------------------------------------------------------------
+Offset:              3.631ns (Levels of Logic = 4)
+  Source:            fif/Mram_array_reg23 (RAM)
+  Destination:       D0f<5> (PAD)
+  Source Clock:      div/clk_div rising
+
+  Data Path: fif/Mram_array_reg23 to D0f<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAM64M:WCLK->DOC      1   1.668   0.776  fif/Mram_array_reg23 (fif/N155)
+     LUT6:I2->O            1   0.124   0.000  fif/inst_LPM_MUX5_51 (fif/inst_LPM_MUX5_51)
+     MUXF7:I1->O           1   0.368   0.000  fif/inst_LPM_MUX5_4_f7 (fif/inst_LPM_MUX5_4_f7)
+     MUXF8:I0->O           1   0.296   0.399  fif/inst_LPM_MUX5_2_f8 (D0f_5_OBUF)
+     OBUF:I->O                 0.000          D0f_5_OBUF (D0f<5>)
+    ----------------------------------------
+    Total                      3.631ns (2.456ns logic, 1.175ns route)
+                                       (67.6% logic, 32.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_in'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.877ns (Levels of Logic = 1)
+  Source:            div/clk_div_1 (FF)
+  Destination:       clk_div (PAD)
+  Source Clock:      clk_in rising
+
+  Data Path: div/clk_div_1 to clk_div
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             1   0.478   0.399  div/clk_div_1 (div/clk_div_1)
+     OBUF:I->O                 0.000          clk_div_OBUF (clk_div)
+    ----------------------------------------
+    Total                      0.877ns (0.478ns logic, 0.399ns route)
+                                       (54.5% logic, 45.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk_in
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_in         |    3.186|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock div/clk_div
+------------------------+---------+---------+---------+---------+
+                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------+---------+---------+---------+---------+
+div/clk_div             |    2.575|    2.087|    2.868|         |
+fif/wr_PWR_14_o_Mux_40_o|         |    1.054|         |         |
+fif/wr_PWR_4_o_Mux_20_o |         |    1.054|         |         |
+reset                   |    1.060|         |         |         |
+------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fif/wr_PWR_14_o_Mux_40_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+div/clk_div    |         |         |    2.403|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fif/wr_PWR_4_o_Mux_20_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+div/clk_div    |         |         |    2.410|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock reset
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+div/clk_div    |    6.548|    3.079|         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.81 secs
+ 
+--> 
+
+
+Total memory usage is 509496 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   47 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+

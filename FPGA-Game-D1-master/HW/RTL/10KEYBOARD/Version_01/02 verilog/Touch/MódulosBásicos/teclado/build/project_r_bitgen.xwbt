@@ -1,0 +1,7 @@
+INFILE=/home/julian/Documentos/Daniel/Proyecto/Touch/MódulosBásicos/teclado/build/project_r.ncd
+OUTFILE=/home/julian/Documentos/Daniel/Proyecto/Touch/MódulosBásicos/teclado/build/project_r.bit
+FAMILY=Artix7
+PART=xc7a100t-1csg324
+WORKINGDIR=/home/julian/Documentos/Daniel/Proyecto/Touch/MódulosBásicos/teclado/build
+LICENSE=WebPack
+USER_INFO=211103265_0_0_858

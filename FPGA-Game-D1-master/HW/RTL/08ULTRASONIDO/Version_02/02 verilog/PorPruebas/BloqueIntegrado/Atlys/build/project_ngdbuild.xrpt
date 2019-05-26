@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<document OS="lin64" product="ISE" version="14.7">
+
+  <!--The data in this file is primarily intended for consumption by Xilinx tools.
+    The structure and the elements are likely to change over the next few releases.
+    This means code written to parse this file will need to be revisited each subsequent release.-->
+
+  <application stringID="NgdBuild" timeStamp="Tue Nov 21 13:00:41 2017">
+    <section stringID="User_Env">
+      <table stringID="User_EnvVar">
+        <column stringID="variable"/>
+        <column stringID="value"/>
+        <row stringID="row" value="0">
+          <item stringID="variable" value="PATH"/>
+          <item stringID="value" value="/home/daniel/Documentos/XilinxISE4.7/14.7/ISE_DS/ISE//bin/lin64:/home/daniel/anaconda2/bin:/home/daniel/bin:/home/daniel/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/daniel/Documentos/XilinxISE4.7/14.7/ISE_DS/ISE/bin/lin64:/home/daniel/Documentos/XilinxISE4.7/14.7/ISE_DS/ISE/sysgen/util:/home/daniel/Documentos/XilinxISE4.7/14.7/ISE_DS/ISE/../../../DocNav:/home/daniel/Documentos/XilinxISE4.7/14.7/ISE_DS/PlanAhead/bin:/home/daniel/Documentos/XilinxISE4.7/14.7/ISE_DS/EDK/bin/lin64:/home/daniel/Documentos/XilinxISE4.7/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin:/home/daniel/Documentos/XilinxISE4.7/14.7/ISE_DS/EDK/gnu/powerpc-eabi/lin/bin:/home/daniel/Documentos/XilinxISE4.7/14.7/ISE_DS/EDK/gnu/arm/lin/bin:/home/daniel/Documentos/XilinxISE4.7/14.7/ISE_DS/EDK/gnu/microblaze/linux_toolchain/lin64_be/bin:/home/daniel/Documentos/XilinxISE4.7/14.7/ISE_DS/EDK/gnu/microblaze/linux_toolchain/lin64_le/bin:/home/daniel/Documentos/XilinxISE4.7/14.7/ISE_DS/common/bin/lin64"/>
+        </row>
+        <row stringID="row" value="1">
+          <item stringID="variable" value="XILINX"/>
+          <item stringID="value" value="/home/daniel/Documentos/XilinxISE4.7/14.7/ISE_DS/ISE/"/>
+        </row>
+        <row stringID="row" value="2">
+          <item stringID="variable" value="LD_LIBRARY_PATH"/>
+          <item stringID="value" value="/home/daniel/Documentos/XilinxISE4.7/14.7/ISE_DS/ISE//lib/lin64"/>
+        </row>
+      </table>
+      <item stringID="User_EnvOs" value="OS Information">
+        <item stringID="User_EnvOsname" value="Ubuntu"/>
+        <item stringID="User_EnvOsrelease" value="Ubuntu 16.04.2 LTS"/>
+      </item>
+      <item stringID="User_EnvHost" value="daniel-Compaq-Presario-CQ50-Notebook-PC"/>
+      <table stringID="User_EnvCpu">
+        <column stringID="arch"/>
+        <column stringID="speed"/>
+        <row stringID="row" value="0">
+          <item stringID="arch" value="AMD Athlon Dual-Core QL-60"/>
+          <item stringID="speed" value="950.000 MHz"/>
+        </row>
+      </table>
+    </section>
+    <task stringID="NGDBUILD_OPTION_SUMMARY">
+      <section stringID="NGDBUILD_OPTION_SUMMARY">
+        <item DEFAULT="None" label="-p" stringID="NGDBUILD_partname" value="XC6SLX45-3CSG324"/>
+        <item DEFAULT="None" label="-uc" stringID="NGDBUILD_ucf_file" value="../bloqueultrasonido.ucf"/>
+      </section>
+    </task>
+    <task stringID="NGDBUILD_REPORT">
+      <section stringID="NGDBUILD_DESIGN_SUMMARY">
+        <item dataType="int" stringID="NGDBUILD_NUM_ERRORS" value="6"/>
+        <item dataType="int" stringID="NGDBUILD_FILTERED_WARNINGS" value="0"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_WARNINGS" value="6"/>
+        <item dataType="int" stringID="NGDBUILD_FILTERED_INFOS" value="0"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_INFOS" value="0"/>
+      </section>
+      <section stringID="NGDBUILD_PRE_UNISIM_SUMMARY">
+        <item dataType="int" stringID="NGDBUILD_NUM_BUFGP" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FD" value="6"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDR" value="58"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDRE" value="15"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_GND" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_IBUF" value="2"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_INV" value="6"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT1" value="47"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT2" value="6"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT3" value="9"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT4" value="4"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT5" value="7"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT6" value="5"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_MUXCY" value="47"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_OBUF" value="10"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_VCC" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_XORCY" value="52"/>
+      </section>
+      <section stringID="NGDBUILD_POST_UNISIM_SUMMARY">
+        <item dataType="int" stringID="NGDBUILD_NUM_BUFG" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FD" value="6"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDR" value="58"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDRE" value="15"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_GND" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_IBUF" value="2"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_IBUFG" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_INV" value="6"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT1" value="47"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT2" value="6"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT3" value="9"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT4" value="4"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT5" value="7"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT6" value="5"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_MUXCY" value="47"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_OBUF" value="10"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_VCC" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_XORCY" value="52"/>
+      </section>
+      <section stringID="NGDBUILD_CORE_GENERATION_SUMMARY">
+        <section stringID="NGDBUILD_CORE_INSTANCES"/>
+      </section>
+    </task>
+  </application>
+
+</document>

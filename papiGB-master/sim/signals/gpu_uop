@@ -1,0 +1,11 @@
+0 nop
+1 wrl
+2 wrr
+3 add
+4 sub
+5 addl
+6 jnz
+7 wbg
+8 subl
+9 rvmem
+10 shl

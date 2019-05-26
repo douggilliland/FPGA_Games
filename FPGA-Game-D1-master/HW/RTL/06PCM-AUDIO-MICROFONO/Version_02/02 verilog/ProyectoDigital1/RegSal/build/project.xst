@@ -1,0 +1,10 @@
+run
+-top RegSal 
+-p XC6SLX45-CSG324						
+-opt_mode Area
+-opt_level 1
+-ifn project.src
+-ifmt mixed
+-ofn project.ngc
+-ofmt NGC
+-rtlview yes

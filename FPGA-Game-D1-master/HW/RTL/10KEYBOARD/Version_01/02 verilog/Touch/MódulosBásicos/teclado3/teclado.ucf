@@ -1,0 +1,35 @@
+## This file is a general .ucf for the Nexys4 rev B board
+## To use it in a project:
+## - uncomment the lines corresponding to used pins
+## - rename the used signals according to the project
+
+## Clock signal
+NET "clk"   LOC = "E3"	| IOSTANDARD = "LVCMOS33";					#Bank = 35, Pin name = IO_L12P_T1_MRCC_35,					Sch name = CLK100MHZ
+NET "clk" TNM_NET = sys_clk_pin;
+TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 100 MHz HIGH 50%; 
+ 
+
+## LEDs
+NET "DATA<0>"			LOC = "T8"	| IOSTANDARD = "LVCMOS33";		
+NET "DATA<1>"			LOC = "V9"	| IOSTANDARD = "LVCMOS33";		
+NET "DATA<2>"			LOC = "R8"	| IOSTANDARD = "LVCMOS33";		
+NET "DATA<3>"			LOC = "T6"	| IOSTANDARD = "LVCMOS33";		
+NET "DATA<4>"			LOC = "T5"	| IOSTANDARD = "LVCMOS33";		
+NET "DATA<5>"			LOC = "T4"	| IOSTANDARD = "LVCMOS33";		
+NET "DATA<6>"			LOC = "U7"	| IOSTANDARD = "LVCMOS33";		
+NET "DATA<7>"			LOC = "U6"	| IOSTANDARD = "LVCMOS33";	
+
+
+
+NET "DONE"			LOC = "U1"	| IOSTANDARD = "LVCMOS33";		
+
+#NET "Rx_error"			LOC = "P2"	| IOSTANDARD = "LVCMOS33";		
+ 
+## Pmod Header JC
+NET "Rx"			LOC = "K2"	| IOSTANDARD = "LVCMOS33";		
+NET "CLKOUTt"			LOC = "E7"	| IOSTANDARD = "LVCMOS33";		
+
+
+
+ 
+

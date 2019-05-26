@@ -1,0 +1,333 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Nov 28 05:22:58 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "sys_clk_i" LOCATE = SITE "E3" LEVEL 1;
+COMP "sys_rst_i" LOCATE = SITE "R10" LEVEL 1;
+PIN cpu0/Mram_rstack_pins<32> = BEL "cpu0/Mram_rstack" PINNAME CLKARDCLK;
+PIN cpu0/ram0/Mram_ram1_pins<63> = BEL "cpu0/ram0/Mram_ram1" PINNAME
+        CLKARDCLKU;
+PIN cpu0/ram0/Mram_ram1_pins<62> = BEL "cpu0/ram0/Mram_ram1" PINNAME
+        CLKARDCLKL;
+PIN cpu0/ram0/Mram_ram1_pins<65> = BEL "cpu0/ram0/Mram_ram1" PINNAME
+        CLKBWRCLKU;
+PIN cpu0/ram0/Mram_ram1_pins<64> = BEL "cpu0/ram0/Mram_ram1" PINNAME
+        CLKBWRCLKL;
+PIN cpu0/ram0/Mram_ram2_pins<63> = BEL "cpu0/ram0/Mram_ram2" PINNAME
+        CLKARDCLKU;
+PIN cpu0/ram0/Mram_ram2_pins<62> = BEL "cpu0/ram0/Mram_ram2" PINNAME
+        CLKARDCLKL;
+PIN cpu0/ram0/Mram_ram2_pins<65> = BEL "cpu0/ram0/Mram_ram2" PINNAME
+        CLKBWRCLKU;
+PIN cpu0/ram0/Mram_ram2_pins<64> = BEL "cpu0/ram0/Mram_ram2" PINNAME
+        CLKBWRCLKL;
+PIN cpu0/ram0/Mram_ram3_pins<63> = BEL "cpu0/ram0/Mram_ram3" PINNAME
+        CLKARDCLKU;
+PIN cpu0/ram0/Mram_ram3_pins<62> = BEL "cpu0/ram0/Mram_ram3" PINNAME
+        CLKARDCLKL;
+PIN cpu0/ram0/Mram_ram3_pins<65> = BEL "cpu0/ram0/Mram_ram3" PINNAME
+        CLKBWRCLKU;
+PIN cpu0/ram0/Mram_ram3_pins<64> = BEL "cpu0/ram0/Mram_ram3" PINNAME
+        CLKBWRCLKL;
+PIN cpu0/ram0/Mram_ram4_pins<63> = BEL "cpu0/ram0/Mram_ram4" PINNAME
+        CLKARDCLKU;
+PIN cpu0/ram0/Mram_ram4_pins<62> = BEL "cpu0/ram0/Mram_ram4" PINNAME
+        CLKARDCLKL;
+PIN cpu0/ram0/Mram_ram4_pins<65> = BEL "cpu0/ram0/Mram_ram4" PINNAME
+        CLKBWRCLKU;
+PIN cpu0/ram0/Mram_ram4_pins<64> = BEL "cpu0/ram0/Mram_ram4" PINNAME
+        CLKBWRCLKL;
+TIMEGRP sys_clk_pin = BEL "cpu0/dsp_4" BEL "cpu0/dsp_3" BEL "cpu0/dsp_2" BEL
+        "cpu0/dsp_1" BEL "cpu0/dsp_0" BEL "cpu0/st0_15" BEL "cpu0/st0_14" BEL
+        "cpu0/st0_13" BEL "cpu0/st0_12" BEL "cpu0/st0_11" BEL "cpu0/st0_10"
+        BEL "cpu0/st0_9" BEL "cpu0/st0_8" BEL "cpu0/st0_7" BEL "cpu0/st0_6"
+        BEL "cpu0/st0_5" BEL "cpu0/st0_4" BEL "cpu0/st0_3" BEL "cpu0/st0_2"
+        BEL "cpu0/st0_1" BEL "cpu0/st0_0" BEL "cpu0/pc_12" BEL "cpu0/pc_11"
+        BEL "cpu0/pc_10" BEL "cpu0/pc_9" BEL "cpu0/pc_8" BEL "cpu0/pc_7" BEL
+        "cpu0/pc_6" BEL "cpu0/pc_5" BEL "cpu0/pc_4" BEL "cpu0/pc_3" BEL
+        "cpu0/pc_2" BEL "cpu0/pc_1" BEL "cpu0/pc_0" BEL "cpu0/rsp_4" BEL
+        "cpu0/rsp_3" BEL "cpu0/rsp_2" BEL "cpu0/rsp_1" BEL "cpu0/rsp_0" BEL
+        "sd/datain_7" BEL "sd/datain_6" BEL "sd/datain_5" BEL "sd/datain_4"
+        BEL "sd/datain_3" BEL "sd/datain_2" BEL "sd/datain_1" BEL
+        "sd/datain_0" BEL "sd/enable" BEL "sd/d_out_7" BEL "sd/d_out_6" BEL
+        "sd/d_out_5" BEL "sd/d_out_4" BEL "sd/d_out_3" BEL "sd/d_out_2" BEL
+        "sd/d_out_1" BEL "sd/d_out_0" BEL "sd/driver/countd_2" BEL
+        "sd/driver/countd_1" BEL "sd/driver/div_31" BEL "sd/driver/countd_0"
+        BEL "sd/driver/div_30" BEL "sd/driver/div_29" BEL "sd/driver/div_28"
+        BEL "sd/driver/div_27" BEL "sd/driver/div_26" BEL "sd/driver/div_25"
+        BEL "sd/driver/div_24" BEL "sd/driver/div_23" BEL "sd/driver/div_22"
+        BEL "sd/driver/div_21" BEL "sd/driver/div_20" BEL "sd/driver/div_19"
+        BEL "sd/driver/div_18" BEL "sd/driver/div_17" BEL "sd/driver/div_15"
+        BEL "sd/driver/div_14" BEL "sd/driver/div_16" BEL "sd/driver/div_13"
+        BEL "sd/driver/div_12" BEL "sd/driver/div_11" BEL "sd/driver/div_10"
+        BEL "sd/driver/div_9" BEL "sd/driver/div_8" BEL "sd/driver/div_7" BEL
+        "sd/driver/div_6" BEL "sd/driver/div_5" BEL "sd/driver/div_4" BEL
+        "sd/driver/div_3" BEL "sd/driver/div_2" BEL "sd/driver/div_1" BEL
+        "sd/driver/div_0" BEL "sd/driver/mosi" BEL "sd/driver/dataout_7" BEL
+        "sd/driver/dataout_6" BEL "sd/driver/dataout_5" BEL
+        "sd/driver/dataout_4" BEL "sd/driver/dataout_3" BEL
+        "sd/driver/dataout_2" BEL "sd/driver/dataout_1" BEL
+        "sd/driver/dataout_0" BEL "sd/driver/datare_7" BEL
+        "sd/driver/datare_6" BEL "sd/driver/datare_5" BEL "sd/driver/datare_4"
+        BEL "sd/driver/datare_3" BEL "sd/driver/datare_2" BEL
+        "sd/driver/datare_1" BEL "sd/driver/datare_0" BEL "sd/driver/sclk" BEL
+        "sd/driver/datase_7" BEL "sd/driver/datase_6" BEL "sd/driver/datase_5"
+        BEL "sd/driver/datase_4" BEL "sd/driver/datase_3" BEL
+        "sd/driver/datase_2" BEL "sd/driver/datase_1" BEL "sd/driver/datase_0"
+        BEL "sd/driver/run" BEL "dpRm/dlptRAM/ram_FF_4080" BEL
+        "dpRm/dlptRAM/ram_FF_4064" BEL "dpRm/dlptRAM/ram_FF_4048" BEL
+        "dpRm/dlptRAM/ram_FF_4032" BEL "dpRm/dlptRAM/ram_FF_4016" BEL
+        "dpRm/dlptRAM/ram_FF_4000" BEL "dpRm/dlptRAM/ram_FF_3984" BEL
+        "dpRm/dlptRAM/ram_FF_3968" BEL "dpRm/dlptRAM/ram_FF_3952" BEL
+        "dpRm/dlptRAM/ram_FF_3936" BEL "dpRm/dlptRAM/ram_FF_3920" BEL
+        "dpRm/dlptRAM/ram_FF_3904" BEL "dpRm/dlptRAM/ram_FF_3888" BEL
+        "dpRm/dlptRAM/ram_FF_3872" BEL "dpRm/dlptRAM/ram_FF_3856" BEL
+        "dpRm/dlptRAM/ram_FF_3840" BEL "dpRm/dlptRAM/ram_FF_3824" BEL
+        "dpRm/dlptRAM/ram_FF_3808" BEL "dpRm/dlptRAM/ram_FF_3792" BEL
+        "dpRm/dlptRAM/ram_FF_3776" BEL "dpRm/dlptRAM/ram_FF_3760" BEL
+        "dpRm/dlptRAM/ram_FF_3744" BEL "dpRm/dlptRAM/ram_FF_3728" BEL
+        "dpRm/dlptRAM/ram_FF_3712" BEL "dpRm/dlptRAM/ram_FF_3696" BEL
+        "dpRm/dlptRAM/ram_FF_3680" BEL "dpRm/dlptRAM/ram_FF_3664" BEL
+        "dpRm/dlptRAM/ram_FF_3648" BEL "dpRm/dlptRAM/ram_FF_3632" BEL
+        "dpRm/dlptRAM/ram_FF_3616" BEL "dpRm/dlptRAM/ram_FF_3600" BEL
+        "dpRm/dlptRAM/ram_FF_3584" BEL "dpRm/dlptRAM/ram_FF_3568" BEL
+        "dpRm/dlptRAM/ram_FF_3552" BEL "dpRm/dlptRAM/ram_FF_3536" BEL
+        "dpRm/dlptRAM/ram_FF_3520" BEL "dpRm/dlptRAM/ram_FF_3504" BEL
+        "dpRm/dlptRAM/ram_FF_3488" BEL "dpRm/dlptRAM/ram_FF_3472" BEL
+        "dpRm/dlptRAM/ram_FF_3456" BEL "dpRm/dlptRAM/ram_FF_3440" BEL
+        "dpRm/dlptRAM/ram_FF_3424" BEL "dpRm/dlptRAM/ram_FF_3408" BEL
+        "dpRm/dlptRAM/ram_FF_3392" BEL "dpRm/dlptRAM/ram_FF_3376" BEL
+        "dpRm/dlptRAM/ram_FF_3360" BEL "dpRm/dlptRAM/ram_FF_3344" BEL
+        "dpRm/dlptRAM/ram_FF_3328" BEL "dpRm/dlptRAM/ram_FF_3312" BEL
+        "dpRm/dlptRAM/ram_FF_3296" BEL "dpRm/dlptRAM/ram_FF_3280" BEL
+        "dpRm/dlptRAM/ram_FF_3264" BEL "dpRm/dlptRAM/ram_FF_3248" BEL
+        "dpRm/dlptRAM/ram_FF_3232" BEL "dpRm/dlptRAM/ram_FF_3216" BEL
+        "dpRm/dlptRAM/ram_FF_3200" BEL "dpRm/dlptRAM/ram_FF_3184" BEL
+        "dpRm/dlptRAM/ram_FF_3168" BEL "dpRm/dlptRAM/ram_FF_3152" BEL
+        "dpRm/dlptRAM/ram_FF_3136" BEL "dpRm/dlptRAM/ram_FF_3120" BEL
+        "dpRm/dlptRAM/ram_FF_3104" BEL "dpRm/dlptRAM/ram_FF_3088" BEL
+        "dpRm/dlptRAM/ram_FF_3072" BEL "dpRm/dlptRAM/ram_FF_3056" BEL
+        "dpRm/dlptRAM/ram_FF_3040" BEL "dpRm/dlptRAM/ram_FF_3024" BEL
+        "dpRm/dlptRAM/ram_FF_3008" BEL "dpRm/dlptRAM/ram_FF_2992" BEL
+        "dpRm/dlptRAM/ram_FF_2976" BEL "dpRm/dlptRAM/ram_FF_2960" BEL
+        "dpRm/dlptRAM/ram_FF_2944" BEL "dpRm/dlptRAM/ram_FF_2928" BEL
+        "dpRm/dlptRAM/ram_FF_2912" BEL "dpRm/dlptRAM/ram_FF_2896" BEL
+        "dpRm/dlptRAM/ram_FF_2880" BEL "dpRm/dlptRAM/ram_FF_2864" BEL
+        "dpRm/dlptRAM/ram_FF_2848" BEL "dpRm/dlptRAM/ram_FF_2832" BEL
+        "dpRm/dlptRAM/ram_FF_2816" BEL "dpRm/dlptRAM/ram_FF_2800" BEL
+        "dpRm/dlptRAM/ram_FF_2784" BEL "dpRm/dlptRAM/ram_FF_2768" BEL
+        "dpRm/dlptRAM/ram_FF_2752" BEL "dpRm/dlptRAM/ram_FF_2736" BEL
+        "dpRm/dlptRAM/ram_FF_2720" BEL "dpRm/dlptRAM/ram_FF_2704" BEL
+        "dpRm/dlptRAM/ram_FF_2688" BEL "dpRm/dlptRAM/ram_FF_2672" BEL
+        "dpRm/dlptRAM/ram_FF_2656" BEL "dpRm/dlptRAM/ram_FF_2640" BEL
+        "dpRm/dlptRAM/ram_FF_2624" BEL "dpRm/dlptRAM/ram_FF_2608" BEL
+        "dpRm/dlptRAM/ram_FF_2592" BEL "dpRm/dlptRAM/ram_FF_2576" BEL
+        "dpRm/dlptRAM/ram_FF_2560" BEL "dpRm/dlptRAM/ram_FF_2544" BEL
+        "dpRm/dlptRAM/ram_FF_2528" BEL "dpRm/dlptRAM/ram_FF_2512" BEL
+        "dpRm/dlptRAM/ram_FF_2496" BEL "dpRm/dlptRAM/ram_FF_2480" BEL
+        "dpRm/dlptRAM/ram_FF_2464" BEL "dpRm/dlptRAM/ram_FF_2448" BEL
+        "dpRm/dlptRAM/ram_FF_2432" BEL "dpRm/dlptRAM/ram_FF_2416" BEL
+        "dpRm/dlptRAM/ram_FF_2400" BEL "dpRm/dlptRAM/ram_FF_2384" BEL
+        "dpRm/dlptRAM/ram_FF_2368" BEL "dpRm/dlptRAM/ram_FF_2352" BEL
+        "dpRm/dlptRAM/ram_FF_2336" BEL "dpRm/dlptRAM/ram_FF_2320" BEL
+        "dpRm/dlptRAM/ram_FF_2304" BEL "dpRm/dlptRAM/ram_FF_2288" BEL
+        "dpRm/dlptRAM/ram_FF_2272" BEL "dpRm/dlptRAM/ram_FF_2256" BEL
+        "dpRm/dlptRAM/ram_FF_2240" BEL "dpRm/dlptRAM/ram_FF_2224" BEL
+        "dpRm/dlptRAM/ram_FF_2208" BEL "dpRm/dlptRAM/ram_FF_2192" BEL
+        "dpRm/dlptRAM/ram_FF_2176" BEL "dpRm/dlptRAM/ram_FF_2160" BEL
+        "dpRm/dlptRAM/ram_FF_2144" BEL "dpRm/dlptRAM/ram_FF_2128" BEL
+        "dpRm/dlptRAM/ram_FF_2112" BEL "dpRm/dlptRAM/ram_FF_2096" BEL
+        "dpRm/dlptRAM/ram_FF_2080" BEL "dpRm/dlptRAM/ram_FF_2064" BEL
+        "dpRm/dlptRAM/ram_FF_2048" BEL "dpRm/dlptRAM/ram_FF_2032" BEL
+        "dpRm/dlptRAM/ram_FF_2016" BEL "dpRm/dlptRAM/ram_FF_2000" BEL
+        "dpRm/dlptRAM/ram_FF_1984" BEL "dpRm/dlptRAM/ram_FF_1968" BEL
+        "dpRm/dlptRAM/ram_FF_1952" BEL "dpRm/dlptRAM/ram_FF_1936" BEL
+        "dpRm/dlptRAM/ram_FF_1920" BEL "dpRm/dlptRAM/ram_FF_1904" BEL
+        "dpRm/dlptRAM/ram_FF_1888" BEL "dpRm/dlptRAM/ram_FF_1872" BEL
+        "dpRm/dlptRAM/ram_FF_1856" BEL "dpRm/dlptRAM/ram_FF_1840" BEL
+        "dpRm/dlptRAM/ram_FF_1824" BEL "dpRm/dlptRAM/ram_FF_1808" BEL
+        "dpRm/dlptRAM/ram_FF_1792" BEL "dpRm/dlptRAM/ram_FF_1776" BEL
+        "dpRm/dlptRAM/ram_FF_1760" BEL "dpRm/dlptRAM/ram_FF_1744" BEL
+        "dpRm/dlptRAM/ram_FF_1728" BEL "dpRm/dlptRAM/ram_FF_1712" BEL
+        "dpRm/dlptRAM/ram_FF_1696" BEL "dpRm/dlptRAM/ram_FF_1680" BEL
+        "dpRm/dlptRAM/ram_FF_1664" BEL "dpRm/dlptRAM/ram_FF_1648" BEL
+        "dpRm/dlptRAM/ram_FF_1632" BEL "dpRm/dlptRAM/ram_FF_1616" BEL
+        "dpRm/dlptRAM/ram_FF_1600" BEL "dpRm/dlptRAM/ram_FF_1584" BEL
+        "dpRm/dlptRAM/ram_FF_1568" BEL "dpRm/dlptRAM/ram_FF_1552" BEL
+        "dpRm/dlptRAM/ram_FF_1536" BEL "dpRm/dlptRAM/ram_FF_1520" BEL
+        "dpRm/dlptRAM/ram_FF_1504" BEL "dpRm/dlptRAM/ram_FF_1488" BEL
+        "dpRm/dlptRAM/ram_FF_1472" BEL "dpRm/dlptRAM/ram_FF_1456" BEL
+        "dpRm/dlptRAM/ram_FF_1440" BEL "dpRm/dlptRAM/ram_FF_1424" BEL
+        "dpRm/dlptRAM/ram_FF_1408" BEL "dpRm/dlptRAM/ram_FF_1392" BEL
+        "dpRm/dlptRAM/ram_FF_1376" BEL "dpRm/dlptRAM/ram_FF_1360" BEL
+        "dpRm/dlptRAM/ram_FF_1344" BEL "dpRm/dlptRAM/ram_FF_1328" BEL
+        "dpRm/dlptRAM/ram_FF_1312" BEL "dpRm/dlptRAM/ram_FF_1296" BEL
+        "dpRm/dlptRAM/ram_FF_1280" BEL "dpRm/dlptRAM/ram_FF_1264" BEL
+        "dpRm/dlptRAM/ram_FF_1248" BEL "dpRm/dlptRAM/ram_FF_1232" BEL
+        "dpRm/dlptRAM/ram_FF_1216" BEL "dpRm/dlptRAM/ram_FF_1200" BEL
+        "dpRm/dlptRAM/ram_FF_1184" BEL "dpRm/dlptRAM/ram_FF_1168" BEL
+        "dpRm/dlptRAM/ram_FF_1152" BEL "dpRm/dlptRAM/ram_FF_1136" BEL
+        "dpRm/dlptRAM/ram_FF_1120" BEL "dpRm/dlptRAM/ram_FF_1104" BEL
+        "dpRm/dlptRAM/ram_FF_1088" BEL "dpRm/dlptRAM/ram_FF_1072" BEL
+        "dpRm/dlptRAM/ram_FF_1056" BEL "dpRm/dlptRAM/ram_FF_1040" BEL
+        "dpRm/dlptRAM/ram_FF_1024" BEL "dpRm/dlptRAM/ram_FF_1008" BEL
+        "dpRm/dlptRAM/ram_FF_992" BEL "dpRm/dlptRAM/ram_FF_976" BEL
+        "dpRm/dlptRAM/ram_FF_960" BEL "dpRm/dlptRAM/ram_FF_944" BEL
+        "dpRm/dlptRAM/ram_FF_928" BEL "dpRm/dlptRAM/ram_FF_912" BEL
+        "dpRm/dlptRAM/ram_FF_896" BEL "dpRm/dlptRAM/ram_FF_880" BEL
+        "dpRm/dlptRAM/ram_FF_864" BEL "dpRm/dlptRAM/ram_FF_848" BEL
+        "dpRm/dlptRAM/ram_FF_832" BEL "dpRm/dlptRAM/ram_FF_816" BEL
+        "dpRm/dlptRAM/ram_FF_800" BEL "dpRm/dlptRAM/ram_FF_784" BEL
+        "dpRm/dlptRAM/ram_FF_768" BEL "dpRm/dlptRAM/ram_FF_752" BEL
+        "dpRm/dlptRAM/ram_FF_736" BEL "dpRm/dlptRAM/ram_FF_720" BEL
+        "dpRm/dlptRAM/ram_FF_704" BEL "dpRm/dlptRAM/ram_FF_688" BEL
+        "dpRm/dlptRAM/ram_FF_672" BEL "dpRm/dlptRAM/ram_FF_656" BEL
+        "dpRm/dlptRAM/ram_FF_640" BEL "dpRm/dlptRAM/ram_FF_624" BEL
+        "dpRm/dlptRAM/ram_FF_608" BEL "dpRm/dlptRAM/ram_FF_592" BEL
+        "dpRm/dlptRAM/ram_FF_576" BEL "dpRm/dlptRAM/ram_FF_560" BEL
+        "dpRm/dlptRAM/ram_FF_544" BEL "dpRm/dlptRAM/ram_FF_528" BEL
+        "dpRm/dlptRAM/ram_FF_512" BEL "dpRm/dlptRAM/ram_FF_496" BEL
+        "dpRm/dlptRAM/ram_FF_480" BEL "dpRm/dlptRAM/ram_FF_464" BEL
+        "dpRm/dlptRAM/ram_FF_448" BEL "dpRm/dlptRAM/ram_FF_432" BEL
+        "dpRm/dlptRAM/ram_FF_416" BEL "dpRm/dlptRAM/ram_FF_400" BEL
+        "dpRm/dlptRAM/ram_FF_384" BEL "dpRm/dlptRAM/ram_FF_368" BEL
+        "dpRm/dlptRAM/ram_FF_352" BEL "dpRm/dlptRAM/ram_FF_336" BEL
+        "dpRm/dlptRAM/ram_FF_320" BEL "dpRm/dlptRAM/ram_FF_304" BEL
+        "dpRm/dlptRAM/ram_FF_288" BEL "dpRm/dlptRAM/ram_FF_272" BEL
+        "dpRm/dlptRAM/ram_FF_256" BEL "dpRm/dlptRAM/ram_FF_240" BEL
+        "dpRm/dlptRAM/ram_FF_239" BEL "dpRm/dlptRAM/ram_FF_238" BEL
+        "dpRm/dlptRAM/ram_FF_237" BEL "dpRm/dlptRAM/ram_FF_236" BEL
+        "dpRm/dlptRAM/ram_FF_235" BEL "dpRm/dlptRAM/ram_FF_234" BEL
+        "dpRm/dlptRAM/ram_FF_233" BEL "dpRm/dlptRAM/ram_FF_232" BEL
+        "dpRm/dlptRAM/ram_FF_231" BEL "dpRm/dlptRAM/ram_FF_230" BEL
+        "dpRm/dlptRAM/ram_FF_229" BEL "dpRm/dlptRAM/ram_FF_228" BEL
+        "dpRm/dlptRAM/ram_FF_227" BEL "dpRm/dlptRAM/ram_FF_226" BEL
+        "dpRm/dlptRAM/ram_FF_225" BEL "dpRm/dlptRAM/ram_FF_224" BEL
+        "dpRm/dlptRAM/ram_FF_208" BEL "dpRm/dlptRAM/ram_FF_207" BEL
+        "dpRm/dlptRAM/ram_FF_206" BEL "dpRm/dlptRAM/ram_FF_205" BEL
+        "dpRm/dlptRAM/ram_FF_204" BEL "dpRm/dlptRAM/ram_FF_203" BEL
+        "dpRm/dlptRAM/ram_FF_202" BEL "dpRm/dlptRAM/ram_FF_201" BEL
+        "dpRm/dlptRAM/ram_FF_200" BEL "dpRm/dlptRAM/ram_FF_199" BEL
+        "dpRm/dlptRAM/ram_FF_198" BEL "dpRm/dlptRAM/ram_FF_197" BEL
+        "dpRm/dlptRAM/ram_FF_196" BEL "dpRm/dlptRAM/ram_FF_195" BEL
+        "dpRm/dlptRAM/ram_FF_194" BEL "dpRm/dlptRAM/ram_FF_193" BEL
+        "dpRm/dlptRAM/ram_FF_192" BEL "dpRm/dlptRAM/ram_FF_176" BEL
+        "dpRm/dlptRAM/ram_FF_175" BEL "dpRm/dlptRAM/ram_FF_174" BEL
+        "dpRm/dlptRAM/ram_FF_173" BEL "dpRm/dlptRAM/ram_FF_172" BEL
+        "dpRm/dlptRAM/ram_FF_171" BEL "dpRm/dlptRAM/ram_FF_170" BEL
+        "dpRm/dlptRAM/ram_FF_169" BEL "dpRm/dlptRAM/ram_FF_168" BEL
+        "dpRm/dlptRAM/ram_FF_167" BEL "dpRm/dlptRAM/ram_FF_166" BEL
+        "dpRm/dlptRAM/ram_FF_165" BEL "dpRm/dlptRAM/ram_FF_164" BEL
+        "dpRm/dlptRAM/ram_FF_163" BEL "dpRm/dlptRAM/ram_FF_162" BEL
+        "dpRm/dlptRAM/ram_FF_161" BEL "dpRm/dlptRAM/ram_FF_160" BEL
+        "dpRm/dlptRAM/ram_FF_144" BEL "dpRm/dlptRAM/ram_FF_143" BEL
+        "dpRm/dlptRAM/ram_FF_142" BEL "dpRm/dlptRAM/ram_FF_141" BEL
+        "dpRm/dlptRAM/ram_FF_140" BEL "dpRm/dlptRAM/ram_FF_139" BEL
+        "dpRm/dlptRAM/ram_FF_138" BEL "dpRm/dlptRAM/ram_FF_137" BEL
+        "dpRm/dlptRAM/ram_FF_136" BEL "dpRm/dlptRAM/ram_FF_135" BEL
+        "dpRm/dlptRAM/ram_FF_134" BEL "dpRm/dlptRAM/ram_FF_133" BEL
+        "dpRm/dlptRAM/ram_FF_132" BEL "dpRm/dlptRAM/ram_FF_131" BEL
+        "dpRm/dlptRAM/ram_FF_130" BEL "dpRm/dlptRAM/ram_FF_129" BEL
+        "dpRm/dlptRAM/ram_FF_128" BEL "dpRm/dlptRAM/ram_FF_112" BEL
+        "dpRm/dlptRAM/ram_FF_111" BEL "dpRm/dlptRAM/ram_FF_110" BEL
+        "dpRm/dlptRAM/ram_FF_109" BEL "dpRm/dlptRAM/ram_FF_108" BEL
+        "dpRm/dlptRAM/ram_FF_107" BEL "dpRm/dlptRAM/ram_FF_106" BEL
+        "dpRm/dlptRAM/ram_FF_105" BEL "dpRm/dlptRAM/ram_FF_104" BEL
+        "dpRm/dlptRAM/ram_FF_103" BEL "dpRm/dlptRAM/ram_FF_102" BEL
+        "dpRm/dlptRAM/ram_FF_101" BEL "dpRm/dlptRAM/ram_FF_100" BEL
+        "dpRm/dlptRAM/ram_FF_99" BEL "dpRm/dlptRAM/ram_FF_98" BEL
+        "dpRm/dlptRAM/ram_FF_97" BEL "dpRm/dlptRAM/ram_FF_96" BEL
+        "dpRm/dlptRAM/ram_FF_80" BEL "dpRm/dlptRAM/ram_FF_79" BEL
+        "dpRm/dlptRAM/ram_FF_78" BEL "dpRm/dlptRAM/ram_FF_77" BEL
+        "dpRm/dlptRAM/ram_FF_76" BEL "dpRm/dlptRAM/ram_FF_75" BEL
+        "dpRm/dlptRAM/ram_FF_74" BEL "dpRm/dlptRAM/ram_FF_73" BEL
+        "dpRm/dlptRAM/ram_FF_72" BEL "dpRm/dlptRAM/ram_FF_71" BEL
+        "dpRm/dlptRAM/ram_FF_70" BEL "dpRm/dlptRAM/ram_FF_69" BEL
+        "dpRm/dlptRAM/ram_FF_68" BEL "dpRm/dlptRAM/ram_FF_67" BEL
+        "dpRm/dlptRAM/ram_FF_66" BEL "dpRm/dlptRAM/ram_FF_65" BEL
+        "dpRm/dlptRAM/ram_FF_64" BEL "dpRm/dlptRAM/ram_FF_48" BEL
+        "dpRm/dlptRAM/ram_FF_47" BEL "dpRm/dlptRAM/ram_FF_46" BEL
+        "dpRm/dlptRAM/ram_FF_45" BEL "dpRm/dlptRAM/ram_FF_44" BEL
+        "dpRm/dlptRAM/ram_FF_43" BEL "dpRm/dlptRAM/ram_FF_42" BEL
+        "dpRm/dlptRAM/ram_FF_41" BEL "dpRm/dlptRAM/ram_FF_40" BEL
+        "dpRm/dlptRAM/ram_FF_39" BEL "dpRm/dlptRAM/ram_FF_38" BEL
+        "dpRm/dlptRAM/ram_FF_37" BEL "dpRm/dlptRAM/ram_FF_36" BEL
+        "dpRm/dlptRAM/ram_FF_35" BEL "dpRm/dlptRAM/ram_FF_34" BEL
+        "dpRm/dlptRAM/ram_FF_33" BEL "dpRm/dlptRAM/ram_FF_32" BEL
+        "dpRm/dlptRAM/ram_FF_16" BEL "dpRm/dlptRAM/ram_FF_15" BEL
+        "dpRm/dlptRAM/ram_FF_14" BEL "dpRm/dlptRAM/ram_FF_13" BEL
+        "dpRm/dlptRAM/ram_FF_12" BEL "dpRm/dlptRAM/ram_FF_11" BEL
+        "dpRm/dlptRAM/ram_FF_10" BEL "dpRm/dlptRAM/ram_FF_9" BEL
+        "dpRm/dlptRAM/ram_FF_8" BEL "dpRm/dlptRAM/ram_FF_7" BEL
+        "dpRm/dlptRAM/ram_FF_6" BEL "dpRm/dlptRAM/ram_FF_5" BEL
+        "dpRm/dlptRAM/ram_FF_4" BEL "dpRm/dlptRAM/ram_FF_3" BEL
+        "dpRm/dlptRAM/ram_FF_2" BEL "dpRm/dlptRAM/ram_FF_1" BEL
+        "dpRm/dlptRAM/ram_FF_0" BEL "dpRm/dlptRAM/d_out_2_15" BEL
+        "dpRm/dlptRAM/d_out_2_14" BEL "dpRm/dlptRAM/d_out_2_13" BEL
+        "dpRm/dlptRAM/d_out_2_12" BEL "dpRm/dlptRAM/d_out_2_11" BEL
+        "dpRm/dlptRAM/d_out_2_10" BEL "dpRm/dlptRAM/d_out_2_9" BEL
+        "dpRm/dlptRAM/d_out_2_8" BEL "dpRm/dlptRAM/d_out_2_7" BEL
+        "dpRm/dlptRAM/d_out_2_6" BEL "dpRm/dlptRAM/d_out_2_5" BEL
+        "dpRm/dlptRAM/d_out_2_4" BEL "dpRm/dlptRAM/d_out_2_3" BEL
+        "dpRm/dlptRAM/d_out_2_2" BEL "dpRm/dlptRAM/d_out_2_1" BEL
+        "dpRm/dlptRAM/d_out_2_0" BEL "dpRm/dlptRAM/d_out_1_0" BEL
+        "dpRm/c_p/estado_FSM_FFd2" BEL "dpRm/c_p/estado_FSM_FFd3" BEL
+        "dpRm/c_p/estado_FSM_FFd1" BEL "dpRm/c_p/estado_FSM_FFd4" BEL
+        "dpRm/c_p/F_1_15" BEL "dpRm/c_p/F_1_14" BEL "dpRm/c_p/F_1_13" BEL
+        "dpRm/c_p/F_1_12" BEL "dpRm/c_p/F_1_11" BEL "dpRm/c_p/F_1_10" BEL
+        "dpRm/c_p/F_1_9" BEL "dpRm/c_p/F_1_8" BEL "dpRm/c_p/F_1_7" BEL
+        "dpRm/c_p/F_1_6" BEL "dpRm/c_p/F_1_5" BEL "dpRm/c_p/F_1_4" BEL
+        "dpRm/c_p/F_1_3" BEL "dpRm/c_p/F_1_2" BEL "dpRm/c_p/F_1_1" BEL
+        "dpRm/c_p/F_1_0" BEL "dpRm/c_p/F_6_15" BEL "dpRm/c_p/F_6_14" BEL
+        "dpRm/c_p/F_6_13" BEL "dpRm/c_p/F_6_12" BEL "dpRm/c_p/F_6_11" BEL
+        "dpRm/c_p/F_6_10" BEL "dpRm/c_p/F_6_9" BEL "dpRm/c_p/F_6_8" BEL
+        "dpRm/c_p/F_6_7" BEL "dpRm/c_p/F_6_6" BEL "dpRm/c_p/F_6_5" BEL
+        "dpRm/c_p/F_6_4" BEL "dpRm/c_p/F_6_3" BEL "dpRm/c_p/F_6_2" BEL
+        "dpRm/c_p/F_6_1" BEL "dpRm/c_p/F_6_0" BEL "dpRm/c_p/F_5_15" BEL
+        "dpRm/c_p/F_5_14" BEL "dpRm/c_p/F_5_13" BEL "dpRm/c_p/F_5_12" BEL
+        "dpRm/c_p/F_5_11" BEL "dpRm/c_p/F_5_10" BEL "dpRm/c_p/F_5_9" BEL
+        "dpRm/c_p/F_5_8" BEL "dpRm/c_p/F_5_7" BEL "dpRm/c_p/F_5_6" BEL
+        "dpRm/c_p/F_5_5" BEL "dpRm/c_p/F_5_4" BEL "dpRm/c_p/F_5_3" BEL
+        "dpRm/c_p/F_5_2" BEL "dpRm/c_p/F_5_1" BEL "dpRm/c_p/F_5_0" BEL
+        "dpRm/c_p/F_3_15" BEL "dpRm/c_p/F_3_14" BEL "dpRm/c_p/F_3_13" BEL
+        "dpRm/c_p/F_3_12" BEL "dpRm/c_p/F_3_11" BEL "dpRm/c_p/F_3_10" BEL
+        "dpRm/c_p/F_3_9" BEL "dpRm/c_p/F_3_8" BEL "dpRm/c_p/F_3_7" BEL
+        "dpRm/c_p/F_3_6" BEL "dpRm/c_p/F_3_5" BEL "dpRm/c_p/F_3_4" BEL
+        "dpRm/c_p/F_3_3" BEL "dpRm/c_p/F_3_2" BEL "dpRm/c_p/F_3_1" BEL
+        "dpRm/c_p/F_3_0" BEL "dpRm/c_p/F_2_15" BEL "dpRm/c_p/F_2_14" BEL
+        "dpRm/c_p/F_2_13" BEL "dpRm/c_p/F_2_12" BEL "dpRm/c_p/F_2_11" BEL
+        "dpRm/c_p/F_2_10" BEL "dpRm/c_p/F_2_9" BEL "dpRm/c_p/F_2_8" BEL
+        "dpRm/c_p/F_2_7" BEL "dpRm/c_p/F_2_6" BEL "dpRm/c_p/F_2_5" BEL
+        "dpRm/c_p/F_2_4" BEL "dpRm/c_p/F_2_3" BEL "dpRm/c_p/F_2_2" BEL
+        "dpRm/c_p/F_2_1" BEL "dpRm/c_p/F_2_0" BEL "dpRm/c_p/F_4_15" BEL
+        "dpRm/c_p/F_4_14" BEL "dpRm/c_p/F_4_13" BEL "dpRm/c_p/F_4_12" BEL
+        "dpRm/c_p/F_4_11" BEL "dpRm/c_p/F_4_10" BEL "dpRm/c_p/F_4_9" BEL
+        "dpRm/c_p/F_4_8" BEL "dpRm/c_p/F_4_7" BEL "dpRm/c_p/F_4_6" BEL
+        "dpRm/c_p/F_4_5" BEL "dpRm/c_p/F_4_4" BEL "dpRm/c_p/F_4_3" BEL
+        "dpRm/c_p/F_4_2" BEL "dpRm/c_p/F_4_1" BEL "dpRm/c_p/F_4_0" BEL
+        "sd/driver/done" BEL "sd/driver/ss" BEL "sys_clk_i_BUFGP/BUFG" BEL
+        "sd/driver/ss_1" BEL "sd/driver/sclk_1" BEL "cpu0/Mram_dstack34/SP"
+        BEL "cpu0/Mram_dstack34/DP" BEL "cpu0/Mram_dstack33/SP" BEL
+        "cpu0/Mram_dstack33/DP" BEL "cpu0/Mram_dstack32/SP" BEL
+        "cpu0/Mram_dstack32/DP" BEL "cpu0/Mram_dstack31/SP" BEL
+        "cpu0/Mram_dstack31/DP" BEL "cpu0/Mram_dstack1_RAMA_D1" BEL
+        "cpu0/Mram_dstack1_RAMA" BEL "cpu0/Mram_dstack1_RAMB_D1" BEL
+        "cpu0/Mram_dstack1_RAMB" BEL "cpu0/Mram_dstack1_RAMC_D1" BEL
+        "cpu0/Mram_dstack1_RAMC" BEL "cpu0/Mram_dstack1_RAMD_D1" BEL
+        "cpu0/Mram_dstack1_RAMD" BEL "cpu0/Mram_dstack2_RAMA_D1" BEL
+        "cpu0/Mram_dstack2_RAMA" BEL "cpu0/Mram_dstack2_RAMB_D1" BEL
+        "cpu0/Mram_dstack2_RAMB" BEL "cpu0/Mram_dstack2_RAMC_D1" BEL
+        "cpu0/Mram_dstack2_RAMC" BEL "cpu0/Mram_dstack2_RAMD_D1" BEL
+        "cpu0/Mram_dstack2_RAMD" PIN "cpu0/Mram_rstack_pins<32>" PIN
+        "cpu0/ram0/Mram_ram1_pins<63>" PIN "cpu0/ram0/Mram_ram1_pins<62>" PIN
+        "cpu0/ram0/Mram_ram1_pins<65>" PIN "cpu0/ram0/Mram_ram1_pins<64>" PIN
+        "cpu0/ram0/Mram_ram2_pins<63>" PIN "cpu0/ram0/Mram_ram2_pins<62>" PIN
+        "cpu0/ram0/Mram_ram2_pins<65>" PIN "cpu0/ram0/Mram_ram2_pins<64>" PIN
+        "cpu0/ram0/Mram_ram3_pins<63>" PIN "cpu0/ram0/Mram_ram3_pins<62>" PIN
+        "cpu0/ram0/Mram_ram3_pins<65>" PIN "cpu0/ram0/Mram_ram3_pins<64>" PIN
+        "cpu0/ram0/Mram_ram4_pins<63>" PIN "cpu0/ram0/Mram_ram4_pins<62>" PIN
+        "cpu0/ram0/Mram_ram4_pins<65>" PIN "cpu0/ram0/Mram_ram4_pins<64>";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+SCHEMATIC END;
+

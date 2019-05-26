@@ -1,0 +1,7 @@
+INFILE=/home/camila/Documentos/Proy.DigI/Códigos PD/BLUETOOTH/RX/build/project_r.ncd
+OUTFILE=/home/camila/Documentos/Proy.DigI/Códigos PD/BLUETOOTH/RX/build/project_r.bit
+FAMILY=Artix7
+PART=xc7a100t-1csg324
+WORKINGDIR=/home/camila/Documentos/Proy.DigI/Códigos PD/BLUETOOTH/RX/build
+LICENSE=WebPack
+USER_INFO=211381616_0_0_859

@@ -1,0 +1,10 @@
+run
+-top contadorprueba 
+-p xc7a100t-csg324							
+-opt_mode Area
+-opt_level 1
+-ifn project.src
+-ifmt mixed
+-ofn project.ngc
+-ofmt NGC
+-rtlview yes

@@ -1,0 +1,688 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "project.src"
+Input Format                       : mixed
+
+---- Target Parameters
+Target Device                      : xc7a100t-csg324
+Output File Name                   : "project.ngc"
+Output Format                      : NGC
+
+---- Source Options
+Top Module Name                    : contadorprueba
+
+---- General Options
+Optimization Goal                  : Area
+Optimization Effort                : 1
+RTL Output                         : yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/daniel/Documentos/Digital/Proyecto/Ultrasonido/ModulosBasicos/PruebasFPGA/contadorprueba/contadorprueba.v" into library work
+Parsing module <contadorprueba>.
+Analyzing Verilog file "/home/daniel/Documentos/Digital/Proyecto/Ultrasonido/ModulosBasicos/PruebasFPGA/contadorprueba/contador.v" into library work
+Parsing module <contador>.
+Analyzing Verilog file "/home/daniel/Documentos/Digital/Proyecto/Ultrasonido/ModulosBasicos/PruebasFPGA/contadorprueba/divisorfrec.v" into library work
+Parsing module <divisorfrec>.
+Analyzing Verilog file "/home/daniel/Documentos/Digital/Proyecto/Ultrasonido/ModulosBasicos/PruebasFPGA/contadorprueba/anteconmutador.v" into library work
+Parsing module <anteconmutador>.
+Analyzing Verilog file "/home/daniel/Documentos/Digital/Proyecto/Ultrasonido/ModulosBasicos/PruebasFPGA/contadorprueba/conmutacion.v" into library work
+Parsing module <conmutacion>.
+Analyzing Verilog file "/home/daniel/Documentos/Digital/Proyecto/Ultrasonido/ModulosBasicos/PruebasFPGA/contadorprueba/display.v" into library work
+Parsing module <display>.
+Analyzing Verilog file "/home/daniel/Documentos/Digital/Proyecto/Ultrasonido/ModulosBasicos/PruebasFPGA/contadorprueba/divisorfrecdisp.v" into library work
+Parsing module <divisorfrecdisp>.
+Analyzing Verilog file "/home/daniel/Documentos/Digital/Proyecto/Ultrasonido/ModulosBasicos/PruebasFPGA/contadorprueba/cantidadecho.v" into library work
+Parsing module <cantidadecho>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <contadorprueba>.
+
+Elaborating module <cantidadecho>.
+WARNING:HDLCompiler:413 - "/home/daniel/Documentos/Digital/Proyecto/Ultrasonido/ModulosBasicos/PruebasFPGA/contadorprueba/cantidadecho.v" Line 27: Result of 8-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/daniel/Documentos/Digital/Proyecto/Ultrasonido/ModulosBasicos/PruebasFPGA/contadorprueba/cantidadecho.v" Line 31: Result of 32-bit expression is truncated to fit in 1-bit target.
+
+Elaborating module <contador>.
+WARNING:HDLCompiler:413 - "/home/daniel/Documentos/Digital/Proyecto/Ultrasonido/ModulosBasicos/PruebasFPGA/contadorprueba/contador.v" Line 41: Result of 9-bit expression is truncated to fit in 8-bit target.
+
+Elaborating module <divisorfrec>.
+WARNING:HDLCompiler:413 - "/home/daniel/Documentos/Digital/Proyecto/Ultrasonido/ModulosBasicos/PruebasFPGA/contadorprueba/divisorfrec.v" Line 18: Result of 13-bit expression is truncated to fit in 12-bit target.
+
+Elaborating module <anteconmutador>.
+WARNING:HDLCompiler:413 - "/home/daniel/Documentos/Digital/Proyecto/Ultrasonido/ModulosBasicos/PruebasFPGA/contadorprueba/anteconmutador.v" Line 38: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/daniel/Documentos/Digital/Proyecto/Ultrasonido/ModulosBasicos/PruebasFPGA/contadorprueba/anteconmutador.v" Line 46: Result of 5-bit expression is truncated to fit in 4-bit target.
+
+Elaborating module <conmutacion>.
+WARNING:HDLCompiler:413 - "/home/daniel/Documentos/Digital/Proyecto/Ultrasonido/ModulosBasicos/PruebasFPGA/contadorprueba/conmutacion.v" Line 28: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "/home/daniel/Documentos/Digital/Proyecto/Ultrasonido/ModulosBasicos/PruebasFPGA/contadorprueba/conmutacion.v" Line 38: Result of 3-bit expression is truncated to fit in 2-bit target.
+
+Elaborating module <display>.
+
+Elaborating module <divisorfrecdisp>.
+WARNING:HDLCompiler:413 - "/home/daniel/Documentos/Digital/Proyecto/Ultrasonido/ModulosBasicos/PruebasFPGA/contadorprueba/divisorfrecdisp.v" Line 18: Result of 18-bit expression is truncated to fit in 17-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <contadorprueba>.
+    Related source file is "/home/daniel/Documentos/Digital/Proyecto/Ultrasonido/ModulosBasicos/PruebasFPGA/contadorprueba/contadorprueba.v".
+    Summary:
+	no macro.
+Unit <contadorprueba> synthesized.
+
+Synthesizing Unit <cantidadecho>.
+    Related source file is "/home/daniel/Documentos/Digital/Proyecto/Ultrasonido/ModulosBasicos/PruebasFPGA/contadorprueba/cantidadecho.v".
+WARNING:Xst:647 - Input <cantidad<7:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <recibido>.
+    Found 1-bit register for signal <ECHO>.
+    Found 2-bit subtractor for signal <n0009> created at line 31.
+    Found 1-bit comparator greater for signal <GND_2_o_recibido_LessThan_2_o> created at line 29
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <cantidadecho> synthesized.
+
+Synthesizing Unit <contador>.
+    Related source file is "/home/daniel/Documentos/Digital/Proyecto/Ultrasonido/ModulosBasicos/PruebasFPGA/contadorprueba/contador.v".
+    Found 8-bit register for signal <count0>.
+    Found 1-bit register for signal <calculate>.
+    Found 1-bit register for signal <pulse>.
+    Found 8-bit adder for signal <count0[7]_GND_3_o_add_1_OUT> created at line 41.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  10 D-type flip-flop(s).
+Unit <contador> synthesized.
+
+Synthesizing Unit <divisorfrec>.
+    Related source file is "/home/daniel/Documentos/Digital/Proyecto/Ultrasonido/ModulosBasicos/PruebasFPGA/contadorprueba/divisorfrec.v".
+        top = 12'b101101101100
+    Found 1-bit register for signal <CLKOUT>.
+    Found 12-bit register for signal <count_2924>.
+    Found 12-bit adder for signal <count_2924[11]_GND_4_o_add_1_OUT> created at line 18.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  13 D-type flip-flop(s).
+Unit <divisorfrec> synthesized.
+
+Synthesizing Unit <anteconmutador>.
+    Related source file is "/home/daniel/Documentos/Digital/Proyecto/Ultrasonido/ModulosBasicos/PruebasFPGA/contadorprueba/anteconmutador.v".
+    Found 1-bit register for signal <i>.
+    Found 4-bit register for signal <centenas>.
+    Found 4-bit register for signal <decenas>.
+    Found 4-bit register for signal <unidades>.
+    Found 1-bit register for signal <C>.
+    Found 1-bit register for signal <De>.
+    Found 1-bit register for signal <U>.
+    Found 8-bit register for signal <digitT>.
+    Found 8-bit subtractor for signal <digitT[7]_GND_5_o_sub_4_OUT> created at line 37.
+    Found 8-bit subtractor for signal <digitT[7]_GND_5_o_sub_7_OUT> created at line 45.
+    Found 4-bit adder for signal <centenas[3]_GND_5_o_add_4_OUT> created at line 38.
+    Found 4-bit adder for signal <decenas[3]_GND_5_o_add_7_OUT> created at line 46.
+    Found 8-bit comparator greater for signal <GND_5_o_digitT[7]_LessThan_3_o> created at line 35
+    Found 8-bit comparator greater for signal <GND_5_o_digitT[7]_LessThan_6_o> created at line 43
+    Found 4-bit comparator lessequal for signal <n0008> created at line 51
+    Found 4-bit comparator lessequal for signal <n0011> created at line 55
+    Found 4-bit comparator lessequal for signal <n0014> created at line 59
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  24 D-type flip-flop(s).
+	inferred   5 Comparator(s).
+	inferred   3 Multiplexer(s).
+Unit <anteconmutador> synthesized.
+
+Synthesizing Unit <conmutacion>.
+    Related source file is "/home/daniel/Documentos/Digital/Proyecto/Ultrasonido/ModulosBasicos/PruebasFPGA/contadorprueba/conmutacion.v".
+    Found 2-bit register for signal <mostrar>.
+    Found 4-bit register for signal <digito>.
+    Found 2-bit register for signal <titileo>.
+    Found 2-bit adder for signal <titileo[1]_GND_6_o_add_2_OUT> created at line 38.
+    Found 4x2-bit Read Only RAM for signal <titileo[1]_PWR_8_o_wide_mux_8_OUT>
+    Found 4-bit 4-to-1 multiplexer for signal <titileo[1]_centenas[3]_wide_mux_9_OUT> created at line 55.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   8 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <conmutacion> synthesized.
+
+Synthesizing Unit <display>.
+    Related source file is "/home/daniel/Documentos/Digital/Proyecto/Ultrasonido/ModulosBasicos/PruebasFPGA/contadorprueba/display.v".
+    Found 4x4-bit Read Only RAM for signal <an>
+WARNING:Xst:737 - Found 1-bit latch for signal <seg<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seg<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seg<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seg<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seg<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seg<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seg<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   7 Latch(s).
+Unit <display> synthesized.
+
+Synthesizing Unit <divisorfrecdisp>.
+    Related source file is "/home/daniel/Documentos/Digital/Proyecto/Ultrasonido/ModulosBasicos/PruebasFPGA/contadorprueba/divisorfrecdisp.v".
+        top = 17'b11000011010100000
+    Found 1-bit register for signal <CLKOUTseg>.
+    Found 17-bit register for signal <count_100000>.
+    Found 17-bit adder for signal <count_100000[16]_GND_15_o_add_1_OUT> created at line 18.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  18 D-type flip-flop(s).
+Unit <divisorfrecdisp> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 4x2-bit single-port Read Only RAM                     : 1
+ 4x4-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 9
+ 12-bit adder                                          : 1
+ 17-bit adder                                          : 1
+ 2-bit adder                                           : 1
+ 2-bit subtractor                                      : 1
+ 4-bit adder                                           : 2
+ 8-bit adder                                           : 1
+ 8-bit subtractor                                      : 2
+# Registers                                            : 20
+ 1-bit register                                        : 10
+ 12-bit register                                       : 1
+ 17-bit register                                       : 1
+ 2-bit register                                        : 2
+ 4-bit register                                        : 4
+ 8-bit register                                        : 2
+# Latches                                              : 7
+ 1-bit latch                                           : 7
+# Comparators                                          : 6
+ 1-bit comparator greater                              : 1
+ 4-bit comparator lessequal                            : 3
+ 8-bit comparator greater                              : 2
+# Multiplexers                                         : 5
+ 1-bit 2-to-1 multiplexer                              : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <anteconmutador>.
+The following registers are absorbed into counter <centenas>: 1 register on signal <centenas>.
+The following registers are absorbed into counter <decenas>: 1 register on signal <decenas>.
+Unit <anteconmutador> synthesized (advanced).
+
+Synthesizing (advanced) Unit <cantidadecho>.
+The following registers are absorbed into counter <recibido>: 1 register on signal <recibido>.
+Unit <cantidadecho> synthesized (advanced).
+
+Synthesizing (advanced) Unit <conmutacion>.
+The following registers are absorbed into counter <titileo>: 1 register on signal <titileo>.
+INFO:Xst:3226 - The RAM <Mram_titileo[1]_PWR_8_o_wide_mux_8_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <mostrar>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 2-bit                      |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <CLKOUTseg>     | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <titileo>       |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <mostrar>       |          |
+    -----------------------------------------------------------------------
+    | optimization       | area                                |          |
+    -----------------------------------------------------------------------
+Unit <conmutacion> synthesized (advanced).
+
+Synthesizing (advanced) Unit <contador>.
+The following registers are absorbed into counter <count0>: 1 register on signal <count0>.
+Unit <contador> synthesized (advanced).
+
+Synthesizing (advanced) Unit <display>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_an> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 4-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <mostrar>       |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <an>            |          |
+    -----------------------------------------------------------------------
+Unit <display> synthesized (advanced).
+
+Synthesizing (advanced) Unit <divisorfrec>.
+The following registers are absorbed into counter <count_2924>: 1 register on signal <count_2924>.
+Unit <divisorfrec> synthesized (advanced).
+
+Synthesizing (advanced) Unit <divisorfrecdisp>.
+The following registers are absorbed into counter <count_100000>: 1 register on signal <count_100000>.
+Unit <divisorfrecdisp> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 4x2-bit single-port block Read Only RAM               : 1
+ 4x4-bit single-port distributed Read Only RAM         : 1
+# Adders/Subtractors                                   : 2
+ 8-bit subtractor                                      : 2
+# Counters                                             : 7
+ 1-bit down counter                                    : 1
+ 12-bit up counter                                     : 1
+ 17-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+ 4-bit up counter                                      : 2
+ 8-bit up counter                                      : 1
+# Registers                                            : 25
+ Flip-Flops                                            : 25
+# Comparators                                          : 6
+ 1-bit comparator greater                              : 1
+ 4-bit comparator lessequal                            : 3
+ 8-bit comparator greater                              : 2
+# Multiplexers                                         : 4
+ 4-bit 4-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <contadorprueba> ...
+
+Optimizing unit <anteconmutador> ...
+
+Optimizing unit <conmutacion> ...
+
+Optimizing unit <display> ...
+WARNING:Xst:2677 - Node <anteconmutador0/C> of sequential type is unconnected in block <contadorprueba>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block contadorprueba, actual ratio is 0.
+FlipFlop contador0/pulse has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 73
+ Flip-Flops                                            : 73
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : project.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 176
+#      GND                         : 1
+#      INV                         : 7
+#      LUT1                        : 34
+#      LUT2                        : 7
+#      LUT3                        : 14
+#      LUT4                        : 14
+#      LUT5                        : 12
+#      LUT6                        : 15
+#      MUXCY                       : 34
+#      VCC                         : 1
+#      XORCY                       : 37
+# FlipFlops/Latches                : 80
+#      FD                          : 9
+#      FDR                         : 36
+#      FDRE                        : 28
+#      LD                          : 7
+# RAMS                             : 1
+#      RAMB18E1                    : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 16
+#      IBUF                        : 4
+#      OBUF                        : 12
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              72  out of  126800     0%  
+ Number of Slice LUTs:                  103  out of  63400     0%  
+    Number used as Logic:               103  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    104
+   Number with an unused Flip Flop:      32  out of    104    30%  
+   Number with an unused LUT:             1  out of    104     0%  
+   Number of fully used LUT-FF pairs:    71  out of    104    68%  
+   Number of unique control sets:        12
+
+IO Utilization: 
+ Number of IOs:                          24
+ Number of bonded IOBs:                  17  out of    210     8%  
+    IOB Flip Flops/Latches:               8
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of    135     0%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------------+----------------------------+-------+
+Clock Signal                             | Clock buffer(FF name)      | Load  |
+-----------------------------------------+----------------------------+-------+
+divisorfrec0/CLKOUT                      | NONE(cantidadecho0/ECHO)   | 13    |
+clk                                      | BUFGP                      | 54    |
+divisorfrecdisp0/CLKOUTseg               | NONE(conmutacion0/digito_3)| 7     |
+display0/_n0038<0>(display0/_n0038<0>1:O)| NONE(*)(display0/seg_6)    | 7     |
+-----------------------------------------+----------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+----------------------------------------------------------+-------+
+Control Signal                     | Buffer(FF name)                                          | Load  |
+-----------------------------------+----------------------------------------------------------+-------+
+an_0_OBUF(XST_GND:G)               | NONE(conmutacion0/Mram_titileo[1]_PWR_8_o_wide_mux_8_OUT)| 2     |
+-----------------------------------+----------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 2.570ns (Maximum Frequency: 389.105MHz)
+   Minimum input arrival time before clock: 0.685ns
+   Maximum output required time after clock: 2.606ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'divisorfrec0/CLKOUT'
+  Clock period: 1.817ns (frequency: 550.449MHz)
+  Total number of paths / destination ports: 58 / 21
+-------------------------------------------------------------------------
+Delay:               1.817ns (Levels of Logic = 3)
+  Source:            contador0/count0_5 (FF)
+  Destination:       contador0/calculate (FF)
+  Source Clock:      divisorfrec0/CLKOUT rising
+  Destination Clock: divisorfrec0/CLKOUT rising
+
+  Data Path: contador0/count0_5 to contador0/calculate
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             3   0.361   0.566  contador0/count0_5 (contador0/count0_5)
+     LUT4:I0->O            1   0.097   0.295  contador0/ECHO_count0[7]_AND_1_o_SW0 (N5)
+     LUT6:I5->O            1   0.097   0.295  contador0/ECHO_count0[7]_AND_1_o (contador0/ECHO_count0[7]_AND_1_o)
+     LUT2:I1->O            1   0.097   0.000  contador0/calculate_glue_set (contador0/calculate_glue_set)
+     FDR:D                     0.008          contador0/calculate
+    ----------------------------------------
+    Total                      1.817ns (0.660ns logic, 1.157ns route)
+                                       (36.3% logic, 63.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 2.570ns (frequency: 389.105MHz)
+  Total number of paths / destination ports: 1279 / 94
+-------------------------------------------------------------------------
+Delay:               2.570ns (Levels of Logic = 4)
+  Source:            anteconmutador0/digitT_3 (FF)
+  Destination:       anteconmutador0/digitT_5 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: anteconmutador0/digitT_3 to anteconmutador0/digitT_5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             3   0.361   0.389  anteconmutador0/digitT_3 (anteconmutador0/digitT_3)
+     LUT3:I1->O            5   0.097   0.712  anteconmutador0/Mmux_digitT[7]_count[7]_mux_1_OUT41 (anteconmutador0/Msub_digitT[7]_GND_5_o_sub_7_OUT_lut<3>)
+     LUT6:I0->O            4   0.097   0.309  anteconmutador0/GND_5_o_digitT[7]_LessThan_6_o1 (anteconmutador0/GND_5_o_digitT[7]_LessThan_6_o1)
+     LUT4:I3->O            6   0.097   0.402  anteconmutador0/GND_5_o_digitT[7]_LessThan_6_o11 (anteconmutador0/GND_5_o_digitT[7]_LessThan_6_o)
+     LUT5:I3->O            1   0.097   0.000  anteconmutador0/Mmux_digitT[7]_digitT[7]_mux_14_OUT61 (anteconmutador0/digitT[7]_digitT[7]_mux_14_OUT<5>)
+     FDRE:D                    0.008          anteconmutador0/digitT_5
+    ----------------------------------------
+    Total                      2.570ns (0.757ns logic, 1.813ns route)
+                                       (29.5% logic, 70.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'divisorfrecdisp0/CLKOUTseg'
+  Clock period: 1.172ns (frequency: 852.951MHz)
+  Total number of paths / destination ports: 13 / 8
+-------------------------------------------------------------------------
+Delay:               1.172ns (Levels of Logic = 1)
+  Source:            conmutacion0/titileo_1 (FF)
+  Destination:       conmutacion0/digito_3 (FF)
+  Source Clock:      divisorfrecdisp0/CLKOUTseg rising
+  Destination Clock: divisorfrecdisp0/CLKOUTseg rising
+
+  Data Path: conmutacion0/titileo_1 to conmutacion0/digito_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               6   0.361   0.706  conmutacion0/titileo_1 (conmutacion0/titileo_1)
+     LUT5:I0->O            1   0.097   0.000  conmutacion0/Mmux_titileo[1]_centenas[3]_wide_mux_9_OUT11 (conmutacion0/titileo[1]_centenas[3]_wide_mux_9_OUT<0>)
+     FD:D                      0.008          conmutacion0/digito_0
+    ----------------------------------------
+    Total                      1.172ns (0.466ns logic, 0.706ns route)
+                                       (39.7% logic, 60.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'divisorfrec0/CLKOUT'
+  Total number of paths / destination ports: 17 / 16
+-------------------------------------------------------------------------
+Offset:              0.685ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       cantidadecho0/ECHO (FF)
+  Destination Clock: divisorfrec0/CLKOUT rising
+
+  Data Path: reset to cantidadecho0/ECHO
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            13   0.001   0.335  reset_IBUF (reset_IBUF)
+     FDR:R                     0.349          cantidadecho0/ECHO
+    ----------------------------------------
+    Total                      0.685ns (0.350ns logic, 0.335ns route)
+                                       (51.1% logic, 48.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'divisorfrecdisp0/CLKOUTseg'
+  Total number of paths / destination ports: 5 / 3
+-------------------------------------------------------------------------
+Offset:              2.606ns (Levels of Logic = 2)
+  Source:            conmutacion0/Mram_titileo[1]_PWR_8_o_wide_mux_8_OUT (RAM)
+  Destination:       an<2> (PAD)
+  Source Clock:      divisorfrecdisp0/CLKOUTseg rising
+
+  Data Path: conmutacion0/Mram_titileo[1]_PWR_8_o_wide_mux_8_OUT to an<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB18E1:CLKARDCLK->DOADO0    2   1.846   0.383  conmutacion0/Mram_titileo[1]_PWR_8_o_wide_mux_8_OUT (mostrar<0>)
+     LUT2:I0->O            1   0.097   0.279  display0/Mram_an21 (an_2_OBUF)
+     OBUF:I->O                 0.000          an_2_OBUF (an<2>)
+    ----------------------------------------
+    Total                      2.606ns (1.943ns logic, 0.663ns route)
+                                       (74.6% logic, 25.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'display0/_n0038<0>'
+  Total number of paths / destination ports: 7 / 7
+-------------------------------------------------------------------------
+Offset:              0.751ns (Levels of Logic = 1)
+  Source:            display0/seg_6 (LATCH)
+  Destination:       seg<6> (PAD)
+  Source Clock:      display0/_n0038<0> falling
+
+  Data Path: display0/seg_6 to seg<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.472   0.279  display0/seg_6 (display0/seg_6)
+     OBUF:I->O                 0.000          seg_6_OBUF (seg<6>)
+    ----------------------------------------
+    Total                      0.751ns (0.472ns logic, 0.279ns route)
+                                       (62.8% logic, 37.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'divisorfrec0/CLKOUT'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.640ns (Levels of Logic = 1)
+  Source:            contador0/pulse_1 (FF)
+  Destination:       pulse (PAD)
+  Source Clock:      divisorfrec0/CLKOUT rising
+
+  Data Path: contador0/pulse_1 to pulse
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.361   0.279  contador0/pulse_1 (contador0/pulse_1)
+     OBUF:I->O                 0.000          pulse_OBUF (pulse)
+    ----------------------------------------
+    Total                      0.640ns (0.361ns logic, 0.279ns route)
+                                       (56.4% logic, 43.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+-------------------+---------+---------+---------+---------+
+                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------+---------+---------+---------+---------+
+clk                |    2.570|         |         |         |
+divisorfrec0/CLKOUT|    2.711|         |         |         |
+-------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock display0/_n0038<0>
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+divisorfrecdisp0/CLKOUTseg|         |         |    1.046|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock divisorfrec0/CLKOUT
+-------------------+---------+---------+---------+---------+
+                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------+---------+---------+---------+---------+
+divisorfrec0/CLKOUT|    1.817|         |         |         |
+-------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock divisorfrecdisp0/CLKOUTseg
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+clk                       |    1.032|         |         |         |
+divisorfrecdisp0/CLKOUTseg|    1.172|         |         |         |
+--------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 19.00 secs
+Total CPU time to Xst completion: 18.00 secs
+ 
+--> 
+
+
+Total memory usage is 505032 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   18 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+

@@ -1,0 +1,13 @@
+
+#Compile the file
+rgbasm -o test_INCr_b.obj test_INCr_b.asm
+rgblink -m test_INCr_b.map -n test_INCr_b.sym -o test_INCr_b.gb test_INCr_b.obj 
+hexdump -v test_INCr_b.gb > test_INCr_b.dump
+
+#format the dump file into single byte and remove the address column
+vim ../tests/asm/test_INCr_b.dump
+
+
+#Run the simulation
+cd ../../sim 
+make clean && make SIMFLAGS="-DENABLE_CPU_LOG -DLOAD_CARTRIDGE_FROM_FILE -DCARTRIGDE_DUMP_PATH='\"../tests/asm/test_INCr_b.dump\"' -DSKIP_BIOS"

@@ -1,0 +1,46 @@
+Release 14.7 Map P.20131013 (lin64)
+Xilinx Mapping Report File for Design 'Microfono'
+
+Design Information
+------------------
+Command Line   : map -pr b -p XC6SLX45-CSG324-3 project.ngd 
+Target Device  : xc6slx45
+Target Package : csg324
+Target Speed   : -3
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Tue Oct 10 08:55:03 2017
+
+Design Summary
+--------------
+Number of errors   :   7
+Number of warnings :   0
+
+Section 1 - Errors
+------------------
+ERROR:MapLib:30 - LOC constraint T16 on D_IN is invalid: No such site on the
+   device. To bypass this error set the environment variable 'XIL_MAP_LOCWARN'.
+ERROR:MapLib:30 - LOC constraint U6 on D_OUT<8> is invalid: No such site on the
+   device. To bypass this error set the environment variable 'XIL_MAP_LOCWARN'.
+ERROR:MapLib:30 - LOC constraint V1 on D_OUT<5> is invalid: No such site on the
+   device. To bypass this error set the environment variable 'XIL_MAP_LOCWARN'.
+ERROR:MapLib:30 - LOC constraint R1 on D_OUT<4> is invalid: No such site on the
+   device. To bypass this error set the environment variable 'XIL_MAP_LOCWARN'.
+ERROR:MapLib:30 - LOC constraint P5 on D_OUT<3> is invalid: No such site on the
+   device. To bypass this error set the environment variable 'XIL_MAP_LOCWARN'.
+ERROR:MapLib:30 - LOC constraint R2 on D_OUT<1> is invalid: No such site on the
+   device. To bypass this error set the environment variable 'XIL_MAP_LOCWARN'.
+ERROR:MapLib:30 - LOC constraint B13 on BCLK is invalid: No such site on the
+   device. To bypass this error set the environment variable 'XIL_MAP_LOCWARN'.
+
+Section 2 - Warnings
+--------------------
+
+Section 3 - Informational
+-------------------------
+INFO:MapLib:562 - No environment variables are currently set.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+
+Section 5 - Removed Logic
+-------------------------

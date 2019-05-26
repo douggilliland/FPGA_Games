@@ -1,0 +1,636 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "project.src"
+Input Format                       : mixed
+
+---- Target Parameters
+Target Device                      : XC6SLX45-3CSG324
+Output File Name                   : "project.ngc"
+Output Format                      : NGC
+
+---- Source Options
+Top Module Name                    : bloqueultrasonido
+
+---- General Options
+Optimization Goal                  : Area
+Optimization Effort                : 1
+RTL Output                         : yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/daniel/Documentos/E_Digital/Proyecto/Ultrasonido/Código/BloqueIntegrado/Atlys/bloqueultrasonido.v" into library wor
+Parsing module <bloqueultrasonido>.
+Analyzing Verilog file "/home/daniel/Documentos/E_Digital/Proyecto/Ultrasonido/Código/BloqueIntegrado/Atlys/contador.v" into library wor
+Parsing module <contador>.
+Analyzing Verilog file "/home/daniel/Documentos/E_Digital/Proyecto/Ultrasonido/Código/BloqueIntegrado/Atlys/divisorfrec.v" into library wor
+Parsing module <divisorfrec>.
+Analyzing Verilog file "/home/daniel/Documentos/E_Digital/Proyecto/Ultrasonido/Código/BloqueIntegrado/Atlys/divisor.v" into library wor
+Parsing module <divisor>.
+Analyzing Verilog file "/home/daniel/Documentos/E_Digital/Proyecto/Ultrasonido/Código/BloqueIntegrado/Atlys/divisorfrecgen.v" into library wor
+Parsing module <divisorfrecgen>.
+Analyzing Verilog file "/home/daniel/Documentos/E_Digital/Proyecto/Ultrasonido/Código/BloqueIntegrado/Atlys/genpulsos.v" into library wor
+Parsing module <genpulsos>.
+Analyzing Verilog file "/home/daniel/Documentos/E_Digital/Proyecto/Ultrasonido/Código/BloqueIntegrado/Atlys/divisorfrecd.v" into library wor
+Parsing module <divisorfrecd>.
+Analyzing Verilog file "/home/daniel/Documentos/E_Digital/Proyecto/Ultrasonido/Código/BloqueIntegrado/Atlys/meultrasonido.v" into library wor
+Parsing module <meultrasonido>.
+Analyzing Verilog file "/home/daniel/Documentos/E_Digital/Proyecto/Ultrasonido/Código/BloqueIntegrado/Atlys/divisorfrecme.v" into library wor
+Parsing module <divisorfrecme>.
+Analyzing Verilog file "/home/daniel/Documentos/E_Digital/Proyecto/Ultrasonido/Código/BloqueIntegrado/Atlys/maquinadeestados.v" into library wor
+Parsing module <maquinadeestados>.
+Analyzing Verilog file "/home/daniel/Documentos/E_Digital/Proyecto/Ultrasonido/Código/BloqueIntegrado/Atlys/ultrasonido.v" into library wor
+Parsing module <ultrasonido>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <bloqueultrasonido>.
+
+Elaborating module <maquinadeestados>.
+
+Elaborating module <meultrasonido>.
+
+Elaborating module <divisorfrecme>.
+WARNING:HDLCompiler:413 - "/home/daniel/Documentos/E_Digital/Proyecto/Ultrasonido/C  digo/BloqueIntegrado/Atlys/divisorfrecme.v" Line 18: Result of 13-bit expression is truncated to fit in 12-bit target.
+
+Elaborating module <ultrasonido>.
+
+Elaborating module <divisorfrec>.
+WARNING:HDLCompiler:413 - "/home/daniel/Documentos/E_Digital/Proyecto/Ultrasonido/C  digo/BloqueIntegrado/Atlys/divisorfrec.v" Line 18: Result of 13-bit expression is truncated to fit in 12-bit target.
+
+Elaborating module <divisorfrecgen>.
+WARNING:HDLCompiler:413 - "/home/daniel/Documentos/E_Digital/Proyecto/Ultrasonido/C  digo/BloqueIntegrado/Atlys/divisorfrecgen.v" Line 18: Result of 10-bit expression is truncated to fit in 9-bit target.
+
+Elaborating module <divisorfrecd>.
+WARNING:HDLCompiler:413 - "/home/daniel/Documentos/E_Digital/Proyecto/Ultrasonido/C  digo/BloqueIntegrado/Atlys/divisorfrecd.v" Line 18: Result of 12-bit expression is truncated to fit in 11-bit target.
+
+Elaborating module <genpulsos>.
+
+Elaborating module <contador>.
+WARNING:HDLCompiler:413 - "/home/daniel/Documentos/E_Digital/Proyecto/Ultrasonido/C  digo/BloqueIntegrado/Atlys/contador.v" Line 42: Result of 9-bit expression is truncated to fit in 8-bit target.
+
+Elaborating module <divisor>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <bloqueultrasonido>.
+    Related source file is "/home/daniel/Documentos/E_Digital/Proyecto/Ultrasonido/Código/BloqueIntegrado/Atlys/bloqueultrasonido.v"
+    Summary:
+	no macro.
+Unit <bloqueultrasonido> synthesized.
+
+Synthesizing Unit <maquinadeestados>.
+    Related source file is "/home/daniel/Documentos/E_Digital/Proyecto/Ultrasonido/Código/BloqueIntegrado/Atlys/maquinadeestados.v"
+    Summary:
+	no macro.
+Unit <maquinadeestados> synthesized.
+
+Synthesizing Unit <meultrasonido>.
+    Related source file is "/home/daniel/Documentos/E_Digital/Proyecto/Ultrasonido/Código/BloqueIntegrado/Atlys/meultrasonido.v"
+    Found 1-bit register for signal <ENABLE>.
+    Found 1-bit register for signal <reset>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <meultrasonido> synthesized.
+
+Synthesizing Unit <divisorfrecme>.
+    Related source file is "/home/daniel/Documentos/E_Digital/Proyecto/Ultrasonido/Código/BloqueIntegrado/Atlys/divisorfrecme.v"
+        top = 12'b101110111000
+    Found 1-bit register for signal <CLKOUT2>.
+    Found 12-bit register for signal <count_3000>.
+    Found 12-bit adder for signal <count_3000[11]_GND_4_o_add_1_OUT> created at line 18.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  13 D-type flip-flop(s).
+Unit <divisorfrecme> synthesized.
+
+Synthesizing Unit <ultrasonido>.
+    Related source file is "/home/daniel/Documentos/E_Digital/Proyecto/Ultrasonido/Código/BloqueIntegrado/Atlys/ultrasonido.v"
+    Summary:
+	no macro.
+Unit <ultrasonido> synthesized.
+
+Synthesizing Unit <divisorfrec>.
+    Related source file is "/home/daniel/Documentos/E_Digital/Proyecto/Ultrasonido/Código/BloqueIntegrado/Atlys/divisorfrec.v"
+        top = 12'b101101101100
+    Found 1-bit register for signal <CLKOUT>.
+    Found 12-bit register for signal <count_2924>.
+    Found 12-bit adder for signal <count_2924[11]_GND_6_o_add_1_OUT> created at line 18.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  13 D-type flip-flop(s).
+Unit <divisorfrec> synthesized.
+
+Synthesizing Unit <divisorfrecgen>.
+    Related source file is "/home/daniel/Documentos/E_Digital/Proyecto/Ultrasonido/Código/BloqueIntegrado/Atlys/divisorfrecgen.v"
+        top = 9'b111110100
+    Found 1-bit register for signal <CLKOUT1>.
+    Found 9-bit register for signal <count_500>.
+    Found 9-bit adder for signal <count_500[8]_GND_7_o_add_1_OUT> created at line 18.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  10 D-type flip-flop(s).
+Unit <divisorfrecgen> synthesized.
+
+Synthesizing Unit <divisorfrecd>.
+    Related source file is "/home/daniel/Documentos/E_Digital/Proyecto/Ultrasonido/Código/BloqueIntegrado/Atlys/divisorfrecd.v"
+        top = 11'b10110110110
+    Found 1-bit register for signal <CLKOUTD>.
+    Found 11-bit register for signal <count_1462>.
+    Found 11-bit adder for signal <count_1462[10]_GND_8_o_add_1_OUT> created at line 18.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  12 D-type flip-flop(s).
+Unit <divisorfrecd> synthesized.
+
+Synthesizing Unit <genpulsos>.
+    Related source file is "/home/daniel/Documentos/E_Digital/Proyecto/Ultrasonido/Código/BloqueIntegrado/Atlys/genpulsos.v"
+    Found 1-bit register for signal <NoDoit>.
+    Found 1-bit register for signal <Doit>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <genpulsos> synthesized.
+
+Synthesizing Unit <contador>.
+    Related source file is "/home/daniel/Documentos/E_Digital/Proyecto/Ultrasonido/Código/BloqueIntegrado/Atlys/contador.v"
+    Found 8-bit register for signal <count0>.
+    Found 1-bit register for signal <calculate>.
+    Found 1-bit register for signal <pulse>.
+    Found 8-bit adder for signal <count0[7]_GND_10_o_add_1_OUT> created at line 42.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  10 D-type flip-flop(s).
+Unit <contador> synthesized.
+
+Synthesizing Unit <divisor>.
+    Related source file is "/home/daniel/Documentos/E_Digital/Proyecto/Ultrasonido/Código/BloqueIntegrado/Atlys/divisor.v"
+    Found 8-bit register for signal <registro>.
+    Found 8-bit register for signal <registro0>.
+    Found 1-bit register for signal <DONE>.
+    Summary:
+	inferred  17 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <divisor> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 5
+ 11-bit adder                                          : 1
+ 12-bit adder                                          : 2
+ 8-bit adder                                           : 1
+ 9-bit adder                                           : 1
+# Registers                                            : 18
+ 1-bit register                                        : 11
+ 11-bit register                                       : 1
+ 12-bit register                                       : 2
+ 8-bit register                                        : 3
+ 9-bit register                                        : 1
+# Multiplexers                                         : 1
+ 8-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1293 - FF/Latch <registro_7> has a constant value of 0 in block <divisor0>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <contador>.
+The following registers are absorbed into counter <count0>: 1 register on signal <count0>.
+Unit <contador> synthesized (advanced).
+
+Synthesizing (advanced) Unit <divisorfrec>.
+The following registers are absorbed into counter <count_2924>: 1 register on signal <count_2924>.
+Unit <divisorfrec> synthesized (advanced).
+
+Synthesizing (advanced) Unit <divisorfrecd>.
+The following registers are absorbed into counter <count_1462>: 1 register on signal <count_1462>.
+Unit <divisorfrecd> synthesized (advanced).
+
+Synthesizing (advanced) Unit <divisorfrecgen>.
+The following registers are absorbed into counter <count_500>: 1 register on signal <count_500>.
+Unit <divisorfrecgen> synthesized (advanced).
+
+Synthesizing (advanced) Unit <divisorfrecme>.
+The following registers are absorbed into counter <count_3000>: 1 register on signal <count_3000>.
+Unit <divisorfrecme> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 5
+ 11-bit up counter                                     : 1
+ 12-bit up counter                                     : 2
+ 8-bit up counter                                      : 1
+ 9-bit up counter                                      : 1
+# Registers                                            : 27
+ Flip-Flops                                            : 27
+# Multiplexers                                         : 8
+ 1-bit 2-to-1 multiplexer                              : 8
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <registro_7> has a constant value of 0 in block <divisor>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <bloqueultrasonido> ...
+
+Optimizing unit <divisor> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block bloqueultrasonido, actual ratio is 0.
+FlipFlop ultrasonido0/divisor0/DONE has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 79
+ Flip-Flops                                            : 79
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : project.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 185
+#      GND                         : 1
+#      INV                         : 6
+#      LUT1                        : 47
+#      LUT2                        : 6
+#      LUT3                        : 9
+#      LUT4                        : 4
+#      LUT5                        : 7
+#      LUT6                        : 5
+#      MUXCY                       : 47
+#      VCC                         : 1
+#      XORCY                       : 52
+# FlipFlops/Latches                : 79
+#      FD                          : 6
+#      FDR                         : 58
+#      FDRE                        : 15
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 12
+#      IBUF                        : 2
+#      OBUF                        : 10
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx45csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              71  out of  54576     0%  
+ Number of Slice LUTs:                   84  out of  27288     0%  
+    Number used as Logic:                84  out of  27288     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     85
+   Number with an unused Flip Flop:      14  out of     85    16%  
+   Number with an unused LUT:             1  out of     85     1%  
+   Number of fully used LUT-FF pairs:    70  out of     85    82%  
+   Number of unique control sets:        11
+
+IO Utilization: 
+ Number of IOs:                          13
+ Number of bonded IOBs:                  13  out of    218     5%  
+    IOB Flip Flops/Latches:               8
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+----------------------------------------+----------------------------------------------+-------+
+Clock Signal                            | Clock buffer(FF name)                        | Load  |
+----------------------------------------+----------------------------------------------+-------+
+maquinadeestados0/divisorfrecme0/CLKOUT2| NONE(maquinadeestados0/meultrasonido0/ENABLE)| 2     |
+clk                                     | BUFGP                                        | 48    |
+ultrasonido0/divisorfrec0/CLKOUT        | NONE(ultrasonido0/contador0/count0_0)        | 10    |
+ultrasonido0/divisorfrecd0/CLKOUTD      | NONE(ultrasonido0/divisor0/registro_6)       | 17    |
+ultrasonido0/divisorfrecgen0/CLKOUT1    | NONE(ultrasonido0/genpulsos0/NoDoit)         | 2     |
+----------------------------------------+----------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.873ns (Maximum Frequency: 258.178MHz)
+   Minimum input arrival time before clock: 2.725ns
+   Maximum output required time after clock: 4.555ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.873ns (frequency: 258.178MHz)
+  Total number of paths / destination ports: 805 / 92
+-------------------------------------------------------------------------
+Delay:               3.873ns (Levels of Logic = 2)
+  Source:            maquinadeestados0/divisorfrecme0/count_3000_7 (FF)
+  Destination:       maquinadeestados0/divisorfrecme0/count_3000_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: maquinadeestados0/divisorfrecme0/count_3000_7 to maquinadeestados0/divisorfrecme0/count_3000_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.447   0.961  maquinadeestados0/divisorfrecme0/count_3000_7 (maquinadeestados0/divisorfrecme0/count_3000_7)
+     LUT5:I0->O            2   0.203   0.721  maquinadeestados0/divisorfrecme0/count_3000[11]_PWR_4_o_equal_3_o<11>2 (maquinadeestados0/divisorfrecme0/count_3000[11]_PWR_4_o_equal_3_o<11>1)
+     LUT4:I2->O           12   0.203   0.908  maquinadeestados0/divisorfrecme0/count_3000[11]_PWR_4_o_equal_3_o<11>3 (maquinadeestados0/divisorfrecme0/count_3000[11]_PWR_4_o_equal_3_o)
+     FDR:R                     0.430          maquinadeestados0/divisorfrecme0/count_3000_0
+    ----------------------------------------
+    Total                      3.873ns (1.283ns logic, 2.590ns route)
+                                       (33.1% logic, 66.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ultrasonido0/divisorfrec0/CLKOUT'
+  Clock period: 2.634ns (frequency: 379.636MHz)
+  Total number of paths / destination ports: 46 / 10
+-------------------------------------------------------------------------
+Delay:               2.634ns (Levels of Logic = 2)
+  Source:            ultrasonido0/contador0/count0_3 (FF)
+  Destination:       ultrasonido0/contador0/calculate (FF)
+  Source Clock:      ultrasonido0/divisorfrec0/CLKOUT rising
+  Destination Clock: ultrasonido0/divisorfrec0/CLKOUT rising
+
+  Data Path: ultrasonido0/contador0/count0_3 to ultrasonido0/contador0/calculate
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             3   0.447   0.995  ultrasonido0/contador0/count0_3 (ultrasonido0/contador0/count0_3)
+     LUT5:I0->O            1   0.203   0.684  ultrasonido0/contador0/calculate_glue_set_SW0 (N17)
+     LUT6:I4->O            1   0.203   0.000  ultrasonido0/contador0/calculate_glue_set (ultrasonido0/contador0/calculate_glue_set)
+     FDR:D                     0.102          ultrasonido0/contador0/calculate
+    ----------------------------------------
+    Total                      2.634ns (0.955ns logic, 1.679ns route)
+                                       (36.3% logic, 63.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ultrasonido0/divisorfrecd0/CLKOUTD'
+  Clock period: 3.423ns (frequency: 292.171MHz)
+  Total number of paths / destination ports: 89 / 24
+-------------------------------------------------------------------------
+Delay:               3.423ns (Levels of Logic = 2)
+  Source:            ultrasonido0/divisor0/registro0_5 (FF)
+  Destination:       ultrasonido0/divisor0/registro_6 (FF)
+  Source Clock:      ultrasonido0/divisorfrecd0/CLKOUTD rising
+  Destination Clock: ultrasonido0/divisorfrecd0/CLKOUTD rising
+
+  Data Path: ultrasonido0/divisor0/registro0_5 to ultrasonido0/divisor0/registro_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.447   0.864  ultrasonido0/divisor0/registro0_5 (ultrasonido0/divisor0/registro0_5)
+     LUT4:I0->O            1   0.203   0.580  ultrasonido0/divisor0/calculate_registro0[7]_AND_4_o_SW0 (N13)
+     LUT6:I5->O            8   0.205   0.802  ultrasonido0/divisor0/calculate_registro0[7]_AND_4_o (ultrasonido0/divisor0/calculate_registro0[7]_AND_4_o)
+     FDRE:CE                   0.322          ultrasonido0/divisor0/registro_0
+    ----------------------------------------
+    Total                      3.423ns (1.177ns logic, 2.246ns route)
+                                       (34.4% logic, 65.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ultrasonido0/divisorfrecgen0/CLKOUT1'
+  Clock period: 1.507ns (frequency: 663.460MHz)
+  Total number of paths / destination ports: 3 / 2
+-------------------------------------------------------------------------
+Delay:               1.507ns (Levels of Logic = 1)
+  Source:            ultrasonido0/genpulsos0/Doit (FF)
+  Destination:       ultrasonido0/genpulsos0/NoDoit (FF)
+  Source Clock:      ultrasonido0/divisorfrecgen0/CLKOUT1 rising
+  Destination Clock: ultrasonido0/divisorfrecgen0/CLKOUT1 rising
+
+  Data Path: ultrasonido0/genpulsos0/Doit to ultrasonido0/genpulsos0/NoDoit
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.447   0.755  ultrasonido0/genpulsos0/Doit (ultrasonido0/genpulsos0/Doit)
+     LUT2:I0->O            1   0.203   0.000  ultrasonido0/genpulsos0/Doit_glue_set (ultrasonido0/genpulsos0/Doit_glue_set)
+     FDR:D                     0.102          ultrasonido0/genpulsos0/Doit
+    ----------------------------------------
+    Total                      1.507ns (0.752ns logic, 0.755ns route)
+                                       (49.9% logic, 50.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'maquinadeestados0/divisorfrecme0/CLKOUT2'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              2.725ns (Levels of Logic = 2)
+  Source:            orden (PAD)
+  Destination:       maquinadeestados0/meultrasonido0/reset (FF)
+  Destination Clock: maquinadeestados0/divisorfrecme0/CLKOUT2 rising
+
+  Data Path: orden to maquinadeestados0/meultrasonido0/reset
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.222   0.616  orden_IBUF (orden_IBUF)
+     INV:I->O              1   0.206   0.579  maquinadeestados0/meultrasonido0/reset_rstpot1_INV_0 (maquinadeestados0/meultrasonido0/reset_rstpot)
+     FD:D                      0.102          maquinadeestados0/meultrasonido0/reset
+    ----------------------------------------
+    Total                      2.725ns (1.530ns logic, 1.195ns route)
+                                       (56.1% logic, 43.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'ultrasonido0/divisorfrec0/CLKOUT'
+  Total number of paths / destination ports: 9 / 9
+-------------------------------------------------------------------------
+Offset:              2.721ns (Levels of Logic = 2)
+  Source:            ECHO (PAD)
+  Destination:       ultrasonido0/contador0/calculate (FF)
+  Destination Clock: ultrasonido0/divisorfrec0/CLKOUT rising
+
+  Data Path: ECHO to ultrasonido0/contador0/calculate
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             9   1.222   1.194  ECHO_IBUF (ECHO_IBUF)
+     LUT6:I0->O            1   0.203   0.000  ultrasonido0/contador0/calculate_glue_set (ultrasonido0/contador0/calculate_glue_set)
+     FDR:D                     0.102          ultrasonido0/contador0/calculate
+    ----------------------------------------
+    Total                      2.721ns (1.527ns logic, 1.194ns route)
+                                       (56.1% logic, 43.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'ultrasonido0/divisorfrecd0/CLKOUTD'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            ultrasonido0/divisor0/registro_6 (FF)
+  Destination:       d<6> (PAD)
+  Source Clock:      ultrasonido0/divisorfrecd0/CLKOUTD rising
+
+  Data Path: ultrasonido0/divisor0/registro_6 to d<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             1   0.447   0.579  ultrasonido0/divisor0/registro_6 (ultrasonido0/divisor0/registro_6)
+     OBUF:I->O                 2.571          d_6_OBUF (d<6>)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'ultrasonido0/divisorfrecgen0/CLKOUT1'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              4.555ns (Levels of Logic = 2)
+  Source:            ultrasonido0/genpulsos0/Doit (FF)
+  Destination:       trigg (PAD)
+  Source Clock:      ultrasonido0/divisorfrecgen0/CLKOUT1 rising
+
+  Data Path: ultrasonido0/genpulsos0/Doit to trigg
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.447   0.755  ultrasonido0/genpulsos0/Doit (ultrasonido0/genpulsos0/Doit)
+     LUT2:I0->O            1   0.203   0.579  ultrasonido0/genpulsos0/trigg1 (trigg_OBUF)
+     OBUF:I->O                 2.571          trigg_OBUF (trigg)
+    ----------------------------------------
+    Total                      4.555ns (3.221ns logic, 1.334ns route)
+                                       (70.7% logic, 29.3% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.873|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock ultrasonido0/divisorfrec0/CLKOUT
+----------------------------------------+---------+---------+---------+---------+
+                                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------------+---------+---------+---------+---------+
+maquinadeestados0/divisorfrecme0/CLKOUT2|    2.126|         |         |         |
+ultrasonido0/divisorfrec0/CLKOUT        |    2.634|         |         |         |
+----------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock ultrasonido0/divisorfrecd0/CLKOUTD
+----------------------------------------+---------+---------+---------+---------+
+                                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------------+---------+---------+---------+---------+
+maquinadeestados0/divisorfrecme0/CLKOUT2|    2.126|         |         |         |
+ultrasonido0/divisorfrec0/CLKOUT        |    2.995|         |         |         |
+ultrasonido0/divisorfrecd0/CLKOUTD      |    3.423|         |         |         |
+----------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock ultrasonido0/divisorfrecgen0/CLKOUT1
+----------------------------------------+---------+---------+---------+---------+
+                                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------------+---------+---------+---------+---------+
+maquinadeestados0/divisorfrecme0/CLKOUT2|    2.126|         |         |         |
+ultrasonido0/divisorfrec0/CLKOUT        |    1.633|         |         |         |
+ultrasonido0/divisorfrecgen0/CLKOUT1    |    1.507|         |         |         |
+----------------------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 63.00 secs
+Total CPU time to Xst completion: 48.38 secs
+ 
+--> 
+
+
+Total memory usage is 386000 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    7 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

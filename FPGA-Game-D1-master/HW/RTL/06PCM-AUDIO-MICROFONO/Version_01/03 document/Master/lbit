@@ -1,0 +1,24 @@
+$ djtgcfg enum
+12. En consola debe aparecer algo como lo siguiente:
+Found 1 device(s)
+Device: Nexys3
+Product Name: Nexys3
+User Name: Nexys3
+Serial Number: 210182392922
+
+13. Por favor tener en cuenta el nombre que aparece después de “Device” pues es lo que necesitaremos para programar la FPGA. La herramienta Adept, necesita conocer el JTAG ID del dispositivo a programar. Para lo cual ejecutamos el siguiente comandom donde “Device” corresponde al nombre que aparece en el paso anterior: 
+
+$ djtgcfg init -d “Device”
+
+14. Debe aparecer algo como lo siguiente:
+Initializing scan chain...
+Found Device ID: 34002093
+Found 1 device(s):
+   Device 0: XC6SLX16
+15. La herramienta “djtgcfg” dice que encontró un dispositivo JTAG con ID 0: La FPGA XC6CSLX16. Conociendo el nombre del dispositivo (“Device”) y el JTAG ID  se puede ejecutar el siguiente comando para programar la tarjeta FPGA:
+$ djtgcfg prog -d “Device” -i “JTAG ID” -f “Archivo.bit”
+16. Un ejemplo de lo anterior, con “Device”=Nexys3, “JTAG ID”=0 y “Archivo.bit”=Project.bit, es:
+$ djtgcfg prog -d Nexys3 -i 0 -f Project.bit
+17. Si todo funciona perfectamente, se debe obtener lo siguiente en consola:
+Programming device. Do not touch your board. This may take a few minutes...
+Programming succeed

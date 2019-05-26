@@ -1,0 +1,17 @@
+0 null
+12 vmem_addr
+13 bh
+14 bl
+15 bg_buffer_block_sel
+1  state
+16 cur_tile
+17 r1
+18 r2
+19 r3
+20 vmem_data
+21 bgmoffset
+22 bg_col_offset
+23 bgtoffset
+24 ly_mod_8
+25 vmem_data_shl_4
+

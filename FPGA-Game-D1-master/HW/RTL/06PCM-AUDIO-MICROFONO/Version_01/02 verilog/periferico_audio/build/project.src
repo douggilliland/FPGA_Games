@@ -1,0 +1,4 @@
+verilog work ../peripheral_audio.v
+verilog work ../div_freq.v
+verilog work ../fifo.v
+verilog work ../microfono.v
