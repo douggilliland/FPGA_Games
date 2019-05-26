@@ -1,0 +1,9 @@
+|random
+clk => rand_temp[0].CLK
+clk => rand_temp[1].CLK
+clk => rand_temp[2].CLK
+random_num[0] <= rand_temp[0].DB_MAX_OUTPUT_PORT_TYPE
+random_num[1] <= rand_temp[1].DB_MAX_OUTPUT_PORT_TYPE
+random_num[2] <= rand_temp[2].DB_MAX_OUTPUT_PORT_TYPE
+
+

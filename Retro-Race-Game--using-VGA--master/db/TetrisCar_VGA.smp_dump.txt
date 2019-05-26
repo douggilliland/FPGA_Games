@@ -1,0 +1,18 @@
+
+State Machine - |TetrisCar_VGA|Position:elemento_7|state
+Name state.s2 state.s1 state.s0 
+state.s0 0 0 0 
+state.s1 0 1 1 
+state.s2 1 0 1 
+
+State Machine - |TetrisCar_VGA|debouncer:elemento_6|state
+Name state.s2 state.s1 state.s0 
+state.s0 0 0 0 
+state.s1 0 1 1 
+state.s2 1 0 1 
+
+State Machine - |TetrisCar_VGA|debouncer:elemento_5|state
+Name state.s2 state.s1 state.s0 
+state.s0 0 0 0 
+state.s1 0 1 1 
+state.s2 1 0 1 

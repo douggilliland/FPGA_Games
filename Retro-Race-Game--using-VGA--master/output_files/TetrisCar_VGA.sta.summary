@@ -1,0 +1,125 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'CLK_DE2'
+Slack : -53.261
+TNS   : -1435.168
+
+Type  : Slow Model Setup 'div_frec:elemento_1|CLK_GAME'
+Slack : -3.424
+TNS   : -128.689
+
+Type  : Slow Model Setup 'div_frec:elemento_1|CLK_Prima'
+Slack : -1.564
+TNS   : -18.599
+
+Type  : Slow Model Setup 'PSH_Block:elemento_2|PSH'
+Slack : -1.412
+TNS   : -17.540
+
+Type  : Slow Model Hold 'div_frec:elemento_1|CLK_GAME'
+Slack : -3.749
+TNS   : -85.593
+
+Type  : Slow Model Hold 'CLK_DE2'
+Slack : -1.772
+TNS   : -5.233
+
+Type  : Slow Model Hold 'PSH_Block:elemento_2|PSH'
+Slack : 0.541
+TNS   : 0.000
+
+Type  : Slow Model Hold 'div_frec:elemento_1|CLK_Prima'
+Slack : 0.709
+TNS   : 0.000
+
+Type  : Slow Model Recovery 'crash'
+Slack : -3.966
+TNS   : -3.966
+
+Type  : Slow Model Removal 'crash'
+Slack : 3.037
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'CLK_DE2'
+Slack : -1.380
+TNS   : -44.380
+
+Type  : Slow Model Minimum Pulse Width 'div_frec:elemento_1|CLK_GAME'
+Slack : -0.500
+TNS   : -46.000
+
+Type  : Slow Model Minimum Pulse Width 'PSH_Block:elemento_2|PSH'
+Slack : -0.500
+TNS   : -21.000
+
+Type  : Slow Model Minimum Pulse Width 'div_frec:elemento_1|CLK_Prima'
+Slack : -0.500
+TNS   : -21.000
+
+Type  : Slow Model Minimum Pulse Width 'crash'
+Slack : -0.500
+TNS   : -1.000
+
+Type  : Fast Model Setup 'CLK_DE2'
+Slack : -22.533
+TNS   : -606.332
+
+Type  : Fast Model Setup 'div_frec:elemento_1|CLK_GAME'
+Slack : -1.056
+TNS   : -36.153
+
+Type  : Fast Model Setup 'div_frec:elemento_1|CLK_Prima'
+Slack : -0.198
+TNS   : -1.980
+
+Type  : Fast Model Setup 'PSH_Block:elemento_2|PSH'
+Slack : -0.136
+TNS   : -1.360
+
+Type  : Fast Model Hold 'div_frec:elemento_1|CLK_GAME'
+Slack : -2.187
+TNS   : -60.638
+
+Type  : Fast Model Hold 'CLK_DE2'
+Slack : -1.293
+TNS   : -3.862
+
+Type  : Fast Model Hold 'PSH_Block:elemento_2|PSH'
+Slack : 0.249
+TNS   : 0.000
+
+Type  : Fast Model Hold 'div_frec:elemento_1|CLK_Prima'
+Slack : 0.322
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'crash'
+Slack : -1.775
+TNS   : -1.775
+
+Type  : Fast Model Removal 'crash'
+Slack : 1.867
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'CLK_DE2'
+Slack : -1.380
+TNS   : -44.380
+
+Type  : Fast Model Minimum Pulse Width 'div_frec:elemento_1|CLK_GAME'
+Slack : -0.500
+TNS   : -46.000
+
+Type  : Fast Model Minimum Pulse Width 'PSH_Block:elemento_2|PSH'
+Slack : -0.500
+TNS   : -21.000
+
+Type  : Fast Model Minimum Pulse Width 'div_frec:elemento_1|CLK_Prima'
+Slack : -0.500
+TNS   : -21.000
+
+Type  : Fast Model Minimum Pulse Width 'crash'
+Slack : -0.500
+TNS   : -1.000
+
+------------------------------------------------------------

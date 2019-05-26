@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="TetrisCar_VGA">
+		<CBX_INST_ENTRY INSTANCE_NAME="|TetrisCar_VGA|div_frec:elemento_1|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_kem.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

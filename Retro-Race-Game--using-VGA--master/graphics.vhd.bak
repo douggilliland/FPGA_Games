@@ -1,0 +1,87 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use ieee.numeric_std.all;
+
+ENTITY graphics IS
+PORT(PosHor: in std_logic_vector(9 downto 0);  
+	  PosVer: in std_logic_vector(9 downto 0);
+	  Player: in std_logic_vector(1 downto 0);
+	  R:out std_logic_vector(9 downto 0);
+	  G:out std_logic_vector(9 downto 0);
+	  B:out std_logic_vector(9 downto 0));
+	  
+ END graphics;
+
+architecture RTL of graphics is
+
+signal x,y : integer range 0 to 800;
+
+begin
+
+x <= conv_integer(PosHor);
+y <= conv_integer(PosVer);
+
+Process(PosHor)
+begin
+if(x>143 and x<778 and  PosVer>35 and PosVer<515) then
+	if((x>143 and x<203)or (x>533)) then --Bordes negros
+		R<="0000000000";
+		G<="0000000000";
+		B<="0000000000";
+	else
+		if(Player="00" and ((x>203 and x<233 and  PosVer>423 and PosVer<453)or
+								  (x>233 and x<263 and  PosVer>423 and PosVer<453)or
+								  (x>263 and x<293 and  PosVer>423 and PosVer<453)or
+								  (x>233 and x<263 and  PosVer>392 and PosVer<422)or
+								  (x>263 and x<263 and  PosVer>454 and PosVer<484)or
+								  (x>203 and x<233 and  PosVer>485 and PosVer<515)or
+								  (x>263 and x<293 and  PosVer>485 and PosVer<515))) then
+			R<="0000000000";
+			G<="0000000000";
+			B<="0000000000";
+		else
+			if(Player="01" and ((x>203+90 and x<233+90 and  PosVer>423 and PosVer<453)or
+								  (x>233+90 and x<263+90 and  PosVer>423 and PosVer<453)or
+								  (x>263+90 and x<293+90 and  PosVer>423 and PosVer<453)or
+								  (x>233+90 and x<263+90 and  PosVer>392 and PosVer<422)or
+								  (x>263+90 and x<263+90 and  PosVer>454 and PosVer<484)or
+								  (x>203+90 and x<233+90 and  PosVer>485 and PosVer<515)or
+								  (x>263+90 and x<293+90 and  PosVer>485 and PosVer<515))) then
+			R<="0000000000";
+			G<="0000000000";
+			B<="0000000000";
+			else
+				if(Player="10" and ((x>203+180 and x<233+180 and  PosVer>423 and PosVer<453)or
+								  (x>233+180 and x<263+180 and  PosVer>423 and PosVer<453)or
+								  (x>263+180 and x<293+180 and  PosVer>423 and PosVer<453)or
+								  (x>233+180 and x<263+180 and  PosVer>392 and PosVer<422)or
+								  (x>263+180 and x<263+180 and  PosVer>454 and PosVer<484)or
+								  (x>203+180 and x<233+180 and  PosVer>485 and PosVer<515)or
+								  (x>263+180 and x<293+180 and  PosVer>485 and PosVer<515))) then
+				R<="0000000000";
+				G<="0000000000";
+				B<="0000000000";
+				else
+					R<="1111111111";
+					G<="1111111111";
+					B<="1111111111";
+	
+				end if;
+			
+			end if;
+		
+		end if;
+			
+			
+	end if;
+else --zona no visible
+	R<="0000000000";
+	G<="0000000000";
+	B<="0000000000";
+end if;
+
+end process;       
+END RTL;
+
