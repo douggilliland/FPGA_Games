@@ -1,4 +1,7 @@
 # FPGA_Gameboy_Watch
+
+From: https://github.com/dovoto/FPGA_Gameboy_Watch
+
 Full gameboy and gameboy color Verilog Implenentation
 
 This project is at about 80% complete.  Most gameboy roms work, gameboy color features are 80% implemented.
