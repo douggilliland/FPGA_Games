@@ -1,6 +1,8 @@
 FPGA: Simple Maze Game using VGA for Graphics Output
 ====================================================
 
+From: https://github.com/ThePedestrian/FPGA-Simple-Maze-Game-Using-VGA-Output
+
 Overview
 --------------------
 + Utilizes the Nexys™3 Spartan-6 FPGA Board
