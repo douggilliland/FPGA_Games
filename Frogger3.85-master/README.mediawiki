@@ -1,3 +1,5 @@
+An arcade frogger game made from scratch on Altera FPGA board, which includes keyboard driver, display unit, and computing unit written in VHDL
+
 BouncingBall is the top
 
 From https://github.com/wisechengyi/Frogger3.85
