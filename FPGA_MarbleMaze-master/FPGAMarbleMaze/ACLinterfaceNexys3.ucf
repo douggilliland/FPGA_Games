@@ -1,0 +1,80 @@
+# Clock
+NET "CLK"	LOC = "V10";
+
+# Buttons
+NET "RST"	LOC = "B8";		#BTND
+
+# Switches
+NET "SW<0>" LOC = "T10";
+NET "SW<1>" LOC = "T9";
+NET "SW<2>" LOC = "V9";
+
+NET "LV<0>" LOC = "V8";
+NET "LV<1>" LOC = "T5";
+
+#	ACL Outputs
+NET "SS"		LOC = "K2";			#JB1
+NET "SDO"	LOC = "K1";			#JB2
+NET "SDI"	LOC = "L4";			#JB3
+NET "SCLK"	LOC = "L3";			#JB4
+
+# VGA Outputs
+NET rgb_out<7> LOC=U7;
+NET rgb_out<6> LOC=V7;
+NET rgb_out<5> LOC=N7;
+NET rgb_out<4> LOC=P8;
+NET rgb_out<3> LOC=T6;
+NET rgb_out<2> LOC=V6;
+NET rgb_out<1> LOC=R7;
+NET rgb_out<0> LOC=T7;
+NET hs_out LOC=N6;
+NET vs_out LOC=P7;
+
+#  Ouput LEDs		
+#NET "LED<0>" LOC = "U16";		#LD0
+#NET "LED<1>" LOC = "V16";		#LD1
+#NET "LED<2>" LOC = "U15";		#LD2
+
+#NET "Data<0>" LOC = "U16";
+#NET "Data<1>" LOC = "V16";
+#NET "Data<2>" LOC = "U15";
+#NET "Data<3>" LOC = "V15";
+#NET "Data<4>" LOC = "M11";
+#NET "Data<5>" LOC = "N11";
+#NET "Data<6>" LOC = "R11";
+#NET "Data<7>" LOC = "T11";
+
+#NET "s_r<0>" LOC = "U16";
+#NET "s_r<1>" LOC = "V16";
+#NET "s_l<0>" LOC = "U15";
+#NET "s_l<1>" LOC = "V15";
+#NET "s_d<0>" LOC = "M11";
+#NET "s_d<1>" LOC = "N11";
+#NET "s_u<0>" LOC = "R11";
+#NET "s_u<1>" LOC = "T11";
+
+#NET "s_y<0>" LOC = "U16";
+#NET "s_y<1>" LOC = "V16";
+#NET "y_dir" LOC = "U15";
+##NET "s_l<1>" LOC = "V15";
+##NET "s_d<0>" LOC = "M11";
+#NET "s_x<1>" LOC = "N11";
+#NET "s_x<0>" LOC = "R11";
+#NET "x_dir" LOC = "T11";
+
+
+##	7 segment display
+#Net "SEG<0>" LOC = T17 | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L51P_M1DQ12, Sch name = CA
+#Net "SEG<1>" LOC = T18 | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L51N_M1DQ13, Sch name = CB
+#Net "SEG<2>" LOC = U17 | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L52P_M1DQ14, Sch name = CC
+#Net "SEG<3>" LOC = U18 | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L52N_M1DQ15, Sch name = CD
+#Net "SEG<4>" LOC = M14 | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L53P, Sch name = CE
+#Net "SEG<5>" LOC = N14 | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L53N_VREF, Sch name = CF
+#Net "SEG<6>" LOC = L14 | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L61P, Sch name = CG
+#Net "DOT" LOC = M13 | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L61N, Sch name = DP
+#
+#Net "AN<0>" LOC = N16 | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L50N_M1UDQSN, Sch name = AN0
+#Net "AN<1>" LOC = N15 | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L50P_M1UDQS, Sch name = AN1
+#Net "AN<2>" LOC = P18 | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L49N_M1DQ11, Sch name = AN2
+#Net "AN<3>" LOC = P17 | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L49P_M1DQ10, Sch name = AN3
+#Net "AN<3>" LOC = P17 | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L49P_M1DQ10, Sch name = AN3

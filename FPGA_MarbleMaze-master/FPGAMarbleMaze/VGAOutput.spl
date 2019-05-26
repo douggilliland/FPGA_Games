@@ -1,0 +1,11 @@
+[Inputs]
+v_dir
+h_dir
+clk100_in
+=sp_v[1:0]=
+=sp_h[1:0]=
+[Outputs]
+hs_out
+vs_out
+=rgb_out[7:0]=
+[BiDir]

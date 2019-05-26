@@ -1,0 +1,28 @@
+//! **************************************************************************
+// Written by: Map P.68d on Wed Dec 04 13:18:24 2013
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "rgb_out<0>" LOCATE = SITE "T7" LEVEL 1;
+COMP "rgb_out<1>" LOCATE = SITE "R7" LEVEL 1;
+COMP "rgb_out<2>" LOCATE = SITE "V6" LEVEL 1;
+COMP "rgb_out<3>" LOCATE = SITE "T6" LEVEL 1;
+COMP "rgb_out<4>" LOCATE = SITE "P8" LEVEL 1;
+COMP "rgb_out<5>" LOCATE = SITE "N7" LEVEL 1;
+COMP "rgb_out<6>" LOCATE = SITE "V7" LEVEL 1;
+COMP "rgb_out<7>" LOCATE = SITE "U7" LEVEL 1;
+COMP "SS" LOCATE = SITE "K2" LEVEL 1;
+COMP "CLK" LOCATE = SITE "V10" LEVEL 1;
+COMP "SDI" LOCATE = SITE "L4" LEVEL 1;
+COMP "SDO" LOCATE = SITE "K1" LEVEL 1;
+COMP "RST" LOCATE = SITE "B8" LEVEL 1;
+COMP "SCLK" LOCATE = SITE "L3" LEVEL 1;
+COMP "LV<0>" LOCATE = SITE "V8" LEVEL 1;
+COMP "LV<1>" LOCATE = SITE "T5" LEVEL 1;
+COMP "SW<0>" LOCATE = SITE "T10" LEVEL 1;
+COMP "SW<1>" LOCATE = SITE "T9" LEVEL 1;
+COMP "SW<2>" LOCATE = SITE "V9" LEVEL 1;
+COMP "hs_out" LOCATE = SITE "N6" LEVEL 1;
+COMP "vs_out" LOCATE = SITE "P7" LEVEL 1;
+SCHEMATIC END;
+

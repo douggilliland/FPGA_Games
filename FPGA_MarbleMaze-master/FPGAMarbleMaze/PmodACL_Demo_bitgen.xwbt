@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\sakmat_fpga\BackUpFinalProject\PmodACL_Demo.ncd
+OUTFILE=C:\sakmat_fpga\BackUpFinalProject\PmodACL_Demo.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=C:\sakmat_fpga\BackUpFinalProject
+LICENSE=ISE
+USER_INFO=203015155_203016297_210565169_560

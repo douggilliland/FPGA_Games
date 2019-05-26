@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="sim" num="991" delta="new" >The project IP instance &apos;<arg fmt="%s" index="1">Div</arg>&apos; for IP &apos;<arg fmt="%s" index="2">Divider Generator v3.0</arg>&apos; was generated with a different version of the IP than is currently in the IP Catalog. It was originally generated using IP with the packaged timestamp &apos;<arg fmt="%s" index="3">2012-04-24+06:33</arg>&apos;; the IP in the current catalog has a different packaged timestamp &apos;<arg fmt="%s" index="4">2013-06-08+23:00</arg>&apos;. This mismatch is due to changes made to the IP in the user repositories. It may affect some functionality of the IP, if there are differences between these two versions of the IP.
+</msg>
+
+<msg type="info" file="sim" num="172" delta="old" >Generating IP...
+</msg>
+
+</messages>
+

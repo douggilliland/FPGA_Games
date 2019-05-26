@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="1369" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\speedCalculator.vhd" Line 48: Possible infinite loop; process does not have a wait statement
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1369" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\PmodACL_Demo.vhd" Line 293: Possible infinite loop; process does not have a wait statement
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="871" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 74: Using initial value <arg fmt="%s" index="1">&quot;000110010000&quot;</arg> for <arg fmt="%s" index="2">easy</arg> since it is never assigned
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="871" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 75: Using initial value <arg fmt="%s" index="1">&quot;000011111010&quot;</arg> for <arg fmt="%s" index="2">medi</arg> since it is never assigned
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="871" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 76: Using initial value <arg fmt="%s" index="1">&quot;000011001000&quot;</arg> for <arg fmt="%s" index="2">hard</arg> since it is never assigned
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="871" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 104: Using initial value <arg fmt="%s" index="1">&quot;0000110101&quot;</arg> for <arg fmt="%s" index="2">m_s_hl</arg> since it is never assigned
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="871" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 105: Using initial value <arg fmt="%s" index="1">&quot;0000111100&quot;</arg> for <arg fmt="%s" index="2">m_s_hr</arg> since it is never assigned
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="871" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 106: Using initial value <arg fmt="%s" index="1">&quot;0000110101&quot;</arg> for <arg fmt="%s" index="2">m_s_vt</arg> since it is never assigned
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="871" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 107: Using initial value <arg fmt="%s" index="1">&quot;0000111100&quot;</arg> for <arg fmt="%s" index="2">m_s_vb</arg> since it is never assigned
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 180: <arg fmt="%s" index="1">vc</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 182: <arg fmt="%s" index="1">hc</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 186: <arg fmt="%s" index="1">vc</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 188: <arg fmt="%s" index="1">vc</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 190: <arg fmt="%s" index="1">vc</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 192: <arg fmt="%s" index="1">vc</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 194: <arg fmt="%s" index="1">vc</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 198: <arg fmt="%s" index="1">vc</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 201: <arg fmt="%s" index="1">vc</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 205: <arg fmt="%s" index="1">vc</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 207: <arg fmt="%s" index="1">vc</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 209: <arg fmt="%s" index="1">vc</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 211: <arg fmt="%s" index="1">vc</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 213: <arg fmt="%s" index="1">vc</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 215: <arg fmt="%s" index="1">vc</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 217: <arg fmt="%s" index="1">vc</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 219: <arg fmt="%s" index="1">vc</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 221: <arg fmt="%s" index="1">vc</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 223: <arg fmt="%s" index="1">vc</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 227: <arg fmt="%s" index="1">hc</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 229: <arg fmt="%s" index="1">hc</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 231: <arg fmt="%s" index="1">hc</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 233: <arg fmt="%s" index="1">hc</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 235: <arg fmt="%s" index="1">hc</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 237: <arg fmt="%s" index="1">hc</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 240: <arg fmt="%s" index="1">hc</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 242: <arg fmt="%s" index="1">hc</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 244: <arg fmt="%s" index="1">hc</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 246: <arg fmt="%s" index="1">hc</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 248: <arg fmt="%s" index="1">hc</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 257: <arg fmt="%s" index="1">m_n_vt</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 259: <arg fmt="%s" index="1">m_n_vt</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 261: <arg fmt="%s" index="1">m_n_vt</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 263: <arg fmt="%s" index="1">m_n_vt</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 265: <arg fmt="%s" index="1">m_n_vt</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 267: <arg fmt="%s" index="1">m_n_vt</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 269: <arg fmt="%s" index="1">m_n_vt</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 271: <arg fmt="%s" index="1">m_n_vt</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 273: <arg fmt="%s" index="1">m_n_vt</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 275: <arg fmt="%s" index="1">m_n_vt</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 279: <arg fmt="%s" index="1">m_n_vt</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 281: <arg fmt="%s" index="1">m_n_vt</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 283: <arg fmt="%s" index="1">m_n_vt</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 285: <arg fmt="%s" index="1">m_n_vt</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 287: <arg fmt="%s" index="1">m_n_vt</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 289: <arg fmt="%s" index="1">m_n_vt</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 291: <arg fmt="%s" index="1">m_n_vt</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 293: <arg fmt="%s" index="1">m_n_vt</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 295: <arg fmt="%s" index="1">m_n_vt</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 297: <arg fmt="%s" index="1">m_n_vt</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 301: <arg fmt="%s" index="1">m_n_vb</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 303: <arg fmt="%s" index="1">m_n_vb</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 305: <arg fmt="%s" index="1">m_n_vb</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 307: <arg fmt="%s" index="1">m_n_vb</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 309: <arg fmt="%s" index="1">m_n_vb</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 311: <arg fmt="%s" index="1">m_n_vb</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 313: <arg fmt="%s" index="1">m_n_vb</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 315: <arg fmt="%s" index="1">m_n_vb</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 317: <arg fmt="%s" index="1">m_n_vb</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 319: <arg fmt="%s" index="1">m_n_vb</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 323: <arg fmt="%s" index="1">m_n_vb</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 325: <arg fmt="%s" index="1">m_n_vb</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 327: <arg fmt="%s" index="1">m_n_vb</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 329: <arg fmt="%s" index="1">m_n_vb</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 331: <arg fmt="%s" index="1">m_n_vb</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 333: <arg fmt="%s" index="1">m_n_vb</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 335: <arg fmt="%s" index="1">m_n_vb</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 337: <arg fmt="%s" index="1">m_n_vb</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 339: <arg fmt="%s" index="1">m_n_vb</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 341: <arg fmt="%s" index="1">m_n_vb</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 345: <arg fmt="%s" index="1">m_n_hl</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 347: <arg fmt="%s" index="1">m_n_hl</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 349: <arg fmt="%s" index="1">m_n_hl</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 351: <arg fmt="%s" index="1">m_n_hl</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 353: <arg fmt="%s" index="1">m_n_hl</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 355: <arg fmt="%s" index="1">m_n_hl</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 357: <arg fmt="%s" index="1">m_n_hl</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 359: <arg fmt="%s" index="1">m_n_hl</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 361: <arg fmt="%s" index="1">m_n_hl</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 363: <arg fmt="%s" index="1">m_n_hl</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 365: <arg fmt="%s" index="1">m_n_hl</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 369: <arg fmt="%s" index="1">m_n_hr</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 371: <arg fmt="%s" index="1">m_n_hr</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 373: <arg fmt="%s" index="1">m_n_hr</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 375: <arg fmt="%s" index="1">m_n_hr</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 377: <arg fmt="%s" index="1">m_n_hr</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 379: <arg fmt="%s" index="1">m_n_hr</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 381: <arg fmt="%s" index="1">m_n_hr</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 383: <arg fmt="%s" index="1">m_n_hr</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 385: <arg fmt="%s" index="1">m_n_hr</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 387: <arg fmt="%s" index="1">m_n_hr</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 389: <arg fmt="%s" index="1">m_n_hr</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 393: <arg fmt="%s" index="1">m_n_hl</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 395: <arg fmt="%s" index="1">m_n_hl</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 397: <arg fmt="%s" index="1">m_n_hl</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 399: <arg fmt="%s" index="1">m_n_hl</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 401: <arg fmt="%s" index="1">m_n_hl</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 403: <arg fmt="%s" index="1">m_n_hl</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 405: <arg fmt="%s" index="1">m_n_hl</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 407: <arg fmt="%s" index="1">m_n_hl</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 409: <arg fmt="%s" index="1">m_n_hl</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 411: <arg fmt="%s" index="1">m_n_hl</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 413: <arg fmt="%s" index="1">m_n_hl</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 417: <arg fmt="%s" index="1">m_n_hr</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 419: <arg fmt="%s" index="1">m_n_hr</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 421: <arg fmt="%s" index="1">m_n_hr</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 423: <arg fmt="%s" index="1">m_n_hr</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 425: <arg fmt="%s" index="1">m_n_hr</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 427: <arg fmt="%s" index="1">m_n_hr</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 429: <arg fmt="%s" index="1">m_n_hr</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 431: <arg fmt="%s" index="1">m_n_hr</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 433: <arg fmt="%s" index="1">m_n_hr</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 435: <arg fmt="%s" index="1">m_n_hr</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 437: <arg fmt="%s" index="1">m_n_hr</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 443: <arg fmt="%s" index="1">m_n_hl</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 444: <arg fmt="%s" index="1">m_n_hr</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 445: <arg fmt="%s" index="1">m_n_vt</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 446: <arg fmt="%s" index="1">m_n_vb</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 450: <arg fmt="%s" index="1">m_n_vt</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 452: <arg fmt="%s" index="1">m_n_vt</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 454: <arg fmt="%s" index="1">m_n_vt</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 456: <arg fmt="%s" index="1">m_n_vt</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 458: <arg fmt="%s" index="1">m_n_vt</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 461: <arg fmt="%s" index="1">m_n_vt</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 463: <arg fmt="%s" index="1">m_n_vt</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 465: <arg fmt="%s" index="1">m_n_vt</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 467: <arg fmt="%s" index="1">m_n_vt</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 469: <arg fmt="%s" index="1">m_n_vt</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 472: <arg fmt="%s" index="1">m_n_vb</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 474: <arg fmt="%s" index="1">m_n_vb</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 476: <arg fmt="%s" index="1">m_n_vb</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 478: <arg fmt="%s" index="1">m_n_vb</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 480: <arg fmt="%s" index="1">m_n_vb</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 483: <arg fmt="%s" index="1">m_n_vb</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 485: <arg fmt="%s" index="1">m_n_vb</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 487: <arg fmt="%s" index="1">m_n_vb</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 489: <arg fmt="%s" index="1">m_n_vb</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 491: <arg fmt="%s" index="1">m_n_vb</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 498: <arg fmt="%s" index="1">reset_fell</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 500: <arg fmt="%s" index="1">m_vt</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 502: <arg fmt="%s" index="1">m_vb</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 506: <arg fmt="%s" index="1">m_hl</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 508: <arg fmt="%s" index="1">m_hr</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 517: <arg fmt="%s" index="1">rst</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 519: <arg fmt="%s" index="1">m_n_vt</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 521: <arg fmt="%s" index="1">m_n_vt</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 523: <arg fmt="%s" index="1">m_n_vb</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 525: <arg fmt="%s" index="1">m_n_vb</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 529: <arg fmt="%s" index="1">vc</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 530: <arg fmt="%s" index="1">m_clr</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SW&lt;2:2&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\sakmat_fpga\BackUpFinalProject\PmodACL_Demo.vhd</arg>&quot; line <arg fmt="%s" index="2">221</arg>: Output port &lt;<arg fmt="%s" index="3">DOUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">SDATA</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">m_hl&lt;9&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">m_hl&lt;8&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">m_hl&lt;7&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">m_hl&lt;6&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">m_hl&lt;5&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">m_hl&lt;4&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">m_hl&lt;3&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">m_hl&lt;2&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">m_hl&lt;1&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">m_hl&lt;0&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">m_hr&lt;9&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">m_hr&lt;8&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">m_hr&lt;7&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">m_hr&lt;6&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">m_hr&lt;5&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">m_hr&lt;4&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">m_hr&lt;3&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">m_hr&lt;2&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">m_hr&lt;1&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">m_hr&lt;0&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">m_vt&lt;9&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">m_vt&lt;8&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">m_vt&lt;7&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">m_vt&lt;6&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">m_vt&lt;5&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">m_vt&lt;4&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">m_vt&lt;3&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">m_vt&lt;2&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">m_vt&lt;1&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">m_vt&lt;0&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">m_vb&lt;9&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">m_vb&lt;8&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">m_vb&lt;7&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">m_vb&lt;6&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">m_vb&lt;5&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">m_vb&lt;4&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">m_vb&lt;3&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">m_vb&lt;2&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">m_vb&lt;1&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">m_vb&lt;0&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">win</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="info" file="Xst" num="1767" delta="old" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+</msg>
+
+<msg type="info" file="Xst" num="3231" delta="old" >The small RAM &lt;<arg fmt="%s" index="1">Mram_GND_16_o_GND_16_o_mux_9_OUT</arg>&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+</msg>
+
+<msg type="info" file="Xst" num="3217" delta="old" >HDL ADVISOR - Register &lt;<arg fmt="%s" index="1">LED</arg>&gt; currently described with an asynchronous reset, could be combined with distributed RAM &lt;<arg fmt="%s" index="2">Mram_GND_7_o_GND_7_o_mux_9_OUT</arg>&gt; for implementation on block RAM resources if you made this reset synchronous instead.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="old" >The value init of the FF/Latch <arg fmt="%s" index="1">game_cnt_7</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">VGAOutput</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">game_cnt_0</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">VGAOutput</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">game_cnt_2</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">VGAOutput</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">game_cnt_9</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">VGAOutput</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">game_cnt_10</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">VGAOutput</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">game_cnt_11</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">VGAOutput</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">m_clr_2</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">VGAOutput</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">m_clr_3</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">VGAOutput</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">txdata_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">SPImaster</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">txdata_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">SPImaster</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">txdata_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">SPImaster</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">txdata_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">SPImaster</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">txdata_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">SPImaster</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">txdata_6</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">SPImaster</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">txdata_7</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">SPImaster</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">txdata_14</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">SPImaster</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">game_cnt_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">VGAOutput</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;game_cnt_5&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">game_cnt_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">VGAOutput</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;game_cnt_6&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">m_clr_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">VGAOutput</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;m_clr_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">m_clr_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">VGAOutput</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;m_clr_5&gt; &lt;m_clr_6&gt; &lt;m_clr_7&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="3002" delta="old" >This design contains one or more registers/latches that are directly
+incompatible with the <arg fmt="%s" index="1">Spartan6</arg> architecture. The two primary causes of this is
+either a register or latch described with both an asynchronous set and
+asynchronous reset, or a register or latch described with an asynchronous
+set or reset which however has an initialization value of the opposite 
+polarity (i.e. asynchronous reset with an initialization value of 1).
+ While this circuit can be built, it creates a sub-optimal implementation
+in terms of area, power and performance. For a more optimal implementation
+Xilinx highly recommends one of the following:
+
+       1) Remove either the set or reset from all registers and latches
+          if not needed for required functionality
+       2) Modify the code in order to produce a synchronous set
+          and/or reset (both is preferred)
+       3) Ensure all registers have the same initialization value as the
+          described asynchronous set or reset polarity
+       4) Use the -async_to_sync option to transform the asynchronous
+          set/reset to synchronous operation
+          (timing simulation highly recommended when using this option)
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">SPI/C1/tx_shift_register_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">PmodACL_Demo</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">SPI/C1/tx_shift_register_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">PmodACL_Demo</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">SPI/C1/tx_shift_register_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">PmodACL_Demo</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SDATA/DOUT_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PmodACL_Demo</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SDATA/DOUT_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PmodACL_Demo</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SDATA/DOUT_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PmodACL_Demo</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SDATA/DOUT_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PmodACL_Demo</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SDATA/DOUT_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PmodACL_Demo</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SDATA/DOUT_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PmodACL_Demo</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SDATA/DOUT_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PmodACL_Demo</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SDATA/DOUT_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PmodACL_Demo</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SDATA/DOUT_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PmodACL_Demo</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SDATA/DOUT_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PmodACL_Demo</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SPI/C0/z_axis_data_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PmodACL_Demo</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SPI/C0/z_axis_data_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PmodACL_Demo</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SPI/C0/z_axis_data_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PmodACL_Demo</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SPI/C0/z_axis_data_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PmodACL_Demo</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SPI/C0/z_axis_data_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PmodACL_Demo</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SPI/C0/z_axis_data_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PmodACL_Demo</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SPI/C0/z_axis_data_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PmodACL_Demo</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SPI/C0/z_axis_data_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PmodACL_Demo</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SPI/C0/z_axis_data_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PmodACL_Demo</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SPI/C0/z_axis_data_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PmodACL_Demo</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SPI/C0/y_axis_data_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PmodACL_Demo</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SPI/C0/y_axis_data_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PmodACL_Demo</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SPI/C0/y_axis_data_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PmodACL_Demo</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SPI/C0/x_axis_data_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PmodACL_Demo</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SPI/C0/x_axis_data_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PmodACL_Demo</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">SPI/C0/x_axis_data_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PmodACL_Demo</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">SPI/C0/txdata_11</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">PmodACL_Demo</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;SPI/C0/txdata_3&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="3203" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">printScreen/m_clr_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">PmodACL_Demo</arg>&gt; is the opposite to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;printScreen/m_clr_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+</msg>
+
+</messages>
+

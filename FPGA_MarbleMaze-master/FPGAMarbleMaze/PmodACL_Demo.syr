@@ -1,0 +1,1565 @@
+Release 14.6 - xst P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: PmodACL_Demo.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "PmodACL_Demo.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "PmodACL_Demo"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : PmodACL_Demo
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\sakmat_fpga\BackUpFinalProject\SPImaster.vhd" into library work
+Parsing entity <SPImaster>.
+Parsing architecture <Behavioral> of entity <spimaster>.
+Parsing VHDL file "C:\sakmat_fpga\BackUpFinalProject\SPIinterface.vhd" into library work
+Parsing entity <SPIinterface>.
+Parsing architecture <Behavioral> of entity <spiinterface>.
+Parsing VHDL file "C:\sakmat_fpga\BackUpFinalProject\slaveSelect.vhd" into library work
+Parsing entity <slaveSelect>.
+Parsing architecture <Behavioral> of entity <slaveselect>.
+Parsing VHDL file "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" into library work
+Parsing entity <VGAOutput>.
+Parsing architecture <behavioral> of entity <vgaoutput>.
+Parsing VHDL file "C:\sakmat_fpga\BackUpFinalProject\SPIcomponents.vhd" into library work
+Parsing entity <SPIcomponent>.
+Parsing architecture <Behavioral> of entity <spicomponent>.
+Parsing VHDL file "C:\sakmat_fpga\BackUpFinalProject\speedCalculator.vhd" into library work
+Parsing entity <speedCalculator>.
+Parsing architecture <Behavioral> of entity <speedcalculator>.
+WARNING:HDLCompiler:1369 - "C:\sakmat_fpga\BackUpFinalProject\speedCalculator.vhd" Line 48: Possible infinite loop; process does not have a wait statement
+Parsing VHDL file "C:\sakmat_fpga\BackUpFinalProject\selData.vhd" into library work
+Parsing entity <sel_Data>.
+Parsing architecture <Behavioral> of entity <sel_data>.
+Parsing VHDL file "C:\sakmat_fpga\BackUpFinalProject\ClkDiv_5Hz.vhd" into library work
+Parsing entity <ClkDiv_5Hz>.
+Parsing architecture <Behavioral> of entity <clkdiv_5hz>.
+Parsing VHDL file "C:\sakmat_fpga\BackUpFinalProject\PmodACL_Demo.vhd" into library work
+Parsing entity <PmodACL_Demo>.
+Parsing architecture <Behavioral> of entity <pmodacl_demo>.
+WARNING:HDLCompiler:1369 - "C:\sakmat_fpga\BackUpFinalProject\PmodACL_Demo.vhd" Line 293: Possible infinite loop; process does not have a wait statement
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <PmodACL_Demo> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <sel_Data> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <SPIcomponent> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <SPImaster> (architecture <Behavioral>) from library <work>.
+INFO:HDLCompiler:679 - "C:\sakmat_fpga\BackUpFinalProject\SPImaster.vhd" Line 165. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:\sakmat_fpga\BackUpFinalProject\SPImaster.vhd" Line 206. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:\sakmat_fpga\BackUpFinalProject\SPImaster.vhd" Line 289. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:\sakmat_fpga\BackUpFinalProject\SPImaster.vhd" Line 341. Case statement is complete. others clause is never selected
+
+Elaborating entity <SPIinterface> (architecture <Behavioral>) from library <work>.
+INFO:HDLCompiler:679 - "C:\sakmat_fpga\BackUpFinalProject\SPIinterface.vhd" Line 126. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:\sakmat_fpga\BackUpFinalProject\SPIinterface.vhd" Line 166. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:\sakmat_fpga\BackUpFinalProject\SPIinterface.vhd" Line 216. Case statement is complete. others clause is never selected
+
+Elaborating entity <slaveSelect> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <ClkDiv_5Hz> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <speedCalculator> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <VGAOutput> (architecture <behavioral>) from library <work>.
+WARNING:HDLCompiler:871 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 74: Using initial value "000110010000" for easy since it is never assigned
+WARNING:HDLCompiler:871 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 75: Using initial value "000011111010" for medi since it is never assigned
+WARNING:HDLCompiler:871 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 76: Using initial value "000011001000" for hard since it is never assigned
+WARNING:HDLCompiler:871 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 104: Using initial value "0000110101" for m_s_hl since it is never assigned
+WARNING:HDLCompiler:871 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 105: Using initial value "0000111100" for m_s_hr since it is never assigned
+WARNING:HDLCompiler:871 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 106: Using initial value "0000110101" for m_s_vt since it is never assigned
+WARNING:HDLCompiler:871 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 107: Using initial value "0000111100" for m_s_vb since it is never assigned
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 180: vc should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 182: hc should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 186: vc should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 188: vc should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 190: vc should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 192: vc should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 194: vc should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 198: vc should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 201: vc should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 205: vc should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 207: vc should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 209: vc should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 211: vc should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 213: vc should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 215: vc should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 217: vc should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 219: vc should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 221: vc should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 223: vc should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 227: hc should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 229: hc should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 231: hc should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 233: hc should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 235: hc should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 237: hc should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 240: hc should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 242: hc should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 244: hc should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 246: hc should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 248: hc should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 257: m_n_vt should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 259: m_n_vt should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 261: m_n_vt should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 263: m_n_vt should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 265: m_n_vt should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 267: m_n_vt should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 269: m_n_vt should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 271: m_n_vt should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 273: m_n_vt should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 275: m_n_vt should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 279: m_n_vt should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 281: m_n_vt should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 283: m_n_vt should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 285: m_n_vt should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 287: m_n_vt should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 289: m_n_vt should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 291: m_n_vt should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 293: m_n_vt should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 295: m_n_vt should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 297: m_n_vt should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 301: m_n_vb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 303: m_n_vb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 305: m_n_vb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 307: m_n_vb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 309: m_n_vb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 311: m_n_vb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 313: m_n_vb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 315: m_n_vb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 317: m_n_vb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 319: m_n_vb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 323: m_n_vb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 325: m_n_vb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 327: m_n_vb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 329: m_n_vb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 331: m_n_vb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 333: m_n_vb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 335: m_n_vb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 337: m_n_vb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 339: m_n_vb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 341: m_n_vb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 345: m_n_hl should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 347: m_n_hl should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 349: m_n_hl should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 351: m_n_hl should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 353: m_n_hl should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 355: m_n_hl should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 357: m_n_hl should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 359: m_n_hl should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 361: m_n_hl should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 363: m_n_hl should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 365: m_n_hl should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 369: m_n_hr should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 371: m_n_hr should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 373: m_n_hr should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 375: m_n_hr should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 377: m_n_hr should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 379: m_n_hr should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 381: m_n_hr should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 383: m_n_hr should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 385: m_n_hr should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 387: m_n_hr should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 389: m_n_hr should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 393: m_n_hl should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 395: m_n_hl should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 397: m_n_hl should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 399: m_n_hl should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 401: m_n_hl should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 403: m_n_hl should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 405: m_n_hl should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 407: m_n_hl should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 409: m_n_hl should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 411: m_n_hl should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 413: m_n_hl should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 417: m_n_hr should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 419: m_n_hr should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 421: m_n_hr should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 423: m_n_hr should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 425: m_n_hr should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 427: m_n_hr should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 429: m_n_hr should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 431: m_n_hr should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 433: m_n_hr should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 435: m_n_hr should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 437: m_n_hr should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 443: m_n_hl should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 444: m_n_hr should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 445: m_n_vt should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 446: m_n_vb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 450: m_n_vt should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 452: m_n_vt should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 454: m_n_vt should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 456: m_n_vt should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 458: m_n_vt should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 461: m_n_vt should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 463: m_n_vt should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 465: m_n_vt should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 467: m_n_vt should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 469: m_n_vt should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 472: m_n_vb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 474: m_n_vb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 476: m_n_vb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 478: m_n_vb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 480: m_n_vb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 483: m_n_vb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 485: m_n_vb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 487: m_n_vb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 489: m_n_vb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 491: m_n_vb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 498: reset_fell should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 500: m_vt should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 502: m_vb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 506: m_hl should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 508: m_hr should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 517: rst should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 519: m_n_vt should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 521: m_n_vt should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 523: m_n_vb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 525: m_n_vb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 529: vc should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd" Line 530: m_clr should be on the sensitivity list of the process
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <PmodACL_Demo>.
+    Related source file is "C:\sakmat_fpga\BackUpFinalProject\PmodACL_Demo.vhd".
+WARNING:Xst:647 - Input <SW<2:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "C:\sakmat_fpga\BackUpFinalProject\PmodACL_Demo.vhd" line 221: Output port <DOUT> of the instance <SDATA> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <PmodACL_Demo> synthesized.
+
+Synthesizing Unit <sel_Data>.
+    Related source file is "C:\sakmat_fpga\BackUpFinalProject\selData.vhd".
+    Found 10-bit register for signal <DOUT>.
+    Found 3-bit register for signal <LED>.
+    Found 9-bit subtractor for signal <GND_7_o_GND_7_o_sub_7_OUT<8:0>> created at line 70.
+    Found 9-bit subtractor for signal <GND_7_o_GND_7_o_sub_4_OUT<8:0>> created at line 56.
+    Found 9-bit subtractor for signal <GND_7_o_GND_7_o_sub_6_OUT<8:0>> created at line 63.
+    Found 4x3-bit Read Only RAM for signal <GND_7_o_GND_7_o_mux_9_OUT>
+    Found 10-bit 4-to-1 multiplexer for signal <xAxis[9]_xAxis[9]_mux_12_OUT> created at line 46.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred  13 D-type flip-flop(s).
+	inferred  28 Multiplexer(s).
+Unit <sel_Data> synthesized.
+
+Synthesizing Unit <SPIcomponent>.
+    Related source file is "C:\sakmat_fpga\BackUpFinalProject\SPIcomponents.vhd".
+    Summary:
+	no macro.
+Unit <SPIcomponent> synthesized.
+
+Synthesizing Unit <SPImaster>.
+    Related source file is "C:\sakmat_fpga\BackUpFinalProject\SPImaster.vhd".
+    Found 1-bit register for signal <transmit>.
+    Found 3-bit register for signal <STATE>.
+    Found 2-bit register for signal <DATA>.
+    Found 12-bit register for signal <break_count>.
+    Found 21-bit register for signal <hold_count>.
+    Found 1-bit register for signal <done_configure>.
+    Found 2-bit register for signal <CONFIGUREsel>.
+    Found 16-bit register for signal <txdata>.
+    Found 1-bit register for signal <register_select>.
+    Found 1-bit register for signal <sample_done>.
+    Found 1-bit register for signal <finish>.
+    Found 10-bit register for signal <x_axis_data>.
+    Found 10-bit register for signal <y_axis_data>.
+    Found 10-bit register for signal <z_axis_data>.
+    Found 1-bit register for signal <end_configure>.
+    Found 4-bit register for signal <prevstart>.
+    Found finite state machine <FSM_0> for signal <STATE>.
+    -----------------------------------------------------------------------
+    | States             | 7                                              |
+    | Transitions        | 21                                             |
+    | Inputs             | 8                                              |
+    | Outputs            | 6                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_1> for signal <DATA>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 15                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | x_axis                                         |
+    | Power Up State     | x_axis                                         |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_2> for signal <CONFIGUREsel>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 11                                             |
+    | Inputs             | 3                                              |
+    | Outputs            | 8                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | powerctl                                       |
+    | Power Up State     | powerctl                                       |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 12-bit adder for signal <break_count[11]_GND_9_o_add_54_OUT> created at line 328.
+    Found 21-bit adder for signal <hold_count[20]_GND_9_o_add_59_OUT> created at line 339.
+    Found 16-bit 3-to-1 multiplexer for signal <DATA[1]_X_9_o_wide_mux_40_OUT> created at line 213.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  89 D-type flip-flop(s).
+	inferred  43 Multiplexer(s).
+	inferred   3 Finite State Machine(s).
+Unit <SPImaster> synthesized.
+
+Synthesizing Unit <SPIinterface>.
+    Related source file is "C:\sakmat_fpga\BackUpFinalProject\SPIinterface.vhd".
+    Found 4-bit register for signal <tx_count>.
+    Found 1-bit register for signal <sdo>.
+    Found 1-bit register for signal <TxSTATE>.
+    Found 8-bit register for signal <rx_shift_register>.
+    Found 4-bit register for signal <rx_count>.
+    Found 1-bit register for signal <done>.
+    Found 1-bit register for signal <RxSTATE>.
+    Found 8-bit register for signal <clk_count>.
+    Found 1-bit register for signal <SCLKSTATE>.
+    Found 1-bit register for signal <sck_previous>.
+    Found 1-bit register for signal <sck_buffer>.
+    Found 1-bit register for signal <clk_edge_buffer>.
+    Found 16-bit register for signal <tx_shift_register>.
+    Found 4-bit adder for signal <tx_count[3]_GND_10_o_add_1_OUT> created at line 121.
+    Found 4-bit adder for signal <rx_count[3]_GND_10_o_add_16_OUT> created at line 162.
+    Found 8-bit adder for signal <clk_count[7]_GND_10_o_add_32_OUT> created at line 214.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  48 D-type flip-flop(s).
+	inferred  11 Multiplexer(s).
+Unit <SPIinterface> synthesized.
+
+Synthesizing Unit <slaveSelect>.
+    Related source file is "C:\sakmat_fpga\BackUpFinalProject\slaveSelect.vhd".
+    Found 1-bit register for signal <ss>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <slaveSelect> synthesized.
+
+Synthesizing Unit <ClkDiv_5Hz>.
+    Related source file is "C:\sakmat_fpga\BackUpFinalProject\ClkDiv_5Hz.vhd".
+    Found 1-bit register for signal <CLKOUT>.
+    Found 24-bit register for signal <clkCount>.
+    Found 24-bit adder for signal <clkCount[23]_GND_12_o_add_1_OUT> created at line 60.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  25 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <ClkDiv_5Hz> synthesized.
+
+Synthesizing Unit <speedCalculator>.
+    Related source file is "C:\sakmat_fpga\BackUpFinalProject\speedCalculator.vhd".
+    Found 9-bit comparator greater for signal <x_tmp[8]_GND_13_o_LessThan_5_o> created at line 63
+    Found 9-bit comparator greater for signal <x_tmp[8]_GND_13_o_LessThan_7_o> created at line 65
+    Found 9-bit comparator greater for signal <x_tmp[8]_GND_13_o_LessThan_9_o> created at line 67
+    Found 9-bit comparator greater for signal <y_tmp[8]_GND_13_o_LessThan_15_o> created at line 76
+    Found 9-bit comparator greater for signal <y_tmp[8]_GND_13_o_LessThan_17_o> created at line 78
+    Found 9-bit comparator greater for signal <y_tmp[8]_GND_13_o_LessThan_19_o> created at line 80
+    Summary:
+	inferred   6 Comparator(s).
+	inferred   8 Multiplexer(s).
+Unit <speedCalculator> synthesized.
+
+Synthesizing Unit <VGAOutput>.
+    Related source file is "C:\sakmat_fpga\BackUpFinalProject\VGAOutput.vhd".
+    Found 13-bit register for signal <count5000>.
+    Found 12-bit register for signal <count1250>.
+    Found 2-bit register for signal <pastlvl>.
+    Found 12-bit register for signal <game_cnt>.
+    Found 1-bit register for signal <clk25>.
+    Found 1-bit register for signal <clk8>.
+    Found 8-bit register for signal <m_clr>.
+    Found 10-bit register for signal <m_n_vt>.
+    Found 10-bit register for signal <m_n_vb>.
+    Found 10-bit register for signal <m_n_hl>.
+    Found 10-bit register for signal <m_n_hr>.
+    Found 1-bit register for signal <reset_fell>.
+    Found 1-bit register for signal <hs_out>.
+    Found 1-bit register for signal <vs_out>.
+    Found 10-bit register for signal <hc>.
+    Found 10-bit register for signal <vc>.
+    Found 2-bit register for signal <counter>.
+    Found 2-bit adder for signal <counter[1]_GND_16_o_add_0_OUT> created at line 134.
+    Found 13-bit adder for signal <count5000[12]_GND_16_o_add_1_OUT> created at line 135.
+    Found 12-bit adder for signal <count1250[11]_GND_16_o_add_13_OUT> created at line 158.
+    Found 10-bit adder for signal <m_vt[9]_GND_16_o_add_1101_OUT> created at line 559.
+    Found 10-bit adder for signal <m_hl[9]_GND_16_o_add_1103_OUT> created at line 561.
+    Found 10-bit adder for signal <m_vt[9]_GND_16_o_add_1109_OUT> created at line 574.
+    Found 10-bit adder for signal <m_vb[9]_GND_16_o_add_1110_OUT> created at line 575.
+    Found 10-bit adder for signal <m_hl[9]_GND_16_o_add_1117_OUT> created at line 581.
+    Found 10-bit adder for signal <m_hr[9]_GND_16_o_add_1118_OUT> created at line 582.
+    Found 10-bit adder for signal <hc[9]_GND_16_o_add_1142_OUT> created at line 611.
+    Found 10-bit adder for signal <vc[9]_GND_16_o_add_1144_OUT> created at line 613.
+    Found 10-bit subtractor for signal <GND_16_o_GND_16_o_sub_1103_OUT<9:0>> created at line 560.
+    Found 10-bit subtractor for signal <GND_16_o_GND_16_o_sub_1105_OUT<9:0>> created at line 562.
+    Found 10-bit subtractor for signal <GND_16_o_GND_16_o_sub_1112_OUT<9:0>> created at line 577.
+    Found 10-bit subtractor for signal <GND_16_o_GND_16_o_sub_1113_OUT<9:0>> created at line 578.
+    Found 10-bit subtractor for signal <GND_16_o_GND_16_o_sub_1120_OUT<9:0>> created at line 584.
+    Found 10-bit subtractor for signal <GND_16_o_GND_16_o_sub_1121_OUT<9:0>> created at line 585.
+    Found 4x12-bit Read Only RAM for signal <GND_16_o_GND_16_o_mux_9_OUT>
+WARNING:Xst:737 - Found 1-bit latch for signal <m_hl<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <m_hl<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <m_hl<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <m_hl<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <m_hl<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <m_hl<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <m_hl<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <m_hl<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <m_hl<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <m_hl<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <m_hr<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <m_hr<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <m_hr<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <m_hr<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <m_hr<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <m_hr<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <m_hr<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <m_hr<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <m_hr<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <m_hr<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <m_vt<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <m_vt<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <m_vt<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <m_vt<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <m_vt<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <m_vt<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <m_vt<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <m_vt<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <m_vt<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <m_vt<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <m_vb<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <m_vb<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <m_vb<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <m_vb<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <m_vb<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <m_vb<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <m_vb<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <m_vb<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <m_vb<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <m_vb<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <win>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 2-bit comparator equal for signal <n0002> created at line 136
+    Found 12-bit comparator equal for signal <count1250[11]_game_cnt[11]_equal_15_o> created at line 160
+    Found 10-bit comparator greater for signal <vc[9]_GND_16_o_LessThan_24_o> created at line 180
+    Found 10-bit comparator greater for signal <GND_16_o_vc[9]_LessThan_25_o> created at line 180
+    Found 10-bit comparator greater for signal <hc[9]_GND_16_o_LessThan_27_o> created at line 182
+    Found 10-bit comparator greater for signal <PWR_17_o_hc[9]_LessThan_28_o> created at line 182
+    Found 10-bit comparator greater for signal <vc[9]_GND_16_o_LessThan_29_o> created at line 182
+    Found 10-bit comparator greater for signal <vc[9]_GND_16_o_LessThan_31_o> created at line 186
+    Found 10-bit comparator greater for signal <GND_16_o_hc[9]_LessThan_32_o> created at line 186
+    Found 10-bit comparator greater for signal <hc[9]_GND_16_o_LessThan_33_o> created at line 186
+    Found 10-bit comparator greater for signal <vc[9]_GND_16_o_LessThan_37_o> created at line 188
+    Found 10-bit comparator greater for signal <GND_16_o_hc[9]_LessThan_38_o> created at line 188
+    Found 10-bit comparator greater for signal <GND_16_o_hc[9]_LessThan_40_o> created at line 188
+    Found 10-bit comparator greater for signal <hc[9]_GND_16_o_LessThan_41_o> created at line 188
+    Found 10-bit comparator greater for signal <PWR_17_o_hc[9]_LessThan_42_o> created at line 188
+    Found 10-bit comparator greater for signal <hc[9]_PWR_17_o_LessThan_43_o> created at line 188
+    Found 10-bit comparator greater for signal <vc[9]_GND_16_o_LessThan_45_o> created at line 190
+    Found 10-bit comparator greater for signal <GND_16_o_hc[9]_LessThan_48_o> created at line 190
+    Found 10-bit comparator greater for signal <vc[9]_GND_16_o_LessThan_55_o> created at line 194
+    Found 10-bit comparator greater for signal <GND_16_o_hc[9]_LessThan_56_o> created at line 194
+    Found 10-bit comparator greater for signal <GND_16_o_hc[9]_LessThan_58_o> created at line 194
+    Found 10-bit comparator greater for signal <hc[9]_GND_16_o_LessThan_59_o> created at line 194
+    Found 10-bit comparator lessequal for signal <n0073> created at line 198
+    Found 10-bit comparator greater for signal <vc[9]_GND_16_o_LessThan_61_o> created at line 198
+    Found 10-bit comparator lessequal for signal <n0076> created at line 198
+    Found 10-bit comparator greater for signal <hc[9]_GND_16_o_LessThan_63_o> created at line 198
+    Found 10-bit comparator greater for signal <vc[9]_GND_16_o_LessThan_65_o> created at line 201
+    Found 10-bit comparator greater for signal <GND_16_o_hc[9]_LessThan_66_o> created at line 201
+    Found 10-bit comparator greater for signal <vc[9]_GND_16_o_LessThan_69_o> created at line 205
+    Found 10-bit comparator greater for signal <hc[9]_GND_16_o_LessThan_71_o> created at line 205
+    Found 10-bit comparator greater for signal <GND_16_o_vc[9]_LessThan_72_o> created at line 207
+    Found 10-bit comparator greater for signal <vc[9]_GND_16_o_LessThan_77_o> created at line 209
+    Found 10-bit comparator greater for signal <hc[9]_GND_16_o_LessThan_79_o> created at line 209
+    Found 10-bit comparator greater for signal <GND_16_o_vc[9]_LessThan_80_o> created at line 211
+    Found 10-bit comparator greater for signal <hc[9]_PWR_17_o_LessThan_83_o> created at line 211
+    Found 10-bit comparator greater for signal <GND_16_o_vc[9]_LessThan_84_o> created at line 213
+    Found 10-bit comparator greater for signal <vc[9]_GND_16_o_LessThan_85_o> created at line 213
+    Found 10-bit comparator greater for signal <hc[9]_GND_16_o_LessThan_87_o> created at line 213
+    Found 10-bit comparator greater for signal <GND_16_o_vc[9]_LessThan_90_o> created at line 215
+    Found 10-bit comparator greater for signal <hc[9]_GND_16_o_LessThan_93_o> created at line 215
+    Found 10-bit comparator greater for signal <GND_16_o_vc[9]_LessThan_96_o> created at line 217
+    Found 10-bit comparator greater for signal <GND_16_o_vc[9]_LessThan_100_o> created at line 219
+    Found 10-bit comparator greater for signal <vc[9]_GND_16_o_LessThan_101_o> created at line 219
+    Found 10-bit comparator greater for signal <GND_16_o_vc[9]_LessThan_104_o> created at line 221
+    Found 10-bit comparator greater for signal <hc[9]_PWR_17_o_LessThan_107_o> created at line 221
+    Found 10-bit comparator greater for signal <GND_16_o_vc[9]_LessThan_108_o> created at line 223
+    Found 10-bit comparator greater for signal <hc[9]_GND_16_o_LessThan_111_o> created at line 223
+    Found 10-bit comparator greater for signal <hc[9]_PWR_17_o_LessThan_113_o> created at line 223
+    Found 10-bit comparator greater for signal <GND_16_o_hc[9]_LessThan_114_o> created at line 227
+    Found 10-bit comparator greater for signal <hc[9]_GND_16_o_LessThan_115_o> created at line 227
+    Found 10-bit comparator greater for signal <GND_16_o_vc[9]_LessThan_116_o> created at line 227
+    Found 10-bit comparator greater for signal <vc[9]_GND_16_o_LessThan_117_o> created at line 227
+    Found 10-bit comparator greater for signal <GND_16_o_hc[9]_LessThan_120_o> created at line 229
+    Found 10-bit comparator greater for signal <hc[9]_GND_16_o_LessThan_121_o> created at line 229
+    Found 10-bit comparator greater for signal <GND_16_o_hc[9]_LessThan_124_o> created at line 231
+    Found 10-bit comparator greater for signal <hc[9]_GND_16_o_LessThan_125_o> created at line 231
+    Found 10-bit comparator greater for signal <GND_16_o_hc[9]_LessThan_128_o> created at line 233
+    Found 10-bit comparator greater for signal <hc[9]_GND_16_o_LessThan_129_o> created at line 233
+    Found 10-bit comparator greater for signal <GND_16_o_hc[9]_LessThan_134_o> created at line 235
+    Found 10-bit comparator greater for signal <hc[9]_GND_16_o_LessThan_135_o> created at line 235
+    Found 10-bit comparator greater for signal <GND_16_o_hc[9]_LessThan_140_o> created at line 237
+    Found 10-bit comparator greater for signal <hc[9]_GND_16_o_LessThan_141_o> created at line 237
+    Found 10-bit comparator greater for signal <GND_16_o_vc[9]_LessThan_144_o> created at line 237
+    Found 10-bit comparator greater for signal <vc[9]_GND_16_o_LessThan_145_o> created at line 237
+    Found 10-bit comparator greater for signal <GND_16_o_hc[9]_LessThan_146_o> created at line 240
+    Found 10-bit comparator greater for signal <hc[9]_GND_16_o_LessThan_147_o> created at line 240
+    Found 10-bit comparator greater for signal <GND_16_o_hc[9]_LessThan_150_o> created at line 242
+    Found 10-bit comparator greater for signal <hc[9]_GND_16_o_LessThan_151_o> created at line 242
+    Found 10-bit comparator greater for signal <vc[9]_GND_16_o_LessThan_153_o> created at line 242
+    Found 10-bit comparator greater for signal <GND_16_o_vc[9]_LessThan_154_o> created at line 242
+    Found 10-bit comparator greater for signal <GND_16_o_hc[9]_LessThan_156_o> created at line 244
+    Found 10-bit comparator greater for signal <hc[9]_GND_16_o_LessThan_157_o> created at line 244
+    Found 10-bit comparator greater for signal <GND_16_o_vc[9]_LessThan_158_o> created at line 244
+    Found 10-bit comparator greater for signal <vc[9]_GND_16_o_LessThan_159_o> created at line 244
+    Found 10-bit comparator greater for signal <PWR_17_o_hc[9]_LessThan_160_o> created at line 246
+    Found 10-bit comparator greater for signal <hc[9]_PWR_17_o_LessThan_161_o> created at line 246
+    Found 10-bit comparator greater for signal <GND_16_o_vc[9]_LessThan_162_o> created at line 246
+    Found 10-bit comparator greater for signal <vc[9]_GND_16_o_LessThan_163_o> created at line 246
+    Found 10-bit comparator greater for signal <GND_16_o_vc[9]_LessThan_164_o> created at line 246
+    Found 10-bit comparator greater for signal <vc[9]_GND_16_o_LessThan_165_o> created at line 246
+    Found 10-bit comparator greater for signal <GND_16_o_vc[9]_LessThan_166_o> created at line 246
+    Found 10-bit comparator greater for signal <vc[9]_GND_16_o_LessThan_167_o> created at line 246
+    Found 10-bit comparator greater for signal <PWR_17_o_hc[9]_LessThan_168_o> created at line 248
+    Found 10-bit comparator greater for signal <hc[9]_PWR_17_o_LessThan_169_o> created at line 248
+    Found 10-bit comparator greater for signal <GND_16_o_vc[9]_LessThan_170_o> created at line 248
+    Found 10-bit comparator greater for signal <vc[9]_GND_16_o_LessThan_171_o> created at line 248
+    Found 10-bit comparator lessequal for signal <n0255> created at line 257
+    Found 10-bit comparator lessequal for signal <n0257> created at line 257
+    Found 10-bit comparator lessequal for signal <n0259> created at line 257
+    Found 10-bit comparator lessequal for signal <n0261> created at line 257
+    Found 10-bit comparator lessequal for signal <n0266> created at line 259
+    Found 10-bit comparator lessequal for signal <n0268> created at line 259
+    Found 10-bit comparator lessequal for signal <n0270> created at line 259
+    Found 10-bit comparator lessequal for signal <n0275> created at line 261
+    Found 10-bit comparator lessequal for signal <n0277> created at line 261
+    Found 10-bit comparator lessequal for signal <n0279> created at line 261
+    Found 10-bit comparator lessequal for signal <n0281> created at line 261
+    Found 10-bit comparator lessequal for signal <n0286> created at line 263
+    Found 10-bit comparator lessequal for signal <n0288> created at line 263
+    Found 10-bit comparator lessequal for signal <n0290> created at line 263
+    Found 10-bit comparator greater for signal <GND_16_o_m_n_vt[9]_LessThan_218_o> created at line 265
+    Found 10-bit comparator greater for signal <n0296> created at line 265
+    Found 10-bit comparator lessequal for signal <n0298> created at line 265
+    Found 10-bit comparator lessequal for signal <n0301> created at line 265
+    Found 10-bit comparator greater for signal <n0307> created at line 267
+    Found 10-bit comparator lessequal for signal <n0309> created at line 267
+    Found 10-bit comparator lessequal for signal <n0311> created at line 267
+    Found 10-bit comparator lessequal for signal <n0313> created at line 267
+    Found 10-bit comparator lessequal for signal <n0316> created at line 267
+    Found 10-bit comparator lessequal for signal <n0318> created at line 267
+    Found 10-bit comparator lessequal for signal <n0324> created at line 269
+    Found 10-bit comparator lessequal for signal <n0326> created at line 269
+    Found 10-bit comparator lessequal for signal <n0328> created at line 269
+    Found 10-bit comparator lessequal for signal <n0333> created at line 271
+    Found 10-bit comparator lessequal for signal <n0335> created at line 271
+    Found 10-bit comparator lessequal for signal <n0340> created at line 273
+    Found 10-bit comparator lessequal for signal <n0342> created at line 273
+    Found 10-bit comparator greater for signal <n0344> created at line 273
+    Found 10-bit comparator lessequal for signal <n0349> created at line 275
+    Found 10-bit comparator lessequal for signal <n0351> created at line 275
+    Found 10-bit comparator lessequal for signal <n0354> created at line 275
+    Found 10-bit comparator lessequal for signal <n0360> created at line 279
+    Found 10-bit comparator lessequal for signal <n0362> created at line 279
+    Found 10-bit comparator lessequal for signal <n0366> created at line 281
+    Found 10-bit comparator lessequal for signal <n0370> created at line 283
+    Found 10-bit comparator lessequal for signal <n0372> created at line 283
+    Found 10-bit comparator lessequal for signal <n0376> created at line 285
+    Found 10-bit comparator lessequal for signal <n0380> created at line 287
+    Found 10-bit comparator lessequal for signal <n0383> created at line 287
+    Found 10-bit comparator lessequal for signal <n0388> created at line 289
+    Found 10-bit comparator lessequal for signal <n0391> created at line 289
+    Found 10-bit comparator lessequal for signal <n0393> created at line 289
+    Found 10-bit comparator lessequal for signal <n0398> created at line 291
+    Found 10-bit comparator greater for signal <n0404> created at line 295
+    Found 10-bit comparator lessequal for signal <n0409> created at line 297
+    Found 10-bit comparator lessequal for signal <n0414> created at line 301
+    Found 10-bit comparator lessequal for signal <n0416> created at line 301
+    Found 10-bit comparator lessequal for signal <n0421> created at line 303
+    Found 10-bit comparator lessequal for signal <n0423> created at line 303
+    Found 10-bit comparator lessequal for signal <n0428> created at line 305
+    Found 10-bit comparator lessequal for signal <n0430> created at line 305
+    Found 10-bit comparator lessequal for signal <n0435> created at line 307
+    Found 10-bit comparator lessequal for signal <n0437> created at line 307
+    Found 10-bit comparator greater for signal <GND_16_o_m_n_vb[9]_LessThan_310_o> created at line 309
+    Found 10-bit comparator greater for signal <n0443> created at line 309
+    Found 10-bit comparator greater for signal <n0447> created at line 311
+    Found 10-bit comparator lessequal for signal <n0449> created at line 311
+    Found 10-bit comparator lessequal for signal <n0453> created at line 313
+    Found 10-bit comparator lessequal for signal <n0455> created at line 313
+    Found 10-bit comparator lessequal for signal <n0460> created at line 315
+    Found 10-bit comparator lessequal for signal <n0462> created at line 315
+    Found 10-bit comparator lessequal for signal <n0467> created at line 317
+    Found 10-bit comparator lessequal for signal <n0469> created at line 317
+    Found 10-bit comparator lessequal for signal <n0474> created at line 319
+    Found 10-bit comparator lessequal for signal <n0476> created at line 319
+    Found 10-bit comparator lessequal for signal <n0497> created at line 345
+    Found 10-bit comparator lessequal for signal <n0500> created at line 345
+    Found 10-bit comparator lessequal for signal <n0502> created at line 345
+    Found 10-bit comparator lessequal for signal <n0508> created at line 347
+    Found 10-bit comparator lessequal for signal <n0510> created at line 347
+    Found 10-bit comparator lessequal for signal <n0515> created at line 349
+    Found 10-bit comparator lessequal for signal <n0520> created at line 351
+    Found 10-bit comparator lessequal for signal <n0523> created at line 351
+    Found 10-bit comparator lessequal for signal <n0529> created at line 353
+    Found 10-bit comparator lessequal for signal <n0531> created at line 353
+    Found 10-bit comparator lessequal for signal <n0533> created at line 353
+    Found 10-bit comparator lessequal for signal <n0536> created at line 353
+    Found 10-bit comparator lessequal for signal <n0542> created at line 355
+    Found 10-bit comparator lessequal for signal <n0544> created at line 355
+    Found 10-bit comparator lessequal for signal <n0550> created at line 357
+    Found 10-bit comparator lessequal for signal <n0552> created at line 357
+    Found 10-bit comparator lessequal for signal <n0557> created at line 359
+    Found 10-bit comparator lessequal for signal <n0563> created at line 361
+    Found 10-bit comparator lessequal for signal <n0565> created at line 361
+    Found 10-bit comparator lessequal for signal <n0570> created at line 363
+    Found 10-bit comparator lessequal for signal <n0572> created at line 363
+    Found 10-bit comparator lessequal for signal <n0580> created at line 365
+    Found 10-bit comparator lessequal for signal <n0582> created at line 365
+    Found 10-bit comparator lessequal for signal <n0587> created at line 369
+    Found 10-bit comparator lessequal for signal <n0591> created at line 371
+    Found 10-bit comparator lessequal for signal <n0596> created at line 373
+    Found 10-bit comparator lessequal for signal <n0601> created at line 375
+    Found 10-bit comparator lessequal for signal <n0605> created at line 377
+    Found 10-bit comparator lessequal for signal <n0609> created at line 379
+    Found 10-bit comparator lessequal for signal <n0611> created at line 379
+    Found 10-bit comparator lessequal for signal <n0615> created at line 381
+    Found 10-bit comparator lessequal for signal <n0617> created at line 381
+    Found 10-bit comparator lessequal for signal <n0622> created at line 383
+    Found 10-bit comparator lessequal for signal <n0626> created at line 385
+    Found 10-bit comparator lessequal for signal <n0628> created at line 385
+    Found 10-bit comparator lessequal for signal <n0633> created at line 387
+    Found 10-bit comparator lessequal for signal <n0637> created at line 389
+    Found 10-bit comparator lessequal for signal <n0639> created at line 389
+    Found 10-bit comparator lessequal for signal <n0645> created at line 393
+    Found 10-bit comparator lessequal for signal <n0647> created at line 393
+    Found 10-bit comparator lessequal for signal <n0652> created at line 395
+    Found 10-bit comparator lessequal for signal <n0659> created at line 399
+    Found 10-bit comparator lessequal for signal <n0664> created at line 401
+    Found 10-bit comparator lessequal for signal <n0666> created at line 401
+    Found 10-bit comparator lessequal for signal <n0669> created at line 401
+    Found 10-bit comparator lessequal for signal <n0684> created at line 411
+    Found 10-bit comparator lessequal for signal <n0716> created at line 461
+    Found 10-bit comparator lessequal for signal <n0718> created at line 461
+    Found 10-bit comparator lessequal for signal <n0722> created at line 463
+    Found 10-bit comparator lessequal for signal <n0724> created at line 463
+    Found 10-bit comparator lessequal for signal <n0728> created at line 465
+    Found 10-bit comparator lessequal for signal <n0731> created at line 465
+    Found 10-bit comparator lessequal for signal <n0733> created at line 465
+    Found 10-bit comparator lessequal for signal <n0739> created at line 467
+    Found 10-bit comparator lessequal for signal <n0741> created at line 467
+    Found 10-bit comparator lessequal for signal <n0746> created at line 469
+    Found 10-bit comparator lessequal for signal <n0748> created at line 469
+    Found 10-bit comparator lessequal for signal <n0752> created at line 472
+    Found 10-bit comparator lessequal for signal <n0754> created at line 472
+    Found 10-bit comparator lessequal for signal <n0759> created at line 474
+    Found 10-bit comparator lessequal for signal <n0761> created at line 474
+    Found 10-bit comparator lessequal for signal <n0764> created at line 474
+    Found 10-bit comparator lessequal for signal <n0766> created at line 474
+    Found 10-bit comparator lessequal for signal <n0770> created at line 474
+    Found 10-bit comparator lessequal for signal <n0772> created at line 474
+    Found 10-bit comparator lessequal for signal <n0777> created at line 476
+    Found 10-bit comparator lessequal for signal <n0779> created at line 476
+    Found 10-bit comparator lessequal for signal <n0785> created at line 480
+    Found 10-bit comparator lessequal for signal <n0787> created at line 480
+    Found 10-bit comparator lessequal for signal <n0790> created at line 480
+    Found 10-bit comparator lessequal for signal <n0792> created at line 480
+    Found 10-bit comparator lessequal for signal <n0797> created at line 483
+    Found 10-bit comparator lessequal for signal <n0799> created at line 483
+    Found 10-bit comparator lessequal for signal <n0801> created at line 483
+    Found 10-bit comparator lessequal for signal <n0803> created at line 483
+    Found 10-bit comparator lessequal for signal <n0809> created at line 485
+    Found 10-bit comparator lessequal for signal <n0811> created at line 485
+    Found 10-bit comparator lessequal for signal <n0813> created at line 485
+    Found 10-bit comparator lessequal for signal <n0815> created at line 485
+    Found 10-bit comparator lessequal for signal <n0818> created at line 485
+    Found 10-bit comparator lessequal for signal <n0820> created at line 485
+    Found 10-bit comparator lessequal for signal <n0824> created at line 485
+    Found 10-bit comparator lessequal for signal <n0826> created at line 485
+    Found 10-bit comparator lessequal for signal <n0832> created at line 487
+    Found 10-bit comparator lessequal for signal <n0835> created at line 487
+    Found 10-bit comparator lessequal for signal <n0837> created at line 487
+    Found 10-bit comparator lessequal for signal <n0841> created at line 487
+    Found 10-bit comparator lessequal for signal <n0843> created at line 487
+    Found 10-bit comparator lessequal for signal <n0847> created at line 489
+    Found 10-bit comparator lessequal for signal <n0849> created at line 489
+    Found 10-bit comparator lessequal for signal <n0854> created at line 491
+    Found 10-bit comparator lessequal for signal <n0856> created at line 491
+    Found 10-bit comparator lessequal for signal <n0858> created at line 491
+    Found 10-bit comparator lessequal for signal <n0860> created at line 491
+    Found 10-bit comparator lessequal for signal <n0863> created at line 491
+    Found 10-bit comparator lessequal for signal <n0865> created at line 491
+    Found 10-bit comparator lessequal for signal <n0891> created at line 500
+    Found 10-bit comparator lessequal for signal <n0893> created at line 502
+    Found 10-bit comparator lessequal for signal <n0897> created at line 506
+    Found 10-bit comparator lessequal for signal <n0899> created at line 508
+    Found 10-bit comparator greater for signal <GND_16_o_m_n_hl[9]_LessThan_1080_o> created at line 519
+    Found 10-bit comparator greater for signal <GND_16_o_m_n_hr[9]_LessThan_1084_o> created at line 521
+    Found 10-bit comparator lessequal for signal <n0922> created at line 529
+    Found 10-bit comparator lessequal for signal <n0924> created at line 529
+    Found 10-bit comparator lessequal for signal <n0926> created at line 529
+    Found 10-bit comparator lessequal for signal <n0928> created at line 529
+    Found 10-bit comparator greater for signal <m_vt[9]_m_vb[9]_LessThan_1101_o> created at line 557
+    Found 10-bit comparator lessequal for signal <n1193> created at line 598
+    Found 10-bit comparator lessequal for signal <n1195> created at line 598
+    Found 10-bit comparator lessequal for signal <n1199> created at line 604
+    Found 10-bit comparator lessequal for signal <n1201> created at line 604
+    Summary:
+	inferred   1 RAM(s).
+	inferred   9 Adder/Subtractor(s).
+	inferred 114 D-type flip-flop(s).
+	inferred  41 Latch(s).
+	inferred 266 Comparator(s).
+	inferred  80 Multiplexer(s).
+Unit <VGAOutput> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 4x12-bit single-port Read Only RAM                    : 1
+ 4x3-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 18
+ 10-bit adder                                          : 2
+ 10-bit addsub                                         : 4
+ 12-bit adder                                          : 2
+ 13-bit adder                                          : 1
+ 2-bit adder                                           : 1
+ 21-bit adder                                          : 1
+ 24-bit adder                                          : 1
+ 4-bit adder                                           : 2
+ 8-bit adder                                           : 1
+ 9-bit subtractor                                      : 3
+# Registers                                            : 48
+ 1-bit register                                        : 21
+ 10-bit register                                       : 10
+ 12-bit register                                       : 3
+ 13-bit register                                       : 1
+ 16-bit register                                       : 2
+ 2-bit register                                        : 2
+ 21-bit register                                       : 1
+ 24-bit register                                       : 1
+ 3-bit register                                        : 1
+ 4-bit register                                        : 3
+ 8-bit register                                        : 3
+# Latches                                              : 41
+ 1-bit latch                                           : 41
+# Comparators                                          : 272
+ 10-bit comparator greater                             : 93
+ 10-bit comparator lessequal                           : 171
+ 12-bit comparator equal                               : 1
+ 2-bit comparator equal                                : 1
+ 9-bit comparator greater                              : 6
+# Multiplexers                                         : 171
+ 1-bit 2-to-1 multiplexer                              : 90
+ 10-bit 2-to-1 multiplexer                             : 23
+ 10-bit 4-to-1 multiplexer                             : 1
+ 12-bit 2-to-1 multiplexer                             : 1
+ 13-bit 2-to-1 multiplexer                             : 1
+ 16-bit 2-to-1 multiplexer                             : 7
+ 16-bit 3-to-1 multiplexer                             : 1
+ 2-bit 2-to-1 multiplexer                              : 6
+ 21-bit 2-to-1 multiplexer                             : 2
+ 24-bit 2-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 34
+ 9-bit 2-to-1 multiplexer                              : 2
+# FSMs                                                 : 3
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <ClkDiv_5Hz>.
+The following registers are absorbed into counter <clkCount>: 1 register on signal <clkCount>.
+Unit <ClkDiv_5Hz> synthesized (advanced).
+
+Synthesizing (advanced) Unit <SPIinterface>.
+The following registers are absorbed into counter <tx_count>: 1 register on signal <tx_count>.
+The following registers are absorbed into counter <rx_count>: 1 register on signal <rx_count>.
+Unit <SPIinterface> synthesized (advanced).
+
+Synthesizing (advanced) Unit <SPImaster>.
+The following registers are absorbed into counter <break_count>: 1 register on signal <break_count>.
+Unit <SPImaster> synthesized (advanced).
+
+Synthesizing (advanced) Unit <VGAOutput>.
+The following registers are absorbed into counter <count5000>: 1 register on signal <count5000>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+The following registers are absorbed into counter <count1250>: 1 register on signal <count1250>.
+The following registers are absorbed into counter <hc>: 1 register on signal <hc>.
+The following registers are absorbed into counter <vc>: 1 register on signal <vc>.
+INFO:Xst:3231 - The small RAM <Mram_GND_16_o_GND_16_o_mux_9_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 12-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <lv>            |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <VGAOutput> synthesized (advanced).
+
+Synthesizing (advanced) Unit <sel_Data>.
+INFO:Xst:3217 - HDL ADVISOR - Register <LED> currently described with an asynchronous reset, could be combined with distributed RAM <Mram_GND_7_o_GND_7_o_mux_9_OUT> for implementation on block RAM resources if you made this reset synchronous instead.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 3-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <SW>            |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <sel_Data> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 4x12-bit single-port distributed Read Only RAM        : 1
+ 4x3-bit single-port distributed Read Only RAM         : 1
+# Adders/Subtractors                                   : 9
+ 10-bit addsub                                         : 4
+ 21-bit adder                                          : 1
+ 8-bit adder                                           : 1
+ 9-bit subtractor                                      : 3
+# Counters                                             : 9
+ 10-bit up counter                                     : 2
+ 12-bit up counter                                     : 2
+ 13-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+ 24-bit up counter                                     : 1
+ 4-bit up counter                                      : 2
+# Registers                                            : 199
+ Flip-Flops                                            : 199
+# Comparators                                          : 272
+ 10-bit comparator greater                             : 93
+ 10-bit comparator lessequal                           : 171
+ 12-bit comparator equal                               : 1
+ 2-bit comparator equal                                : 1
+ 9-bit comparator greater                              : 6
+# Multiplexers                                         : 166
+ 1-bit 2-to-1 multiplexer                              : 90
+ 10-bit 2-to-1 multiplexer                             : 23
+ 10-bit 4-to-1 multiplexer                             : 1
+ 16-bit 2-to-1 multiplexer                             : 7
+ 16-bit 3-to-1 multiplexer                             : 1
+ 2-bit 2-to-1 multiplexer                              : 6
+ 21-bit 2-to-1 multiplexer                             : 2
+ 8-bit 2-to-1 multiplexer                              : 34
+ 9-bit 2-to-1 multiplexer                              : 2
+# FSMs                                                 : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <SPI/C0/FSM_0> on signal <STATE[1:3]> with user encoding.
+--------------------------
+ State        | Encoding
+--------------------------
+ idle         | 000
+ configure    | 001
+ transmitting | 010
+ recieving    | 011
+ finished     | 100
+ break        | 101
+ holding      | 110
+--------------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <SPI/C0/FSM_2> on signal <CONFIGUREsel[1:2]> with user encoding.
+------------------------
+ State      | Encoding
+------------------------
+ powerctl   | 00
+ bwrate     | 01
+ dataformat | 10
+------------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <SPI/C0/FSM_1> on signal <DATA[1:2]> with user encoding.
+--------------------
+ State  | Encoding
+--------------------
+ x_axis | 00
+ y_axis | 01
+ z_axis | 10
+--------------------
+WARNING:Xst:1426 - The value init of the FF/Latch game_cnt_7 hinder the constant cleaning in the block VGAOutput.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1293 - FF/Latch <game_cnt_0> has a constant value of 0 in block <VGAOutput>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <game_cnt_2> has a constant value of 0 in block <VGAOutput>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <game_cnt_9> has a constant value of 0 in block <VGAOutput>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <game_cnt_10> has a constant value of 0 in block <VGAOutput>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <game_cnt_11> has a constant value of 0 in block <VGAOutput>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <m_clr_2> has a constant value of 0 in block <VGAOutput>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <m_clr_3> has a constant value of 0 in block <VGAOutput>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <txdata_0> (without init value) has a constant value of 0 in block <SPImaster>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <txdata_1> (without init value) has a constant value of 0 in block <SPImaster>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <txdata_2> (without init value) has a constant value of 0 in block <SPImaster>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <txdata_4> (without init value) has a constant value of 0 in block <SPImaster>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <txdata_5> (without init value) has a constant value of 0 in block <SPImaster>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <txdata_6> (without init value) has a constant value of 0 in block <SPImaster>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <txdata_7> (without init value) has a constant value of 0 in block <SPImaster>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <txdata_14> (without init value) has a constant value of 0 in block <SPImaster>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <game_cnt_1> in Unit <VGAOutput> is equivalent to the following FF/Latch, which will be removed : <game_cnt_5> 
+INFO:Xst:2261 - The FF/Latch <game_cnt_3> in Unit <VGAOutput> is equivalent to the following FF/Latch, which will be removed : <game_cnt_6> 
+INFO:Xst:2261 - The FF/Latch <m_clr_0> in Unit <VGAOutput> is equivalent to the following FF/Latch, which will be removed : <m_clr_1> 
+INFO:Xst:2261 - The FF/Latch <m_clr_4> in Unit <VGAOutput> is equivalent to the following 3 FFs/Latches, which will be removed : <m_clr_5> <m_clr_6> <m_clr_7> 
+WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
+   incompatible with the Spartan6 architecture. The two primary causes of this is
+   either a register or latch described with both an asynchronous set and
+   asynchronous reset, or a register or latch described with an asynchronous
+   set or reset which however has an initialization value of the opposite 
+   polarity (i.e. asynchronous reset with an initialization value of 1).
+    While this circuit can be built, it creates a sub-optimal implementation
+   in terms of area, power and performance. For a more optimal implementation
+   Xilinx highly recommends one of the following:
+
+          1) Remove either the set or reset from all registers and latches
+             if not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Ensure all registers have the same initialization value as the
+             described asynchronous set or reset polarity
+          4) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Spartan6 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    win in unit <VGAOutput>
+
+
+Optimizing unit <PmodACL_Demo> ...
+
+Optimizing unit <VGAOutput> ...
+
+Optimizing unit <sel_Data> ...
+
+Optimizing unit <SPImaster> ...
+
+Optimizing unit <SPIinterface> ...
+WARNING:Xst:1710 - FF/Latch <SPI/C1/tx_shift_register_2> (without init value) has a constant value of 0 in block <PmodACL_Demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <SPI/C1/tx_shift_register_1> (without init value) has a constant value of 0 in block <PmodACL_Demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <SPI/C1/tx_shift_register_0> (without init value) has a constant value of 0 in block <PmodACL_Demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <SDATA/DOUT_9> of sequential type is unconnected in block <PmodACL_Demo>.
+WARNING:Xst:2677 - Node <SDATA/DOUT_8> of sequential type is unconnected in block <PmodACL_Demo>.
+WARNING:Xst:2677 - Node <SDATA/DOUT_7> of sequential type is unconnected in block <PmodACL_Demo>.
+WARNING:Xst:2677 - Node <SDATA/DOUT_6> of sequential type is unconnected in block <PmodACL_Demo>.
+WARNING:Xst:2677 - Node <SDATA/DOUT_5> of sequential type is unconnected in block <PmodACL_Demo>.
+WARNING:Xst:2677 - Node <SDATA/DOUT_4> of sequential type is unconnected in block <PmodACL_Demo>.
+WARNING:Xst:2677 - Node <SDATA/DOUT_3> of sequential type is unconnected in block <PmodACL_Demo>.
+WARNING:Xst:2677 - Node <SDATA/DOUT_2> of sequential type is unconnected in block <PmodACL_Demo>.
+WARNING:Xst:2677 - Node <SDATA/DOUT_1> of sequential type is unconnected in block <PmodACL_Demo>.
+WARNING:Xst:2677 - Node <SDATA/DOUT_0> of sequential type is unconnected in block <PmodACL_Demo>.
+WARNING:Xst:2677 - Node <SPI/C0/z_axis_data_9> of sequential type is unconnected in block <PmodACL_Demo>.
+WARNING:Xst:2677 - Node <SPI/C0/z_axis_data_8> of sequential type is unconnected in block <PmodACL_Demo>.
+WARNING:Xst:2677 - Node <SPI/C0/z_axis_data_7> of sequential type is unconnected in block <PmodACL_Demo>.
+WARNING:Xst:2677 - Node <SPI/C0/z_axis_data_6> of sequential type is unconnected in block <PmodACL_Demo>.
+WARNING:Xst:2677 - Node <SPI/C0/z_axis_data_5> of sequential type is unconnected in block <PmodACL_Demo>.
+WARNING:Xst:2677 - Node <SPI/C0/z_axis_data_4> of sequential type is unconnected in block <PmodACL_Demo>.
+WARNING:Xst:2677 - Node <SPI/C0/z_axis_data_3> of sequential type is unconnected in block <PmodACL_Demo>.
+WARNING:Xst:2677 - Node <SPI/C0/z_axis_data_2> of sequential type is unconnected in block <PmodACL_Demo>.
+WARNING:Xst:2677 - Node <SPI/C0/z_axis_data_1> of sequential type is unconnected in block <PmodACL_Demo>.
+WARNING:Xst:2677 - Node <SPI/C0/z_axis_data_0> of sequential type is unconnected in block <PmodACL_Demo>.
+WARNING:Xst:2677 - Node <SPI/C0/y_axis_data_2> of sequential type is unconnected in block <PmodACL_Demo>.
+WARNING:Xst:2677 - Node <SPI/C0/y_axis_data_1> of sequential type is unconnected in block <PmodACL_Demo>.
+WARNING:Xst:2677 - Node <SPI/C0/y_axis_data_0> of sequential type is unconnected in block <PmodACL_Demo>.
+WARNING:Xst:2677 - Node <SPI/C0/x_axis_data_2> of sequential type is unconnected in block <PmodACL_Demo>.
+WARNING:Xst:2677 - Node <SPI/C0/x_axis_data_1> of sequential type is unconnected in block <PmodACL_Demo>.
+WARNING:Xst:2677 - Node <SPI/C0/x_axis_data_0> of sequential type is unconnected in block <PmodACL_Demo>.
+INFO:Xst:2261 - The FF/Latch <SPI/C0/txdata_11> in Unit <PmodACL_Demo> is equivalent to the following FF/Latch, which will be removed : <SPI/C0/txdata_3> 
+INFO:Xst:3203 - The FF/Latch <printScreen/m_clr_4> in Unit <PmodACL_Demo> is the opposite to the following FF/Latch, which will be removed : <printScreen/m_clr_0> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block PmodACL_Demo, actual ratio is 15.
+FlipFlop printScreen/m_n_hl_3 has been replicated 1 time(s)
+FlipFlop printScreen/m_n_hl_4 has been replicated 1 time(s)
+FlipFlop printScreen/m_n_hl_7 has been replicated 1 time(s)
+FlipFlop printScreen/m_n_hr_6 has been replicated 1 time(s)
+FlipFlop printScreen/m_n_hr_7 has been replicated 1 time(s)
+FlipFlop printScreen/m_n_vb_1 has been replicated 2 time(s)
+FlipFlop printScreen/m_n_vb_2 has been replicated 1 time(s)
+FlipFlop printScreen/m_n_vb_7 has been replicated 1 time(s)
+FlipFlop printScreen/m_n_vb_8 has been replicated 1 time(s)
+FlipFlop printScreen/m_n_vt_3 has been replicated 1 time(s)
+FlipFlop printScreen/m_n_vt_4 has been replicated 1 time(s)
+FlipFlop printScreen/m_n_vt_5 has been replicated 1 time(s)
+FlipFlop printScreen/m_n_vt_6 has been replicated 1 time(s)
+FlipFlop printScreen/m_n_vt_7 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 260
+ Flip-Flops                                            : 260
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : PmodACL_Demo.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1339
+#      GND                         : 1
+#      INV                         : 10
+#      LUT1                        : 83
+#      LUT2                        : 139
+#      LUT3                        : 148
+#      LUT4                        : 163
+#      LUT5                        : 145
+#      LUT6                        : 352
+#      MUXCY                       : 151
+#      MUXF7                       : 4
+#      VCC                         : 1
+#      XORCY                       : 142
+# FlipFlops/Latches                : 301
+#      FD                          : 66
+#      FDC                         : 27
+#      FDCE                        : 1
+#      FDE                         : 3
+#      FDR                         : 40
+#      FDRE                        : 119
+#      FDS                         : 1
+#      FDSE                        : 3
+#      LD                          : 41
+# Clock Buffers                    : 4
+#      BUFG                        : 3
+#      BUFGP                       : 1
+# IO Buffers                       : 22
+#      IBUF                        : 6
+#      OBUF                        : 16
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             298  out of  18224     1%  
+ Number of Slice LUTs:                 1040  out of   9112    11%  
+    Number used as Logic:              1040  out of   9112    11%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1103
+   Number with an unused Flip Flop:     805  out of   1103    72%  
+   Number with an unused LUT:            63  out of   1103     5%  
+   Number of fully used LUT-FF pairs:   235  out of   1103    21%  
+   Number of unique control sets:        37
+
+IO Utilization: 
+ Number of IOs:                          50
+ Number of bonded IOBs:                  23  out of    232     9%  
+    IOB Flip Flops/Latches:               3
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                4  out of     16    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+--------------------------------------------------------------------------------------+----------------------------+-------+
+Clock Signal                                                                          | Clock buffer(FF name)      | Load  |
+--------------------------------------------------------------------------------------+----------------------------+-------+
+CLK                                                                                   | BUFGP                      | 181   |
+printScreen/clk25                                                                     | BUFG                       | 22    |
+printScreen/GND_16_o_GND_16_o_AND_589_o93(printScreen/GND_16_o_GND_16_o_AND_589_o88:O)| BUFG(*)(printScreen/m_vb_0)| 40    |
+printScreen/clk8                                                                      | BUFG                       | 57    |
+printScreen/win_G(printScreen/win_G:O)                                                | NONE(*)(printScreen/win)   | 1     |
+--------------------------------------------------------------------------------------+----------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 8.846ns (Maximum Frequency: 113.045MHz)
+   Minimum input arrival time before clock: 5.267ns
+   Maximum output required time after clock: 13.315ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 5.720ns (frequency: 174.839MHz)
+  Total number of paths / destination ports: 4148 / 326
+-------------------------------------------------------------------------
+Delay:               5.720ns (Levels of Logic = 4)
+  Source:            SPI/C0/break_count_7 (FF)
+  Destination:       SPI/C0/txdata_15 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: SPI/C0/break_count_7 to SPI/C0/txdata_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             2   0.447   0.981  SPI/C0/break_count_7 (SPI/C0/break_count_7)
+     LUT6:I0->O            4   0.203   0.788  SPI/C0/break_count[11]_PWR_10_o_equal_49_o<11>1 (SPI/C0/break_count[11]_PWR_10_o_equal_49_o<11>)
+     LUT2:I0->O            3   0.203   1.015  SPI/C0/break_count[11]_PWR_10_o_equal_49_o<11>3 (SPI/C0/break_count[11]_PWR_10_o_equal_49_o)
+     LUT6:I0->O            1   0.203   0.580  SPI/C0/_n0365_inv3 (SPI/C0/_n0365_inv3)
+     LUT6:I5->O            7   0.205   0.773  SPI/C0/_n0365_inv4 (SPI/C0/_n0365_inv)
+     FDRE:CE                   0.322          SPI/C0/txdata_8
+    ----------------------------------------
+    Total                      5.720ns (1.583ns logic, 4.137ns route)
+                                       (27.7% logic, 72.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'printScreen/clk25'
+  Clock period: 4.795ns (frequency: 208.561MHz)
+  Total number of paths / destination ports: 431 / 52
+-------------------------------------------------------------------------
+Delay:               4.795ns (Levels of Logic = 2)
+  Source:            printScreen/hc_7 (FF)
+  Destination:       printScreen/hc_9 (FF)
+  Source Clock:      printScreen/clk25 rising
+  Destination Clock: printScreen/clk25 rising
+
+  Data Path: printScreen/hc_7 to printScreen/hc_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             39   0.447   1.736  printScreen/hc_7 (printScreen/hc_7)
+     LUT5:I0->O            1   0.203   0.684  printScreen/GND_16_o_GND_16_o_equal_1144_o<9>_SW0 (N34)
+     LUT6:I4->O           20   0.203   1.092  printScreen/GND_16_o_GND_16_o_equal_1144_o<9> (printScreen/GND_16_o_GND_16_o_equal_1144_o)
+     FDR:R                     0.430          printScreen/hc_0
+    ----------------------------------------
+    Total                      4.795ns (1.283ns logic, 3.512ns route)
+                                       (26.8% logic, 73.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'printScreen/clk8'
+  Clock period: 8.846ns (frequency: 113.045MHz)
+  Total number of paths / destination ports: 358488 / 56
+-------------------------------------------------------------------------
+Delay:               8.846ns (Levels of Logic = 17)
+  Source:            printScreen/m_n_vb_9 (FF)
+  Destination:       printScreen/m_n_vb_9 (FF)
+  Source Clock:      printScreen/clk8 rising
+  Destination Clock: printScreen/clk8 rising
+
+  Data Path: printScreen/m_n_vb_9 to printScreen/m_n_vb_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              30   0.447   1.264  printScreen/m_n_vb_9 (printScreen/m_n_vb_9)
+     LUT2:I1->O            6   0.205   0.745  printScreen/GND_16_o_m_n_vb[9]_LessThan_510_o11 (printScreen/GND_16_o_m_n_vb[9]_LessThan_510_o1)
+     LUT6:I5->O            2   0.205   0.721  printScreen/GND_16_o_m_n_vb[9]_LessThan_1064_o11 (printScreen/GND_16_o_m_n_vb[9]_LessThan_1064_o)
+     LUT6:I4->O            1   0.203   0.580  printScreen/Mmux_fell126 (printScreen/Mmux_fell125)
+     LUT6:I5->O            6   0.205   0.973  printScreen/Mmux_fell129 (printScreen/Mmux_fell128)
+     LUT6:I3->O           19   0.205   1.072  printScreen/Mmux_fell167_2 (printScreen/Mmux_fell1671)
+     LUT2:I1->O            1   0.205   0.579  printScreen/Mmux_m_n_hr[9]_GND_16_o_mux_1131_OUT_rs_AS_inv2 (printScreen/Mmux_m_n_hr[9]_GND_16_o_mux_1131_OUT_rs_AS_inv)
+     MUXCY:CI->O           1   0.019   0.000  printScreen/Mmux_m_n_hr[9]_GND_16_o_mux_1131_OUT_rs_cy<0> (printScreen/Mmux_m_n_hr[9]_GND_16_o_mux_1131_OUT_rs_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  printScreen/Mmux_m_n_hr[9]_GND_16_o_mux_1131_OUT_rs_cy<1> (printScreen/Mmux_m_n_hr[9]_GND_16_o_mux_1131_OUT_rs_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  printScreen/Mmux_m_n_hr[9]_GND_16_o_mux_1131_OUT_rs_cy<2> (printScreen/Mmux_m_n_hr[9]_GND_16_o_mux_1131_OUT_rs_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  printScreen/Mmux_m_n_hr[9]_GND_16_o_mux_1131_OUT_rs_cy<3> (printScreen/Mmux_m_n_hr[9]_GND_16_o_mux_1131_OUT_rs_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  printScreen/Mmux_m_n_hr[9]_GND_16_o_mux_1131_OUT_rs_cy<4> (printScreen/Mmux_m_n_hr[9]_GND_16_o_mux_1131_OUT_rs_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  printScreen/Mmux_m_n_hr[9]_GND_16_o_mux_1131_OUT_rs_cy<5> (printScreen/Mmux_m_n_hr[9]_GND_16_o_mux_1131_OUT_rs_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  printScreen/Mmux_m_n_hr[9]_GND_16_o_mux_1131_OUT_rs_cy<6> (printScreen/Mmux_m_n_hr[9]_GND_16_o_mux_1131_OUT_rs_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  printScreen/Mmux_m_n_hr[9]_GND_16_o_mux_1131_OUT_rs_cy<7> (printScreen/Mmux_m_n_hr[9]_GND_16_o_mux_1131_OUT_rs_cy<7>)
+     MUXCY:CI->O           0   0.019   0.000  printScreen/Mmux_m_n_hr[9]_GND_16_o_mux_1131_OUT_rs_cy<8> (printScreen/Mmux_m_n_hr[9]_GND_16_o_mux_1131_OUT_rs_cy<8>)
+     XORCY:CI->O           1   0.180   0.580  printScreen/Mmux_m_n_hr[9]_GND_16_o_mux_1131_OUT_rs_xor<9> (printScreen/m_n_hr[9]_GND_16_o_mux_1131_OUT<9>)
+     LUT2:I1->O            1   0.205   0.000  printScreen/Mmux_m_n_hr[9]_GND_16_o_mux_1132_OUT101 (printScreen/m_n_hr[9]_GND_16_o_mux_1132_OUT<9>)
+     FD:D                      0.102          printScreen/m_n_hr_9
+    ----------------------------------------
+    Total                      8.846ns (2.333ns logic, 6.513ns route)
+                                       (26.4% logic, 73.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 397 / 181
+-------------------------------------------------------------------------
+Offset:              5.267ns (Levels of Logic = 3)
+  Source:            LV<1> (PAD)
+  Destination:       printScreen/count1250_11 (FF)
+  Destination Clock: CLK rising
+
+  Data Path: LV<1> to printScreen/count1250_11
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            20   1.222   1.340  LV_1_IBUF (LV_1_IBUF)
+     LUT4:I0->O            2   0.203   0.961  printScreen/n0002_inv_inv21 (printScreen/n0002_inv_inv)
+     LUT5:I0->O           12   0.203   0.908  printScreen/_n14961 (printScreen/_n1496)
+     FDRE:R                    0.430          printScreen/count1250_0
+    ----------------------------------------
+    Total                      5.267ns (2.058ns logic, 3.209ns route)
+                                       (39.1% logic, 60.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'printScreen/clk8'
+  Total number of paths / destination ports: 58 / 58
+-------------------------------------------------------------------------
+Offset:              4.572ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       printScreen/reset_fell (FF)
+  Destination Clock: printScreen/clk8 rising
+
+  Data Path: RST to printScreen/reset_fell
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           178   1.222   2.138  RST_IBUF (RST_IBUF)
+     LUT2:I0->O            1   0.203   0.579  printScreen/_n14991 (printScreen/_n1499)
+     FDR:R                     0.430          printScreen/reset_fell
+    ----------------------------------------
+    Total                      4.572ns (1.855ns logic, 2.717ns route)
+                                       (40.6% logic, 59.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'printScreen/win_G'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.860ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       printScreen/win (LATCH)
+  Destination Clock: printScreen/win_G falling
+
+  Data Path: RST to printScreen/win
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           178   1.222   2.398  RST_IBUF (RST_IBUF)
+     LUT6:I0->O            1   0.203   0.000  printScreen/win_D (printScreen/win_D)
+     LD:D                      0.037          printScreen/win
+    ----------------------------------------
+    Total                      3.860ns (1.462ns logic, 2.398ns route)
+                                       (37.9% logic, 62.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 6 / 6
+-------------------------------------------------------------------------
+Offset:              3.820ns (Levels of Logic = 1)
+  Source:            SPI/C1/sck_buffer (FF)
+  Destination:       SCLK (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: SPI/C1/sck_buffer to SCLK
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDSE:C->Q             8   0.447   0.802  SPI/C1/sck_buffer (SPI/C1/sck_buffer)
+     OBUF:I->O                 2.571          SCLK_OBUF (SCLK)
+    ----------------------------------------
+    Total                      3.820ns (3.018ns logic, 0.802ns route)
+                                       (79.0% logic, 21.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'printScreen/clk25'
+  Total number of paths / destination ports: 9298 / 10
+-------------------------------------------------------------------------
+Offset:              13.315ns (Levels of Logic = 9)
+  Source:            printScreen/vc_3 (FF)
+  Destination:       rgb_out<1> (PAD)
+  Source Clock:      printScreen/clk25 rising
+
+  Data Path: printScreen/vc_3 to rgb_out<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            27   0.447   1.565  printScreen/vc_3 (printScreen/vc_3)
+     LUT5:I0->O            3   0.203   0.898  printScreen/GND_16_o_vc[9]_LessThan_1141_o21 (printScreen/GND_16_o_vc[9]_LessThan_1141_o2)
+     LUT6:I2->O            7   0.203   1.002  printScreen/GND_16_o_vc[9]_LessThan_170_o11 (printScreen/GND_16_o_vc[9]_LessThan_170_o)
+     LUT4:I1->O            1   0.205   0.944  printScreen/GND_16_o_hc[9]_AND_49_o112_SW0 (N124)
+     LUT6:I0->O            1   0.203   0.808  printScreen/GND_16_o_hc[9]_AND_49_o112 (printScreen/GND_16_o_hc[9]_AND_49_o115)
+     LUT6:I3->O            1   0.205   0.827  printScreen/GND_16_o_hc[9]_AND_49_o119 (printScreen/GND_16_o_hc[9]_AND_49_o125)
+     LUT6:I2->O            4   0.203   1.028  printScreen/GND_16_o_hc[9]_AND_49_o150 (printScreen/GND_16_o_hc[9]_AND_49_o_mmx_out)
+     LUT5:I0->O            2   0.203   0.981  printScreen/vc[9]_hc[9]_AND_19_o14 (printScreen/vc[9]_hc[9]_AND_19_o_mmx_out)
+     LUT6:I0->O            2   0.203   0.616  printScreen/rgb_out<1>1 (rgb_out_0_OBUF)
+     OBUF:I->O                 2.571          rgb_out_1_OBUF (rgb_out<1>)
+    ----------------------------------------
+    Total                     13.315ns (4.646ns logic, 8.669ns route)
+                                       (34.9% logic, 65.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'printScreen/GND_16_o_GND_16_o_AND_589_o93'
+  Total number of paths / destination ports: 792 / 8
+-------------------------------------------------------------------------
+Offset:              9.480ns (Levels of Logic = 10)
+  Source:            printScreen/m_hr_0 (LATCH)
+  Destination:       rgb_out<6> (PAD)
+  Source Clock:      printScreen/GND_16_o_GND_16_o_AND_589_o93 falling
+
+  Data Path: printScreen/m_hr_0 to rgb_out<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               5   0.498   0.943  printScreen/m_hr_0 (printScreen/m_hr_0)
+     LUT4:I1->O            1   0.205   0.000  printScreen/Mcompar_hc[9]_m_hr[9]_LessThan_1096_o_lut<0> (printScreen/Mcompar_hc[9]_m_hr[9]_LessThan_1096_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  printScreen/Mcompar_hc[9]_m_hr[9]_LessThan_1096_o_cy<0> (printScreen/Mcompar_hc[9]_m_hr[9]_LessThan_1096_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  printScreen/Mcompar_hc[9]_m_hr[9]_LessThan_1096_o_cy<1> (printScreen/Mcompar_hc[9]_m_hr[9]_LessThan_1096_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  printScreen/Mcompar_hc[9]_m_hr[9]_LessThan_1096_o_cy<2> (printScreen/Mcompar_hc[9]_m_hr[9]_LessThan_1096_o_cy<2>)
+     MUXCY:CI->O           1   0.213   0.684  printScreen/Mcompar_hc[9]_m_hr[9]_LessThan_1096_o_cy<3> (printScreen/Mcompar_hc[9]_m_hr[9]_LessThan_1096_o_cy<3>)
+     LUT5:I3->O            4   0.203   0.931  printScreen/Mcompar_hc[9]_m_hr[9]_LessThan_1096_o_cy<4> (printScreen/hc[9]_m_hr[9]_LessThan_1096_o)
+     LUT4:I0->O            4   0.203   0.788  printScreen/vc[9]_m_hl[9]_AND_506_o1 (printScreen/vc[9]_m_hl[9]_AND_506_o)
+     LUT6:I4->O            4   0.203   1.048  printScreen/Mmux_rgb_out623 (printScreen/Mmux_rgb_out62)
+     LUT6:I0->O            1   0.203   0.579  printScreen/Mmux_rgb_out71 (rgb_out_6_OBUF)
+     OBUF:I->O                 2.571          rgb_out_6_OBUF (rgb_out<6>)
+    ----------------------------------------
+    Total                      9.480ns (4.509ns logic, 4.971ns route)
+                                       (47.6% logic, 52.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'printScreen/clk8'
+  Total number of paths / destination ports: 6 / 6
+-------------------------------------------------------------------------
+Offset:              4.859ns (Levels of Logic = 2)
+  Source:            printScreen/m_clr_4 (FF)
+  Destination:       rgb_out<4> (PAD)
+  Source Clock:      printScreen/clk8 rising
+
+  Data Path: printScreen/m_clr_4 to rgb_out<4>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               5   0.447   1.059  printScreen/m_clr_4 (printScreen/m_clr_4)
+     LUT6:I1->O            1   0.203   0.579  printScreen/Mmux_rgb_out51 (rgb_out_4_OBUF)
+     OBUF:I->O                 2.571          rgb_out_4_OBUF (rgb_out<4>)
+    ----------------------------------------
+    Total                      4.859ns (3.221ns logic, 1.638ns route)
+                                       (66.3% logic, 33.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    5.720|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock printScreen/GND_16_o_GND_16_o_AND_589_o93
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+printScreen/clk8|         |         |    1.946|         |
+----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock printScreen/clk25
+-----------------+---------+---------+---------+---------+
+                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------+---------+---------+---------+---------+
+printScreen/clk25|    4.795|         |         |         |
+-----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock printScreen/clk8
+-----------------------------------------+---------+---------+---------+---------+
+                                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------------+---------+---------+---------+---------+
+CLK                                      |    5.246|         |         |         |
+printScreen/GND_16_o_GND_16_o_AND_589_o93|         |    9.945|         |         |
+printScreen/clk8                         |    8.846|         |         |         |
+printScreen/win_G                        |         |    1.385|         |         |
+-----------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock printScreen/win_G
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+printScreen/clk8|         |         |    6.488|         |
+----------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 16.00 secs
+Total CPU time to Xst completion: 15.77 secs
+ 
+--> 
+
+Total memory usage is 285724 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  247 (   0 filtered)
+Number of infos    :   11 (   0 filtered)
+
