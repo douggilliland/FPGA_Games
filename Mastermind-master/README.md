@@ -1,4 +1,7 @@
 # Mastermind
+
+From: https://github.com/Davide-DD/Mastermind
+
 FPGA implementation of the popular logic game using VHDL and Altera DE1. It stands by the [original rules](https://en.wikipedia.org/wiki/Mastermind_(board_game)) of this game, except for the secret pattern of four code pegs, that can contain duplicates. For this project, we used Quartus 13.0sp1, for it's the last version supporting our board Altera DE1, who is mounting a Cyclone II FPGA. You can download this project and load it directly into your Quartus IDE, as there's already the main project file inside this repository (**Mastermind.qpf**).
 
 ## How it works
