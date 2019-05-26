@@ -1,5 +1,7 @@
 # Space Invaders Fpga Game
 
+From: https://github.com/nikkatsa7/SpaceInvadersFpgaGame
+
 This two person project was completed through the course of Embedded Systems
 at the University of Thessaly, Department of Computer Engineering. 
 
