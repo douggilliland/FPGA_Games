@@ -1,0 +1,7 @@
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto ba5b9c63aead4660828e51675f968cd3 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot VGAmain_behav xil_defaultlib.VGAmain -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-664] expression has 421 elements ; expected 400 [C:/Users/asus/final/final.srcs/sources_1/new/Constants.vhd:814]
+ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit vgamain in library work failed.

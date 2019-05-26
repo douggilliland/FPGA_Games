@@ -1,0 +1,14 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../final.srcs/sources_1/new/ButtonSlowClock.vhd" \
+"../../../../final.srcs/sources_1/new/Constants.vhd" \
+"../../../../final.srcs/sources_1/new/VGASync.vhd" \
+"../../../../final.srcs/sources_1/new/buttonPress.vhd" \
+"../../../../final.srcs/sources_1/new/randomBitGen.vhd" \
+"../../../../final.srcs/sources_1/new/QBertGraphicsPack.vhd" \
+"../../../../final.srcs/sources_1/new/Mechanics.vhd" \
+"../../../../final.srcs/sources_1/new/Vgamain.vhd" \
+"../../../../final.srcs/sim_1/new/test.vhd" \
+
+# Do not sort compile order
+nosort

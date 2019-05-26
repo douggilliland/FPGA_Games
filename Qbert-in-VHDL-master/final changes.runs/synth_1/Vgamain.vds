@@ -1,0 +1,632 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Dec 26 16:48:10 2018
+# Process ID: 4268
+# Current directory: C:/Users/asus/final changes/final changes.runs/synth_1
+# Command line: vivado.exe -log Vgamain.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Vgamain.tcl
+# Log file: C:/Users/asus/final changes/final changes.runs/synth_1/Vgamain.vds
+# Journal file: C:/Users/asus/final changes/final changes.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Vgamain.tcl -notrace
+Command: synth_design -top Vgamain -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 1728 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 351.770 ; gain = 99.238
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Vgamain' [C:/Users/asus/final changes/final changes.srcs/sources_1/new/Vgamain.vhd:27]
+INFO: [Synth 8-3491] module 'VGAsync' declared at 'C:/Users/asus/final changes/final changes.srcs/sources_1/new/VGASync.vhd:9' bound to instance 'syncronization' of component 'VGAsync' [C:/Users/asus/final changes/final changes.srcs/sources_1/new/Vgamain.vhd:49]
+INFO: [Synth 8-638] synthesizing module 'VGAsync' [C:/Users/asus/final changes/final changes.srcs/sources_1/new/VGASync.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'VGAsync' (1#1) [C:/Users/asus/final changes/final changes.srcs/sources_1/new/VGASync.vhd:17]
+INFO: [Synth 8-3491] module 'Mechanics' declared at 'C:/Users/asus/final changes/final changes.srcs/sources_1/new/Mechanics.vhd:9' bound to instance 'gameMechanics' of component 'Mechanics' [C:/Users/asus/final changes/final changes.srcs/sources_1/new/Vgamain.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'Mechanics' [C:/Users/asus/final changes/final changes.srcs/sources_1/new/Mechanics.vhd:18]
+INFO: [Synth 8-3491] module 'Drawing' declared at 'C:/Users/asus/final changes/final changes.srcs/sources_1/new/Drawing.vhd:13' bound to instance 'drawercomp' of component 'Drawing' [C:/Users/asus/final changes/final changes.srcs/sources_1/new/Mechanics.vhd:98]
+INFO: [Synth 8-638] synthesizing module 'Drawing' [C:/Users/asus/final changes/final changes.srcs/sources_1/new/Drawing.vhd:25]
+INFO: [Synth 8-256] done synthesizing module 'Drawing' (2#1) [C:/Users/asus/final changes/final changes.srcs/sources_1/new/Drawing.vhd:25]
+INFO: [Synth 8-3491] module 'randomBitGen' declared at 'C:/Users/asus/final changes/final changes.srcs/sources_1/new/randomBitGen.vhd:34' bound to instance 'randomcomp' of component 'randomBitGen' [C:/Users/asus/final changes/final changes.srcs/sources_1/new/Mechanics.vhd:118]
+INFO: [Synth 8-638] synthesizing module 'randomBitGen' [C:/Users/asus/final changes/final changes.srcs/sources_1/new/randomBitGen.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'randomBitGen' (3#1) [C:/Users/asus/final changes/final changes.srcs/sources_1/new/randomBitGen.vhd:39]
+WARNING: [Synth 8-614] signal 'endgame' is read in the process but is not in the sensitivity list [C:/Users/asus/final changes/final changes.srcs/sources_1/new/Mechanics.vhd:130]
+WARNING: [Synth 8-614] signal 'Lives' is read in the process but is not in the sensitivity list [C:/Users/asus/final changes/final changes.srcs/sources_1/new/Mechanics.vhd:130]
+WARNING: [Synth 8-614] signal 'coilyState' is read in the process but is not in the sensitivity list [C:/Users/asus/final changes/final changes.srcs/sources_1/new/Mechanics.vhd:130]
+WARNING: [Synth 8-6014] Unused sequential element CoilyblockX_reg was removed.  [C:/Users/asus/final changes/final changes.srcs/sources_1/new/Mechanics.vhd:164]
+WARNING: [Synth 8-6014] Unused sequential element CoilyblockY_reg was removed.  [C:/Users/asus/final changes/final changes.srcs/sources_1/new/Mechanics.vhd:166]
+INFO: [Synth 8-256] done synthesizing module 'Mechanics' (4#1) [C:/Users/asus/final changes/final changes.srcs/sources_1/new/Mechanics.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'Vgamain' (5#1) [C:/Users/asus/final changes/final changes.srcs/sources_1/new/Vgamain.vhd:27]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 433.684 ; gain = 181.152
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 433.684 ; gain = 181.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 433.684 ; gain = 181.152
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/asus/final changes/final changes.srcs/constrs_1/new/Qbertcons.xdc]
+Finished Parsing XDC File [C:/Users/asus/final changes/final changes.srcs/constrs_1/new/Qbertcons.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/asus/final changes/final changes.srcs/constrs_1/new/Qbertcons.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Vgamain_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Vgamain_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 780.527 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 780.527 ; gain = 527.996
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 780.527 ; gain = 527.996
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 780.527 ; gain = 527.996
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "drawBackground8" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/asus/final changes/final changes.srcs/sources_1/new/Drawing.vhd:118]
+INFO: [Synth 8-5545] ROM "drawBackground8" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "RB" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "numA[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "govA[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "wonA[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "RB" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RB" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RB" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "GB" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "GB" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "GB" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RB" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RB" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RB" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RB" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RB" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RB" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RB" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "BB" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RB" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RB" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RB" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RB" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RB" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RB" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RB" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RB" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RB" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RB" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RB" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RB" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RB" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RB" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RB" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RB" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RB" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RB" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RB" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RB" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RB" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/asus/final changes/final changes.srcs/sources_1/new/Mechanics.vhd:229]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/asus/final changes/final changes.srcs/sources_1/new/Mechanics.vhd:229]
+INFO: [Synth 8-5545] ROM "endgamevar" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "coilyStatevar" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "CoilyMoving" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/asus/final changes/final changes.srcs/sources_1/new/Mechanics.vhd:258]
+INFO: [Synth 8-5545] ROM "endgamevar" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "coilyStatevar" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "CoilyMoving" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "refA[0,5]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "refA[0,4]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "refA[0,3]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "refA[0,2]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "refA[0,1]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "refA[0,0]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "refA[0,6]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "refA[0,5]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "refA[0,4]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "refA[0,3]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "refA[0,2]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "refA[0,1]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "refA[0,0]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "refA[0,6]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "refA[0,5]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "refA[0,4]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "refA[0,3]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "refA[0,2]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "refA[0,1]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "refA[0,0]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "refA[0,6]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "QbertG" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "QbertG" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 780.527 ; gain = 527.996
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+---------------+------------+----------+
+|      |RTL Partition  |Replication |Instances |
++------+---------------+------------+----------+
+|1     |Mechanics__GB0 |           1|     38485|
+|2     |Mechanics__GB1 |           1|     22549|
+|3     |VGAsync        |           1|       139|
++------+---------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 5     
+	   2 Input     32 Bit       Adders := 36    
+	   3 Input     32 Bit       Adders := 6     
+	   2 Input     31 Bit       Adders := 3     
+	   3 Input     13 Bit       Adders := 2     
+	   2 Input     12 Bit       Adders := 4     
+	   3 Input     12 Bit       Adders := 2     
+	   2 Input     11 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 2     
+	   3 Input     10 Bit       Adders := 2     
+	   2 Input      9 Bit       Adders := 3     
+	   2 Input      8 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 5     
+	   3 Input      7 Bit       Adders := 3     
+	   3 Input      6 Bit       Adders := 1     
+	   3 Input      5 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 12    
+	               28 Bit    Registers := 1     
+	               11 Bit    Registers := 2     
+	               10 Bit    Registers := 2     
+	                4 Bit    Registers := 10    
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 10    
++---Multipliers : 
+	                32x32  Multipliers := 1     
+	                 8x32  Multipliers := 3     
++---Muxes : 
+	  90 Input    600 Bit        Muxes := 1     
+	 126 Input    267 Bit        Muxes := 1     
+	 126 Input    193 Bit        Muxes := 1     
+	   5 Input     33 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 177   
+	   5 Input     32 Bit        Muxes := 13    
+	   2 Input     31 Bit        Muxes := 3     
+	   2 Input     28 Bit        Muxes := 6     
+	   7 Input     12 Bit        Muxes := 21    
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	  15 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 194   
+	   4 Input      4 Bit        Muxes := 3     
+	  10 Input      4 Bit        Muxes := 2     
+	  13 Input      4 Bit        Muxes := 2     
+	  38 Input      4 Bit        Muxes := 3     
+	   3 Input      4 Bit        Muxes := 28    
+	   5 Input      4 Bit        Muxes := 3     
+	   6 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 32    
+	   2 Input      1 Bit        Muxes := 80    
+	   4 Input      1 Bit        Muxes := 4     
+	   6 Input      1 Bit        Muxes := 2     
+	  10 Input      1 Bit        Muxes := 2     
+	  13 Input      1 Bit        Muxes := 2     
+	  38 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module VGAsync 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	               11 Bit    Registers := 2     
+	               10 Bit    Registers := 2     
+Module Drawing 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 5     
+	   2 Input     32 Bit       Adders := 11    
+	   3 Input     32 Bit       Adders := 2     
+	   2 Input     31 Bit       Adders := 2     
+	   3 Input     13 Bit       Adders := 2     
+	   2 Input     12 Bit       Adders := 4     
+	   3 Input     12 Bit       Adders := 2     
+	   2 Input     11 Bit       Adders := 1     
+	   3 Input     10 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 3     
+	   2 Input      8 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 5     
+	   3 Input      7 Bit       Adders := 3     
+	   3 Input      6 Bit       Adders := 1     
+	   3 Input      5 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 6     
+	                1 Bit    Registers := 7     
++---Multipliers : 
+	                32x32  Multipliers := 1     
++---Muxes : 
+	  90 Input    600 Bit        Muxes := 1     
+	 126 Input    267 Bit        Muxes := 1     
+	 126 Input    193 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     31 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	  15 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 189   
+	   4 Input      4 Bit        Muxes := 3     
+	  10 Input      4 Bit        Muxes := 2     
+	  13 Input      4 Bit        Muxes := 2     
+	  38 Input      4 Bit        Muxes := 3     
+	   3 Input      4 Bit        Muxes := 28    
+	   5 Input      4 Bit        Muxes := 2     
+	   6 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 67    
+	   4 Input      1 Bit        Muxes := 4     
+	   6 Input      1 Bit        Muxes := 2     
+	  10 Input      1 Bit        Muxes := 2     
+	  13 Input      1 Bit        Muxes := 2     
+	  38 Input      1 Bit        Muxes := 2     
+Module randomBitGen 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+Module Mechanics 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 25    
+	   3 Input     32 Bit       Adders := 4     
+	   2 Input     31 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 12    
+	               28 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Multipliers : 
+	                 8x32  Multipliers := 3     
++---Muxes : 
+	   5 Input     33 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 176   
+	   5 Input     32 Bit        Muxes := 13    
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input     28 Bit        Muxes := 6     
+	   7 Input     12 Bit        Muxes := 21    
+	   5 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 5     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 32    
+	   2 Input      1 Bit        Muxes := 13    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5545] ROM "drawBackground8" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/asus/final changes/final changes.srcs/sources_1/new/Drawing.vhd:118]
+DSP Report: Generating DSP drawCoily2, operation Mode is: A*B.
+DSP Report: operator drawCoily2 is absorbed into DSP drawCoily2.
+DSP Report: operator drawCoily2 is absorbed into DSP drawCoily2.
+DSP Report: Generating DSP drawCoily2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator drawCoily2 is absorbed into DSP drawCoily2.
+DSP Report: operator drawCoily2 is absorbed into DSP drawCoily2.
+DSP Report: Generating DSP drawCoily2, operation Mode is: A*B.
+DSP Report: operator drawCoily2 is absorbed into DSP drawCoily2.
+DSP Report: operator drawCoily2 is absorbed into DSP drawCoily2.
+DSP Report: Generating DSP drawCoily2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator drawCoily2 is absorbed into DSP drawCoily2.
+DSP Report: operator drawCoily2 is absorbed into DSP drawCoily2.
+DSP Report: Generating DSP drawCoily5, operation Mode is: A*B.
+DSP Report: operator drawCoily5 is absorbed into DSP drawCoily5.
+DSP Report: operator drawCoily5 is absorbed into DSP drawCoily5.
+DSP Report: Generating DSP drawCoily5, operation Mode is: A*B.
+DSP Report: operator drawCoily5 is absorbed into DSP drawCoily5.
+DSP Report: operator drawCoily5 is absorbed into DSP drawCoily5.
+DSP Report: Generating DSP drawCoily5, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator drawCoily5 is absorbed into DSP drawCoily5.
+DSP Report: operator drawCoily5 is absorbed into DSP drawCoily5.
+INFO: [Synth 8-5545] ROM "endgamevar" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "p_0_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "CoilyMoving" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "coilyStatevar" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+DSP Report: Generating DSP toggleData7, operation Mode is: A*B.
+DSP Report: operator toggleData7 is absorbed into DSP toggleData7.
+DSP Report: operator toggleData7 is absorbed into DSP toggleData7.
+DSP Report: Generating DSP toggleData7, operation Mode is: A*B.
+DSP Report: operator toggleData7 is absorbed into DSP toggleData7.
+DSP Report: operator toggleData7 is absorbed into DSP toggleData7.
+DSP Report: Generating DSP toggleData7, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator toggleData7 is absorbed into DSP toggleData7.
+DSP Report: operator toggleData7 is absorbed into DSP toggleData7.
+INFO: [Synth 8-3886] merging instance 'gameMechanicsi_0/drawercomp/BB_reg[0]' (FDRE) to 'gameMechanicsi_0/drawercomp/BB_reg[3]'
+INFO: [Synth 8-3886] merging instance 'gameMechanicsi_0/drawercomp/BB_reg[1]' (FDRE) to 'gameMechanicsi_0/drawercomp/BB_reg[2]'
+INFO: [Synth 8-3886] merging instance 'gameMechanicsi_0/QbertG_reg[0]' (FDRE) to 'gameMechanicsi_0/QbertG_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (gameMechanicsi_0/\QbertG_reg[3] )
+INFO: [Synth 8-3886] merging instance 'gameMechanicsi_0/QbertR_reg[0]' (FDSE) to 'gameMechanicsi_0/QbertR_reg[3]'
+INFO: [Synth 8-3886] merging instance 'gameMechanicsi_0/QbertR_reg[1]' (FDSE) to 'gameMechanicsi_0/QbertR_reg[3]'
+INFO: [Synth 8-3886] merging instance 'gameMechanicsi_0/QbertR_reg[2]' (FDSE) to 'gameMechanicsi_0/QbertR_reg[3]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (gameMechanicsi_0/\QbertR_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (gameMechanicsi_0/drawercomp/drawBadBalls_reg)
+INFO: [Synth 8-3886] merging instance 'gameMechanicsi_0/drawercomp/GB_reg[0]' (FDRE) to 'gameMechanicsi_0/drawercomp/GB_reg[3]'
+INFO: [Synth 8-3886] merging instance 'gameMechanicsi_0/drawercomp/B_reg[1]' (FDR) to 'gameMechanicsi_0/drawercomp/B_reg[2]'
+WARNING: [Synth 8-3332] Sequential element (drawBadBalls_reg) is unused and will be removed from module Drawing.
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (gameMechanicsi_1/\toggleData_reg[0] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:15 ; elapsed = 00:01:19 . Memory (MB): peak = 869.348 ; gain = 616.816
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------+-------------+---------------+----------------+
+|Module Name | RTL Object  | Depth x Width | Implemented As | 
++------------+-------------+---------------+----------------+
+|Drawing     | butA[0]     | 512x400       | LUT            | 
+|Drawing     | swearA[0]   | 32x48         | LUT            | 
+|Drawing     | heartA[0]   | 128x73        | LUT            | 
+|Drawing     | Coilymap[0] | 256x100       | LUT            | 
+|Drawing     | Qbertmap[0] | 128x84        | LUT            | 
+|Drawing     | butA[0]     | 512x400       | LUT            | 
+|Drawing     | swearA[0]   | 32x48         | LUT            | 
+|Drawing     | heartA[0]   | 128x73        | LUT            | 
+|Drawing     | Coilymap[0] | 256x100       | LUT            | 
+|Drawing     | Qbertmap[0] | 128x84        | LUT            | 
++------------+-------------+---------------+----------------+
+
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Drawing     | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Drawing     | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Drawing     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Drawing     | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Drawing     | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Drawing     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Drawing     | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Mechanics   | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Mechanics   | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Mechanics   | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+---------------+------------+----------+
+|      |RTL Partition  |Replication |Instances |
++------+---------------+------------+----------+
+|1     |Mechanics__GB0 |           1|     15712|
+|2     |Mechanics__GB1 |           1|      8846|
+|3     |VGAsync        |           1|       135|
++------+---------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:29 ; elapsed = 00:01:35 . Memory (MB): peak = 869.348 ; gain = 616.816
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+info: optimization accepted worst group hill climbing move (-8409.0/oG. 803.0ps)
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:32 ; elapsed = 00:02:38 . Memory (MB): peak = 1195.117 ; gain = 942.586
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+---------------+------------+----------+
+|      |RTL Partition  |Replication |Instances |
++------+---------------+------------+----------+
+|1     |Mechanics__GB0 |           1|     13617|
+|2     |Mechanics__GB1 |           1|      8846|
+|3     |VGAsync        |           1|       135|
++------+---------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:40 ; elapsed = 00:02:46 . Memory (MB): peak = 1195.117 ; gain = 942.586
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:43 ; elapsed = 00:02:49 . Memory (MB): peak = 1195.117 ; gain = 942.586
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:43 ; elapsed = 00:02:49 . Memory (MB): peak = 1195.117 ; gain = 942.586
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:44 ; elapsed = 00:02:50 . Memory (MB): peak = 1195.117 ; gain = 942.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:44 ; elapsed = 00:02:50 . Memory (MB): peak = 1195.117 ; gain = 942.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:45 ; elapsed = 00:02:51 . Memory (MB): peak = 1195.117 ; gain = 942.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:45 ; elapsed = 00:02:51 . Memory (MB): peak = 1195.117 ; gain = 942.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+-----------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                                      | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+-----------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Vgamain     | gameMechanics/randomcomp/linFBShiftReg_reg[2] | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++------------+-----------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     2|
+|2     |CARRY4  |   821|
+|3     |DSP48E1 |     9|
+|4     |LUT1    |   400|
+|5     |LUT2    |  1478|
+|6     |LUT3    |  1112|
+|7     |LUT4    |   820|
+|8     |LUT5    |  1068|
+|9     |LUT6    |  4179|
+|10    |MUXF7   |   214|
+|11    |MUXF8   |     1|
+|12    |SRL16E  |     1|
+|13    |FDRE    |   562|
+|14    |IBUF    |     6|
+|15    |OBUF    |    14|
++------+--------+------+
+
+Report Instance Areas: 
++------+-----------------+-------------+------+
+|      |Instance         |Module       |Cells |
++------+-----------------+-------------+------+
+|1     |top              |             | 10687|
+|2     |  gameMechanics  |Mechanics    |  8170|
+|3     |    drawercomp   |Drawing      |  3145|
+|4     |    randomcomp   |randomBitGen |   571|
+|5     |  syncronization |VGAsync      |  2172|
++------+-----------------+-------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:45 ; elapsed = 00:02:51 . Memory (MB): peak = 1195.117 ; gain = 942.586
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:33 ; elapsed = 00:02:42 . Memory (MB): peak = 1195.117 ; gain = 595.742
+Synthesis Optimization Complete : Time (s): cpu = 00:02:45 ; elapsed = 00:02:51 . Memory (MB): peak = 1195.117 ; gain = 942.586
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 1051 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+118 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:48 ; elapsed = 00:02:56 . Memory (MB): peak = 1195.117 ; gain = 955.594
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/asus/final changes/final changes.runs/synth_1/Vgamain.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Vgamain_utilization_synth.rpt -pb Vgamain_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.080 . Memory (MB): peak = 1195.117 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 26 16:51:14 2018...
