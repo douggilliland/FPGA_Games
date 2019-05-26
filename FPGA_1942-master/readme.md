@@ -1,5 +1,7 @@
 # 1942 FPGA arcade #
 
+From: https://github.com/d18c7db/FPGA_1942
+
 ## About ##
 This is an FPGA implementation of the arcade game "1942" based on the Capcom
 schematic circuit diagram.
