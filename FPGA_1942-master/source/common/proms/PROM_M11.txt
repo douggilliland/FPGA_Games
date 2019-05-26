@@ -1,0 +1,2 @@
+D1  =  A7' A6' A5' A4'  +  A7 A6 A5 A4 
+D0  =  A7' A6' A5' A4' A3'  +  A7' A6' A5' A4' A2'  +  A7' A6' A5' A4' A1'  +  A7' A6' A5' A4' A0'  +  A7 A6 A5 A3 A2 A1 A0  +  A7 A6 A5 A4 
