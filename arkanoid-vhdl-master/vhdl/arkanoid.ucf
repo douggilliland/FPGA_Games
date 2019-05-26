@@ -1,0 +1,24 @@
+net "clk_50mhz" period = 20.0ns high 40%;
+net "clk_50mhz" loc = "c9" | iostandard = lvcmos33;
+
+net "reset" loc = "v16" | iostandard = lvttl | pulldown;
+
+net "vga_out_red" loc = "h14" | drive = 8 | slew = fast | iostandard = lvttl;
+net "vga_out_green" loc = "h15" | drive = 8 | slew = fast | iostandard = lvttl;
+net "vga_out_blue" loc = "g15" | drive = 8 | slew = fast | iostandard = lvttl;
+
+net "vga_vsynch" loc = "f14" | drive = 8 | slew = fast | iostandard = lvttl;
+net "vga_hsynch" loc = "f15" | iostandard = lvttl | drive = 8 | slew = fast;
+
+net "push_left" loc = "d18" | iostandard = lvttl | pulldown;
+net "push_right" loc = "h13" | iostandard = lvttl | pulldown;
+
+net "led<7>" loc = "f9" | iostandard = lvttl | slew = slow | drive = 8;
+net "led<6>" loc = "e9" | iostandard = lvttl | slew = slow | drive = 8;
+net "led<5>" loc = "d11" | iostandard = lvttl | slew = slow | drive = 8;
+net "led<4>" loc = "c11" | iostandard = lvttl | slew = slow | drive = 8;
+net "led<3>" loc = "f11" | iostandard = lvttl | slew = slow | drive = 8;
+net "led<2>" loc = "e11" | iostandard = lvttl | slew = slow | drive = 8;
+net "led<1>" loc = "e12" | iostandard = lvttl | slew = slow | drive = 8;
+net "led<0>" loc = "f12" | iostandard = lvttl | slew = slow | drive = 8;
+
