@@ -1,0 +1,41 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "rgb[0]",
+					"strict" : false
+				},
+				{
+					"name" : "rgb[1]",
+					"strict" : false
+				},
+				{
+					"name" : "rgb[2]",
+					"strict" : false
+				},
+				{
+					"name" : "hsync",
+					"strict" : false
+				},
+				{
+					"name" : "vsync",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "ps2_clk",
+					"strict" : false
+				},
+				{
+					"name" : "ps2_data",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

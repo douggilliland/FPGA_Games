@@ -1,0 +1,54 @@
+
+State Machine - |RiverRaid|PS2_Controller:ps2|s_ps2_transceiver
+Name s_ps2_transceiver.PS2_STATE_3_END_TRANSFER s_ps2_transceiver.PS2_STATE_2_COMMAND_OUT s_ps2_transceiver.PS2_STATE_1_DATA_IN s_ps2_transceiver.PS2_STATE_0_IDLE s_ps2_transceiver.PS2_STATE_4_END_DELAYED 
+s_ps2_transceiver.PS2_STATE_0_IDLE 0 0 0 0 0 
+s_ps2_transceiver.PS2_STATE_1_DATA_IN 0 0 1 1 0 
+s_ps2_transceiver.PS2_STATE_2_COMMAND_OUT 0 1 0 1 0 
+s_ps2_transceiver.PS2_STATE_3_END_TRANSFER 1 0 0 1 0 
+s_ps2_transceiver.PS2_STATE_4_END_DELAYED 0 0 0 1 1 
+
+State Machine - |RiverRaid|PS2_Controller:ps2|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter
+Name s_ps2_transmitter.PS2_STATE_7_TRANSMISSION_ERROR s_ps2_transmitter.PS2_STATE_6_COMMAND_WAS_SENT s_ps2_transmitter.PS2_STATE_5_RECEIVE_ACK_BIT s_ps2_transmitter.PS2_STATE_4_TRANSMIT_STOP_BIT s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA s_ps2_transmitter.PS2_STATE_2_WAIT_FOR_CLOCK s_ps2_transmitter.PS2_STATE_1_INITIATE_COMMUNICATION s_ps2_transmitter.PS2_STATE_0_IDLE 
+s_ps2_transmitter.PS2_STATE_0_IDLE 0 0 0 0 0 0 0 0 
+s_ps2_transmitter.PS2_STATE_1_INITIATE_COMMUNICATION 0 0 0 0 0 0 1 1 
+s_ps2_transmitter.PS2_STATE_2_WAIT_FOR_CLOCK 0 0 0 0 0 1 0 1 
+s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA 0 0 0 0 1 0 0 1 
+s_ps2_transmitter.PS2_STATE_4_TRANSMIT_STOP_BIT 0 0 0 1 0 0 0 1 
+s_ps2_transmitter.PS2_STATE_5_RECEIVE_ACK_BIT 0 0 1 0 0 0 0 1 
+s_ps2_transmitter.PS2_STATE_6_COMMAND_WAS_SENT 0 1 0 0 0 0 0 1 
+s_ps2_transmitter.PS2_STATE_7_TRANSMISSION_ERROR 1 0 0 0 0 0 0 1 
+
+State Machine - |RiverRaid|PS2_Controller:ps2|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver
+Name s_ps2_receiver.PS2_STATE_3_PARITY_IN s_ps2_receiver.PS2_STATE_2_DATA_IN s_ps2_receiver.PS2_STATE_1_WAIT_FOR_DATA s_ps2_receiver.PS2_STATE_0_IDLE s_ps2_receiver.PS2_STATE_4_STOP_IN 
+s_ps2_receiver.PS2_STATE_0_IDLE 0 0 0 0 0 
+s_ps2_receiver.PS2_STATE_1_WAIT_FOR_DATA 0 0 1 1 0 
+s_ps2_receiver.PS2_STATE_2_DATA_IN 0 1 0 1 0 
+s_ps2_receiver.PS2_STATE_3_PARITY_IN 1 0 0 1 0 
+s_ps2_receiver.PS2_STATE_4_STOP_IN 0 0 0 1 1 
+
+State Machine - |RiverRaid|play:comb_109|line_end
+Name line_end.00000111 line_end.00000110 line_end.00000101 line_end.00000100 line_end.00000011 line_end.00000010 line_end.00000001 line_end.00000000 
+line_end.00000000 0 0 0 0 0 0 0 0 
+line_end.00000001 0 0 0 0 0 0 1 1 
+line_end.00000010 0 0 0 0 0 1 0 1 
+line_end.00000011 0 0 0 0 1 0 0 1 
+line_end.00000100 0 0 0 1 0 0 0 1 
+line_end.00000101 0 0 1 0 0 0 0 1 
+line_end.00000110 0 1 0 0 0 0 0 1 
+line_end.00000111 1 0 0 0 0 0 0 1 
+
+State Machine - |RiverRaid|play:comb_109|step
+Name step.1100 step.1011 step.1010 step.1001 step.1000 step.0111 step.0110 step.0101 step.0100 step.0011 step.0010 step.0001 step.0000 
+step.0000 0 0 0 0 0 0 0 0 0 0 0 0 0 
+step.0001 0 0 0 0 0 0 0 0 0 0 0 1 1 
+step.0010 0 0 0 0 0 0 0 0 0 0 1 0 1 
+step.0011 0 0 0 0 0 0 0 0 0 1 0 0 1 
+step.0100 0 0 0 0 0 0 0 0 1 0 0 0 1 
+step.0101 0 0 0 0 0 0 0 1 0 0 0 0 1 
+step.0110 0 0 0 0 0 0 1 0 0 0 0 0 1 
+step.0111 0 0 0 0 0 1 0 0 0 0 0 0 1 
+step.1000 0 0 0 0 1 0 0 0 0 0 0 0 1 
+step.1001 0 0 0 1 0 0 0 0 0 0 0 0 1 
+step.1010 0 0 1 0 0 0 0 0 0 0 0 0 1 
+step.1011 0 1 0 0 0 0 0 0 0 0 0 0 1 
+step.1100 1 0 0 0 0 0 0 0 0 0 0 0 1 

@@ -42,28 +42,28 @@
 # ========================
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.0 SP2"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "00:26:34  JANUARY 27, 2011"
-set_global_assignment -name LAST_QUARTUS_VERSION 16.0.0
+set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
 
 # Pin & Location Assignments
 # ==========================
-set_location_assignment PIN_103 -to vsync
-set_location_assignment PIN_101 -to hsync
+set_location_assignment PIN_143 -to vsync
+set_location_assignment PIN_142 -to hsync
 set_location_assignment PIN_23 -to clk
-set_location_assignment PIN_133 -to dig[0]
-set_location_assignment PIN_135 -to dig[1]
+set_location_assignment PIN_138 -to dig[0]
+set_location_assignment PIN_137 -to dig[1]
 set_location_assignment PIN_136 -to dig[2]
-set_location_assignment PIN_137 -to dig[3]
-set_location_assignment PIN_128 -to seg[0]
-set_location_assignment PIN_121 -to seg[1]
-set_location_assignment PIN_125 -to seg[2]
-set_location_assignment PIN_129 -to seg[3]
-set_location_assignment PIN_132 -to seg[4]
-set_location_assignment PIN_126 -to seg[5]
-set_location_assignment PIN_124 -to seg[6]
+set_location_assignment PIN_135 -to dig[3]
+set_location_assignment PIN_115 -to seg[0]
+set_location_assignment PIN_119 -to seg[1]
+set_location_assignment PIN_120 -to seg[2]
+set_location_assignment PIN_121 -to seg[3]
+set_location_assignment PIN_124 -to seg[4]
+set_location_assignment PIN_125 -to seg[5]
+set_location_assignment PIN_126 -to seg[6]
 set_location_assignment PIN_127 -to seg[7]
-set_location_assignment PIN_119 -to ps2_clk
-set_location_assignment PIN_120 -to ps2_data
-set_location_assignment PIN_25 -to rst
+set_location_assignment PIN_11 -to ps2_clk
+set_location_assignment PIN_10 -to ps2_data
+set_location_assignment PIN_86 -to rst
 
 # Classic Timing Assignments
 # ==========================
@@ -145,9 +145,9 @@ set_global_assignment -name VHDL_SHOW_LMF_MAPPING_MESSAGES OFF
 set_global_assignment -name CDF_FILE Chain.cdf
 set_global_assignment -name SEARCH_PATH ip_cores/vga
 set_global_assignment -name SEARCH_PATH ip_cores/ps2_keyboard
-set_location_assignment PIN_104 -to rgb[0]
-set_location_assignment PIN_105 -to rgb[1]
-set_location_assignment PIN_106 -to rgb[2]
+set_location_assignment PIN_144 -to rgb[0]
+set_location_assignment PIN_1 -to rgb[1]
+set_location_assignment PIN_2 -to rgb[2]
 set_global_assignment -name VERILOG_INCLUDE_FILE defs.vh
 set_global_assignment -name MIF_FILE sprites.mif
 set_global_assignment -name QIP_FILE sprites.qip

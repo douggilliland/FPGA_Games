@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sun Jul 28 18:22:54 2019
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : RiverRaid
+Top-level Entity Name : RiverRaid
+Family : Cyclone IV E
+Total logic elements : 6,388
+    Total combinational functions : 6,152
+    Dedicated logic registers : 999
+Total registers : 999
+Total pins : 9
+Total virtual pins : 0
+Total memory bits : 142,400
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1
