@@ -1,0 +1,369 @@
+Analysis & Synthesis report for top
+Thu Jul 15 20:21:49 2021
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Failed - Thu Jul 15 20:21:49 2021           ;
+; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                      ; top                                         ;
+; Top-level Entity Name              ; top                                         ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE15F23I7       ;                    ;
+; Top-level entity name                                            ; top                ; top                ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Thu Jul 15 20:21:32 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file vga_controller.vhd
+    Info (12022): Found design unit 1: VGA_CONT-Behavioral File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/vga_controller.vhd Line: 42
+    Info (12023): Found entity 1: VGA_CONT File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/vga_controller.vhd Line: 33
+Info (12021): Found 2 design units, including 1 entities, in source file top.vhd
+    Info (12022): Found design unit 1: top-Behavioral File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/top.vhd Line: 45
+    Info (12023): Found entity 1: top File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/top.vhd Line: 33
+Info (12021): Found 2 design units, including 1 entities, in source file test.vhd
+    Info (12022): Found design unit 1: test-behavior File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/test.vhd Line: 38
+    Info (12023): Found entity 1: test File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/test.vhd Line: 35
+Info (12021): Found 2 design units, including 1 entities, in source file spaceship4.vhd
+    Info (12022): Found design unit 1: spaceship4-Behavioral File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/spaceship4.vhd Line: 40
+    Info (12023): Found entity 1: spaceship4 File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/spaceship4.vhd Line: 33
+Info (12021): Found 2 design units, including 1 entities, in source file spaceship3.vhd
+    Info (12022): Found design unit 1: spaceship3-Behavioral File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/spaceship3.vhd Line: 40
+    Info (12023): Found entity 1: spaceship3 File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/spaceship3.vhd Line: 33
+Info (12021): Found 2 design units, including 1 entities, in source file spaceship2.vhd
+    Info (12022): Found design unit 1: spaceship2-Behavioral File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/spaceship2.vhd Line: 40
+    Info (12023): Found entity 1: spaceship2 File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/spaceship2.vhd Line: 33
+Info (12021): Found 2 design units, including 1 entities, in source file spaceship_second_colour.vhd
+    Info (12022): Found design unit 1: spaceship_second_colour-Behavioral File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/spaceship_second_colour.vhd Line: 40
+    Info (12023): Found entity 1: spaceship_second_colour File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/spaceship_second_colour.vhd Line: 33
+Info (12021): Found 2 design units, including 1 entities, in source file shoot_rom.vhd
+    Info (12022): Found design unit 1: shoot_ROM-Behavioral File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/shoot_ROM.vhd Line: 40
+    Info (12023): Found entity 1: shoot_ROM File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/shoot_ROM.vhd Line: 33
+Info (12021): Found 2 design units, including 1 entities, in source file screen.vhd
+    Info (12022): Found design unit 1: screen-Behavioral File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/screen.vhd Line: 48
+    Info (12023): Found entity 1: screen File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/screen.vhd Line: 34
+Info (12021): Found 2 design units, including 1 entities, in source file score_rom4.vhd
+    Info (12022): Found design unit 1: score_ROM4-Behavioral File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/score_ROM4.vhd Line: 44
+    Info (12023): Found entity 1: score_ROM4 File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/score_ROM4.vhd Line: 33
+Info (12021): Found 2 design units, including 1 entities, in source file score_rom3.vhd
+    Info (12022): Found design unit 1: score_ROM3-Behavioral File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/score_ROM3.vhd Line: 44
+    Info (12023): Found entity 1: score_ROM3 File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/score_ROM3.vhd Line: 33
+Info (12021): Found 2 design units, including 1 entities, in source file score_rom2.vhd
+    Info (12022): Found design unit 1: score_ROM2-Behavioral File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/score_ROM2.vhd Line: 44
+    Info (12023): Found entity 1: score_ROM2 File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/score_ROM2.vhd Line: 33
+Info (12021): Found 2 design units, including 1 entities, in source file score_rom1.vhd
+    Info (12022): Found design unit 1: score_ROM1-Behavioral File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/score_ROM1.vhd Line: 44
+    Info (12023): Found entity 1: score_ROM1 File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/score_ROM1.vhd Line: 33
+Info (12021): Found 2 design units, including 1 entities, in source file score_rom.vhd
+    Info (12022): Found design unit 1: SCORE_ROM-Behavioral File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/SCORE_ROM.vhd Line: 42
+    Info (12023): Found entity 1: SCORE_ROM File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/SCORE_ROM.vhd Line: 33
+Info (12021): Found 2 design units, including 1 entities, in source file score.vhd
+    Info (12022): Found design unit 1: score-Behavioral File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/score.vhd Line: 42
+    Info (12023): Found entity 1: score File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/score.vhd Line: 27
+Info (12021): Found 2 design units, including 1 entities, in source file rom_laser_text.vhd
+    Info (12022): Found design unit 1: Rom_laser_text-Behavioral File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/rom_laser_text.vhd Line: 42
+    Info (12023): Found entity 1: Rom_laser_text File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/rom_laser_text.vhd Line: 33
+Info (12021): Found 2 design units, including 1 entities, in source file refresh_clock2.vhd
+    Info (12022): Found design unit 1: refresh_clock2-Behavioral File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/refresh_clock2.vhd Line: 38
+    Info (12023): Found entity 1: refresh_clock2 File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/refresh_clock2.vhd Line: 33
+Info (12021): Found 2 design units, including 1 entities, in source file obstacles2_rom.vhd
+    Info (12022): Found design unit 1: obstacles2_ROM-Behavioral File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/obstacles2_ROM.vhd Line: 41
+    Info (12023): Found entity 1: obstacles2_ROM File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/obstacles2_ROM.vhd Line: 33
+Info (12021): Found 2 design units, including 1 entities, in source file obstacles1_rom.vhd
+    Info (12022): Found design unit 1: obstacles1_ROM-Behavioral File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/obstacles1_ROM.vhd Line: 41
+    Info (12023): Found entity 1: obstacles1_ROM File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/obstacles1_ROM.vhd Line: 33
+Info (12021): Found 2 design units, including 1 entities, in source file obstacles_rom.vhd
+    Info (12022): Found design unit 1: obstacles3_ROM-Behavioral File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/obstacles_ROM.vhd Line: 41
+    Info (12023): Found entity 1: obstacles3_ROM File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/obstacles_ROM.vhd Line: 33
+Info (12021): Found 2 design units, including 1 entities, in source file obstacles_control.vhd
+    Info (12022): Found design unit 1: obstacles_control-Behavioral File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/obstacles_control.vhd Line: 51
+    Info (12023): Found entity 1: obstacles_control File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/obstacles_control.vhd Line: 33
+Info (12021): Found 2 design units, including 1 entities, in source file obstacle_collision.vhd
+    Info (12022): Found design unit 1: obstacle_collision-Behavioral File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/obstacle_collision.vhd Line: 44
+    Info (12023): Found entity 1: obstacle_collision File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/obstacle_collision.vhd Line: 32
+Info (12021): Found 2 design units, including 1 entities, in source file my_rom.vhd
+    Info (12022): Found design unit 1: my_rom-Behavioral File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/my_rom.vhd Line: 40
+    Info (12023): Found entity 1: my_rom File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/my_rom.vhd Line: 33
+Info (12021): Found 2 design units, including 1 entities, in source file mitra.vhd
+    Info (12022): Found design unit 1: mitra-Behavioral File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/mitra.vhd Line: 45
+    Info (12023): Found entity 1: mitra File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/mitra.vhd Line: 33
+Info (12021): Found 2 design units, including 1 entities, in source file laser_timer.vhd
+    Info (12022): Found design unit 1: laser_timer-Behavioral File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/laser_timer.vhd Line: 36
+    Info (12023): Found entity 1: laser_timer File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/laser_timer.vhd Line: 25
+Info (12021): Found 2 design units, including 1 entities, in source file laser_controll.vhd
+    Info (12022): Found design unit 1: laser_controll-Behavioral File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/laser_controll.vhd Line: 47
+    Info (12023): Found entity 1: laser_controll File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/laser_controll.vhd Line: 33
+Info (12021): Found 2 design units, including 1 entities, in source file imm_generator.vhd
+    Info (12022): Found design unit 1: imm_generator-Behavioral File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/imm_generator.vhd Line: 71
+    Info (12023): Found entity 1: imm_generator File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/imm_generator.vhd Line: 32
+Info (12021): Found 2 design units, including 1 entities, in source file heart.vhd
+    Info (12022): Found design unit 1: spaceship1-Behavioral File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/heart.vhd Line: 40
+    Info (12023): Found entity 1: spaceship1 File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/heart.vhd Line: 33
+Info (12021): Found 2 design units, including 1 entities, in source file game_over_rom.vhd
+    Info (12022): Found design unit 1: game_over_ROM-Behavioral File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/game_over_ROM.vhd Line: 42
+    Info (12023): Found entity 1: game_over_ROM File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/game_over_ROM.vhd Line: 33
+Info (12021): Found 2 design units, including 1 entities, in source file game_over_display.vhd
+    Info (12022): Found design unit 1: game_over_display-Behavioral File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/game_over_display.vhd Line: 35
+    Info (12023): Found entity 1: game_over_display File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/game_over_display.vhd Line: 32
+Info (12021): Found 2 design units, including 1 entities, in source file game_controll.vhd
+    Info (12022): Found design unit 1: game_controll-Behavioral File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/game_controll.vhd Line: 40
+    Info (12023): Found entity 1: game_controll File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/game_controll.vhd Line: 32
+Info (12021): Found 2 design units, including 1 entities, in source file enemy_shoot.vhd
+    Info (12022): Found design unit 1: enemy_shoot-Behavioral File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/enemy_shoot.vhd Line: 47
+    Info (12023): Found entity 1: enemy_shoot File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/enemy_shoot.vhd Line: 33
+Info (12021): Found 2 design units, including 1 entities, in source file enemy_destruction.vhd
+    Info (12022): Found design unit 1: enemy_destruction-Behavioral File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/enemy_destruction.vhd Line: 43
+    Info (12023): Found entity 1: enemy_destruction File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/enemy_destruction.vhd Line: 32
+Info (12021): Found 2 design units, including 1 entities, in source file enemy_control.vhd
+    Info (12022): Found design unit 1: enemy_control-Behavioral File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/enemy_control.vhd Line: 45
+    Info (12023): Found entity 1: enemy_control File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/enemy_control.vhd Line: 33
+Info (12021): Found 2 design units, including 1 entities, in source file counter_mitra.vhd
+    Info (12022): Found design unit 1: counter_mitra-Behavioral File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/counter_mitra.vhd Line: 40
+    Info (12023): Found entity 1: counter_mitra File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/counter_mitra.vhd Line: 33
+Info (12021): Found 2 design units, including 1 entities, in source file controll.vhd
+    Info (12022): Found design unit 1: controll-Behavioral File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 47
+    Info (12023): Found entity 1: controll File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 33
+Info (12021): Found 2 design units, including 1 entities, in source file clock_divider.vhd
+    Info (12022): Found design unit 1: clk_divider-Behavioral File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/clock_divider.vhd Line: 38
+    Info (12023): Found entity 1: clk_divider File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/clock_divider.vhd Line: 33
+Info (12021): Found 2 design units, including 1 entities, in source file ball_collision.vhd
+    Info (12022): Found design unit 1: ball_collision-Behavioral File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/ball_collision.vhd Line: 38
+    Info (12023): Found entity 1: ball_collision File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/ball_collision.vhd Line: 32
+Info (12021): Found 2 design units, including 1 entities, in source file ball.vhd
+    Info (12022): Found design unit 1: ball-Behavioral File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/ball.vhd Line: 43
+    Info (12023): Found entity 1: ball File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/ball.vhd Line: 33
+Info (12021): Found 2 design units, including 1 entities, in source file animation.vhd
+    Info (12022): Found design unit 1: animation-Behavioral File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/animation.vhd Line: 44
+    Info (12023): Found entity 1: animation File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/animation.vhd Line: 33
+Info (12127): Elaborating entity "top" for the top level hierarchy
+Info (12128): Elaborating entity "clk_divider" for hierarchy "clk_divider:A" File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/top.vhd Line: 83
+Info (12128): Elaborating entity "VGA_CONT" for hierarchy "VGA_CONT:B" File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/top.vhd Line: 87
+Info (12128): Elaborating entity "screen" for hierarchy "screen:C" File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/top.vhd Line: 94
+Info (12128): Elaborating entity "refresh_clock2" for hierarchy "screen:C|refresh_clock2:D" File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/screen.vhd Line: 446
+Info (12128): Elaborating entity "controll" for hierarchy "screen:C|controll:E" File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/screen.vhd Line: 449
+Warning (10492): VHDL Process Statement warning at controll.vhd(83): signal "HminHe_next" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 83
+Warning (10492): VHDL Process Statement warning at controll.vhd(84): signal "VminHe_next" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 84
+Warning (10492): VHDL Process Statement warning at controll.vhd(101): signal "HminHe" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 101
+Warning (10492): VHDL Process Statement warning at controll.vhd(102): signal "VminHe" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 102
+Warning (10492): VHDL Process Statement warning at controll.vhd(104): signal "VminHe_next" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 104
+Warning (10492): VHDL Process Statement warning at controll.vhd(105): signal "HminHe_next" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 105
+Warning (10631): VHDL Process Statement warning at controll.vhd(69): inferring latch(es) for signal or variable "HminHe", which holds its previous value in one or more paths through the process File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 69
+Warning (10631): VHDL Process Statement warning at controll.vhd(69): inferring latch(es) for signal or variable "VminHe", which holds its previous value in one or more paths through the process File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 69
+Info (10041): Inferred latch for "VminHe[0]" at controll.vhd(69) File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 69
+Info (10041): Inferred latch for "VminHe[1]" at controll.vhd(69) File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 69
+Info (10041): Inferred latch for "VminHe[2]" at controll.vhd(69) File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 69
+Info (10041): Inferred latch for "VminHe[3]" at controll.vhd(69) File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 69
+Info (10041): Inferred latch for "VminHe[4]" at controll.vhd(69) File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 69
+Info (10041): Inferred latch for "VminHe[5]" at controll.vhd(69) File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 69
+Info (10041): Inferred latch for "VminHe[6]" at controll.vhd(69) File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 69
+Info (10041): Inferred latch for "VminHe[7]" at controll.vhd(69) File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 69
+Info (10041): Inferred latch for "VminHe[8]" at controll.vhd(69) File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 69
+Info (10041): Inferred latch for "VminHe[9]" at controll.vhd(69) File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 69
+Info (10041): Inferred latch for "HminHe[0]" at controll.vhd(69) File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 69
+Info (10041): Inferred latch for "HminHe[1]" at controll.vhd(69) File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 69
+Info (10041): Inferred latch for "HminHe[2]" at controll.vhd(69) File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 69
+Info (10041): Inferred latch for "HminHe[3]" at controll.vhd(69) File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 69
+Info (10041): Inferred latch for "HminHe[4]" at controll.vhd(69) File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 69
+Info (10041): Inferred latch for "HminHe[5]" at controll.vhd(69) File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 69
+Info (10041): Inferred latch for "HminHe[6]" at controll.vhd(69) File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 69
+Info (10041): Inferred latch for "HminHe[7]" at controll.vhd(69) File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 69
+Info (10041): Inferred latch for "HminHe[8]" at controll.vhd(69) File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 69
+Info (10041): Inferred latch for "HminHe[9]" at controll.vhd(69) File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 69
+Info (10041): Inferred latch for "HminHe[10]" at controll.vhd(69) File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 69
+Error (10818): Can't infer register for "VminHe_next[0]" at controll.vhd(86) because it does not hold its value outside the clock edge File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 86
+Info (10041): Inferred latch for "VminHe_next[0]" at controll.vhd(69) File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 69
+Error (10818): Can't infer register for "VminHe_next[1]" at controll.vhd(86) because it does not hold its value outside the clock edge File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 86
+Info (10041): Inferred latch for "VminHe_next[1]" at controll.vhd(69) File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 69
+Error (10818): Can't infer register for "VminHe_next[2]" at controll.vhd(86) because it does not hold its value outside the clock edge File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 86
+Info (10041): Inferred latch for "VminHe_next[2]" at controll.vhd(69) File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 69
+Error (10818): Can't infer register for "VminHe_next[3]" at controll.vhd(86) because it does not hold its value outside the clock edge File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 86
+Info (10041): Inferred latch for "VminHe_next[3]" at controll.vhd(69) File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 69
+Error (10818): Can't infer register for "VminHe_next[4]" at controll.vhd(86) because it does not hold its value outside the clock edge File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 86
+Info (10041): Inferred latch for "VminHe_next[4]" at controll.vhd(69) File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 69
+Error (10818): Can't infer register for "VminHe_next[5]" at controll.vhd(86) because it does not hold its value outside the clock edge File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 86
+Info (10041): Inferred latch for "VminHe_next[5]" at controll.vhd(69) File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 69
+Error (10818): Can't infer register for "VminHe_next[6]" at controll.vhd(86) because it does not hold its value outside the clock edge File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 86
+Info (10041): Inferred latch for "VminHe_next[6]" at controll.vhd(69) File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 69
+Error (10818): Can't infer register for "VminHe_next[7]" at controll.vhd(86) because it does not hold its value outside the clock edge File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 86
+Info (10041): Inferred latch for "VminHe_next[7]" at controll.vhd(69) File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 69
+Error (10818): Can't infer register for "VminHe_next[8]" at controll.vhd(86) because it does not hold its value outside the clock edge File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 86
+Info (10041): Inferred latch for "VminHe_next[8]" at controll.vhd(69) File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 69
+Error (10818): Can't infer register for "VminHe_next[9]" at controll.vhd(86) because it does not hold its value outside the clock edge File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 86
+Info (10041): Inferred latch for "VminHe_next[9]" at controll.vhd(69) File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 69
+Error (10818): Can't infer register for "HminHe_next[0]" at controll.vhd(86) because it does not hold its value outside the clock edge File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 86
+Info (10041): Inferred latch for "HminHe_next[0]" at controll.vhd(69) File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 69
+Error (10818): Can't infer register for "HminHe_next[1]" at controll.vhd(86) because it does not hold its value outside the clock edge File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 86
+Info (10041): Inferred latch for "HminHe_next[1]" at controll.vhd(69) File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 69
+Error (10818): Can't infer register for "HminHe_next[2]" at controll.vhd(86) because it does not hold its value outside the clock edge File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 86
+Info (10041): Inferred latch for "HminHe_next[2]" at controll.vhd(69) File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 69
+Error (10818): Can't infer register for "HminHe_next[3]" at controll.vhd(86) because it does not hold its value outside the clock edge File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 86
+Info (10041): Inferred latch for "HminHe_next[3]" at controll.vhd(69) File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 69
+Error (10818): Can't infer register for "HminHe_next[4]" at controll.vhd(86) because it does not hold its value outside the clock edge File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 86
+Info (10041): Inferred latch for "HminHe_next[4]" at controll.vhd(69) File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 69
+Error (10818): Can't infer register for "HminHe_next[5]" at controll.vhd(86) because it does not hold its value outside the clock edge File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 86
+Info (10041): Inferred latch for "HminHe_next[5]" at controll.vhd(69) File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 69
+Error (10818): Can't infer register for "HminHe_next[6]" at controll.vhd(86) because it does not hold its value outside the clock edge File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 86
+Info (10041): Inferred latch for "HminHe_next[6]" at controll.vhd(69) File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 69
+Error (10818): Can't infer register for "HminHe_next[7]" at controll.vhd(86) because it does not hold its value outside the clock edge File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 86
+Info (10041): Inferred latch for "HminHe_next[7]" at controll.vhd(69) File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 69
+Error (10818): Can't infer register for "HminHe_next[8]" at controll.vhd(86) because it does not hold its value outside the clock edge File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 86
+Info (10041): Inferred latch for "HminHe_next[8]" at controll.vhd(69) File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/controll.vhd Line: 69
+Error (12152): Can't elaborate user hierarchy "screen:C|controll:E" File: C:/Users/HPz420/Documents/GitHub/Doug Gilliland/FPGA_Games/FPGA-Game-master/screen.vhd Line: 449
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 20 errors, 9 warnings
+    Error: Peak virtual memory: 4787 megabytes
+    Error: Processing ended: Thu Jul 15 20:21:49 2021
+    Error: Elapsed time: 00:00:17
+    Error: Total CPU time (on all processors): 00:00:38
+
+

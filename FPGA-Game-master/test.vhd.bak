@@ -41,7 +41,6 @@ ARCHITECTURE behavior OF test IS
  
     COMPONENT screen
     PORT(
-			-- i_CLOCK50 : IN std_logic;
          Hposition : IN  std_logic_vector(10 downto 0);
          Vposition : IN  std_logic_vector(9 downto 0);
          VIDON : IN  std_logic;
@@ -56,8 +55,6 @@ ARCHITECTURE behavior OF test IS
    signal Hposition : std_logic_vector(10 downto 0) := (others => '0');
    signal Vposition : std_logic_vector(9 downto 0) := (others => '0');
    signal VIDON : std_logic := '0';
-	
-	SIGNAL i_CLOCK50  : STD_LOGIC;
 
  	--Outputs
    signal red : std_logic_vector(4 downto 0);
@@ -66,7 +63,7 @@ ARCHITECTURE behavior OF test IS
    -- No clocks detected in port list. Replace <clock> below with 
    -- appropriate port name 
  
-   constant i_CLOCK50_period : time := 20 ns;
+   constant <clock>_period : time := 10 ns;
  
 BEGIN
  
@@ -81,12 +78,12 @@ BEGIN
         );
 
    -- Clock process definitions
-   i_CLOCK50_process :process
+   <clock>_process :process
    begin
-		i_CLOCK50 <= '0';
-		wait for i_CLOCK50_period/2;
-		i_CLOCK50 <= '1';
-		wait for i_CLOCK50_period/2;
+		<clock> <= '0';
+		wait for <clock>_period/2;
+		<clock> <= '1';
+		wait for <clock>_period/2;
    end process;
  
 
@@ -96,7 +93,7 @@ BEGIN
       -- hold reset state for 100 ns.
       wait for 100 ns;	
 
-      wait for i_CLOCK50_period*5;
+      wait for <clock>_period*10;
 
       -- insert stimulus here 
 

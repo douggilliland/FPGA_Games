@@ -34,7 +34,7 @@ entity my_rom is
     port( Add : in std_logic_vector(5 downto 0);
 	       enable : in std_logic;
 			 position : in std_logic_vector(4 downto 0);
-	       data : INout std_logic);
+	       data : out std_logic);
 end my_rom;
 
 architecture Behavioral of my_rom is

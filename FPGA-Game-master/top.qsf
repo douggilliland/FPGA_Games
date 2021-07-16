@@ -1,0 +1,94 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2020  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+# Date created = 20:02:20  July 15, 2021
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		top_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE15F23I7
+set_global_assignment -name TOP_LEVEL_ENTITY top
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "20:02:20  JULY 15, 2021"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
+set_global_assignment -name VHDL_FILE vga_controller.vhd
+set_global_assignment -name VHDL_FILE top.vhd
+set_global_assignment -name VHDL_FILE test.vhd
+set_global_assignment -name VHDL_FILE spaceship4.vhd
+set_global_assignment -name VHDL_FILE spaceship3.vhd
+set_global_assignment -name VHDL_FILE spaceship2.vhd
+set_global_assignment -name VHDL_FILE spaceship_second_colour.vhd
+set_global_assignment -name VHDL_FILE shoot_ROM.vhd
+set_global_assignment -name VHDL_FILE screen.vhd
+set_global_assignment -name VHDL_FILE score_ROM4.vhd
+set_global_assignment -name VHDL_FILE score_ROM3.vhd
+set_global_assignment -name VHDL_FILE score_ROM2.vhd
+set_global_assignment -name VHDL_FILE score_ROM1.vhd
+set_global_assignment -name VHDL_FILE SCORE_ROM.vhd
+set_global_assignment -name VHDL_FILE score.vhd
+set_global_assignment -name VHDL_FILE rom_laser_text.vhd
+set_global_assignment -name VHDL_FILE refresh_clock2.vhd
+set_global_assignment -name VHDL_FILE obstacles2_ROM.vhd
+set_global_assignment -name VHDL_FILE obstacles1_ROM.vhd
+set_global_assignment -name VHDL_FILE obstacles_ROM.vhd
+set_global_assignment -name VHDL_FILE obstacles_control.vhd
+set_global_assignment -name VHDL_FILE obstacle_collision.vhd
+set_global_assignment -name VHDL_FILE my_rom.vhd
+set_global_assignment -name VHDL_FILE mitra.vhd
+set_global_assignment -name VHDL_FILE laser_timer.vhd
+set_global_assignment -name VHDL_FILE laser_controll.vhd
+set_global_assignment -name VHDL_FILE imm_generator.vhd
+set_global_assignment -name VHDL_FILE heart.vhd
+set_global_assignment -name VHDL_FILE game_over_ROM.vhd
+set_global_assignment -name VHDL_FILE game_over_display.vhd
+set_global_assignment -name VHDL_FILE game_controll.vhd
+set_global_assignment -name VHDL_FILE enemy_shoot.vhd
+set_global_assignment -name VHDL_FILE enemy_destruction.vhd
+set_global_assignment -name VHDL_FILE enemy_control.vhd
+set_global_assignment -name VHDL_FILE counter_mitra.vhd
+set_global_assignment -name VHDL_FILE controll.vhd
+set_global_assignment -name VHDL_FILE clock_divider.vhd
+set_global_assignment -name VHDL_FILE ball_collision.vhd
+set_global_assignment -name VHDL_FILE ball.vhd
+set_global_assignment -name VHDL_FILE animation.vhd
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP "-40"
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 100
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
