@@ -1,0 +1,11 @@
+.DS_Store
+**/db/
+**/incremental_db/
+**/devkits/
+**/output_files/
+**/simulation/
+**/greybox_tmp/
+*.rpt
+*.bak
+*.json
+*.qws
